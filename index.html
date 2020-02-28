@@ -124,6 +124,7 @@
 </div>
 
 
+<!-- 지도 -->
 <script>
   
 
@@ -173,7 +174,7 @@
           radius: 지역별확진자[i] * 5000,
           strokeWeight: 1.5,
           fillColor: "#ff0000",
-          fillOpacity: 0.5
+          fillOpacity: 0.6
       });
       var infowindow = new naver.maps.InfoWindow({
           content: contentString,
@@ -186,7 +187,7 @@ naver.maps.Event.addListener(지역별마커[0], "click", function(e) {
   if (지역별정보윈도우[0].getMap()) {
     지역별정보윈도우[0].close();
   } else {
-    지역별정보윈도우[0].open(koreamap, 지역별마커[0]);
+    지역별정보윈도우[0].open(map), 지역별마커[0]);
   }
 });
 
@@ -194,7 +195,7 @@ naver.maps.Event.addListener(지역별마커[1], "click", function(e) {
   if (지역별정보윈도우[1].getMap()) {
     지역별정보윈도우[1].close();
   } else {
-    지역별정보윈도우[1].open(koreamap, 지역별마커[1]);
+    지역별정보윈도우[1].open(map, 지역별마커[1]);
   }
 });
 
@@ -202,7 +203,7 @@ naver.maps.Event.addListener(지역별마커[2], "click", function(e) {
   if (지역별정보윈도우[2].getMap()) {
     지역별정보윈도우[2].close();
   } else {
-    지역별정보윈도우[2].open(koreamap, 지역별마커[2]);
+    지역별정보윈도우[2].open(map, 지역별마커[2]);
   }
 });
 
