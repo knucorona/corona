@@ -167,11 +167,10 @@
       var circle = new naver.maps.Circle({
           map: map,
           center: point,
-          radius: 지역별확진자[i] * 10000,
+          radius: 지역별확진자[i] * 5000,
           strokeWeight: 1.5,
-          strokeQpacity: 0.1,
           fillColor: "#ff0000",
-          fillopacity: 0.7
+          fillOpacity: 0.5
       });
       var infowindow = new naver.maps.InfoWindow({
           content: contentString,
