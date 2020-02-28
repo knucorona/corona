@@ -122,7 +122,7 @@
 
 
 <script>
-  var map = new naver.maps.Map('map', mapOptions);
+  
 
   var mapOptions = {
       center: new naver.maps.LatLng(35.889672, 128.610472),
@@ -132,7 +132,8 @@
         position: naver.maps.Position.TOP_RIGHT
       }
   };
-  
+  var map = new naver.maps.Map('map', mapOptions);
+
   var 지역별확진자 =[
     2, //창원
     1, //경주
@@ -169,7 +170,7 @@
     var circle = new naver.maps.Circle({
       map: map,
       center: point,
-      radius: 지역별확진자[i] * 100,
+      radius: 지역별확진자[i] * 1000,
       strokeWeight: 3,
       fillColor: "#ffoooo",
       fillopacity: 0.7
