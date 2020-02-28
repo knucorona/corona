@@ -150,9 +150,6 @@
   var 지역별마커 = [];
   var 지역별정보윈도우 =[];
   for(let i in 지역이름){
-    console.log(i);
-    console.log(지역좌표[i][0], 지역좌표[i][1]);
-    console.log(지역이름[i], 지역별확진자[i]);
 
     var point = new naver.maps.LatLng(지역좌표[i][0], 지역좌표[i][1]);
     var contentString = [
@@ -182,31 +179,29 @@
     지역별마커.push(marker);
     지역별정보윈도우.push(infowindow);
   }
-  console.log(지역별마커)
-  console.log(지역별정보윈도우);
 
   naver.maps.Event.addListener(지역별마커[0], "click", function(e) {
-  if (지역별정보윈도우[0].getMap()) {
-    지역별정보윈도우[0].close();
-  } else {
-    지역별정보윈도우[0].open(map, 지역별마커[0]);
-  }
+    if (지역별정보윈도우[0].getMap()) {
+      지역별정보윈도우[0].close();
+    } else {
+      지역별정보윈도우[0].open(map, 지역별마커[0]);
+    }
   });
 
   naver.maps.Event.addListener(지역별마커[1], "click", function(e) {
-  if (지역별정보윈도우[1].getMap()) {
-    지역별정보윈도우[1].close();
-  } else {
-    지역별정보윈도우[1].open(map, 지역별마커[1]);
-  }
+    if (지역별정보윈도우[1].getMap()) {
+      지역별정보윈도우[1].close();
+    } else {
+      지역별정보윈도우[1].open(map, 지역별마커[1]);
+    }
   });
 
   naver.maps.Event.addListener(지역별마커[2], "click", function(e) {
-  if (지역별정보윈도우[2].getMap()) {
-    지역별정보윈도우[2].close();
-  } else {
-    지역별정보윈도우[2].open(map, 지역별마커[2]);
-  }
+    if (지역별정보윈도우[2].getMap()) {
+      지역별정보윈도우[2].close();
+    } else {
+      지역별정보윈도우[2].open(map, 지역별마커[2]);
+    }
   });
 
   </script>
