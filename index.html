@@ -151,33 +151,33 @@
   var 지역별정보윈도우 =[];
   for(let i in 지역이름){
 
-    var point = new naver.maps.LatLng(지역좌표[i][0], 지역좌표[i][1]);
-    var contentString = [
-        '<div class="iw_inner">',
-        '<p style="font-size: small; margin:10px;">지역이름 : ',지역이름[i],'<br>',
-        '확진자수 : ',지역별확진자[i],'<br>',
-        '</p>',
-        '</div>'
-    ].join('');
+      var point = new naver.maps.LatLng(지역좌표[i][0], 지역좌표[i][1]);
+      var contentString = [
+          '<div class="iw_inner">',
+          '<p style="font-size: small; margin:10px;">지역이름 : ',지역이름[i],'<br>',
+          '확진자수 : ',지역별확진자[i],'<br>',
+          '</p>',
+          '</div>'
+      ].join('');
 
-    var marker = new naver.maps.Marker({
-      map: map,
-      position: point
-    });
-    var circle = new naver.maps.Circle({
-      map: map,
-      center: point,
-      radius: 지역별확진자[i] * 10000,
-      strokeWeight: 1.5,
-      strokeQpacity: 0.5,
-      fillColor: "#ff0000",
-      fillopacity: 0.7
-    });
-    var infowindow = new naver.maps.InfoWindow({
-      content: contentString,
-    });
-    지역별마커.push(marker);
-    지역별정보윈도우.push(infowindow);
+      var marker = new naver.maps.Marker({
+          map: map,
+          position: point
+      });
+      var circle = new naver.maps.Circle({
+          map: map,
+          center: point,
+          radius: 지역별확진자[i] * 10000,
+          strokeWeight: 1.5,
+          strokeQpacity: 0.5,
+          fillColor: "#ff0000",
+          fillopacity: 0.7
+      });
+      var infowindow = new naver.maps.InfoWindow({
+          content: contentString,
+      });
+      지역별마커.push(marker);
+      지역별정보윈도우.push(infowindow);
   }
 
   naver.maps.Event.addListener(지역별마커[0], "click", function(e) {
