@@ -1,213 +1,324 @@
 <!DOCTYPE html>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <html>
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
-<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=b0jzj6p97b"></script>
-<head>
 
-<meta charset="utf-8">
-<title>KNU Corona 알리미</title>
-<style>
-      h3 {
-        font-family: "Noto Sans KR", sans-serif;
-        font-size: 25px;
-      }
-      p,h4 {
-        font-family: "Noto Sans KR", sans-serif;
-        font-size: 20px;
-      }
-      p.a {
-        font-weight: 400;
-      }
-      p.b {
-        font-weight: 700;
-      }
-      p.c {
-        font-weight: 800;
-      }
-      p.d {
-        font-weight: bold;
-      }
-      p.e {
-        font-family: "Noto Sans KR", sans-serif;
-        font-size: 15px;
-        padding: -2px;
-      }
-</style>
+<head>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=b0jzj6p97b"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+  <title>KNU Corona 알리미</title>
+  <style>
+    h3 {
+      font-family: "Noto Sans KR", sans-serif;
+      font-weight: 800;
+      font-size: 30px;
+      margin-bottom: 3rem;
+    }
+
+    h4 {
+      font-family: "Noto Sans KR", sans-serif;
+      font-size: 22px;
+      display: block;
+      font-weight: 700;
+    }
+
+    h5 {
+      font-family: "Noto Sans KR", sans-serif;
+      font-size: 18px;
+      display: block;
+      font-weight: 700;
+    }
+
+    p {
+      font-family: "Noto Sans KR", sans-serif;
+      font-size: 25px;
+      display: block;
+    }
+
+    p.a {
+      font-family: "Noto Sans KR", sans-serif;
+      font-size: 15px;
+    }
+
+    p.b {
+      font-family: "Noto Sans KR", sans-serif;
+      font-weight: 700;
+    }
+
+    p.c {
+      font-family: "Noto Sans KR", sans-serif;
+      font-weight: 800;
+    }
+
+    p.d {
+      font-family: "Noto Sans KR", sans-serif;
+      font-weight: bold;
+    }
+
+    p.e {
+      font-family: "Noto Sans KR", sans-serif;
+      font-size: 17px;
+      margin-bottom: -.5rem;
+    }
+
+    p.infect {
+      font-family: "Noto Sans KR", sans-serif;
+      font-size: 24px;
+      color: gray;
+    }
+
+    p.death {
+      font-family: "Noto Sans KR", sans-serif;
+      font-size: 24px;
+      color: red;
+    }
+
+    p.cured {
+      font-family: "Noto Sans KR", sans-serif;
+      font-size: 24px;
+      color: rgb(0, 110, 255);
+    }
+
+    .box {
+      display: flex;
+    }
+
+    .container-rounded {
+      background: white;
+      height: 100em;
+      width: 95%;
+      max-width: 850px;
+      border-radius: 15px;
+      border: 1px solid lightgray;
+      margin: 0 auto;
+      padding: 3em;
+      box-shadow: 0px 0px 7px 2px rgb(233, 232, 232);
+    }
+
+    .row0 {
+      background: white;
+      height: 1em;
+      width: 80%;
+      max-width: 750px;
+      text-align: right;
+      margin: 0 auto;
+      padding: .1em;
+      position: relative;
+      margin-bottom: .7em;
+    }
+
+    .row1 {
+      background: rgb(249, 249, 249);
+      height: 7em;
+      width: 70%;
+      max-width: 600px;
+      border-radius: 10px;
+      text-align: center;
+      margin: 0 auto;
+      border: 1px solid lightgray;
+      padding: .5em;
+      position: relative;
+      margin-bottom: .5em;
+    }
+
+    .col1 {
+      flex: 0 0 33.333%;
+      width: 33.3333%;
+      text-align: center;
+      position: relative;
+      padding-left: 15px;
+      padding-right: 15px;
+      display: block;
+      float: left;
+    }
+
+    .mapContent {
+      width: 100%;
+      max-width: 750px;
+      border-radius: 10px;
+      text-align: center;
+      border: 2px solid rgb(79, 165, 144);
+      margin: 0 auto;
+      padding: 1em;
+      position: relative;
+      margin-bottom: .2em;
+    }
+
+    .path {
+      height: 10em;
+      width: 100%;
+      max-width: 750px;
+      border-radius: 10px;
+      text-align: center;
+      border: 1px solid rgb(79, 165, 144);
+      margin: 0 auto;
+      padding: 1em;
+      position: relative;
+      margin-bottom: .5em;
+    }
+  </style>
 
 </head>
+
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="#">KNU corona | knucorona.coo.kr</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="navbarColor01">
-      <ul class="navbar-nav mr-auto">
-        <!--
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
-        </li>-->
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search">
-        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-      </form>
+  <div class="container-rounded">
+    <h3> KNU corona 알림판</h3>
+    <p class="a" style="margin-top:-3em">knucorona.coo.kr</p>
+
+    <div id="row 0 col 1" class="row0">
+      <p class="a"><span style="color:rgb(187, 187, 187)"><i class="fas fa-edit"></i></span> 업데이트 : 02.28 (10:00) 기준</p>
     </div>
-  </nav>
 
- <div class="row" style ="margin:0 auto;top:50%; left:50%">
-  <div class="card bg-white mb-3" style="width:25em; padding:5px; margin-top:0.5%; margin-left:0.5%; margin-right:0.5%">
-  <div class="card-header"><h4>국내 현황(2.28 09:01)</h4></div>
-  <div class="card-body" style="float:left; width:100%">
-     <p class="e">확진자 : 2,022명</p>
-     <p class="e">완치자 : 26명</p>
-     <p class="e">사망자 : 13명</p>
+    <div id="row 1 col 1" class="row1">
+      <h4><span style="color:rgb(47, 73, 218)"><i class="fas fa-chart-bar"></span></i> 국내 현황</h4>
+      <div class="col1">
+
+        <p class="e"> 확진자 </p>
+        <p class="infect"> 2,055 </p>
+      </div>
+
+      <div class="col1">
+        <p class="e"> 사망자 </p>
+        <p class="death"> 13 </p>
+      </div>
+
+      <div class="col1">
+        <p class="e"> 완치자 </p>
+        <p class="cured"> 23 </p>
+      </div>
+
+    </div>
+
+    <div id="row 1 col 1" class="row1">
+      <h4><span style="color:rgb(146, 35, 35)"><i class="fas fa-chart-bar"></span></i> 경북대 현황</h4>
+      <div class="col1">
+
+        <p class="e"> 확진자 </p>
+        <p class="infect"> 4 </p>
+      </div>
+
+      <div class="col1">
+        <p class="e"> 사망자 </p>
+        <p class="death"> 0 </p>
+      </div>
+
+      <div class="col1">
+        <p class="e"> 완치자 </p>
+        <p class="cured"> 0 </p>
+      </div>
+
+    </div>
+
+    <div id="row 1 col 1" class="mapContent">
+      <h5><span style="color:rgb(35, 146, 109)"><i class="fas fa-map-marked-alt"></i></span> 경북대 확진자 동선 지도</h5>
+
+      <div>
+        <!-- 지도가 들어갈 공간 -->
+        <div id="map" style="width:100%;height:400px;"></div>
+      </div>
+
+    </div>
+
+    <div id="row 1 col 1" class="path">
+      <h5><span style="color:rgb(73, 138, 116)"><i class="fas fa-road"></i></span> 확진자 이동 경로</h5>
+
+      <div>
+
+      </div>
+
+    </div>
+
   </div>
-</div>
-
-<div class="card bg-white mb-3" style="width:25em; padding:5px; margin-top:0.5%; margin-left:0.5%; margin-right:0.5%">
-  <div class="card-header"><h4>경북대학교 현황</h4></div>
-  <div class="card-body" style="float:left; width:100%">
-      <h4 class="card-title">Secondary card title</h4>
-      <p class="card-text">확진자 : 4명</p>
-      <p class="card-text">완치자 : 0명</p>
-      <p class="card-text">사망자 : 0명</p>
-
-  </div>
-</div>
-
-<div class="card bg-white mb-3" style="width:25em;  padding:5px; margin-top:0.5%; margin-left:0.5%; margin-right:0.5%">
-  <div class="card-header"><h4>공간 3</h4></div>
-  <div class="card-body" style="float:left; width:100%">
-      <h4 class="card-title">Secondary card title</h4>
-      <p class="card-text">ddd</p>
-  </div>
-</div>
-</div>
-
-<div class="row" style ="margin:0 auto;">
-<div class="card text-white bg-success mb-3" style="width:40em; padding:5px; margin-top:0.5%; margin-left:0.5%; margin-right:0.5%">
-  <div class="card-header"><h3>지도</h3></div>
-  <div class="card-body" style="float:left; width:100%">
-    <div id="map" style="width:100%;height:400px;"></div>
-  </div>
-</div>
- 
-<div class="card border-success mb-3" style="width:40em; padding:5px; margin-top:0.5%; margin-left:0.5%; margin-right:0.5%">
-  <div class="card-header"><h3>이동 동선(텍스트)</h3></div>
-  <div class="card-body" style="float:left; width:50%">
-      <h4 class="card-title">Secondary card title</h4>
-      <p class="card-text">ddd</p>
-  </div>
-</div>
-</div>
-
-<div class="card border-primary mb-3" style="float:left; width:92%; padding:5px; margin-top:0.5%; margin-left:0.5%; margin-right:0.5%">
-  <div class="card-header"><h4>경북대학교 공지사항</h4></div>
-  <div class="card-body" style="float:left; width:50%">
-      <h4 class="card-title">Secondary card title</h4>
-      <p class="card-text">ddd</p>
-  </div>
-</div>
 
 
-<!-- 지도 -->
-<script>
-  
 
-  var mapOptions = {
+  <script>
+    var mapOptions = {
       center: new naver.maps.LatLng(35.889672, 128.610472),
       zoom: 7,
       zoomControl: true,
-      zoomControlOptions:{
+      zoomControlOptions: {
         position: naver.maps.Position.TOP_RIGHT
       }
-  };
-  var map = new naver.maps.Map('map', mapOptions);
+    };
 
-  var 지역별확진자 =[
-    2, //창원
-    1, //경주
-    1, //영양
-  ];
+    var map = new naver.maps.Map('map', mapOptions);
+    var 지역별확진자 = [
+      2, //창원
+      1, //경주
+      1, //영양
+    ];
 
-  var 지역이름 =['창원', '경주', '영양']
-  var 지역좌표 =[
-    [35.856728, 129.224696], //경주시청
-    [36.669226, 129.111796], //영양군청
-    [35.228000, 128.681802],  //창원시청
-  ];
+    var 지역이름 = ['창원', '경주', '영양']
+    var 지역좌표 = [
+      [35.856728, 129.224696], //경주시청
+      [36.669226, 129.111796], //영양군청
+      [35.228000, 128.681802],  //창원시청
+    ];
 
-  var 지역별마커 = [];
-  var 지역별정보윈도우 =[];
-  for(let i in 지역이름){
+    var 지역별마커 = [];
+    var 지역별정보윈도우 = [];
+    for (let i in 지역이름) {
 
       var point = new naver.maps.LatLng(지역좌표[i][0], 지역좌표[i][1]);
       var contentString = [
-          '<div class="iw_inner">',
-          '<p style="font-size: small; color:black; margin:10px;">지역이름 : ',지역이름[i],'<br>',
-          '확진자수 : ',지역별확진자[i],'<br>',
-          '</p>',
-          '</div>'
+        '<div class="iw_inner">',
+        '<p style="font-size: small; color:black; margin:10px;">지역이름 : ', 지역이름[i], '<br>',
+        '확진자수 : ', 지역별확진자[i], '<br>',
+        '</p>',
+        '</div>'
       ].join('');
 
       var marker = new naver.maps.Marker({
-          map: map,
-          position: point
+        map: map,
+        position: point
       });
       var circle = new naver.maps.Circle({
-          map: map,
-          center: point,
-          radius: 지역별확진자[i] * 5000,
-          strokeWeight: 1.5,
-          fillColor: "#ff0000",
-          fillOpacity: 0.6
+        map: map,
+        center: point,
+        radius: 지역별확진자[i] * 5000,
+        strokeWeight: 1.5,
+        fillColor: "#ff0000",
+        fillOpacity: 0.6
       });
       var infowindow = new naver.maps.InfoWindow({
-          content: contentString,
+        content: contentString,
       });
       지역별마커.push(marker);
       지역별정보윈도우.push(infowindow);
-  }
+    }
 
-naver.maps.Event.addListener(지역별마커[0], "click", function(e) {
-  if (지역별정보윈도우[0].getMap()) {
-    지역별정보윈도우[0].close();
-  } else {
-    지역별정보윈도우[0].open(map, 지역별마커[0]);
-  }
-});
+    naver.maps.Event.addListener(지역별마커[0], "click", function (e) {
+      if (지역별정보윈도우[0].getMap()) {
+        지역별정보윈도우[0].close();
+      } else {
+        지역별정보윈도우[0].open(map, 지역별마커[0]);
+      }
+    });
 
-naver.maps.Event.addListener(지역별마커[1], "click", function(e) {
-  if (지역별정보윈도우[1].getMap()) {
-    지역별정보윈도우[1].close();
-  } else {
-    지역별정보윈도우[1].open(map, 지역별마커[1]);
-  }
-});
+    naver.maps.Event.addListener(지역별마커[1], "click", function (e) {
+      if (지역별정보윈도우[1].getMap()) {
+        지역별정보윈도우[1].close();
+      } else {
+        지역별정보윈도우[1].open(map, 지역별마커[1]);
+      }
+    });
 
-naver.maps.Event.addListener(지역별마커[2], "click", function(e) {
-  if (지역별정보윈도우[2].getMap()) {
-    지역별정보윈도우[2].close();
-  } else {
-    지역별정보윈도우[2].open(map, 지역별마커[2]);
-  }
-});
+    naver.maps.Event.addListener(지역별마커[2], "click", function (e) {
+      if (지역별정보윈도우[2].getMap()) {
+        지역별정보윈도우[2].close();
+      } else {
+        지역별정보윈도우[2].open(map, 지역별마커[2]);
+      }
+    });
 
-</script>
+
+
+  </script>
 
 </body>
+
 </html>
