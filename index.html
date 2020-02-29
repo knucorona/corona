@@ -309,32 +309,79 @@
 
       <script>
       Highcharts.chart('container', {
-        title: {
-          text: ' '
-        },
-        xAxis: {
-          categories: ['2.23', '2.24', '2.25', '2.26', '2.27', '2.28', '2.29']
-        },
-        yAxis: {
+          chart: {
+              zoomType: 'xy'
+          },
           title: {
-            text: '확진자 수'
-          }
-        },
-        plotOptions: {
+              text: ' '
+          },
+          xAxis: [{
+              categories: ['2.23', '2.24', '2.25', '2.26', '2.27', '2.28',
+                  '2.29'],
+              crosshair: true
+          }],
+          yAxis: [{ // Primary yAxis
+              labels: {
+                  format: '{value}',
+                  style: {
+                      color: Highcharts.getOptions().colors[1]
+                  }
+              },
+              max:3000,
+              title: {
+                  text: '전체 확진자 수',
+                  style: {
+                      color: Highcharts.getOptions().colors[1]
+                  }
+              }
+          }, { // Secondary yAxis
+              max:200,
+              title: {
+                  text: '경북대 확진자 수',
+                  style: {
+                      color: Highcharts.getOptions().colors[0]
+                  }
+              },
+              labels: {
+                  format: '{value}',
+                  style: {
+                      color: Highcharts.getOptions().colors[0]
+                  }
+              },
+              opposite: true
+          }],
+          tooltip: {
+              shared: true
+          },
+          legend: {
+              layout: 'vertical',
+              align: 'left',
+              x: 120,
+              verticalAlign: 'top',
+              y: 100,
+              floating: true,
+              backgroundColor:
+                  Highcharts.defaultOptions.legend.backgroundColor || // theme
+                  'rgba(255,255,255,0.25)'
+          },
+          plotOptions: {
           line: {
             dataLabels: {
-              enabled: true
-            },
-            enableMouseTracking: true
-          }
-        },
-        series: [{
-          name: '전체 확진자',
-          data: [602, 833, 977, 1261, 1766, 2337, 2931]
-        }, {
-          name: '경북대 확진자',
-          data: [0, 2, 2, 3, 4, 7, 7]
-        }]
+                enabled: true
+              },
+              enableMouseTracking: true
+            }
+          },
+          series: [{
+              name: '경북대 확진자 수',
+              type: 'spline',
+              yAxis: 1,
+              data: [0, 2, 2, 3, 4, 7, 7],
+          }, {
+              name: '전체 확진자 수',
+              type: 'spline',
+              data: [602, 833, 977, 1261, 1766, 2337, 2931],
+          }]
       });
     </script>
 
