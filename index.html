@@ -85,6 +85,20 @@
       color: rgb(0, 0, 0);
     }
 
+    p.diff_infect {
+      font-family: "Noto Sans KR", sans-serif;
+      font-size: 15px;
+      margin-top: -1em;
+      color: rgb(207, 90, 90);
+    }
+
+    p.diff_cured {
+      font-family: "Noto Sans KR", sans-serif;
+      font-size: 15px;
+      margin-top: -1em;
+      color: rgb(58, 98, 231);
+    }
+
     p.death {
       font-family: "Noto Sans KR", sans-serif;
       font-size: 24px;
@@ -95,20 +109,6 @@
       font-family: "Noto Sans KR", sans-serif;
       font-size: 24px;
       color: rgb(0, 110, 255);
-    }
-
-    p.diff_infect {
-      font-family: "Noto Sans KR", sans-serif;
-      font-size: 15px;
-      margin-top:-1.2em;
-      color: rgb(207, 90, 90);
-    }
-
-    p.diff_cured {
-      font-family: "Noto Sans KR", sans-serif;
-      font-size: 15px;
-      margin-top:-1.2em;
-      color: rgb(58, 98, 231);
     }
 
     .box {
@@ -163,6 +163,16 @@
       float: left;
     }
 
+    .col2 {
+      width: 100%;
+      text-align: center;
+      position: relative;
+      padding-left: 15px;
+      padding-right: 15px;
+      display: block;
+      float: left;
+    }
+
     .mapContent {
       width: 100%;
       max-width: 900px;
@@ -175,6 +185,32 @@
       margin-bottom: .2em;
     }
 
+    .graphContent {
+      width: 100%;
+      max-width: 900px;
+      border-radius: 10px;
+      text-align: center;
+      border: 2px solid rgb(252, 214, 145);
+      margin: 0 auto;
+      padding: 1em;
+      position: relative;
+      margin-bottom: .5em;
+    }
+
+
+    .linkContent {
+      width: 100%;
+      height: 10em;
+      max-width: 900px;
+      border-radius: 10px;
+      text-align: center;
+      border: 2px solid rgb(170, 199, 255);
+      margin: 0 auto;
+      padding: 1em;
+      position: relative;
+      margin-bottom: .5em;
+    }
+
     .path {
       width: 100%;
       max-width: 900px;
@@ -183,46 +219,22 @@
       border: 1px solid rgb(79, 165, 144);
       margin: 0 auto;
       padding: .2em;
-      padding-top:1em;
+      padding-top: 1em;
       position: relative;
       margin-bottom: .5em;
     }
 
-    .graphContent {
-    width: 100%;
-    max-width: 900px;
-    border-radius: 10px;
-    text-align: center;
-    border: 2px solid rgb(252, 214, 145);
-    margin: 0 auto;
-    padding: 1em;
-    position: relative;
-    margin-bottom: .2em;
-    }
-
-    .linkContent {
+    .regionContent {
       width: 100%;
-      height: 13em;
       max-width: 900px;
       border-radius: 10px;
       text-align: center;
-      border: 2px solid rgb(170, 199, 255);
       margin: 0 auto;
-      padding: 1em;
+      padding: .7em;
+      padding-top: .5em;
       position: relative;
-      margin-bottom: .2em;
+      margin-top: .5em;
     }
-
-    .col2 {
-      width: 100%;
-      text-align: center;
-      position: relative;
-      padding-left: 15px;
-      padding-right: 15px;
-      display: block;
-      float: left;
-    }
-
 
     .footer {
       width: 100%;
@@ -268,6 +280,109 @@
         <p class="e"> 완치자 </p>
         <p class="cured"><b>28</b></p>
         <p class="diff_cured"> +1 </p>
+      </div>
+
+    </div>
+
+    <div id="region" class="regionContent">
+      <h5 id="regionClick"><span style="color:rgb(47, 73, 218)">
+          <i class="fas fa-search-plus"></span></i>
+        지역별 현황 및 검사자 현황
+        <button id="openButton" class="btn btn-info" style="width:30px;height:30px;padding:1px;">
+          <i class="fas fa-angle-down fa-2x"></i></button>
+        <button id="closeButton" class="btn btn-info" style="width:30px;height:30px;padding:1px;">
+          <i class="fas fa-angle-up fa-2x"></i></button></h5>
+
+
+      <div id="regionDiv">
+        <table class="table table-hover" style="table-layout:fixed; word-break:break-all;">
+          <thead>
+            <tr class="table-primary">
+              <th scope="col">서울</th>
+              <th scope="col">부산</th>
+              <th scope="col">대구</th>
+              <th scope="col">인천</th>
+              <th scope="col">광주</th>
+            </tr>
+
+            <tr>
+              <td><b>77</b></td> <!-- 서울 -->
+              <td><b>80</b></td> <!-- 부산 -->
+              <td><b>2236</b></td> <!-- 대구 -->
+              <td><b>6</b></td> <!-- 인천 -->
+              <td><b>9</b></td> <!-- 광주 -->
+            </tr>
+
+            <tr class="table-primary">
+
+              <th scope="col">대전</th>
+              <th scope="col">울산</th>
+              <th scope="col">세종</th>
+              <th scope="col">경기</th>
+              <th scope="col">강원</th>
+            </tr>
+
+            <tr>
+              <td><b>13</b></td> <!-- 대전 -->
+              <td><b>17</b></td> <!-- 울산 -->
+              <td><b>1</b></td> <!-- 세종 -->
+              <td><b>82</b></td> <!-- 경기 -->
+              <td><b>7</b></td> <!-- 강원 -->
+            </tr>
+
+            <tr class="table-primary">
+
+              <th scope="col">충북</th>
+              <th scope="col">충남</th>
+              <th scope="col">전북</th>
+              <th scope="col">전남</th>
+              <th scope="col">경북</th>
+            </tr>
+
+            <tr>
+              <td><b>10</b></td> <!-- 충북 -->
+              <td><b>55</b></td> <!-- 충남 -->
+              <td><b>5</b></td> <!-- 전북 -->
+              <td><b>3</b></td> <!-- 전남 -->
+              <td><b>488</b></td> <!-- 경북 -->
+            </tr>
+
+            <tr class="table-primary">
+              <th scope="col">경남</th>
+              <th scope="col">제주</th>
+            </tr>
+
+            <tr>
+              <td><b>59</b></td> <!-- 경남 -->
+              <td><b>2</b></td> <!-- 제주 -->
+            </tr>
+          </thead>
+        </table>
+
+        <h5><span style="color:rgb(47, 73, 218)"><i class="fas fa-street-view"></span></i> 검사자 현황</h5>
+        <table class="table table-hover" style="table-layout:fixed; word-break:break-all;">
+          <thead>
+            <tr>
+              <td colspan="2" style="font-size:15px; background-color: whitesmoke;"><b>검사중</b></td>
+              <td colspan="3" style="font-size:15px">
+                <b>35,182</b>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" style="font-size:15px; background-color: whitesmoke;"><b>결과 음성</b></td>
+              <td colspan="3" style="font-size:15px">
+                <b>55,723</b>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" style="font-size:15px; background-color: whitesmoke;"><b>합계</b></td>
+              <td colspan="3" style="font-size:15px">
+                <b>90,905</b>
+              </td>
+            </tr>
+          </thead>
+        </table>
+
       </div>
 
     </div>
@@ -1081,6 +1196,24 @@
     var person4Cnt = 0;
     var person5Cnt = 0;
 
+    // 지역별 현황 펼치기/접기
+    $('#regionDiv').hide();
+    $('#closeButton').hide();
+    var regionDiv = $('#regionDiv');
+
+    $('#openButton').click(function () {
+      $('#regionDiv').slideDown();
+      $('#closeButton').show();
+      $('#openButton').hide();
+    });
+
+    $('#closeButton').click(function () {
+      $('#regionDiv').slideUp();
+      $('#openButton').show();
+      $('#closeButton').hide();
+    });
+
+    // 테이블 행 펼치기/접기
     $('.person1-content').hide();
     $('.person2-content').hide();
     $('.person3-content').hide();
