@@ -1281,8 +1281,8 @@
                 보건소 선별진료소
               </td>
             </tr>
-             <!-- day -->
-             <tr class="person6-content">
+            <!-- day -->
+            <tr class="person6-content">
               <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
                 <b>3월 2일(월)</b> <br>
               </td>
@@ -1345,6 +1345,24 @@
     </div>
 
   </div>
+
+  <!-- 숫자 카운트 애니메이션 -->
+  <script language="javascript" type="text/javascript">
+    $('.death').counterUp({
+      delay: 10,
+      time: 1000
+    });
+    $('.cured').counterUp({
+      delay: 10,
+      time: 1000
+    });
+    $('.infect').counterUp({
+      delay: 10,
+      time: 1000
+    });
+
+
+  </script>
 
   <!-- 테이블 접기 -->
   <script language="javascript" type="text/javascript">
@@ -1562,9 +1580,9 @@
 
   <script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
   <script type="text/javascript">
-  if(!wcs_add) var wcs_add = {};
-  wcs_add["wa"] = "4a452c022f3f98";
-  wcs_do();
+    if (!wcs_add) var wcs_add = {};
+    wcs_add["wa"] = "4a452c022f3f98";
+    wcs_do();
   </script>
 </body>
 
