@@ -289,6 +289,31 @@
 
     </div>
 
+    <!-- 경북대 현황 -->
+    <div id="row 2 col 1" class="row1">
+      <h4><span style="color:rgb(146, 35, 35)"><i class="fas fa-chart-bar"></span></i> 경북대 현황</h4>
+      <div class="col1">
+
+        <p class="e"> 확진자 </p>
+        <p class="infect">11</p>
+        <p class="diff_infect"> +0 </p>
+      </div>
+
+      <div class="col1">
+        <p class="e"> 사망자 </p>
+        <p class="death">0</p>
+        <p class="diff_infect"> +0 </p>
+      </div>
+
+      <div class="col1">
+        <p class="e"> 완치자 </p>
+        <p class="cured">0</p>
+        <p class="diff_cured"> +0 </p>
+      </div>
+
+    </div>
+
+    <!-- 지역별 현황 펼치기 -->
     <div id="region" class="regionContent">
       <h5 id="regionClick"><span style="color:rgb(47, 73, 218)">
           <i class="fas fa-search-plus"></span></i>
@@ -392,30 +417,35 @@
 
     </div>
 
-    <div id="row 2 col 1" class="row1">
-      <h4><span style="color:rgb(146, 35, 35)"><i class="fas fa-chart-bar"></span></i> 경북대 현황</h4>
-      <div class="col1">
-
-        <p class="e"> 확진자 </p>
-        <p class="infect">11</p>
-        <p class="diff_infect"> +0 </p>
+    <!-- 관련 현황 링크 펼치기 -->
+    <div id="row 3 col 1" class="linkContent">
+      <h5><span style="color:rgb(65, 92, 247)"><i class="fas fa-link"></i></span> 공지사항 및 마스크 구매처 링크
+        <button id="openButton2" class="btn btn-info" style="width:30px;height:30px;padding:1px;">
+          <i class="fas fa-angle-down fa-2x"></i></button>
+        <button id="closeButton2" class="btn btn-info" style="width:30px;height:30px;padding:1px;">
+          <i class="fas fa-angle-up fa-2x"></i></button></h5>
+      </h5>
+      <div id="linkDiv">
+        <div class="col2" style="margin-bottom:-12px">
+          <p><button class="btn btn-danger"
+              onclick="location.href='https://knu.ac.kr/wbbs/wbbs/bbs/btin/list.action?bbs_cde=34&amp;menu_idx=224'">경북대
+              코로나19 대응관련 공지</button></p>
+        </div>
+        <div class="col2" style="margin-bottom:-12px">
+          <p><button class="btn btn-info" onclick="window.open('https://instagram.com/knu_ch/')">경북대 총학생회 인스타그램</button>
+          </p>
+        </div>
+        <div class="col2" style="margin-bottom:-12px">
+          <p><button class="btn btn-success" onclick="window.open('https://www.facebook.com/knuchonghak/')">경북대 총학생회
+              페이스북</button></p>
+        </div>
+        <div class="col2" style="margin-bottom:-12px">
+          <p><button class="btn btn-warning" onclick="window.open('https://coronamask.kr/')">마스크 판매처 바로가기</button></p>
+        </div>
       </div>
-
-      <div class="col1">
-        <p class="e"> 사망자 </p>
-        <p class="death">0</p>
-        <p class="diff_infect"> +0 </p>
-      </div>
-
-      <div class="col1">
-        <p class="e"> 완치자 </p>
-        <p class="cured">0</p>
-        <p class="diff_cured"> +0 </p>
-      </div>
-
     </div>
 
-    <!-- 그래프가 들어갈 공간 -->
+    <!-- 확진자 추세선 그래프 -->
     <div id="row 1 col 1" class="graphContent">
       <h5><span style="color:rgb(243, 173, 81)"><i class="fas fa-chart-line"></i></span> 확진자 추세 그래프</h5>
 
@@ -496,33 +526,6 @@
         });
       </script>
 
-    </div>
-
-    <div id="row 3 col 1" class="linkContent">
-      <h5><span style="color:rgb(65, 92, 247)"><i class="fas fa-link"></i></span> 공지사항 및 마스크 구매처 링크
-        <button id="openButton2" class="btn btn-info" style="width:30px;height:30px;padding:1px;">
-          <i class="fas fa-angle-down fa-2x"></i></button>
-        <button id="closeButton2" class="btn btn-info" style="width:30px;height:30px;padding:1px;">
-          <i class="fas fa-angle-up fa-2x"></i></button></h5>
-      </h5>
-      <div id="linkDiv">
-        <div class="col2" style="margin-bottom:-12px">
-          <p><button class="btn btn-danger"
-              onclick="location.href='https://knu.ac.kr/wbbs/wbbs/bbs/btin/list.action?bbs_cde=34&amp;menu_idx=224'">경북대
-              코로나19 대응관련 공지</button></p>
-        </div>
-        <div class="col2" style="margin-bottom:-12px">
-          <p><button class="btn btn-info" onclick="window.open('https://instagram.com/knu_ch/')">경북대 총학생회 인스타그램</button>
-          </p>
-        </div>
-        <div class="col2" style="margin-bottom:-12px">
-          <p><button class="btn btn-success" onclick="window.open('https://www.facebook.com/knuchonghak/')">경북대 총학생회
-              페이스북</button></p>
-        </div>
-        <div class="col2" style="margin-bottom:-12px">
-          <p><button class="btn btn-warning" onclick="window.open('https://coronamask.kr/')">마스크 판매처 바로가기</button></p>
-        </div>
-      </div>
     </div>
 
     <div id="row 4 col 1" class="mapContent">
