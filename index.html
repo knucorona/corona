@@ -33,7 +33,7 @@
   <title>경북대 코로나 알리미</title>
   <style>
     h3 {
-      font-family: 'Jua', sans-serif;
+      font-family: 'Noto Sans KR', sans-serif;
       font-weight: 700;
       font-size: 35px;
       margin-bottom: 3rem;
@@ -41,26 +41,27 @@
 
     h4 {
       font-family: 'Noto Sans KR', sans-serif;
-      font-size: 23px;
+      font-size: 26px;
       display: block;
       font-weight: 700;
+      text-align: left;
     }
 
     h5 {
       font-family: 'Noto Sans KR', sans-serif;
-      font-size: 18px;
+      font-size: 20px;
       display: block;
       font-weight: 700;
     }
 
     p {
-      font-family: 'Gothic A1', sans-serif;
+      font-family: 'Noto Sans KR', sans-serif;
       font-size: 25px;
       display: block;
     }
 
     p.a {
-      font-family: 'Gothic A1', sans-serif;
+      font-family: 'Noto Sans KR', sans-serif;
       font-size: 15px;
     }
 
@@ -81,36 +82,54 @@
 
     p.e {
       font-family: 'Gothic A1', sans-serif;
-      font-size: 17px;
-      margin-bottom: -.5rem;
+      font-weight:800;
+      font-size: 15px;
+      padding:.1em;
+      background-color: white;
+      border:1px solid rgb(219, 219, 219);
+      border-radius:10px;
+      margin-bottom: .1rem;
     }
 
     p.infect {
-      font-family: 'Gothic A1', sans-serif;
+      font-family: 'Noto Sans KR', sans-serif;
       font-size: 24px;
       font-weight: 800;
-      color: rgb(0, 0, 0);
+      color: rgb(241, 57, 88);
     }
 
     p.diff_infect {
-      font-family: 'Gothic A1', sans-serif;
+      font-family: 'Noto Sans KR', sans-serif;
       font-size: 15px;
-      margin-top: -1em;
-      color: rgb(207, 90, 90);
+      font-weight: 700;
+      margin-top: -1.3em;
+      margin-bottom: -.2em;
+      color: rgb(235, 83, 109);
+    }
+
+    p.diff_death {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      margin-top: -1.3em;
+      margin-bottom: -.2em;
+      color: rgb(99, 61, 67);
     }
 
     p.diff_cured {
       font-family: 'Gothic A1', sans-serif;
       font-size: 15px;
-      margin-top: -1em;
+      font-weight: 700;
+      margin-top: -1.3em;
+      margin-bottom: -.2em;
       color: rgb(58, 98, 231);
     }
 
     p.death {
-      font-family: 'Gothic A1', sans-serif;
+      font-family: 'Noto Sans KR', sans-serif;
       font-size: 24px;
       font-weight: 800;
-      color: rgb(233, 27, 27);
+      color: rgb(92, 62, 67);
     }
 
     p.cured {
@@ -127,12 +146,17 @@
     .container-rounded {
       background: white;
       width: 100%;
-      max-width: 1000px;
+      max-width: 1100px;
       border-radius: 15px;
-      border: 2px solid rgb(151, 157, 170);
       margin: 0 auto;
-      padding: 1.3em;
-      box-shadow: 0px 0px 7px 2px rgb(233, 232, 232);
+    }
+
+    .container-title {
+      background: linear-gradient(to bottom, rgb(51, 179, 253), rgb(11, 146, 236));
+      width: 100%;
+      max-width: 1100px;
+      padding: 1.5em;
+      margin: 0 auto;
     }
 
     .row0 {
@@ -147,27 +171,27 @@
       margin-bottom: .7em;
     }
 
-    .row1 {
-      background: rgb(247, 247, 247);
-      height: 8.5em;
+    .nowContainer {
+      background: rgb(255, 255, 255);
+      height: 10em;
       width: 100%;
-      max-width: 900px;
-      border-radius: 10px;
+      max-width: 1200px;
       text-align: center;
       margin: 0 auto;
-      border: 2px solid rgb(210, 209, 214);
+      border-radius: 10px;
       padding: .5em;
       position: relative;
-      margin-bottom: .5em;
+      margin-bottom: 1em;
     }
 
-    .col1 {
+    .nowContent {
       flex: 0 0 33.333%;
       width: 33.3333%;
       text-align: center;
       position: relative;
       padding-left: 15px;
       padding-right: 15px;
+      padding: .5em;
       display: block;
       float: left;
     }
@@ -184,10 +208,9 @@
 
     .mapContent {
       width: 100%;
-      max-width: 900px;
+      max-width: 1200px;
       border-radius: 10px;
       text-align: center;
-      border: 2px solid rgb(79, 165, 144);
       margin: 0 auto;
       padding: 1em;
       position: relative;
@@ -196,10 +219,9 @@
 
     .graphContent {
       width: 100%;
-      max-width: 900px;
+      max-width: 1200px;
       border-radius: 10px;
       text-align: center;
-      border: 2px solid rgb(252, 214, 145);
       margin: 0 auto;
       padding: 1em;
       position: relative;
@@ -221,12 +243,11 @@
 
     .path {
       width: 100%;
-      max-width: 900px;
+      max-width: 1200px;
       border-radius: 10px;
       text-align: center;
-      border: 1px solid rgb(79, 165, 144);
       margin: 0 auto;
-      padding: .2em;
+      padding: 1em;
       padding-top: 1em;
       position: relative;
       margin-bottom: .5em;
@@ -261,30 +282,46 @@
 <body>
 
   <div class="container-rounded">
-    <h3>경북대 코로나 알리미</h3>
-    <p class="a" style="margin-top:-3em">[확진자 관련 제보 및 피드백] knucorona@gmail.com </p>
+    <div class="container-title">
+      <h3><span style="color:white">경북대 코로나 알리미</span></h3>
+
+      <p class="a" style="margin-top:-3em">
+        <span style="color:white"><b>http://knucorona.coo.kr/</b></span> </p>
+
+      <p class="a" style="margin-top:-1em">
+        <span style="color:white"><i class="fas fa-envelope-open-text"></i>
+          확진자 관련 제보 및 피드백 | knucorona@gmail.com</span> </p>
+    </div>
 
     <div id="row 0 col 1" class="row0">
-      <p class="a"><span style="color:rgb(187, 187, 187)"><i class="fas fa-edit"></i></span> 업데이트 : 03.05 (14:30) 기준</p>
+      <p class="a"><span style="color:rgb(187, 187, 187)">
+        <i class="fas fa-edit"></i></span> 업데이트 : 03.05 (14:30) 기준</p>
     </div>
 
     <!-- 국내 현황 -->
-    <div id="row 1 col 1" class="row1">
-      <h4><span style="color:rgb(47, 73, 218)"><i class="fas fa-chart-bar"></span></i> 국내 현황</h4>
-      <div class="col1">
+    <div id="row 1 col 1" class="nowContainer">
+      <h4 style ="border-bottom:3px solid rgb(230, 230, 230); padding:.1em;">
+        <span style="color:rgb(47, 73, 218);">
+          <i class="fas fa-user-friends"></span></i> 국내 현황</h4>
+
+      <div class="nowContent"
+      style="background-color: rgb(255, 242, 244); border:2px solid white; border-radius:10px">
 
         <p class="e"> 확진자 </p>
         <p class="infect">5,766</p>
         <p class="diff_infect"> +145 </p>
+
       </div>
 
-      <div class="col1">
+      <div class="nowContent"
+      style="background-color: rgb(235, 235, 235); border:2px solid white; border-radius:10px">
         <p class="e"> 사망자 </p>
         <p class="death">39</p>
-        <p class="diff_infect"> +4 </p>
+        <p class="diff_death"> +4 </p>
       </div>
 
-      <div class="col1">
+      <div class="nowContent"
+      style="background-color: rgb(228, 248, 253); border:2px solid white; border-radius:10px">
         <p class="e"> 완치자 </p>
         <p class="cured">88</p>
         <p class="diff_cured"> +47 </p>
@@ -293,22 +330,27 @@
     </div>
 
     <!-- 경북대 현황 -->
-    <div id="row 2 col 1" class="row1">
-      <h4><span style="color:rgb(146, 35, 35)"><i class="fas fa-chart-bar"></span></i> 경북대 현황</h4>
-      <div class="col1">
+    <div id="row 2 col 1" class="nowContainer" >
+      <h4 style ="border-bottom:3px solid rgb(230, 230, 230);padding:.1em;">
+        <span style="color:rgb(180, 84, 105)">
+          <i class="fas fa-user-friends"></span></i> 경북대 현황</h4>
+      <div class="nowContent"
+      style="background-color: rgb(255, 242, 244); border:2px solid white; border-radius:10px">
 
         <p class="e"> 확진자 </p>
         <p class="infect">14</p>
         <p class="diff_infect"> +3 </p>
       </div>
 
-      <div class="col1">
+      <div class="nowContent"
+      style="background-color: rgb(235, 235, 235); border:2px solid white; border-radius:10px">
         <p class="e"> 사망자 </p>
         <p class="death">0</p>
-        <p class="diff_infect"> +0 </p>
+        <p class="diff_death"> +0 </p>
       </div>
 
-      <div class="col1">
+      <div class="nowContent"
+      style="background-color: rgb(228, 248, 253); border:2px solid white; border-radius:10px">
         <p class="e"> 완치자 </p>
         <p class="cured">0</p>
         <p class="diff_cured"> +0 </p>
@@ -318,7 +360,8 @@
 
     <!-- 지역별 현황 펼치기 -->
     <div id="region" class="regionContent">
-      <h5 id="regionClick"><span style="color:rgb(47, 73, 218)">
+      <h5 style="border-bottom:2px solid rgb(230, 230, 230);padding:.5em;">
+        <span style="color:rgb(23, 116, 255)">
           <i class="fas fa-search-plus"></span></i>
         지역별 현황 및 검사자 현황
         <button id="openButton" class="btn btn-info" style="width:30px;height:30px;padding:1px;">
@@ -422,7 +465,9 @@
 
     <!-- 관련 현황 링크 펼치기 -->
     <div id="row 3 col 1" class="linkContent">
-      <h5><span style="color:rgb(65, 92, 247)"><i class="fas fa-link"></i></span> 공지사항 및 마스크 구매처 링크
+      <h5 style="border-bottom:2px solid rgb(230, 230, 230); padding:.5em;">
+        <span style="color:rgb(3, 118, 248)"><i class="fas fa-link"></i></span>
+        공지사항 및 마스크 구매처 링크
         <button id="openButton2" class="btn btn-info" style="width:30px;height:30px;padding:1px;">
           <i class="fas fa-angle-down fa-2x"></i></button>
         <button id="closeButton2" class="btn btn-info" style="width:30px;height:30px;padding:1px;">
@@ -446,14 +491,18 @@
           <p><button class="btn btn-warning" onclick="window.open('https://coronamask.kr/')">마스크 판매처 바로가기</button></p>
         </div>
         <div class="col2" style="margin-bottom:-12px">
-          <p><button class="btn btn-primary" onclick="window.open('https://mohw.go.kr/react/popup_200128.html')">전국 안심병원 현황</button></p>
+          <p><button class="btn btn-primary" onclick="window.open('https://mohw.go.kr/react/popup_200128.html')">전국 안심병원
+              현황</button></p>
         </div>
       </div>
     </div>
 
     <!-- 확진자 추세선 그래프 -->
     <div id="row 4 col 1" class="graphContent">
-      <h5><span style="color:rgb(243, 173, 81)"><i class="fas fa-chart-line"></i></span> 확진자 추세 그래프</h5>
+      <h4 style="border-bottom:3px solid rgb(252, 183, 105); padding:.3em;">
+        <span style="color:rgb(243, 173, 81)">
+          <i class="fas fa-chart-line"></i></span>
+          확진자 추세 그래프</h4>
 
       <script src="https://code.highcharts.com/highcharts.js"></script>
       <script src="https://code.highcharts.com/modules/exporting.js"></script>
@@ -491,7 +540,7 @@
               }
             }
           }, { // Secondary yAxis
-            max: 40,
+            max: 200,
             title: {
               text: '경북대 확진자 수',
               style: {
@@ -536,7 +585,10 @@
 
     <!-- 경북대 현황 지도 -->
     <div id="row 5 col 1" class="mapContent">
-      <h5><span style="color:rgb(35, 146, 109)"><i class="fas fa-map-marked-alt"></i></span> 경북대 확진자 지도</h5>
+      <h4 style="border-bottom:3px solid rgb(32, 179, 105); padding:.3em;">
+        <span style="color:rgb(35, 146, 109)">
+        <i class="fas fa-map-marked-alt"></i></span>
+        경북대 확진자 지도</h4>
 
       <div>
         <!-- 지도가 들어갈 공간 -->
@@ -547,7 +599,10 @@
 
     <!-- 경북대 확진자 이동경로 -->
     <div id="row 6 col 1" class="path">
-      <h5><span style="color:rgb(73, 138, 116)"><i class="fas fa-road"></i></span> 확진자 이동경로 (행 클릭시 펼침/닫힘) </h5>
+      <h4 style="border-bottom:3px solid rgb(93, 176, 187); font-size:17px;padding:.3em;">
+        <span style="color:rgb(73, 138, 116)">
+          <i class="fas fa-road"></i></span>
+          확진자 이동경로 (행 클릭시 펼침/닫힘) </h4>
 
       <div>
         <!-- 테이블이 들어갈 공간 -->
@@ -1384,7 +1439,8 @@
       <hr width="100%" color="lightgray" size="1">
       <p style="font-size:12px"> <a href="https://www.notion.so/41c18523ef264a65953829902a90a9fe" target="_blank">[현황 및
           확진자 이동경로 출처]</a> </p>
-      <p style="font-size:12px"> <a href="https://www.notion.so/chanhui/3c3f593d20cd42ee9241451ee9225a4b" target="_blank"> [사이트 기능 업데이트 현황]</a> </p>
+      <p style="font-size:12px"> <a href="https://www.notion.so/chanhui/3c3f593d20cd42ee9241451ee9225a4b"
+          target="_blank"> [사이트 기능 업데이트 현황]</a> </p>
     </div>
 
   </div>
