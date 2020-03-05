@@ -280,7 +280,7 @@
 
     <div id="row 0 col 1" class="row0">
       <p class="a"><span style="color:rgb(187, 187, 187)">
-        <i class="fas fa-edit"></i></span> 업데이트 : 03.05 (16:00) 기준</p>
+        <i class="fas fa-edit"></i></span> 업데이트 : 03.05 (18:40) 기준</p>
     </div>
 
     <!-- 국내 현황 -->
@@ -323,8 +323,8 @@
       style="background-color: rgb(255, 242, 244); border:2px solid white; border-radius:10px">
 
         <p class="e"> 확진자 </p>
-        <p class="infect">14</p>
-        <p class="diff_infect"> +3 </p>
+        <p class="infect">15</p>
+        <p class="diff_infect"> +1 </p>
       </div>
 
       <div class="nowContent"
@@ -557,7 +557,7 @@
             name: '경북대 확진자 수',
             type: 'spline',
             yAxis: 1,
-            data: [0, 2, 2, 3, 4, 7, 7, 8, 8, 11, 14, 14],
+            data: [0, 2, 2, 3, 4, 7, 7, 8, 8, 11, 14, 15],
           }, {
             name: '전체 확진자 수',
             type: 'spline',
@@ -1359,8 +1359,55 @@
 
             <!---------------------------------------------------->
             <!-- PERSON 7 -->
-            <tr id="person7Tr" style="background-color:rgb(236, 237, 238);">
-              <td td colspan="4" style="font-size:13px"><span style="color:rgb(163, 163, 163)"><b>확인중</b></span></td>
+            <tr id="person7Tr" style="background-color:rgb(230, 237, 240);">
+              <td style="font-size:13px"><b>대전시</b></td>
+              <td style="font-size:13px"><b>20대(남)</b></td>
+              <td style="font-size:13px"><b>대구 신천지 교육생</b></td>
+              <td style="font-size:13px"><b>3.4(수)</b></td>
+            </tr>
+
+            <!-- day -->
+            <tr class="person7-content">
+              <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
+                <b>2월 28일(금) ~ 3월3일(화)</b> <br>
+              </td>
+            </tr>
+            <tr class="person6-content">
+              <td colspan="1" style="font-size:12px">-</td>
+              <td colspan="3" style="text-align:left;font-size:12px">
+                종일 자택(원내동, 한아름아파트) / 자가격리 중
+              </td>
+            </tr>
+            <!-- day -->
+            <tr class="person6-content">
+              <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
+                <b>3월 4일(수)</b> <br>
+              </td>
+            </tr>
+            <tr class="person6-content">
+              <td colspan="1" style="font-size:12px">17:30</td>
+              <td colspan="3" style="text-align:left;font-size:12px">
+                유성구보건소
+              </td>
+            </tr>
+            <tr class="person6-content">
+              <td colspan="1" style="font-size:12px">18:00</td>
+              <td colspan="3" style="text-align:left;font-size:12px">
+                자택
+              </td>
+            </tr>
+
+            <!-- day -->
+            <tr class="person6-content">
+              <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
+                <b>3월 5일(목)</b> <br>
+              </td>
+            </tr>
+            <tr class="person6-content">
+              <td colspan="1" style="font-size:12px">1130</td>
+              <td colspan="3" style="text-align:left;font-size:12px">
+                충남대병원 입원
+              </td>
             </tr>
 
             <!---------------------------------------------------->
@@ -1456,6 +1503,7 @@
     var person4Cnt = 0;
     var person5Cnt = 0;
     var person6Cnt = 0;
+    var person7Cnt = 0;
 
     // 지역별 현황 펼치기/접기
     $('#regionDiv').hide();
@@ -1494,6 +1542,7 @@
     $('.person4-content').hide();
     $('.person5-content').hide();
     $('.person6-content').hide();
+    $('.person7-content').hide();
 
     $('#person1Tr').click(function () {
       if (person1Cnt == 0) {
@@ -1572,6 +1621,20 @@
         $('.person6-content').hide();
       }
     });
+
+    $('#person7Tr').click(function () {
+      if (person7Cnt == 0) {
+        person7Cnt = 1;
+        $('#person7Tr').css("background-color", "#A9AED6");
+        $('.person7-content').fadeIn(300);
+      }
+      else {
+        person7Cnt = 0;
+        $('#person7Tr').css("background-color", "#E6EDF0");
+        $('.person7-content').hide();
+      }
+    });
+
   </script>
 
   <script>
@@ -1590,6 +1653,7 @@
       2, //경주
       1, //영양
       1, //봉화
+      1, //대전
     ];
 
     var 지역이름 = ['창원', '경주', '영양', '봉화']
@@ -1598,6 +1662,7 @@
       [35.856728, 129.224696],  //경주시청
       [36.669226, 129.111796],  //영양군청
       [36.896468, 128.732478],  //봉화군청
+      [36.350660, 127.384829],  //대전시청
     ];
 
     var 지역별마커 = [];
@@ -1664,6 +1729,13 @@
       }
     });
 
+    naver.maps.Event.addListener(지역별마커[4], "click", function (e) {
+      if (지역별정보윈도우[4].getMap()) {
+        지역별정보윈도우[4].close();
+      } else {
+        지역별정보윈도우[4].open(map, 지역별마커[4]);
+      }
+    });
 
 
   </script>
