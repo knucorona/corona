@@ -566,6 +566,71 @@
         });
       </script>
 
+            <!-- 일별 확진자수 증가표 -->
+            <div id="diff" class="regionContent">
+              <h5 style="padding:.5em; border-bottom:2px solid rgb(230, 230, 230); ">
+                일별 확진자수 증가 추이
+                <button id="openButton3" class="btn btn-warning" style="width:30px;height:30px;padding:1px;">
+                  <i class="fas fa-angle-down fa-2x"></i></button>
+                <button id="closeButton3" class="btn btn-warning" style="width:30px;height:30px;padding:1px;">
+                  <i class="fas fa-angle-up fa-2x"></i></button></h5>
+      
+              <div id="diffDiv">
+                <table class="table table-hover" style="table-layout:fixed; word-break:break-all;">
+                  <thead>
+                    <tr class="table-light">
+                      <th scope="col">2.24</th>
+                      <th scope="col">2.25</th>
+                      <th scope="col">2.26</th>
+                      <th scope="col">2.27</th>
+                      <th scope="col">2.28</th>
+                    </tr>
+                  </thead>
+                  <tr>
+                    <td>+231</td>
+                    <td>+144</td>
+                    <td>+284</td>
+                    <td>+505</td>
+                    <td>+571</td>
+                  </tr>
+                  <thead>
+                    <tr class="table-light">
+                      <th scope="col">2.29</th>
+                      <th scope="col">3.1</th>
+                      <th scope="col">3.2</th>
+                      <th scope="col">3.3</th>
+                      <th scope="col">3.4</th>
+                    </tr>
+                  </thead>
+                  <tr>
+                    <td>+813</td>
+                    <td>+1062</td>
+                    <td>+600</td>
+                    <td>+516</td>
+                    <td>+438</td>
+                  </tr>
+                  <thead>
+                    <tr class="table-light">
+                      <th scope="col">3.5</th>
+                      <th scope="col">3.6</th>
+                      <th scope="col"></th>
+                      <th scope="col"></th>
+                      <th scope="col"></th>
+                    </tr>
+                  </thead>
+                  <tr>
+                    <td>+518</td>
+                    <td>+0</td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                  </tr>
+      
+                </table>
+              </div>
+      
+            </div>
+
     </div>
 
     <!-- 경북대 현황 지도 -->
@@ -1508,8 +1573,10 @@
     // 지역별 현황 펼치기/접기
     $('#regionDiv').hide();
     $('#linkDiv').hide();
+    $('#diffDiv').hide();
     $('#closeButton').hide();
     $('#closeButton2').hide();
+    $('#closeButton3').hide();
 
     $('#openButton').click(function () {
       $('#regionDiv').slideDown();
@@ -1533,6 +1600,18 @@
       $('#linkDiv').slideUp();
       $('#openButton2').show();
       $('#closeButton2').hide();
+    });
+
+    $('#openButton3').click(function () {
+      $('#diffDiv').slideDown();
+      $('#closeButton3').show();
+      $('#openButton3').hide();
+    });
+
+    $('#closeButton3').click(function () {
+      $('#diffDiv').slideUp();
+      $('#openButton3').show();
+      $('#closeButton3').hide();
     });
 
     // 테이블 행 펼치기/접기
