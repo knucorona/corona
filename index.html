@@ -151,13 +151,14 @@
 
     .nowContainer {
       background: rgb(255, 255, 255);
-      height: 10em;
-      width: 95%;
-      max-width: 650px;
+      height: auto;
+      overflow: hidden;
+      width: 90%;
+      max-width: 1200px;
       text-align: center;
       margin: 0 auto;
       border-radius: 10px;
-      padding: .5em;
+      padding: .1em;
       position: relative;
       margin-bottom: 1em;
     }
@@ -191,8 +192,7 @@
       max-width: 350px;
       text-align: center;
       margin: 0 auto;
-      margin-top:-1em;
-      margin-bottom:1.5em;
+      margin-bottom: 1.5em;
       border-radius: 10px;
       position: relative;
     }
@@ -271,6 +271,32 @@
       width: 300px;
     }
   </style>
+  <style media="(min-width: 451px) and (max-width: 3000px)">
+    .nowData_korea {
+      float: left;
+      width: 50%;
+      padding: 1em;
+    }
+
+    .nowData_school {
+      float: left;
+      width: 50%;
+      padding: 1em;
+    }
+  </style>
+  <style media="all and (max-width: 450px)">
+    .nowData_korea {
+      float: left;
+      width: 100%;
+      padding: .3em;
+    }
+
+    .nowData_school {
+      float: left;
+      width: 100%;
+      padding: .3em;
+    }
+  </style>
 
 </head>
 
@@ -288,66 +314,74 @@
     <div id="row 0 col 1" class="row0">
       <p class="a" style="font-size:11px"><span style="color:rgb(187, 187, 187)">
           <i class="fas fa-edit"></i></span>
-          <span style="color:rgb(165, 165, 165)">
+        <span style="color:rgb(165, 165, 165)">
           업데이트 : <span id="update" style="color:rgb(165, 165, 165)"></span> 기준 (차이 : 당일 00시 대비)</span></p>
     </div>
 
     <!-- 국내 현황 -->
     <div id="row 1 col 1" class="nowContainer">
-      <h4 style="border-bottom:3px solid rgb(230, 230, 230); padding:.1em;">
-        <span style="color:rgb(54, 64, 155);">
-          <i class="fas fa-user-friends"></span></i> 국내 현황</h4>
 
-      <div class="nowContent" style="background-color:rgb(248, 248, 248); border-bottom:3px solid rgb(252, 167, 192);">
+      <div id="korea" class="nowData_korea">
+        <h4 style="border-bottom:3px solid rgb(230, 230, 230); padding:.2em;">
+          <span style="color:rgb(54, 64, 155);">
+            <i class="fas fa-user-friends"></span></i> 국내 현황</h4>
 
-        <p class="e"> 확진자 </p>
-        <p id ="국내확진자" class="infect"></p>
-        <p id ="국내확진자차이" class="diff_infect"></p>
+        <div class="nowContent"
+          style="background-color: rgb(248, 248, 248); border-bottom:3px solid rgb(252, 167, 192);">
 
+          <p class="e"> 확진자 </p>
+          <p id="국내확진자" class="infect">7,134</p>
+          <p id="국내확진자차이" class="diff_infect"> +0 </p>
+
+        </div>
+
+        <div class="nowContent"
+          style="background-color: rgb(248, 248, 248); border-bottom:3px solid rgb(190, 189, 189);">
+          <p class="e"> 사망자 </p>
+          <p id="국내사망자" class="death">50</p>
+          <p id="국내사망자차이" class="diff_death"> +1 </p>
+        </div>
+
+        <div class="nowContent"
+          style="background-color: rgb(248, 248, 248); border-bottom:3px solid rgb(144, 209, 253);">
+          <p class="e"> 완치자 </p>
+          <p id="국내완치자" class="cured">118</p>
+          <p id="국내완치자차이" class="diff_cured"> +0 </p>
+        </div>
       </div>
 
-      <div class="nowContent" style="background-color: rgb(248, 248, 248); border-bottom:3px solid rgb(190, 189, 189);">
-        <p class="e"> 사망자 </p>
-        <p id ="국내사망자" class="death"></p>
-        <p id ="국내사망자차이" class="diff_death"></p>
-      </div>
+      <!-- 경북대 현황 -->
+      <div id="school" class="nowData_school">
+        <h4 style="border-bottom:3px solid rgb(230, 230, 230);padding:.2em;">
+          <span style="color:rgb(199, 108, 128)">
+            <i class="fas fa-user-friends"></span></i> 경북대 현황</h4>
+        <div class="nowContent"
+          style="background-color: rgb(248, 248, 248); border-bottom:3px solid rgb(252, 167, 192);">
 
-      <div class="nowContent" style="background-color: rgb(248, 248, 248); border-bottom:3px solid rgb(144, 209, 253);">
-        <p class="e"> 완치자 </p>
-        <p id ="국내완치자" class="cured"></p>
-        <p id ="국내완치자차이" class="diff_cured"></p>
+          <p class="e"> 확진자 </p>
+          <p id="경대확진자" class="infect">16</p>
+          <p id="경대확진자차이" class="diff_infect"> +0 </p>
+        </div>
+
+        <div class="nowContent"
+          style="background-color: rgb(248, 248, 248); border-bottom:3px solid rgb(190, 189, 189);">
+          <p class="e"> 사망자 </p>
+          <p id="경대사망자" class="death">0</p>
+          <p id="경대사망자차이" class="diff_death"> +0 </p>
+        </div>
+
+        <div class="nowContent"
+          style="background-color: rgb(248, 248, 248); border-bottom:3px solid rgb(144, 209, 253);">
+          <p class="e"> 완치자 </p>
+          <p id="경대완치자" class="cured">0</p>
+          <p id="경대완치자차이" class="diff_cured"> +0 </p>
+        </div>
       </div>
 
     </div>
 
     <div class="yesterday">
-      <p class="a">어제 하루 국내 확진자 <span id ="daydiff"></span>명 증가</p>
-    </div>
-
-    <!-- 경북대 현황 -->
-    <div id="row 2 col 1" class="nowContainer">
-      <h4 style="border-bottom:3px solid rgb(230, 230, 230);padding:.1em;">
-        <span style="color:rgb(199, 108, 128)">
-          <i class="fas fa-user-friends"></span></i> 경북대 현황</h4>
-      <div class="nowContent" style="background-color: rgb(248, 248, 248); border-bottom:3px solid rgb(252, 167, 192);">
-
-        <p class="e"> 확진자 </p>
-        <p id ="경대확진자" class="infect"></p>
-        <p id ="경대확진자차이" class="diff_infect"></p>
-      </div>
-
-      <div class="nowContent" style="background-color: rgb(248, 248, 248); border-bottom:3px solid rgb(190, 189, 189);">
-        <p class="e"> 사망자 </p>
-        <p id ="경대사망자" class="death"></p>
-        <p id ="경대사망자차이" class="diff_death"></p>
-      </div>
-
-      <div class="nowContent" style="background-color: rgb(248, 248, 248); border-bottom:3px solid rgb(144, 209, 253);">
-        <p class="e"> 완치자 </p>
-        <p id ="경대완치자" class="cured"></p>
-        <p id ="경대완치자차이" class="diff_cured"></p>
-      </div>
-
+      <p class="a">어제 하루 국내 확진자 <span id="daydiff"></span>명 증가</p>
     </div>
 
     <!-- 지역별 현황 펼치기 -->
@@ -432,20 +466,20 @@
           <thead>
             <tr>
               <td colspan="2" style="font-size:15px; background-color: whitesmoke;"><b>검사중</b></td>
-              <td id ="검사중" colspan="3" style="font-size:15px">
-                
+              <td id="검사중" colspan="3" style="font-size:15px">
+
               </td>
             </tr>
             <tr>
               <td colspan="2" style="font-size:15px; background-color: whitesmoke;"><b>결과 음성</b></td>
-              <td id ="결과음성" colspan="3" style="font-size:15px">
-                
+              <td id="결과음성" colspan="3" style="font-size:15px">
+
               </td>
             </tr>
             <tr>
               <td colspan="2" style="font-size:15px; background-color: whitesmoke;"><b>합계</b></td>
-              <td id ="결과합계" colspan="3" style="font-size:15px">
-                
+              <td id="결과합계" colspan="3" style="font-size:15px">
+
               </td>
             </tr>
           </thead>
@@ -1571,23 +1605,23 @@
       document.getElementById("경대완치자차이").innerHTML = '+' + String(경북대현황[5].toLocaleString());
 
       //지역별 확진자수
-      document.getElementById("seoul").innerHTML = '<b>' + String(전국지역확진자[0].toLocaleString()) +'</b>';
-      document.getElementById("busan").innerHTML = '<b>' + String(전국지역확진자[1].toLocaleString()) +'</b>';
-      document.getElementById("daegu").innerHTML = '<b>' + String(전국지역확진자[2].toLocaleString()) +'</b>';
-      document.getElementById("incheon").innerHTML = '<b>' + String(전국지역확진자[3].toLocaleString()) +'</b>';
-      document.getElementById("gwangju").innerHTML = '<b>' + String(전국지역확진자[4].toLocaleString()) +'</b>';
-      document.getElementById("daejeon").innerHTML = '<b>' + String(전국지역확진자[5].toLocaleString()) +'</b>';
-      document.getElementById("ulsan").innerHTML = '<b>' + String(전국지역확진자[6].toLocaleString()) +'</b>';
-      document.getElementById("sejong").innerHTML = '<b>' + String(전국지역확진자[7].toLocaleString()) +'</b>';
-      document.getElementById("gyeong").innerHTML = '<b>' + String(전국지역확진자[8].toLocaleString()) +'</b>';
-      document.getElementById("kangwon").innerHTML = '<b>' + String(전국지역확진자[9].toLocaleString()) +'</b>'; 
-      document.getElementById("chbuk").innerHTML = '<b>' + String(전국지역확진자[10].toLocaleString()) +'</b>';
-      document.getElementById("chnam").innerHTML = '<b>' + String(전국지역확진자[11].toLocaleString()) +'</b>';
-      document.getElementById("jnbuk").innerHTML = '<b>' + String(전국지역확진자[12].toLocaleString()) +'</b>';     
-      document.getElementById("jnnam").innerHTML = '<b>' + String(전국지역확진자[13].toLocaleString()) +'</b>';     
-      document.getElementById("kybuk").innerHTML = '<b>' + String(전국지역확진자[14].toLocaleString()) +'</b>';    
-      document.getElementById("kynam").innerHTML = '<b>' + String(전국지역확진자[15].toLocaleString()) +'</b>';
-      document.getElementById("jeju").innerHTML = '<b>' + String(전국지역확진자[16].toLocaleString()) +'</b>';
+      document.getElementById("seoul").innerHTML = '<b>' + String(전국지역확진자[0].toLocaleString()) + '</b>';
+      document.getElementById("busan").innerHTML = '<b>' + String(전국지역확진자[1].toLocaleString()) + '</b>';
+      document.getElementById("daegu").innerHTML = '<b>' + String(전국지역확진자[2].toLocaleString()) + '</b>';
+      document.getElementById("incheon").innerHTML = '<b>' + String(전국지역확진자[3].toLocaleString()) + '</b>';
+      document.getElementById("gwangju").innerHTML = '<b>' + String(전국지역확진자[4].toLocaleString()) + '</b>';
+      document.getElementById("daejeon").innerHTML = '<b>' + String(전국지역확진자[5].toLocaleString()) + '</b>';
+      document.getElementById("ulsan").innerHTML = '<b>' + String(전국지역확진자[6].toLocaleString()) + '</b>';
+      document.getElementById("sejong").innerHTML = '<b>' + String(전국지역확진자[7].toLocaleString()) + '</b>';
+      document.getElementById("gyeong").innerHTML = '<b>' + String(전국지역확진자[8].toLocaleString()) + '</b>';
+      document.getElementById("kangwon").innerHTML = '<b>' + String(전국지역확진자[9].toLocaleString()) + '</b>';
+      document.getElementById("chbuk").innerHTML = '<b>' + String(전국지역확진자[10].toLocaleString()) + '</b>';
+      document.getElementById("chnam").innerHTML = '<b>' + String(전국지역확진자[11].toLocaleString()) + '</b>';
+      document.getElementById("jnbuk").innerHTML = '<b>' + String(전국지역확진자[12].toLocaleString()) + '</b>';
+      document.getElementById("jnnam").innerHTML = '<b>' + String(전국지역확진자[13].toLocaleString()) + '</b>';
+      document.getElementById("kybuk").innerHTML = '<b>' + String(전국지역확진자[14].toLocaleString()) + '</b>';
+      document.getElementById("kynam").innerHTML = '<b>' + String(전국지역확진자[15].toLocaleString()) + '</b>';
+      document.getElementById("jeju").innerHTML = '<b>' + String(전국지역확진자[16].toLocaleString()) + '</b>';
 
       // 검사자수
       document.getElementById("검사중").innerHTML = 검사현황[0].toLocaleString();
@@ -1598,7 +1632,7 @@
       document.getElementById("update").innerHTML = String(업데이트시간);
 
       // 어제 하루 확진자 증가수
-      document.getElementById("daydiff").innerHTML = '<b>'+ String(어제확진자증가수) +'</b>';
+      document.getElementById("daydiff").innerHTML = '<b>' + String(어제확진자증가수) + '</b>';
     </script>
 
     <!-- 숫자 카운트 애니메이션 -->
