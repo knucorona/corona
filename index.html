@@ -297,21 +297,21 @@
       <div class="nowContent" style="background-color: rgb(255, 242, 244); border:2px solid white; border-radius:10px">
 
         <p class="e"> 확진자 </p>
-        <p class="infect">7,134</p>
-        <p class="diff_infect"> +0 </p>
+        <p id ="국내확진자" class="infect">7,134</p>
+        <p id ="국내확진자차이" class="diff_infect"> +0 </p>
 
       </div>
 
       <div class="nowContent" style="background-color: rgb(235, 235, 235); border:2px solid white; border-radius:10px">
         <p class="e"> 사망자 </p>
-        <p class="death">50</p>
-        <p class="diff_death"> +1 </p>
+        <p id ="국내사망자" class="death">50</p>
+        <p id ="국내사망자차이" class="diff_death"> +1 </p>
       </div>
 
       <div class="nowContent" style="background-color: rgb(228, 248, 253); border:2px solid white; border-radius:10px">
         <p class="e"> 완치자 </p>
-        <p class="cured">118</p>
-        <p class="diff_cured"> +0 </p>
+        <p id ="국내완치자" class="cured">118</p>
+        <p id ="국내완치자차이" class="diff_cured"> +0 </p>
       </div>
 
     </div>
@@ -328,20 +328,20 @@
       <div class="nowContent" style="background-color: rgb(255, 242, 244); border:2px solid white; border-radius:10px">
 
         <p class="e"> 확진자 </p>
-        <p class="infect">16</p>
-        <p class="diff_infect"> +0 </p>
+        <p id ="경대확진자" class="infect">16</p>
+        <p id ="경대확진자차이" class="diff_infect"> +0 </p>
       </div>
 
       <div class="nowContent" style="background-color: rgb(235, 235, 235); border:2px solid white; border-radius:10px">
         <p class="e"> 사망자 </p>
-        <p class="death">0</p>
-        <p class="diff_death"> +0 </p>
+        <p id ="경대사망자" class="death">0</p>
+        <p id ="경대사망자차이" class="diff_death"> +0 </p>
       </div>
 
       <div class="nowContent" style="background-color: rgb(228, 248, 253); border:2px solid white; border-radius:10px">
         <p class="e"> 완치자 </p>
-        <p class="cured">0</p>
-        <p class="diff_cured"> +0 </p>
+        <p id ="경대완치자" class="cured">0</p>
+        <p id ="경대완치자차이" class="diff_cured"> +0 </p>
       </div>
 
     </div>
@@ -370,11 +370,11 @@
             </tr>
 
             <tr>
-              <td><b>108</b></td> <!-- 서울 -->
-              <td><b>936</b></td> <!-- 부산 -->
-              <td><b>5,084</b></td> <!-- 대구 -->
-              <td><b>9</b></td> <!-- 인천 -->
-              <td><b>13</b></td> <!-- 광주 -->
+              <td id="seoul"><b>108</b></td> <!-- 서울 -->
+              <td id="busan"><b>936</b></td> <!-- 부산 -->
+              <td id="daegu"><b>5,084</b></td> <!-- 대구 -->
+              <td id="incheon"><b>9</b></td> <!-- 인천 -->
+              <td id="gwangju"><b>13</b></td> <!-- 광주 -->
             </tr>
 
             <tr class="table-primary">
@@ -387,11 +387,11 @@
             </tr>
 
             <tr>
-              <td><b>16</b></td> <!-- 대전 -->
-              <td><b>23</b></td> <!-- 울산 -->
-              <td><b>2</b></td> <!-- 세종 -->
-              <td><b>130</b></td> <!-- 경기 -->
-              <td><b>26</b></td> <!-- 강원 -->
+              <td id="daejeon"><b>16</b></td> <!-- 대전 -->
+              <td id="ulsan"><b>23</b></td> <!-- 울산 -->
+              <td id="sejong"><b>2</b></td> <!-- 세종 -->
+              <td id="gyeong"><b>130</b></td> <!-- 경기 -->
+              <td id="kangwon"><b>26</b></td> <!-- 강원 -->
             </tr>
 
             <tr class="table-primary">
@@ -404,11 +404,11 @@
             </tr>
 
             <tr>
-              <td><b>20</b></td> <!-- 충북 -->
-              <td><b>92</b></td> <!-- 충남 -->
-              <td><b>7</b></td> <!-- 전북 -->
-              <td><b>4</b></td> <!-- 전남 -->
-              <td><b>1049</b></td> <!-- 경북 -->
+              <td id="chbuk"><b>20</b></td> <!-- 충북 -->
+              <td id="chnam"><b>92</b></td> <!-- 충남 -->
+              <td id="jnbuk"><b>7</b></td> <!-- 전북 -->
+              <td id="jnnam"><b>4</b></td> <!-- 전남 -->
+              <td id="kybuk"><b>1049</b></td> <!-- 경북 -->
             </tr>
 
             <tr class="table-primary">
@@ -417,8 +417,8 @@
             </tr>
 
             <tr>
-              <td><b>82</b></td> <!-- 경남 -->
-              <td><b>4<b></td> <!-- 제주 -->
+              <td id="kynam"><b>82</b></td> <!-- 경남 -->
+              <td id="jeju"><b>4<b></td> <!-- 제주 -->
             </tr>
           </thead>
         </table>
@@ -428,19 +428,19 @@
           <thead>
             <tr>
               <td colspan="2" style="font-size:15px; background-color: whitesmoke;"><b>검사중</b></td>
-              <td colspan="3" style="font-size:15px">
+              <td id ="검사중" colspan="3" style="font-size:15px">
                 <b>19,620</b> (-2,212)
               </td>
             </tr>
             <tr>
               <td colspan="2" style="font-size:15px; background-color: whitesmoke;"><b>결과 음성</b></td>
-              <td colspan="3" style="font-size:15px">
+              <td id ="결과음성" colspan="3" style="font-size:15px">
                 <b>151,802</b> (+15,178)
               </td>
             </tr>
             <tr>
               <td colspan="2" style="font-size:15px; background-color: whitesmoke;"><b>합계</b></td>
-              <td colspan="3" style="font-size:15px">
+              <td id ="결과합계" colspan="3" style="font-size:15px">
                 <b>171,422</b> (+12,966)
               </td>
             </tr>
@@ -1544,6 +1544,53 @@
       </div>
 
     </div>
+
+
+    <!-- 데이터셋 처리 -->
+    <script src="dataset.js"></script>
+    <script language="javascript" type="text/javascript">
+
+      //국내 현황
+      document.getElementById("국내확진자").innerHTML = '+' + string(국내현황[0].toLocaleString());
+      document.getElementById("국내사망자").innerHTML = '+' + string(국내현황[1].toLocaleString());
+      document.getElementById("국내완치자").innerHTML = '+' + string(국내현황[2].toLocaleString());
+      document.getElementById("국내확진자차이").innerHTML = '+' + string(국내현황[3].toLocaleString());
+      document.getElementById("국내사망자차이").innerHTML = '+' + string(국내현황[4].toLocaleString());
+      document.getElementById("국내완치자차이").innerHTML = '+' + string(국내현황[5].toLocaleString());
+
+      //경북대 현황
+      document.getElementById("경대확진자").innerHTML = '+' + string(경북대현황[0].toLocaleString());
+      document.getElementById("경대사망자").innerHTML = '+' + string(경북대현황[1].toLocaleString());
+      document.getElementById("경대완치자").innerHTML = '+' + string(경북대현황[2].toLocaleString());
+      document.getElementById("경대확진자차이").innerHTML = '+' + string(경북대현황[3].toLocaleString());
+      document.getElementById("경대사망자차이").innerHTML = '+' + string(경북대현황[4].toLocaleString());
+      document.getElementById("경대완치자차이").innerHTML = '+' + string(경북대현황[5].toLocaleString());
+
+      //지역별 확진자수
+      document.getElementById("seoul").innerHTML = 전국지역확진자[0].toLocaleString();
+      document.getElementById("busan").innerHTML = 전국지역확진자[1].toLocaleString();
+      document.getElementById("daegu").innerHTML = 전국지역확진자[2].toLocaleString();
+      document.getElementById("incheon").innerHTML = 전국지역확진자[3].toLocaleString();
+      document.getElementById("gwangju").innerHTML = 전국지역확진자[4].toLocaleString();
+      document.getElementById("daejeon").innerHTML = 전국지역확진자[5].toLocaleString();
+      document.getElementById("ulsan").innerHTML = 전국지역확진자[6].toLocaleString();
+      document.getElementById("sejong").innerHTML = 전국지역확진자[7].toLocaleString();
+      document.getElementById("gyeong").innerHTML = 전국지역확진자[8].toLocaleString();
+      document.getElementById("kangwon").innerHTML = 전국지역확진자[9].toLocaleString();  
+      document.getElementById("chbuk").innerHTML = 전국지역확진자[10].toLocaleString();
+      document.getElementById("chnam").innerHTML = 전국지역확진자[11].toLocaleString(); 
+      document.getElementById("jnbuk").innerHTML = 전국지역확진자[12].toLocaleString();     
+      document.getElementById("jnnam").innerHTML = 전국지역확진자[13].toLocaleString();     
+      document.getElementById("kybuk").innerHTML = 전국지역확진자[14].toLocaleString();     
+      document.getElementById("kynam").innerHTML = 전국지역확진자[15].toLocaleString();
+      document.getElementById("jeju").innerHTML = 전국지역확진자[16].toLocaleString();
+
+      // 검사자수
+      document.getElementById("검사중").innerHTML = 검사현황[0].toLocaleString();
+      document.getElementById("결과음성").innerHTML = 검사현황[1].toLocaleString();
+      document.getElementById("결과합계").innerHTML = 검사현황[2].toLocaleString();
+
+    </script>
 
     <!-- 숫자 카운트 애니메이션 -->
     <script language="javascript" type="text/javascript">
