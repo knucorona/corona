@@ -62,7 +62,7 @@
 
     p.a {
       font-family: 'Noto Sans KR', sans-serif;
-      font-size: 15px;
+      font-size: 14px;
     }
 
     p.e {
@@ -285,7 +285,8 @@
 
     <div id="row 0 col 1" class="row0">
       <p class="a"><span style="color:rgb(187, 187, 187)">
-          <i class="fas fa-edit"></i></span> 업데이트 : 03.08 (10:00) 기준 | 차이 : 당일 00시 대비</p>
+          <i class="fas fa-edit"></i></span>
+          업데이트 : <span id="update"></span> 기준 | 차이 : 당일 00시 대비</p>
     </div>
 
     <!-- 국내 현황 -->
@@ -1590,6 +1591,8 @@
       document.getElementById("결과음성").innerHTML = 검사현황[1].toLocaleString();
       document.getElementById("결과합계").innerHTML = 검사현황[2].toLocaleString();
 
+      // 업데이트 시간
+      document.getElementById("update").innerHTML = String(업데이트시간);
     </script>
 
     <!-- 숫자 카운트 애니메이션 -->
