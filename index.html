@@ -1593,16 +1593,20 @@
 
 
     <!-- 데이터셋 처리 -->
-    <script src="dataset.js"></script>
+    <script src="검사자현황.js"></script>
+    <script src="국내현황.js"></script>
+    <script src="지역별현황.js"></script>
+    <script src="직접수정.js"></script>
     <script language="javascript" type="text/javascript">
 
       //국내 현황
-      document.getElementById("국내확진자").innerHTML = '+' + String(국내현황[0].toLocaleString());
-      document.getElementById("국내사망자").innerHTML = '+' + String(국내현황[1].toLocaleString());
+      document.getElementById("국내확진자").innerHTML = '+' + String(국내현황[1].toLocaleString());  
       document.getElementById("국내완치자").innerHTML = '+' + String(국내현황[2].toLocaleString());
-      document.getElementById("국내확진자차이").innerHTML = '+' + String(국내현황[3].toLocaleString());
-      document.getElementById("국내사망자차이").innerHTML = '+' + String(국내현황[4].toLocaleString());
-      document.getElementById("국내완치자차이").innerHTML = '+' + String(국내현황[5].toLocaleString());
+      document.getElementById("국내사망자").innerHTML = '+' + String(국내현황[3].toLocaleString());
+
+      document.getElementById("국내확진자차이").innerHTML = '+' + String(국내현황[0].toLocaleString());
+      document.getElementById("국내사망자차이").innerHTML = '+' + String(전일대비차이[0].toLocaleString());
+      document.getElementById("국내완치자차이").innerHTML = '+' + String(전일대비차이[1].toLocaleString());
 
       //경북대 현황
       document.getElementById("경대확진자").innerHTML = '+' + String(경북대현황[0].toLocaleString());
@@ -1632,15 +1636,15 @@
       document.getElementById("jeju").innerHTML = '<b>' + String(전국지역확진자[16].toLocaleString()) + '</b>';
 
       // 검사자수
-      document.getElementById("검사중").innerHTML = 검사현황[0].toLocaleString();
-      document.getElementById("결과음성").innerHTML = 검사현황[1].toLocaleString();
-      document.getElementById("결과합계").innerHTML = 검사현황[2].toLocaleString();
+      document.getElementById("결과음성").innerHTML = String(검사자현황[0].toLocaleString());     
+      document.getElementById("검사중").innerHTML = String(검사자현황[1].toLocaleString());
+      document.getElementById("결과합계").innerHTML = String((검사자현황[0]+검사자현황[1]).toLocaleString());
 
       // 업데이트 시간
       document.getElementById("update").innerHTML = String(업데이트시간);
 
       // 어제 하루 확진자 증가수
-      document.getElementById("daydiff").innerHTML = '<b>' + String(어제확진자증가수) + '</b>';
+      document.getElementById("daydiff").innerHTML = '<b>' + String(국내현황[0].toLocaleString()) + '</b>';
     </script>
 
     <!-- 숫자 카운트 애니메이션 -->
