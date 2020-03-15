@@ -143,6 +143,7 @@ var chart = new Highcharts.Chart('diffDiv', {
         '3.11',
         '3.12',
         '3.13',
+        '3.14',
     ],
       crosshair: true
     }],
@@ -164,6 +165,7 @@ var chart = new Highcharts.Chart('diffDiv', {
         114, //3월 11일
         110, //3월 12일
         107, //3월 13일
+        76, //3.14
       ],
     },]
   });
