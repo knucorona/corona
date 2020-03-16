@@ -4,13 +4,15 @@ document.write("<script type='text/javascript' src='국내현황.js'><"+"/script
 ///////////////////////직접수정 시작/////////////////////////////////
 
 //(수정 1)
-var 업데이트시간 = "03.15 (10:00)";
+var 업데이트시간 = "03.16 (10:00)";
 
 //(수정 2)
-var 어제사망자 = 72
+//3.15 사망자 75명
+var 어제사망자 = 75
 
 //(수정 3)
-var 어제완치자 = 714
+//3.15 완치자 834명
+var 어제완치자 = 834
 
 //(수정 4)
 var 경북대현황 = [
@@ -40,6 +42,7 @@ var chart0 = new Highcharts.Chart('container', {
         '3.13',
         '3.14',
         '3.15',
+        '3.16',
         ],
       crosshair: true
     }],
@@ -95,6 +98,7 @@ var chart0 = new Highcharts.Chart('container', {
       27, // 3월 13일
       29, // 3.14
       29, // 3.15
+      29, // 3.16
       ],
     }, {
       name: '전체 확진자 수',
@@ -104,7 +108,8 @@ var chart0 = new Highcharts.Chart('container', {
       7979, //3월 12일
       8086, //3월 13일
       8162, //3.14
-      8162, //3.15
+      8236, //3.15
+      8236, //3.16
       ],
     }]
   });
@@ -144,6 +149,7 @@ var chart = new Highcharts.Chart('diffDiv', {
         '3.12',
         '3.13',
         '3.14',
+        '3.15',
     ],
       crosshair: true
     }],
@@ -166,6 +172,7 @@ var chart = new Highcharts.Chart('diffDiv', {
         110, //3월 12일
         107, //3월 13일
         76, //3.14
+        74, //3.15
       ],
     },]
   });
