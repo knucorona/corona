@@ -4,7 +4,7 @@ document.write("<script type='text/javascript' src='국내현황.js'><"+"/script
 ///////////////////////직접수정 시작/////////////////////////////////
 
 //(수정 1)
-var 업데이트시간 = "03.17 (10:00)";
+var 업데이트시간 = "03.18 (10:00)";
 
 //(수정 2)
 //3.15.일 사망자 75명
@@ -47,6 +47,7 @@ var chart0 = new Highcharts.Chart('container', {
         '3.14',
         '3.15',
         '3.16',
+        '3.17',
         ],
       crosshair: true
     }],
@@ -103,6 +104,7 @@ var chart0 = new Highcharts.Chart('container', {
       29, // 3.14
       29, // 3.15
       29, // 3.16
+      34, // 3.17
       ],
     }, {
       name: '전체 확진자 수',
@@ -114,6 +116,7 @@ var chart0 = new Highcharts.Chart('container', {
       8162, //3.14
       8236, //3.15
       8320, //3.16
+      8413, //3.17
       ],
     }]
   });
@@ -155,6 +158,7 @@ var chart = new Highcharts.Chart('diffDiv', {
         '3.14',
         '3.15',
         '3.16',
+        '3.17'
     ],
       crosshair: true
     }],
@@ -179,6 +183,7 @@ var chart = new Highcharts.Chart('diffDiv', {
         76, //3.14
         74, //3.15
         84, //3.16
+        93, //3.17
       ],
     },]
   });
