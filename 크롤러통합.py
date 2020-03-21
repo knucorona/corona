@@ -137,6 +137,7 @@ soup = BeautifulSoup(html, 'html.parser')
 my_titles = soup.select(
     '#maincounter-wrap > div'
     )
+updates = soup.select('.content-inner > div')    
 
 세계현황 = []
 datas = my_titles[0:]
@@ -144,10 +145,12 @@ datas = my_titles[0:]
 세계확진자수 = int(datas[0].find_all('span')[0].text.replace(',',''))
 세계사망자수 = int(datas[1].find_all('span')[0].text.replace(',',''))
 세계완치자수 = int(datas[2].find_all('span')[0].text.replace(',',''))
+업데이트날짜 = updates[1].string
 
 세계현황.append(세계확진자수)
 세계현황.append(세계사망자수)
 세계현황.append(세계완치자수)
+세계현황.append(업데이트날짜)
 
 with open("세계현황.js", "w", encoding='UTF-8-sig') as json_file:
     json.dump(세계현황[0:], json_file, ensure_ascii=False, indent=4)
