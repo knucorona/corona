@@ -1697,9 +1697,9 @@
       document.getElementById("결과합계").innerHTML = String((검사자현황[0] + 검사자현황[1]).toLocaleString());
 
       // 세계현황
-      document.getElementById("세계확진자").innerHTML = '+' + String(세계현황[0].toLocaleString());
-      document.getElementById("세계사망자").innerHTML = '+' + String(세계현황[1].toLocaleString());
-      document.getElementById("세계완치자").innerHTML = '+' + String(세계현황[2].toLocaleString());
+      document.getElementById("세계확진자").innerHTML = String(세계현황[0].toLocaleString());
+      document.getElementById("세계사망자").innerHTML = String(세계현황[1].toLocaleString());
+      document.getElementById("세계완치자").innerHTML = String(세계현황[2].toLocaleString());
 
       // 세계순위현황 업데이트시간 텍스트
       document.getElementById("W_updateDate").innerHTML = String(세계현황[3]);
