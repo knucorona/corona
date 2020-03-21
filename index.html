@@ -391,11 +391,10 @@
       <div id="school" class="nowData_school">
         <h4 style="border-bottom:3px solid rgb(230, 230, 230);padding:.2em;">
           <span style="color:rgb(199, 108, 128)">
-            <i class="fas fa-user-friends"></span></i> 경북대 현황 
-            <button class="btn btn-secondary"
-            onclick="Move()"
+            <i class="fas fa-user-friends"></span></i> 경북대 현황
+          <button class="btn btn-secondary" onclick="Move()"
             style="font-size:11.5px;width:31%;margin-top:-.5em;float:right">이동경로 확인</button></h4>
-            
+
         <div class="nowContent"
           style="background-color: rgb(248, 248, 248); border-bottom:3px solid rgb(252, 167, 192);">
 
@@ -423,8 +422,12 @@
     <!-- 전 세계 현황 펼치기 -->
     <div id="world" class="worldContent">
       <h5 style="border-bottom:2px solid rgb(230, 230, 230);padding:.5em;">
-        <span style="color:rgb(27, 26, 109)">
-          <i class="fas fa-globe"></i> 전 세계 코로나19 현황</span>
+
+        <span id="Wcorona">
+          <span style="color:rgb(27, 26, 109)">
+            <i class="fas fa-globe"></i> 전 세계 코로나19 현황</span>
+        </span>
+
         <button id="openButton4" class="btn btn-primary" style="width:30px;height:30px;padding:1px;">
           <i class="fas fa-angle-down fa-2x"></i></button>
         <button id="closeButton4" class="btn btn-primary" style="width:30px;height:30px;padding:1px;">
@@ -432,36 +435,36 @@
 
       <div id="worldDiv">
         <div class="nowContent"
-        style="background-color: rgb(255, 255, 255); border-bottom:3px solid rgb(252, 167, 192);">
-        <p class="d"> 확진자 </p>
-        <p id="세계확진자" class="infect"></p>
-        <p id="세계확진자차이" class="diff_infect"></p>
-      </div>
+          style="background-color: rgb(255, 255, 255); border-bottom:3px solid rgb(252, 167, 192);">
+          <p class="d"> 확진자 </p>
+          <p id="세계확진자" class="infect"></p>
+          <p id="세계확진자차이" class="diff_infect"></p>
+        </div>
 
-      <div class="nowContent"
-        style="background-color: rgb(255, 255, 255); border-bottom:3px solid rgb(190, 189, 189);">
-        <p class="d"> 사망자 </p>
-        <p id="세계사망자" class="death"></p>
-        <p id="세계사망자차이" class="diff_death"></p>
-      </div>
+        <div class="nowContent"
+          style="background-color: rgb(255, 255, 255); border-bottom:3px solid rgb(190, 189, 189);">
+          <p class="d"> 사망자 </p>
+          <p id="세계사망자" class="death"></p>
+          <p id="세계사망자차이" class="diff_death"></p>
+        </div>
 
-      <div class="nowContent"
-        style="background-color: rgb(255, 255, 255); border-bottom:3px solid rgb(144, 209, 253);">
-        <p class="d"> 완치자 </p>
-        <p id="세계완치자" class="cured"></p>
-        <p id="세계완치자차이" class="diff_cured"></p>
-      </div>
+        <div class="nowContent"
+          style="background-color: rgb(255, 255, 255); border-bottom:3px solid rgb(144, 209, 253);">
+          <p class="d"> 완치자 </p>
+          <p id="세계완치자" class="cured"></p>
+          <p id="세계완치자차이" class="diff_cured"></p>
+        </div>
 
-      <table class="table table-hover" style="table-layout:fixed; word-break:break-all;">
-        <thead>
-          <tr class="table-light">
-            <th scope="col">국가명</th>
-            <th scope="col">확진자</th>
-            <th scope="col">사망자</th>
-            <th scope="col">완치자</th>
-            <th scope="col">치명율</th>
-          </tr>
-        </thead>
+        <table class="table table-hover" style="table-layout:fixed; word-break:break-all;">
+          <thead>
+            <tr class="table-light">
+              <th scope="col">국가명</th>
+              <th scope="col">확진자</th>
+              <th scope="col">사망자</th>
+              <th scope="col">완치자</th>
+              <th scope="col">치명율</th>
+            </tr>
+          </thead>
           <tr style="font-size:13px">
             <td id="w_name_1"></td>
             <td id="w_infect_1"></td>
@@ -489,7 +492,7 @@
             <td id="w_death_4"></td>
             <td id="w_cured_4"></td>
             <td id="w_rate_4"></td>
-          </tr>         
+          </tr>
           <tr style="font-size:13px">
             <td id="w_name_5"></td>
             <td id="w_infect_5"></td>
@@ -533,19 +536,23 @@
             <td id="w_rate_10"></td>
           </tr>
 
-      </table>
+        </table>
 
-      
-    </div>
+
+      </div>
 
     </div>
 
     <!-- 지역별 현황 펼치기 -->
     <div id="region" class="regionContent">
       <h5 style="border-bottom:2px solid rgb(230, 230, 230);padding:.5em;">
-        <span style="color:rgb(23, 116, 255)">
-          <i class="fas fa-search-plus"></span></i>
-        국내 지역별 및 검사자 현황
+
+        <span id="Kcorona">
+          <span style="color:rgb(23, 116, 255)">
+            <i class="fas fa-search-plus"></span></i>
+          국내 지역별 및 검사자 현황
+        </span>
+
         <button id="openButton" class="btn btn-info" style="width:30px;height:30px;padding:1px;">
           <i class="fas fa-angle-down fa-2x"></i></button>
         <button id="closeButton" class="btn btn-info" style="width:30px;height:30px;padding:1px;">
@@ -648,8 +655,12 @@
     <!-- 공지사항 및 각종 링크 펼치기 -->
     <div id="row 3 col 1" class="linkContent">
       <h5 style="border-bottom:2px solid rgb(230, 230, 230); padding:.5em;">
-        <span style="color:rgb(3, 118, 248)"><i class="fas fa-link"></i></span>
-        공지사항 및 마스크 구매처 링크
+
+        <span id="Lcorona">
+          <span style="color:rgb(3, 118, 248)"><i class="fas fa-link"></i></span>
+          공지사항 및 마스크 구매처 링크
+        </span>
+
         <button id="openButton2" class="btn btn-info" style="width:30px;height:30px;padding:1px;">
           <i class="fas fa-angle-down fa-2x"></i></button>
         <button id="closeButton2" class="btn btn-info" style="width:30px;height:30px;padding:1px;">
@@ -701,8 +712,12 @@
       <!-- 일별 확진자수 증가표 -->
       <div id="diff" class="graph2Content">
         <h5 style="padding:.5em; border-bottom:2px solid rgb(230, 230, 230); ">
-          <span style="color:rgb(255, 175, 56)"><i class="fas fa-calendar-alt"></i></span>
-          일별 확진자수 증가 추이
+
+          <span id="Dcorona">
+            <span style="color:rgb(255, 175, 56)"><i class="fas fa-calendar-alt"></i></span>
+            일별 확진자수 증가 추이
+          </span>
+
           <button id="openButton3" class="btn btn-warning" style="width:30px;height:30px;padding:1px;">
             <i class="fas fa-angle-down fa-2x"></i></button>
           <button id="closeButton3" class="btn btn-warning" style="width:30px;height:30px;padding:1px;">
@@ -720,7 +735,9 @@
         <h4 style="border-bottom:3px solid rgb(32, 179, 105); padding:.3em;">
           <span style="color:rgb(35, 146, 109)">
             <i class="fas fa-map-marked-alt"></i></span>
-          경북대 확진자 지도</h4>
+          경북대 확진자 지도
+
+        </h4>
 
         <div>
           <!-- 지도가 들어갈 공간 -->
@@ -1679,7 +1696,7 @@
 
       // 세계현황
       document.getElementById("세계확진자").innerHTML = '+' + String(세계현황[0].toLocaleString());
-      document.getElementById("세계사망자").innerHTML = '+' + String(세계현황[1].toLocaleString());    
+      document.getElementById("세계사망자").innerHTML = '+' + String(세계현황[1].toLocaleString());
       document.getElementById("세계완치자").innerHTML = '+' + String(세계현황[2].toLocaleString());
 
       // 세계순위현황
@@ -1687,61 +1704,61 @@
       document.getElementById("w_infect_1").innerHTML = '<span style="color:#DA5672"> <b>' + String(세계확진자[0].확진자수.toLocaleString()) + '</b> </span> ';
       document.getElementById("w_death_1").innerHTML = '<span style="color:#4C525D"> <b>' + String(세계확진자[0].사망자수.toLocaleString()) + '</b> </span> ';
       document.getElementById("w_cured_1").innerHTML = '<span style="color:#4874C3"> <b>' + String(세계확진자[0].완치자수.toLocaleString()) + '</b> </span> ';
-      document.getElementById("w_rate_1").innerHTML ='<span style="color:#8F8F8F"> <b>' + String((세계확진자[0].사망자수 / 세계확진자[0].확진자수 * 100).toFixed(2)) + '%</b> </span> ';
+      document.getElementById("w_rate_1").innerHTML = '<span style="color:#8F8F8F"> <b>' + String((세계확진자[0].사망자수 / 세계확진자[0].확진자수 * 100).toFixed(2)) + '%</b> </span> ';
 
       document.getElementById("w_name_2").innerHTML = '<b>' + String(세계확진자[1].Name) + '</b>';
       document.getElementById("w_infect_2").innerHTML = '<span style="color:#DA5672"> <b>' + String(세계확진자[1].확진자수.toLocaleString()) + '</b> </span> ';
       document.getElementById("w_death_2").innerHTML = '<span style="color:#4C525D"> <b>' + String(세계확진자[1].사망자수.toLocaleString()) + '</b> </span> ';
       document.getElementById("w_cured_2").innerHTML = '<span style="color:#4874C3"> <b>' + String(세계확진자[1].완치자수.toLocaleString()) + '</b> </span> ';
-      document.getElementById("w_rate_2").innerHTML ='<span style="color:#8F8F8F"> <b>' + String((세계확진자[1].사망자수 / 세계확진자[1].확진자수 * 100).toFixed(2)) + '%</b> </span> ';
+      document.getElementById("w_rate_2").innerHTML = '<span style="color:#8F8F8F"> <b>' + String((세계확진자[1].사망자수 / 세계확진자[1].확진자수 * 100).toFixed(2)) + '%</b> </span> ';
 
       document.getElementById("w_name_3").innerHTML = '<b>' + String(세계확진자[2].Name) + '</b>';
       document.getElementById("w_infect_3").innerHTML = '<span style="color:#DA5672"> <b>' + String(세계확진자[2].확진자수.toLocaleString()) + '</b> </span> ';
       document.getElementById("w_death_3").innerHTML = '<span style="color:#4C525D"> <b>' + String(세계확진자[2].사망자수.toLocaleString()) + '</b> </span> ';
       document.getElementById("w_cured_3").innerHTML = '<span style="color:#4874C3"> <b>' + String(세계확진자[2].완치자수.toLocaleString()) + '</b> </span> ';
-      document.getElementById("w_rate_3").innerHTML ='<span style="color:#8F8F8F"> <b>' + String((세계확진자[2].사망자수 / 세계확진자[2].확진자수 * 100).toFixed(2)) + '%</b> </span> ';
+      document.getElementById("w_rate_3").innerHTML = '<span style="color:#8F8F8F"> <b>' + String((세계확진자[2].사망자수 / 세계확진자[2].확진자수 * 100).toFixed(2)) + '%</b> </span> ';
 
       document.getElementById("w_name_4").innerHTML = '<b>' + String(세계확진자[3].Name) + '</b>';
       document.getElementById("w_infect_4").innerHTML = '<span style="color:#DA5672"> <b>' + String(세계확진자[3].확진자수.toLocaleString()) + '</b> </span> ';
       document.getElementById("w_death_4").innerHTML = '<span style="color:#4C525D"> <b>' + String(세계확진자[3].사망자수.toLocaleString()) + '</b> </span> ';
       document.getElementById("w_cured_4").innerHTML = '<span style="color:#4874C3"> <b>' + String(세계확진자[3].완치자수.toLocaleString()) + '</b> </span> ';
-      document.getElementById("w_rate_4").innerHTML ='<span style="color:#8F8F8F"> <b>' + String((세계확진자[3].사망자수 / 세계확진자[3].확진자수 * 100).toFixed(2)) + '%</b> </span> ';
+      document.getElementById("w_rate_4").innerHTML = '<span style="color:#8F8F8F"> <b>' + String((세계확진자[3].사망자수 / 세계확진자[3].확진자수 * 100).toFixed(2)) + '%</b> </span> ';
 
       document.getElementById("w_name_5").innerHTML = '<b>' + String(세계확진자[4].Name) + '</b>';
       document.getElementById("w_infect_5").innerHTML = '<span style="color:#DA5672"> <b>' + String(세계확진자[4].확진자수.toLocaleString()) + '</b> </span> ';
       document.getElementById("w_death_5").innerHTML = '<span style="color:#4C525D"> <b>' + String(세계확진자[4].사망자수.toLocaleString()) + '</b> </span> ';
       document.getElementById("w_cured_5").innerHTML = '<span style="color:#4874C3"> <b>' + String(세계확진자[4].완치자수.toLocaleString()) + '</b> </span> ';
-      document.getElementById("w_rate_5").innerHTML ='<span style="color:#8F8F8F"> <b>' + String((세계확진자[4].사망자수 / 세계확진자[4].확진자수 * 100).toFixed(2)) + '%</b> </span> ';
+      document.getElementById("w_rate_5").innerHTML = '<span style="color:#8F8F8F"> <b>' + String((세계확진자[4].사망자수 / 세계확진자[4].확진자수 * 100).toFixed(2)) + '%</b> </span> ';
 
       document.getElementById("w_name_6").innerHTML = '<b>' + String(세계확진자[5].Name) + '</b>';
       document.getElementById("w_infect_6").innerHTML = '<span style="color:#DA5672"> <b>' + String(세계확진자[5].확진자수.toLocaleString()) + '</b> </span> ';
       document.getElementById("w_death_6").innerHTML = '<span style="color:#4C525D"> <b>' + String(세계확진자[5].사망자수.toLocaleString()) + '</b> </span> ';
       document.getElementById("w_cured_6").innerHTML = '<span style="color:#4874C3"> <b>' + String(세계확진자[5].완치자수.toLocaleString()) + '</b> </span> ';
-      document.getElementById("w_rate_6").innerHTML ='<span style="color:#8F8F8F"> <b>' + String((세계확진자[5].사망자수 / 세계확진자[5].확진자수 * 100).toFixed(2)) + '%</b> </span> ';
+      document.getElementById("w_rate_6").innerHTML = '<span style="color:#8F8F8F"> <b>' + String((세계확진자[5].사망자수 / 세계확진자[5].확진자수 * 100).toFixed(2)) + '%</b> </span> ';
 
       document.getElementById("w_name_7").innerHTML = '<b>' + String(세계확진자[6].Name) + '</b>';
       document.getElementById("w_infect_7").innerHTML = '<span style="color:#DA5672"> <b>' + String(세계확진자[6].확진자수.toLocaleString()) + '</b> </span> ';
       document.getElementById("w_death_7").innerHTML = '<span style="color:#4C525D"> <b>' + String(세계확진자[6].사망자수.toLocaleString()) + '</b> </span> ';
       document.getElementById("w_cured_7").innerHTML = '<span style="color:#4874C3"> <b>' + String(세계확진자[6].완치자수.toLocaleString()) + '</b> </span> ';
-      document.getElementById("w_rate_7").innerHTML ='<span style="color:#8F8F8F"> <b>' + String((세계확진자[6].사망자수 / 세계확진자[6].확진자수 * 100).toFixed(2)) + '%</b> </span> ';
+      document.getElementById("w_rate_7").innerHTML = '<span style="color:#8F8F8F"> <b>' + String((세계확진자[6].사망자수 / 세계확진자[6].확진자수 * 100).toFixed(2)) + '%</b> </span> ';
 
       document.getElementById("w_name_8").innerHTML = '<b>' + String(세계확진자[7].Name) + '</b>';
       document.getElementById("w_infect_8").innerHTML = '<span style="color:#DA5672"> <b>' + String(세계확진자[7].확진자수.toLocaleString()) + '</b> </span> ';
       document.getElementById("w_death_8").innerHTML = '<span style="color:#4C525D"> <b>' + String(세계확진자[7].사망자수.toLocaleString()) + '</b> </span> ';
       document.getElementById("w_cured_8").innerHTML = '<span style="color:#4874C3"> <b>' + String(세계확진자[7].완치자수.toLocaleString()) + '</b> </span> ';
-      document.getElementById("w_rate_8").innerHTML ='<span style="color:#8F8F8F"> <b>' + String((세계확진자[7].사망자수 / 세계확진자[7].확진자수 * 100).toFixed(2)) + '%</b> </span> ';
+      document.getElementById("w_rate_8").innerHTML = '<span style="color:#8F8F8F"> <b>' + String((세계확진자[7].사망자수 / 세계확진자[7].확진자수 * 100).toFixed(2)) + '%</b> </span> ';
 
       document.getElementById("w_name_9").innerHTML = '<b>' + String(세계확진자[8].Name) + '</b>';
       document.getElementById("w_infect_9").innerHTML = '<span style="color:#DA5672"> <b>' + String(세계확진자[8].확진자수.toLocaleString()) + '</b> </span> ';
       document.getElementById("w_death_9").innerHTML = '<span style="color:#4C525D"> <b>' + String(세계확진자[8].사망자수.toLocaleString()) + '</b> </span> ';
       document.getElementById("w_cured_9").innerHTML = '<span style="color:#4874C3"> <b>' + String(세계확진자[8].완치자수.toLocaleString()) + '</b> </span> ';
-      document.getElementById("w_rate_9").innerHTML ='<span style="color:#8F8F8F"> <b>' + String((세계확진자[8].사망자수 / 세계확진자[8].확진자수 * 100).toFixed(2)) + '%</b> </span> ';
+      document.getElementById("w_rate_9").innerHTML = '<span style="color:#8F8F8F"> <b>' + String((세계확진자[8].사망자수 / 세계확진자[8].확진자수 * 100).toFixed(2)) + '%</b> </span> ';
 
       document.getElementById("w_name_10").innerHTML = '<b>' + String(세계확진자[9].Name) + '</b>';
       document.getElementById("w_infect_10").innerHTML = '<span style="color:#DA5672"> <b>' + String(세계확진자[9].확진자수.toLocaleString()) + '</b> </span> ';
       document.getElementById("w_death_10").innerHTML = '<span style="color:#4C525D"> <b>' + String(세계확진자[9].사망자수.toLocaleString()) + '</b> </span> ';
       document.getElementById("w_cured_10").innerHTML = '<span style="color:#4874C3"> <b>' + String(세계확진자[9].완치자수.toLocaleString()) + '</b> </span> ';
-      document.getElementById("w_rate_10").innerHTML ='<span style="color:#8F8F8F"> <b>' + String((세계확진자[9].사망자수 / 세계확진자[9].확진자수 * 100).toFixed(2)) + '%</b> </span> ';
+      document.getElementById("w_rate_10").innerHTML = '<span style="color:#8F8F8F"> <b>' + String((세계확진자[9].사망자수 / 세계확진자[9].확진자수 * 100).toFixed(2)) + '%</b> </span> ';
 
 
       // 업데이트 시간
@@ -1779,6 +1796,11 @@
       var person6Cnt = 0;
       var person7Cnt = 0;
 
+      var WcoronaCnt = 0;
+      var KcoronaCnt = 0;
+      var LcoronaCnt = 0;
+      var DcoronaCnt = 0;
+
       // 지역별 현황 펼치기/접기
       $('#regionDiv').hide();
       $('#linkDiv').hide();
@@ -1788,6 +1810,71 @@
       $('#closeButton2').hide();
       $('#closeButton3').hide();
       $('#closeButton4').hide();
+
+
+      // 제목을 눌러도 오픈 : 전세계 코로나
+      $('#Wcorona').click(function () {
+        if (WcoronaCnt == 0) {
+          $('#worldDiv').slideDown();
+          $('#closeButton4').show();
+          $('#openButton4').hide();
+          WcoronaCnt = 1;
+        }
+        else {
+          $('#worldDiv').slideUp();
+          $('#closeButton4').hide();
+          $('#openButton4').show();
+          WcoronaCnt = 0;
+        }
+      });
+
+      // 제목을 눌러도 오픈 : 국내 지역별
+      $('#Kcorona').click(function () {
+        if (KcoronaCnt == 0) {
+          $('#regionDiv').slideDown();
+          $('#closeButton').show();
+          $('#openButton').hide();
+          KcoronaCnt = 1;
+        }
+        else {
+          $('#regionDiv').slideUp();
+          $('#closeButton').hide();
+          $('#openButton').show();
+          KcoronaCnt = 0;
+        }
+      });
+
+      // 제목을 눌러도 오픈 : 각종 링크
+      $('#Lcorona').click(function () {
+        if (LcoronaCnt == 0) {
+          $('#linkDiv').slideDown();
+          $('#closeButton2').show();
+          $('#openButton2').hide();
+          LcoronaCnt = 1;
+        }
+        else {
+          $('#linkDiv').slideUp();
+          $('#closeButton2').hide();
+          $('#openButton2').show();
+          LcoronaCnt = 0;
+        }
+      });
+
+      // 제목을 눌러도 오픈 : 일일 그래프
+      $('#Dcorona').click(function () {
+        if (DcoronaCnt == 0) {
+          $('#diffDiv').slideDown();
+          $('#closeButton3').show();
+          $('#openButton3').hide();
+          DcoronaCnt = 1;
+        }
+        else {
+          $('#diffDiv').slideUp();
+          $('#closeButton3').hide();
+          $('#openButton3').show();
+          DcoronaCnt = 0;
+        }
+      });
 
       $('#openButton').click(function () {
         $('#regionDiv').slideDown();
@@ -1941,9 +2028,9 @@
 
     <!-- 자동 스크롤 기능 -->
     <script>
-      function Move(){
-          var offset = $(".path").offset();
-          $('html, body').animate({scrollTop : offset.top}, 400);
+      function Move() {
+        var offset = $(".path").offset();
+        $('html, body').animate({ scrollTop: offset.top }, 400);
       }
     </script>
 
