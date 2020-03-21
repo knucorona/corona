@@ -6,6 +6,7 @@
 <head>
   <!-- Scripts -->
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.8.3.min.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
   <script type="text/javascript" src="js/jquery.counterup.min.js"></script>
   <link rel="stylesheet" type="text/css" href="//cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
@@ -390,7 +391,11 @@
       <div id="school" class="nowData_school">
         <h4 style="border-bottom:3px solid rgb(230, 230, 230);padding:.2em;">
           <span style="color:rgb(199, 108, 128)">
-            <i class="fas fa-user-friends"></span></i> 경북대 현황</h4>
+            <i class="fas fa-user-friends"></span></i> 경북대 현황 
+            <button class="btn btn-secondary"
+            onclick="Move()"
+            style="font-size:12.5px;width:30%;margin-top:-.5em;float:right">이동경로 확인</button></h4>
+            
         <div class="nowContent"
           style="background-color: rgb(248, 248, 248); border-bottom:3px solid rgb(252, 167, 192);">
 
@@ -413,11 +418,6 @@
           <p id="경대완치자차이" class="diff_cured"></p>
         </div>
       </div>
-
-    </div>
-
-    <div class="yesterday">
-      <p class="a">어제 하루 국내 확진자 <span id="daydiff"></span>명 증가</p>
     </div>
 
     <!-- 전 세계 현황 펼치기 -->
@@ -1937,6 +1937,14 @@
         }
       });
 
+    </script>
+
+    <!-- 자동 스크롤 기능 -->
+    <script>
+      function Move(){
+          var offset = $(".path").offset();
+          $('html, body').animate({scrollTop : offset.top}, 400);
+      }
     </script>
 
     <script>
