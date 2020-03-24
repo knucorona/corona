@@ -102,7 +102,7 @@ my_data = soup.select(
 검사자현황 = []
 datas = my_data[1]
 
-결과음성 = int(datas.find_all('td')[5].text.replace(',',''))
+결과음성 = int(datas.find_all('td')[4].text.replace(',',''))
 검사중 = int(datas.find_all('td')[6].text.replace(',',''))
 
 검사자현황.append(결과음성)
