@@ -12,10 +12,7 @@
   <link rel="stylesheet" type="text/css" href="//cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
 
   <meta name="naver-site-verification" content="4d3351009873ce58503ee84bae28c9e420d235d7" />
-  <!-- 경고창 -->
-  <script type="text/javascript" value="알림">
-//alert("코로나 경북대 확진자와 관련된 정보를 knucorona@gmail.com으로 제보해주시면 반영하도록 하겠습니다!")
-  </script>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156002547-2"></script>
   <script>
@@ -33,429 +30,480 @@
   <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=b0jzj6p97b"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
   <title>경북대 코로나 알리미</title>
+
   <style>
-    h3 {
-      font-family: 'NanumSquareRound', sans-serif;
-      font-weight: 800;
-      font-size: 37px;
-      margin-bottom: 3rem;
-    }
-
-    h4 {
-      font-family: 'NanumSquareRound', sans-serif;
-      font-size: 21px;
-      display: block;
-      font-weight: 800;
-      text-align: left;
-    }
-
+    h1,
+    h2,
+    h3,
+    h4,
     h5 {
       font-family: 'NanumSquareRound', sans-serif;
-      font-size: 20px;
-      display: block;
       font-weight: 800;
     }
 
-    p {
+    table {
       font-family: 'NanumSquareRound', sans-serif;
-      font-size: 25px;
-      display: block;
     }
 
-    p.a {
+    ul li {
       font-family: 'NanumSquareRound', sans-serif;
-      font-size: 15px;
+      font-weight: 700;
     }
 
-    p.d {
+    p.menu1 {
       font-family: 'NanumSquareRound', sans-serif;
-      font-weight: 800;
-      font-size: 15px;
-      padding: .1em;
-      background-color: white;
-      border-radius: 10px;
-      margin-bottom: .1rem;
+      text-align: left;
+      font-size: 17px;
+      font-weight: 500;
+      margin-left: 1em;
+    }
+
+    p.menu2{
+      font-family: 'NanumSquareRound', sans-serif;
+      text-align: left;
+      font-size: 14px;
+      font-weight: 500;
+      margin-left: 1em;
+    }
+
+    p.menu1:hover{
+      font-family: 'NanumSquareRound', sans-serif;
+      background-color: rgb(50, 52, 143);
+      text-align: left;
+      font-size: 115%;
+      font-weight: 650;
+      margin-left: 1em;
+    }
+
+    p.menu2:hover{
+      font-family: 'NanumSquareRound', sans-serif;
+      background-color: rgb(50, 52, 143);
+      text-align: left;
     }
 
     p.e {
       font-family: 'NanumSquareRound', sans-serif;
+      font-weight: 600;
+      font-size: 12px;
+      float: left;
+    }
+
+    .title {
+      color: white;
+      text-align: center;
+      font-family: 'NanumSquareRound', sans-serif;
       font-weight: 700;
-      font-size: 13px;
-      padding: .1em;
+    }
+
+    .contentItem {
+      padding:2em;
+      margin-bottom: 7px;
+    }
+
+    #dataSection2 {
       background-color: white;
-      border: 1px solid rgb(219, 219, 219);
-      border-radius: 10px;
-      margin-bottom: .1rem;
-    }
-
-    p.infect {
-      font-size: 25px;
-      font-weight: 800;
-      color: rgb(241, 57, 88);
-    }
-
-    p.diff_infect {
-      font-size: 15px;
-      font-weight: 700;
-      margin-top: -1.3em;
-      margin-bottom: -.2em;
-      color: rgb(235, 83, 109);
-    }
-
-    p.diff_death {
-      font-size: 15px;
-      font-weight: 700;
-      margin-top: -1.3em;
-      margin-bottom: -.2em;
-      color: rgb(99, 61, 67);
-    }
-
-    p.diff_cured {
-      font-size: 15px;
-      font-weight: 700;
-      margin-top: -1.3em;
-      margin-bottom: -.2em;
-      color: rgb(58, 98, 231);
-    }
-
-    p.death {
-      font-size: 25px;
-      font-weight: 800;
-      color: rgb(92, 62, 67);
-    }
-
-    p.cured {
-      font-size: 25px;
-      font-weight: 800;
-      color: rgb(0, 110, 255);
-    }
-
-    .box {
-      display: flex;
-    }
-
-    .container-rounded {
-      background: white;
       width: 100%;
-      border-radius: 15px;
-      margin: 0 auto;
-    }
-
-    .container-title {
-      background: linear-gradient(to bottom, rgb(17, 25, 63), rgb(46, 54, 90));
-      width: 100%;
-      padding: 1em;
+      margin-bottom: 5px;
       text-align: center;
-      margin: 0 auto;
-    }
-
-    .row0 {
-      background: white;
-      height: 1em;
-      width: 100%;
-      max-width: 1200px;
-      text-align: right;
-      margin: 0 auto;
-      padding: .1em;
-      position: relative;
-      margin-bottom: .7em;
-    }
-
-    .nowContainer {
-      background: rgb(255, 255, 255);
-      height: auto;
-      overflow: hidden;
-      width: 90%;
-      max-width: 1200px;
-      text-align: center;
-      margin: 0 auto;
-      border-radius: 10px;
-      padding: .1em;
-      position: relative;
-      margin-bottom: 1em;
-    }
-
-    .nowContent {
-      flex: 0 0 30.333%;
-      width: 33.3333%;
-      text-align: center;
-      position: relative;
-      padding-left: 15px;
-      padding-right: 15px;
-      padding: .5em;
-      display: block;
-      float: left;
-    }
-
-    .col2 {
-      width: 100%;
-      text-align: center;
-      position: relative;
-      padding-left: 15px;
-      padding-right: 15px;
-      display: block;
-      float: left;
-    }
-
-    .yesterday {
-      background: rgb(241, 241, 241);
-      height: 1.5em;
-      width: 80%;
-      max-width: 350px;
-      text-align: center;
-      margin: 0 auto;
-      margin-bottom: 1.5em;
-      border-radius: 10px;
-      position: relative;
-    }
-
-    .mapContent {
-      width: 100%;
-      max-width: 1200px;
-      border-radius: 10px;
-      text-align: center;
-      margin: 0 auto;
-      padding: .5em;
-      position: relative;
-      margin-bottom: .2em;
-    }
-
-    .graphContent {
-      width: 100%;
-      max-width: 1200px;
-      border-radius: 10px;
-      text-align: center;
-      margin: 0 auto;
-      padding: .5em;
-      position: relative;
-      margin-bottom: .5em;
     }
 
 
-    .linkContent {
-      width: 100%;
-      max-width: 1200px;
-      border-radius: 10px;
-      text-align: center;
-      margin: 0 auto;
-      padding: .5em;
-      padding-top: .5em;
-      position: relative;
-      margin-top: .5em;
-    }
-
-    .path {
-      width: 100%;
-      max-width: 1200px;
-      border-radius: 10px;
-      text-align: center;
-      margin: 0 auto;
-      padding: .5em;
-      padding-top: 1em;
-      position: relative;
-      margin-bottom: .5em;
-    }
-
-    .regionContent {
-      width: 100%;
-      max-width: 1200px;
-      border-radius: 10px;
-      text-align: center;
-      margin: 0 auto;
-      padding: .7em;
-      padding-top: .5em;
-      position: relative;
-      margin-top: .5em;
-    }
-
-    .graph2Content {
-      width: 100%;
-      max-width: 1200px;
-      border-radius: 10px;
-      text-align: center;
-      margin: 0 auto;
-      padding: .7em;
-      padding-top: .5em;
-      position: relative;
-      margin-top: .5em;
-    }
-
-    .worldContent {
-      width: 100%;
-      max-width: 1200px;
-      border-radius: 10px;
-      text-align: center;
-      margin: 0 auto;
-      padding: .7em;
-      padding-top: .5em;
-      position: relative;
-      margin-top: .5em;
-    }
-
-    .footer {
-      width: 100%;
-      height: 5em;
-      max-width: 900px;
-      text-align: center;
-      margin: 0 auto;
-      padding: 1em;
-      position: relative;
-      margin-bottom: .2em;
-    }
-
-    button {
-      width: 300px;
-    }
   </style>
-  <style media="(min-width: 621px) and (max-width: 3000px)">
-    .nowData_korea {
-      float: left;
-      width: 50%;
-      padding: 1em;
+
+  <style media="(min-width: 950px) and (max-width: 3000px)">
+  
+    .header1 {
+      position: fixed;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 280px;
+      background: linear-gradient(to top, rgb(105, 106, 175), rgb(43, 77, 170));
+      overflow-y: auto;
+    }    
+    .wrapper {
+      padding: 4rem;
+      margin-left: 280px;
+      background-color: rgb(248, 248, 248);
+      height: 320px;
     }
 
-    .nowData_school {
-      float: left;
-      width: 50%;
-      padding: 1em;
+    #link-popup{
+      display:none;
     }
+
+    #footer2{
+      display:none;
+    }
+
+    .content {
+      padding: 3rem;
+      margin-left: 280px;
+    }
+
+    .nowData{
+      width:50%;
+      float:left;
+    }  
+
+    #dataSection {
+      background-color: white;
+      box-shadow: 0 2px 8px rgb(228, 228, 228);
+      border-radius: 10px;
+      width: 85%;
+      margin-right:20px;    
+      float:left;
+      text-align: center;
+    }
+
+    #update3{
+      display:none;
+    }
+
+    h2{
+      font-size:32px;
+    }
+
+    #linkContent{
+      display:none;
+    }
+
+
   </style>
-  <style media="all and (max-width: 620px)">
-    .nowData_korea {
-      float: left;
-      width: 100%;
-      padding: .3em;
+  <style media="all and (max-width: 949px)">
+
+    button{
+      width:300px;
     }
 
-    .nowData_school {
-      float: left;
-      width: 100%;
-      padding: .3em;
+    #footer{
+      display:none;
     }
+
+    #menu {
+      display: none;
+    }
+    .header1 {
+      left: 0;
+      top: 0;
+      height: 120px;
+      width: 100%;
+      background: linear-gradient(to top, rgb(105, 106, 175), rgb(43, 77, 170));
+      margin: 0 auto;
+    }
+
+
+    .wrapper {
+      padding: .2rem;
+      background-color: rgb(248, 248, 248);
+      height: 425px;
+    }
+  
+    h2{
+      font-size:21px;
+      font-weight:800;
+      margin-top:1em;
+      text-align:center;
+    }
+
+    h3{              
+      margin-top:.2em;
+      font-size:20px;
+      text-align:center;
+    }
+
+    .content {
+      padding: .5rem;
+    }
+    
+    .contentItem {
+      padding:.5em;
+      margin-bottom: 7px;
+    }
+
+    .nowData{
+      width:100%;
+      margin: 0 auto;
+    }  
+
+    #dataSection {
+      background-color: white;
+      box-shadow: 0 2px 8px rgb(228, 228, 228);
+      border-radius: 10px;
+      width: 85%;
+      margin-right:.5em;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    #update1, #update2{
+      display:none;
+    }
+
+    #update3{
+      width:100%;
+      text-align:center;
+      font-size:11px;
+    }
+
   </style>
 
 </head>
 
 <body>
 
-  <div class="container-rounded">
-    <div class="container-title">
-      <!--<img src="/img/title_logo.png" width="200" height="35" />-->
-      <p> <span style="color:rgb(255, 255, 255); font-size:30px; font-weight:800">
-          경북대 코로나 알리미</span></p>
-      <p class="a" style="margin-top:-2.5em; margin-bottom:-.5em;">
-        <span style="color:rgb(233, 233, 233); font-size:12px"><br><i class="fas fa-envelope-open-text"></i>
-          확진자 관련 제보 및 피드백 | <a href="mailto:knucorona@gmail.com">knucorona@gmail.com</a></span> </p>
+  <header class="header1">
+
+    <br>
+    <h4 class="title" style="font-size:27px">경북대 코로나 알리미</h4>
+    <h6 class="title" style="font-size:13px"><i class="fas fa-envelope-open-text"></i>
+      확진자 관련 제보 및 피드백 <a href="mailto:knucorona@gmail.com">knucorona@gmail.com</a></h6>
+
+    <hr style="margin-top:.5em; background-color: rgb(167, 173, 199); width:80%">
+
+    <!-- 크기 줄여질 시 나타나는 구역 -->
+    <div id="link-popup" style="margin-top:-.5em">
+      <p onclick="Move7()" style="font-size:12px; text-align:center"><span style="color:rgb(255, 251, 0)">
+        <i class="fas fa-link"></i>
+        &nbsp; 학교 코로나 공지사항 · 마스크 구매처 링크</span></p>
     </div>
 
-    <div id="row 0 col 1" class="row0">
-      <p class="a" style="font-size:11px"><span style="color:rgb(187, 187, 187)">
-          <i class="fas fa-edit"></i></span>
-        <span style="color:rgb(165, 165, 165)">
-          업데이트 : <span id="update" style="color:rgb(165, 165, 165)"></span> 기준 (차이 : 전일 00시 대비)</span></p>
-    </div>
+    <div id="menu">
 
-    <!-- 국내 현황 -->
-    <div id="row 1 col 1" class="nowContainer">
+      <p class="menu1" id="MenuLink1"><span style="color:rgb(255, 251, 0)"><i class="fas fa-link"></i>&nbsp; 공지사항 및 마스크 구매처</span></p>
 
-      <div id="korea" class="nowData_korea">
-        <h4 style="border-bottom:3px solid rgb(230, 230, 230); padding:.2em;">
-          <span style="color:rgb(54, 64, 155);">
-            <i class="fas fa-user-friends"></span></i> 국내 현황</h4>
-
-        <div class="nowContent"
-          style="background-color: rgb(248, 248, 248); border-bottom:3px solid rgb(252, 167, 192);">
-
-          <p class="e"> 확진자 </p>
-          <p id="국내확진자" class="infect"></p>
-          <p id="국내확진자차이" class="diff_infect"></p>
-
-        </div>
-
-        <div class="nowContent"
-          style="background-color: rgb(248, 248, 248); border-bottom:3px solid rgb(190, 189, 189);">
-          <p class="e"> 사망자 </p>
-          <p id="국내사망자" class="death">50</p>
-          <p id="국내사망자차이" class="diff_death"></p>
-        </div>
-
-        <div class="nowContent"
-          style="background-color: rgb(248, 248, 248); border-bottom:3px solid rgb(144, 209, 253);">
-          <p class="e"> 완치자 </p>
-          <p id="국내완치자" class="cured">130</p>
-          <p id="국내완치자차이" class="diff_cured"></p>
-        </div>
+      <div id="innerMenu" style="display:none">
+        <p class="menu2" onclick="window.open('https://knu.ac.kr/wbbs/wbbs/bbs/btin/list.action?bbs_cde=34&amp;menu_idx=224')" style="margin-left:3em"><span style="color:rgb(255, 255, 255)"><i class="fas fa-link"></i>&nbsp; 경북대 코로나 대응관련 공지</span></p>
+        <p class="menu2" onclick="window.open('https://instagram.com/knu_ch/')" style="margin-left:3em"><span style="color:rgb(255, 255, 255)"><i class="fas fa-link"></i>&nbsp; 경북대 총학생회 인스타그램</span></p>
+        <p class="menu2" onclick="window.open('https://www.facebook.com/knuchonghak/')" style="margin-left:3em"><span style="color:rgb(255, 255, 255)"><i class="fas fa-link"></i>&nbsp; 경북대 총학생회 페이스북 </span></p>
+        <p class="menu2" onclick="window.open('https://coronamask.kr/')" style="margin-left:3em"><span style="color:rgb(255, 255, 255)"><i class="fas fa-link"></i>&nbsp; 마스크 판매처 바로가기 </span></p>
+        <p class="menu2" onclick="window.open('https://mohw.go.kr/react/popup_200128.html')" style="margin-left:3em"><span style="color:rgb(255, 255, 255)"><i class="fas fa-link"></i>&nbsp; 전국 안심병원 현황 </span></p>
       </div>
 
-      <!-- 경북대 현황 -->
-      <div id="school" class="nowData_school">
-        <h4 style="border-bottom:3px solid rgb(230, 230, 230);padding:.2em;">
-          <span style="color:rgb(199, 108, 128)">
-            <i class="fas fa-user-friends"></span></i> 경북대 현황
-          <button class="btn btn-secondary" onclick="Move()"
-            style="font-size:11.5px;width:31%;margin-top:-.5em;float:right">이동경로 확인</button></h4>
+      <p class="menu1" onclick="Move1()"><span style="color:white"><i class="fas fa-user-friends"></i>&nbsp; 국내 및 경북대 현황</span></p>
 
-        <div class="nowContent"
-          style="background-color: rgb(248, 248, 248); border-bottom:3px solid rgb(252, 167, 192);">
+      <p class="menu1" onclick="Move2()"><span style="color:white"><i class="fas fa-search-plus"></i>&nbsp; 국내 지역별 현황</span></p>
 
-          <p class="e"> 확진자 </p>
-          <p id="경대확진자" class="infect"></p>
-          <p id="경대확진자차이" class="diff_infect"></p>
-        </div>
+      <p class="menu1" onclick="Move3()"><span style="color:white"><i class="fas fa-globe"></i>&nbsp; 전 세계 코로나19 현황</span></p>
 
-        <div class="nowContent"
-          style="background-color: rgb(248, 248, 248); border-bottom:3px solid rgb(190, 189, 189);">
-          <p class="e"> 사망자 </p>
-          <p id="경대사망자" class="death"></p>
-          <p id="경대사망자차이" class="diff_death"></p>
-        </div>
+      <p class="menu1" onclick="Move4()"><span style="color:white"><i class="fas fa-chart-line"></i>&nbsp; 확진자 추세 그래프</span></p>
 
-        <div class="nowContent"
-          style="background-color: rgb(248, 248, 248); border-bottom:3px solid rgb(144, 209, 253);">
-          <p class="e"> 완치자 </p>
-          <p id="경대완치자" class="cured"></p>
-          <p id="경대완치자차이" class="diff_cured"></p>
-        </div>
-      </div>
+      <p class="menu1" onclick="Move5()"><span style="color:white"><i class="fas fa-chart-line"></i>&nbsp; 경북대 확진자 지도</span></p>
+
+      <p class="menu1" onclick="Move6()"><span style="color:white"><i class="fas fa-road"></i>&nbsp; 확진자 이동경로</span></p>
+
     </div>
 
-    <!-- 전 세계 현황 펼치기 -->
-    <div id="world" class="worldContent">
-      <h5 style="border-bottom:2px solid rgb(230, 230, 230);padding:.5em;">
+    <a href="https://www.notion.so/chanhui/3c3f593d20cd42ee9241451ee9225a4b" target="_blank">
+      <p id="footer" class="menu1" style="bottom:0; position:fixed; font-size:12px; color:rgb(228, 228, 228)">&gt; 사이트 기능 업데이트 현황</p>
+    </a>
+  </header>
 
-        <span id="Wcorona">
-          <span style="color:rgb(27, 26, 109)">
-            <i class="fas fa-globe"></i> 전 세계 코로나19 현황</span>
+  <section class="wrapper">
+
+    <div class="nowData">
+      <a id = "section1"></a>
+      <h2><i class="fas fa-user-friends"></span></i> 국내 현황 </h2>
+
+      <table id="dataSection">
+        <tr style="border-bottom:2px solid rgb(228, 228, 228)">
+          <th style="font-size:20px; color:rgb(204, 58, 70);width:30%">확진자</th>
+          <td id="국내확진자" style="font-size:27px; font-weight:800; color:rgb(255, 78, 93)"></td>
+          <td id="국내확진자차이" style="font-size:17px; font-weight:700; color:rgb(255, 78, 93)"></td>
+        </tr>
+        <tr style="border-bottom:2px solid rgb(228, 228, 228)">
+          <th style="font-size:20px; color:rgb(3, 125, 224)">완치자</th>
+          <td id="국내완치자" style="font-size:27px; font-weight:800; color:rgb(3, 125, 224)"></td>
+          <td id="국내완치자차이" style="font-size:17px; font-weight:700; color:rgb(3, 125, 224)"></td>
+        </tr>
+        <tr>
+          <th style="font-size:20px; color:rgb(110, 102, 103)">사망자</th>
+          <td id="국내사망자" style="font-size:27px; font-weight:800; color:rgb(110, 102, 103)"></td>
+          <td id="국내사망자차이" style="font-size:17px; font-weight:700; color:rgb(110, 102, 103)"></td>
+        </tr>
+      </table>
+
+      <p id="update1" class="e"><br><i class="fas fa-sync-alt"></i>
+        업데이트: 03.24 (10:00) 기준 (차이: 전날 00시 대비)</p>
+
+    </div>
+
+    <div class="nowData">
+      <h2><i class="fas fa-user-friends"></span></i> 경북대 현황</h2>
+
+      <table id="dataSection">
+        <tr style="border-bottom:2px solid rgb(228, 228, 228)">
+          <th style="font-size:20px; color:rgb(204, 58, 70);width:30%">확진자</th>
+          <td id="경대확진자" style="font-size:27px; font-weight:800; color:rgb(255, 78, 93)"></td>
+          <td id="경대확진자차이" style="font-size:17px; font-weight:700; color:rgb(255, 78, 93)"></td>
+        </tr>
+        <tr style="border-bottom:2px solid rgb(228, 228, 228)">
+          <th style="font-size:20px; color:rgb(3, 125, 224)">완치자</th>
+          <td id="경대완치자" style="font-size:27px; font-weight:800; color:rgb(3, 125, 224)"></td>
+          <td id="경대완치자차이" style="font-size:17px; font-weight:700; color:rgb(3, 125, 224)"></td>
+        </tr>
+        <tr>
+          <th style="font-size:20px; color:rgb(110, 102, 103)">사망자</th>
+          <td id="경대사망자" style="font-size:27px; font-weight:800; color:rgb(110, 102, 103)"></td>
+          <td id="경대사망자차이" style="font-size:17px; font-weight:700; color:rgb(110, 102, 103)"></td>
+        </tr>
+      </table>
+
+      <p id="update2" class="e"><br><i class="fas fa-sync-alt"></i>
+        업데이트: 03.24 (10:00) 기준 (차이: 전날 00시 대비)</p>
+
+    </div>
+
+    <p id="update3" class="e"><br><i class="fas fa-sync-alt"></i>
+      업데이트: 03.24 (10:00) 기준 (차이: 전날 00시 대비)</p>
+
+  </section>
+
+  <section class="content">
+
+    <!-- 국내 지역별 현황-->
+    <div class="contentItem" style="width:100%; 
+    float:left; border-radius:10px; border:2px solid rgb(231, 231, 231)">
+      <h3>
+        <span id="Kcorona">
+          <span style="color:rgb(23, 116, 255)">
+            <i class="fas fa-search-plus"></span></i>
+          국내 지역별 및 검사자 현황
         </span>
 
-        <button id="openButton4" class="btn btn-primary" style="width:30px;height:30px;padding:1px;">
+        <button id="openButton1" class="btn btn-info" style="width:30px;height:30px;padding:1px;">
           <i class="fas fa-angle-down fa-2x"></i></button>
-        <button id="closeButton4" class="btn btn-primary" style="width:30px;height:30px;padding:1px;">
-          <i class="fas fa-angle-up fa-2x"></i></button></h5>
+        <button id="closeButton1" class="btn btn-info" style="width:30px;height:30px;padding:1px;">
+          <i class="fas fa-angle-up fa-2x"></i></button>
+
+      </h3>
+
+      <div id="regionDiv">
+        <table class="table table-hover" style="text-align:center">
+          <thead>
+            <tr class="table-light">
+              <th scope="col">서울</th>
+              <th scope="col">부산</th>
+              <th scope="col">대구</th>
+              <th scope="col">인천</th>
+              <th scope="col">광주</th>
+            </tr>
+
+            <tr>
+              <td id="seoul"></td> <!-- 서울 -->
+              <td id="busan"></td> <!-- 부산 -->
+              <td id="daegu"></td> <!-- 대구 -->
+              <td id="incheon"></td> <!-- 인천 -->
+              <td id="gwangju"></td> <!-- 광주 -->
+            </tr>
+
+            <tr class="table-light">
+
+              <th scope="col">대전</th>
+              <th scope="col">울산</th>
+              <th scope="col">세종</th>
+              <th scope="col">경기</th>
+              <th scope="col">강원</th>
+            </tr>
+
+            <tr>
+              <td id="daejeon"></td> <!-- 대전 -->
+              <td id="ulsan"></td> <!-- 울산 -->
+              <td id="sejong"></td> <!-- 세종 -->
+              <td id="gyeong"></td> <!-- 경기 -->
+              <td id="kangwon"></td> <!-- 강원 -->
+            </tr>
+
+            <tr class="table-light">
+
+              <th scope="col">충북</th>
+              <th scope="col">충남</th>
+              <th scope="col">전북</th>
+              <th scope="col">전남</th>
+              <th scope="col">경북</th>
+            </tr>
+
+            <tr>
+              <td id="chbuk"></td> <!-- 충북 -->
+              <td id="chnam"></td> <!-- 충남 -->
+              <td id="jnbuk"></td> <!-- 전북 -->
+              <td id="jnnam"></td> <!-- 전남 -->
+              <td id="kybuk"></td> <!-- 경북 -->
+            </tr>
+
+            <tr class="table-light">
+              <th scope="col">경남</th>
+              <th scope="col">제주</th>
+            </tr>
+
+            <tr>
+              <td id="kynam"></td> <!-- 경남 -->
+              <td id="jeju"></td> <!-- 제주 -->
+            </tr>
+          </thead>
+        </table>
+
+        <h5><span style="color:rgb(47, 73, 218)"><i class="fas fa-street-view"></span></i> 검사자 현황</h5>
+        <table class="table table-hover"
+          style="width:50%; text-align:center; table-layout:fixed; word-break:break-all;">
+          <thead>
+            <tr>
+              <td colspan="2" style="font-size:15px; background-color: whitesmoke;"><b>검사중</b></td>
+              <td id="검사중" colspan="3" style="font-size:15px">
+
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" style="font-size:15px; background-color: whitesmoke;"><b>결과 음성</b></td>
+              <td id="결과음성" colspan="3" style="font-size:15px">
+
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" style="font-size:15px; background-color: whitesmoke;"><b>합계</b></td>
+              <td id="결과합계" colspan="3" style="font-size:15px">
+
+              </td>
+            </tr>
+          </thead>
+        </table>
+
+      </div>
+    </div>
+
+    <!-- 전 세계 현황-->
+    <div class="contentItem" style="width:100%; 
+    float:left; border-radius:10px; border:2px solid rgb(231, 231, 231)">
+      <h3>
+
+        <span id="Wcorona">
+          <span style="color:rgb(41, 30, 102)">
+            <i class="fas fa-globe"></span></i>
+          전 세계 코로나19 현황
+        </span>
+
+        <button id="openButton4" class="btn btn-info" style="width:30px;height:30px;padding:1px;">
+          <i class="fas fa-angle-down fa-2x"></i></button>
+        <button id="closeButton4" class="btn btn-info" style="width:30px;height:30px;padding:1px;">
+          <i class="fas fa-angle-up fa-2x"></i></button>
+
+      </h3>
 
       <div id="worldDiv">
-        <div class="nowContent"
-          style="background-color: rgb(255, 255, 255); border-bottom:3px solid rgb(252, 167, 192);">
-          <p class="d"> 확진자 </p>
-          <p id="세계확진자" class="infect"></p>
-          <p id="세계확진자차이" class="diff_infect"></p>
-        </div>
+        <table id="dataSection2" style="table-layout:fixed; word-break:break-all;">
+          <tr>
+            <th style="font-size:21px; font-weight:800; ">확진자</th>
+            <th style="font-size:21px; font-weight:800; ">완치자</th>
+            <th style="font-size:21px; font-weight:800; ">사망자</th>
+          </tr>
+          <tr>
+            <td id="세계확진자" style="font-size:28px; font-weight:800; color:rgb(223, 58, 77)">111111</td>
+            <td id="세계완치자" style="font-size:28px; font-weight:800; color:rgb(51, 94, 212)">111</td>
+            <td id="세계사망자" style="font-size:28px; font-weight:800; color:rgb(110, 102, 103)">111</td>
+          </tr>
+        </table>
 
-        <div class="nowContent"
-          style="background-color: rgb(255, 255, 255); border-bottom:3px solid rgb(190, 189, 189);">
-          <p class="d"> 사망자 </p>
-          <p id="세계사망자" class="death"></p>
-          <p id="세계사망자차이" class="diff_death"></p>
-        </div>
-
-        <div class="nowContent"
-          style="background-color: rgb(255, 255, 255); border-bottom:3px solid rgb(144, 209, 253);">
-          <p class="d"> 완치자 </p>
-          <p id="세계완치자" class="cured"></p>
-          <p id="세계완치자차이" class="diff_cured"></p>
-        </div>
-
-        <table class="table table-hover" style="table-layout:fixed; word-break:break-all;">
+        <table class="table table-hover" style="text-align:center; table-layout:fixed; word-break:break-all;">
           <thead>
             <tr class="table-light">
               <th scope="col">국가명</th>
@@ -539,166 +587,25 @@
         </table>
 
         <p style="font-size:12px; text-align:right">※ 세계 확진자 상위 10개국 현황</p>
-        <p id ="W_updateDate" style="margin-top:-.5em; font-size:11px; text-align:right"></p>
-
+        <p id="W_updateDate" style="margin-top:-.5em; font-size:11px; text-align:right"></p>
       </div>
 
     </div>
 
-    <!-- 지역별 현황 펼치기 -->
-    <div id="region" class="regionContent">
-      <h5 style="border-bottom:2px solid rgb(230, 230, 230);padding:.5em;">
-
-        <span id="Kcorona">
-          <span style="color:rgb(23, 116, 255)">
-            <i class="fas fa-search-plus"></span></i>
-          국내 지역별 및 검사자 현황
+    <!-- 추세선 그래프 -->
+    <div class="contentItem" style="width:100%; 
+    float:left; border-radius:10px; border:2px solid rgb(231, 231, 231)">
+      <h3>
+        <span id="Gcorona">
+          <span style="color:rgb(240, 142, 50)">
+            <i class="fas fa-chart-line"></span></i>
+          확진자 추세 그래프
         </span>
 
-        <button id="openButton" class="btn btn-info" style="width:30px;height:30px;padding:1px;">
+        <button id="openButton5" class="btn btn-warning" style="width:30px;height:30px;padding:1px;">
           <i class="fas fa-angle-down fa-2x"></i></button>
-        <button id="closeButton" class="btn btn-info" style="width:30px;height:30px;padding:1px;">
-          <i class="fas fa-angle-up fa-2x"></i></button></h5>
-
-
-      <div id="regionDiv">
-        <table class="table table-hover" style="table-layout:fixed; word-break:break-all;">
-          <thead>
-            <tr class="table-primary">
-              <th scope="col">서울</th>
-              <th scope="col">부산</th>
-              <th scope="col">대구</th>
-              <th scope="col">인천</th>
-              <th scope="col">광주</th>
-            </tr>
-
-            <tr>
-              <td id="seoul"></td> <!-- 서울 -->
-              <td id="busan"></td> <!-- 부산 -->
-              <td id="daegu"></td> <!-- 대구 -->
-              <td id="incheon"></td> <!-- 인천 -->
-              <td id="gwangju"></td> <!-- 광주 -->
-            </tr>
-
-            <tr class="table-primary">
-
-              <th scope="col">대전</th>
-              <th scope="col">울산</th>
-              <th scope="col">세종</th>
-              <th scope="col">경기</th>
-              <th scope="col">강원</th>
-            </tr>
-
-            <tr>
-              <td id="daejeon"></td> <!-- 대전 -->
-              <td id="ulsan"></td> <!-- 울산 -->
-              <td id="sejong"></td> <!-- 세종 -->
-              <td id="gyeong"></td> <!-- 경기 -->
-              <td id="kangwon"></td> <!-- 강원 -->
-            </tr>
-
-            <tr class="table-primary">
-
-              <th scope="col">충북</th>
-              <th scope="col">충남</th>
-              <th scope="col">전북</th>
-              <th scope="col">전남</th>
-              <th scope="col">경북</th>
-            </tr>
-
-            <tr>
-              <td id="chbuk"></td> <!-- 충북 -->
-              <td id="chnam"></td> <!-- 충남 -->
-              <td id="jnbuk"></td> <!-- 전북 -->
-              <td id="jnnam"></td> <!-- 전남 -->
-              <td id="kybuk"></td> <!-- 경북 -->
-            </tr>
-
-            <tr class="table-primary">
-              <th scope="col">경남</th>
-              <th scope="col">제주</th>
-            </tr>
-
-            <tr>
-              <td id="kynam"></td> <!-- 경남 -->
-              <td id="jeju"></td> <!-- 제주 -->
-            </tr>
-          </thead>
-        </table>
-
-        <h5><span style="color:rgb(47, 73, 218)"><i class="fas fa-street-view"></span></i> 검사자 현황</h5>
-        <table class="table table-hover" style="table-layout:fixed; word-break:break-all;">
-          <thead>
-            <tr>
-              <td colspan="2" style="font-size:15px; background-color: whitesmoke;"><b>검사중</b></td>
-              <td id="검사중" colspan="3" style="font-size:15px">
-
-              </td>
-            </tr>
-            <tr>
-              <td colspan="2" style="font-size:15px; background-color: whitesmoke;"><b>결과 음성</b></td>
-              <td id="결과음성" colspan="3" style="font-size:15px">
-
-              </td>
-            </tr>
-            <tr>
-              <td colspan="2" style="font-size:15px; background-color: whitesmoke;"><b>합계</b></td>
-              <td id="결과합계" colspan="3" style="font-size:15px">
-
-              </td>
-            </tr>
-          </thead>
-        </table>
-
-      </div>
-
-    </div>
-
-    <!-- 공지사항 및 각종 링크 펼치기 -->
-    <div id="row 3 col 1" class="linkContent">
-      <h5 style="border-bottom:2px solid rgb(230, 230, 230); padding:.5em;">
-
-        <span id="Lcorona">
-          <span style="color:rgb(3, 118, 248)"><i class="fas fa-link"></i></span>
-          공지사항 및 마스크 구매처 링크
-        </span>
-
-        <button id="openButton2" class="btn btn-info" style="width:30px;height:30px;padding:1px;">
-          <i class="fas fa-angle-down fa-2x"></i></button>
-        <button id="closeButton2" class="btn btn-info" style="width:30px;height:30px;padding:1px;">
-          <i class="fas fa-angle-up fa-2x"></i></button></h5>
-      </h5>
-      <div id="linkDiv">
-        <div class="col2" style="margin-bottom:-12px">
-          <p><button class="btn btn-danger"
-              onclick="location.href='https://knu.ac.kr/wbbs/wbbs/bbs/btin/list.action?bbs_cde=34&amp;menu_idx=224'">
-              경북대 코로나19 대응관련 공지</button></p>
-        </div>
-        <div class="col2" style="margin-bottom:-12px">
-          <p><button class="btn btn-success" onclick="window.open('https://instagram.com/knu_ch/')">경북대 총학생회
-              인스타그램</button>
-          </p>
-        </div>
-        <div class="col2" style="margin-bottom:-12px">
-          <p><button class="btn btn-info" onclick="window.open('https://www.facebook.com/knuchonghak/')">경북대 총학생회
-              페이스북</button></p>
-        </div>
-        <div class="col2" style="margin-bottom:-12px">
-          <p><button class="btn btn-warning" onclick="window.open('https://coronamask.kr/')">마스크 판매처 바로가기</button></p>
-        </div>
-        <div class="col2" style="margin-bottom:-12px">
-          <p><button class="btn btn-primary" onclick="window.open('https://mohw.go.kr/react/popup_200128.html')">전국 안심병원
-              현황</button></p>
-        </div>
-      </div>
-    </div>
-
-    <!-- 확진자 추세선 그래프 -->
-    <div id="row 4 col 1" class="graphContent">
-      <h4 style="border-bottom:3px solid rgb(252, 183, 105); padding:.3em;">
-        <span style="color:rgb(243, 173, 81)">
-          <i class="fas fa-chart-line"></i></span>
-        확진자 추세 그래프</h4>
+        <button id="closeButton5" class="btn btn-warning" style="width:30px;height:30px;padding:1px;">
+          <i class="fas fa-angle-up fa-2x"></i></button> </h3>
 
       <script src="https://code.highcharts.com/highcharts.js"></script>
       <script src="https://code.highcharts.com/modules/exporting.js"></script>
@@ -706,1463 +613,1539 @@
       <script src="https://code.highcharts.com/modules/series-label.js"></script>
       <scritp src="https://code.highcharts.com/modules/exporting.js"></scritp>
 
-      <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+      <div id="graphDiv">
+        <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 
-      <script>
-      </script>
-
-      <!-- 일별 확진자수 증가표 -->
-      <div id="diff" class="graph2Content">
-        <h5 style="padding:.5em; border-bottom:2px solid rgb(230, 230, 230); ">
-
-          <span id="Dcorona">
-            <span style="color:rgb(255, 175, 56)"><i class="fas fa-calendar-alt"></i></span>
-            일별 확진자수 증가 추이
-          </span>
-
-          <button id="openButton3" class="btn btn-warning" style="width:30px;height:30px;padding:1px;">
-            <i class="fas fa-angle-down fa-2x"></i></button>
-          <button id="closeButton3" class="btn btn-warning" style="width:30px;height:30px;padding:1px;">
-            <i class="fas fa-angle-up fa-2x"></i></button></h5>
-
-        <div id="diffDiv"></div>
         <script>
         </script>
 
+        <!-- 일별 확진자수 증가표 -->
+        <h5 style="padding:.5em; border-bottom:2px solid rgb(230, 230, 230); ">
 
+          <span style="color:rgb(255, 175, 56)"><i class="fas fa-calendar-alt"></i></span>
+          일별 확진자수 증가 추이
+          </span>
+
+          <div id="diffDiv"></div>
+          <script>
+          </script>
       </div>
+    </div>
 
-      <!-- 경북대 현황 지도 -->
-      <div id="row 5 col 1" class="mapContent">
-        <h4 style="border-bottom:3px solid rgb(32, 179, 105); padding:.3em;">
-          <span style="color:rgb(35, 146, 109)">
-            <i class="fas fa-map-marked-alt"></i></span>
+    <!-- 확진자 지도 및 동선 -->
+    <div class="contentItem" style="width:100%; 
+    float:left; border-radius:10px; border:2px solid rgb(231, 231, 231)">
+      <h3>
+        <span id="Mcorona">
+          <span style="color:rgb(29, 185, 133)">
+            <i class="fas fa-map-marked-alt"></span></i>
           경북대 확진자 지도
+        </span>
 
-        </h4>
+        <button id="openButton6" class="btn btn-success" style="width:30px;height:30px;padding:1px;">
+          <i class="fas fa-angle-down fa-2x"></i></button>
+        <button id="closeButton6" class="btn btn-success" style="width:30px;height:30px;padding:1px;">
+          <i class="fas fa-angle-up fa-2x"></i></button></h3>
 
+      <div id="mapDiv">
         <div>
           <!-- 지도가 들어갈 공간 -->
           <div id="map" style="width:100%;height:400px;"></div>
         </div>
 
-      </div>
+        <!-- 경북대 확진자 이동경로 -->
+        <div id="row 6 col 1" class="path">
+          <h4 style="border-bottom:3px solid rgb(93, 176, 187); font-size:17px;padding:.3em;">
+            <span style="color:rgb(73, 138, 116)">
+              <i class="fas fa-road"></i></span>
+            확진자 이동경로 (행 클릭시 펼침/닫힘) </h4>
 
-      <!-- 경북대 확진자 이동경로 -->
-      <div id="row 6 col 1" class="path">
-        <h4 style="border-bottom:3px solid rgb(93, 176, 187); font-size:17px;padding:.3em;">
-          <span style="color:rgb(73, 138, 116)">
-            <i class="fas fa-road"></i></span>
-          확진자 이동경로 (행 클릭시 펼침/닫힘) </h4>
+          <div>
+            <!-- 테이블이 들어갈 공간 -->
+            <table class="table table-hover" style="text-align:center; table-layout:fixed; word-break:break-all;">
+              <thead>
+                <tr class="table-light">
+                  <th scope="col" width="28%">환자</th>
+                  <th scope="col" width="26%">인적사항</th>
+                  <th scope="col" width="34%">추정 감염경로</th>
+                  <th scope="col" width="24%">확진일</th>
+                </tr>
 
-        <div>
-          <!-- 테이블이 들어갈 공간 -->
-          <table class="table table-hover" style="table-layout:fixed; word-break:break-all;">
-            <thead>
-              <tr class="table-light">
-                <th scope="col" width="28%">환자</th>
-                <th scope="col" width="26%">인적사항</th>
-                <th scope="col" width="34%">추정 감염경로</th>
-                <th scope="col" width="24%">확진일</th>
-              </tr>
+                <!-- PERSON1 -->
+                <tr id="person1Tr" style="background-color:rgb(230, 237, 240);">
+                  <td style="font-size:13px"><b>경주시</b></td>
+                  <td style="font-size:13px"><b>22(남)</b></td>
+                  <td style="font-size:13px"><b>확인중</b></td>
+                  <td style="font-size:13px"><b>2.22(토)</b></td>
+                </tr>
 
-              <!-- PERSON1 -->
-              <tr id="person1Tr" style="background-color:rgb(230, 237, 240);">
-                <td style="font-size:13px"><b>경주시</b></td>
-                <td style="font-size:13px"><b>22(남)</b></td>
-                <td style="font-size:13px"><b>확인중</b></td>
-                <td style="font-size:13px"><b>2.22(토)</b></td>
-              </tr>
+                <tr class="person1-content">
+                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
+                    <b>2월 19일(수)</b> <br>
+                  </td>
+                </tr>
+                <tr class="person1-content">
+                  <td colspan="1" style="font-size:12px">18:00</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    (버스이동) 동성로 KB ATM 이용, 동생 만남
+                  </td>
+                </tr>
+                <tr class="person1-content">
+                  <td colspan="1" style="font-size:12px">18:10</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    대구 동성로 인플라워 꽃집
+                  </td>
+                </tr>
+                <tr class="person1-content">
+                  <td colspan="1" style="font-size:12px">18:20</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    대구 동성로 스시라스또 식당
+                  </td>
+                </tr>
+                <tr class="person1-content">
+                  <td colspan="1" style="font-size:12px">18:50</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    (택시 이동) 동대구역 이동
+                  </td>
+                </tr>
+                <tr class="person1-content">
+                  <td colspan="1" style="font-size:12px">19:05</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    기차(1791, 3호차 자석 21·22)
+                  </td>
+                </tr>
+                <tr class="person1-content">
+                  <td colspan="1" style="font-size:12px">20:15</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    서경주역 도착, 귀가도보
+                  </td>
+                </tr>
 
-              <tr class="person1-content">
-                <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                  <b>2월 19일(수)</b> <br>
-                </td>
-              </tr>
-              <tr class="person1-content">
-                <td colspan="1" style="font-size:12px">18:00</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  (버스이동) 동성로 KB ATM 이용, 동생 만남
-                </td>
-              </tr>
-              <tr class="person1-content">
-                <td colspan="1" style="font-size:12px">18:10</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  대구 동성로 인플라워 꽃집
-                </td>
-              </tr>
-              <tr class="person1-content">
-                <td colspan="1" style="font-size:12px">18:20</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  대구 동성로 스시라스또 식당
-                </td>
-              </tr>
-              <tr class="person1-content">
-                <td colspan="1" style="font-size:12px">18:50</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  (택시 이동) 동대구역 이동
-                </td>
-              </tr>
-              <tr class="person1-content">
-                <td colspan="1" style="font-size:12px">19:05</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  기차(1791, 3호차 자석 21·22)
-                </td>
-              </tr>
-              <tr class="person1-content">
-                <td colspan="1" style="font-size:12px">20:15</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  서경주역 도착, 귀가도보
-                </td>
-              </tr>
+                <tr class="person1-content">
+                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
+                    <b>2월 20일(목)</b> <br>
+                  </td>
+                </tr>
+                <tr class="person1-content">
+                  <td colspan="1" style="font-size:12px">10:00<br>~14:00</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    현곡 준PC방
+                  </td>
+                </tr>
 
-              <tr class="person1-content">
-                <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                  <b>2월 20일(목)</b> <br>
-                </td>
-              </tr>
-              <tr class="person1-content">
-                <td colspan="1" style="font-size:12px">10:00<br>~14:00</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  현곡 준PC방
-                </td>
-              </tr>
+                <tr class="person1-content">
+                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
+                    <b>2월 21일(금)</b> <br>
+                  </td>
+                </tr>
+                <tr class="person1-content">
+                  <td colspan="1" style="font-size:12px">10:00</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    (아버지 차 이동) 동국대학교 경주병원 이동
+                  </td>
+                </tr>
 
-              <tr class="person1-content">
-                <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                  <b>2월 21일(금)</b> <br>
-                </td>
-              </tr>
-              <tr class="person1-content">
-                <td colspan="1" style="font-size:12px">10:00</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  (아버지 차 이동) 동국대학교 경주병원 이동
-                </td>
-              </tr>
+                <tr class="person1-content">
+                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
+                    <b>2월 22일(토)</b> <br>
+                  </td>
+                </tr>
+                <tr class="person1-content">
+                  <td colspan="1" style="font-size:12px">10:32</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    검사결과 양성 통보(동국대경주병원)
+                  </td>
+                </tr>
+                <tr class="person1-content">
+                  <td colspan="1" style="font-size:12px">10:56</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    역학조사 진행, 조사중(자가격리)
+                  </td>
+                </tr>
 
-              <tr class="person1-content">
-                <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                  <b>2월 22일(토)</b> <br>
-                </td>
-              </tr>
-              <tr class="person1-content">
-                <td colspan="1" style="font-size:12px">10:32</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  검사결과 양성 통보(동국대경주병원)
-                </td>
-              </tr>
-              <tr class="person1-content">
-                <td colspan="1" style="font-size:12px">10:56</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  역학조사 진행, 조사중(자가격리)
-                </td>
-              </tr>
-
-              <tr class="person1-content">
-                <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                  <b>2월 24일(월)</b> <br>
-                </td>
-              </tr>
-              <tr class="person1-content">
-                <td colspan="1" style="font-size:12px">10:32</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  동국대학교경주병원 격리병상 입원
-                </td>
-              </tr>
+                <tr class="person1-content">
+                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
+                    <b>2월 24일(월)</b> <br>
+                  </td>
+                </tr>
+                <tr class="person1-content">
+                  <td colspan="1" style="font-size:12px">10:32</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    동국대학교경주병원 격리병상 입원
+                  </td>
+                </tr>
 
 
-              <!---------------------------------------------------->
-              <!-- PERSON 2 -->
-              <tr id="person2Tr" style="background-color:rgb(230, 237, 240);">
-                <td style="font-size:13px"><b>창원시</b></td>
-                <td style="font-size:13px"><b>21(여)</b></td>
-                <td style="font-size:13px"><b>신천지 대구교회 방문</b></td>
-                <td style="font-size:13px"><b>2.23(일)</b></td>
-              </tr>
+                <!---------------------------------------------------->
+                <!-- PERSON 2 -->
+                <tr id="person2Tr" style="background-color:rgb(230, 237, 240);">
+                  <td style="font-size:13px"><b>창원시</b></td>
+                  <td style="font-size:13px"><b>21(여)</b></td>
+                  <td style="font-size:13px"><b>신천지 대구교회 방문</b></td>
+                  <td style="font-size:13px"><b>2.23(일)</b></td>
+                </tr>
 
-              <!-- day -->
-              <tr class="person2-content">
-                <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                  <b>2월 20일(목)</b> <br>
-                </td>
-              </tr>
-              <tr class="person2-content">
-                <td colspan="1" style="font-size:12px">14:00<br>~14:20</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  자택
-                </td>
-              </tr>
-              <!-- day -->
-              <tr class="person2-content">
-                <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                  <b>2월 21일(금)</b> <br>
-                </td>
-              </tr>
-              <tr class="person2-content">
-                <td colspan="1" style="font-size:12px">14:00<br>~14:20</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  자택
-                </td>
-              </tr>
-              <!-- day -->
-              <tr class="person2-content">
-                <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                  <b>2월 22일(토)</b> <br>
-                </td>
-              </tr>
-              <tr class="person2-content">
-                <td colspan="1" style="font-size:12px">17:00</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  보건소 선별진료소
-                </td>
-              </tr>
-              <!-- day -->
-              <tr class="person2-content">
-                <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                  <b>2월 23일(일)</b> <br>
-                </td>
-              </tr>
-              <tr class="person2-content">
-                <td colspan="1" style="font-size:12px">-</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  마산의료원
-                </td>
-              </tr>
-
-
-              <!---------------------------------------------------->
-              <!-- PERSON 3 -->
-              <tr id="person3Tr" style="background-color:rgb(230, 237, 240);">
-                <td style="font-size:13px"><b>영양군</b></td>
-                <td style="font-size:13px"><b>21(남)</b></td>
-                <td style="font-size:13px"><b>신천지 대구교회 방문</b></td>
-                <td style="font-size:13px"><b>2.26(수)</b></td>
-              </tr>
-
-              <!-- day -->
-              <tr class="person3-content">
-                <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                  <b>2월 19일(수)</b> <br>
-                </td>
-              </tr>
-              <tr class="person3-content">
-                <td colspan="1" style="font-size:12px">14:00<br>~14:20</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  경북대학교 첨성관 식당
-                </td>
-              </tr>
-              <tr class="person3-content">
-                <td colspan="1" style="font-size:12px">14:20<br>~18:30</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  도보로 기숙사 귀가
-                </td>
-              </tr>
-              <tr class="person3-content">
-                <td colspan="1" style="font-size:12px">18:30<br>~19:00</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  경북대학교 첨성관 식당
-                </td>
-              </tr>
-              <tr class="person3-content">
-                <td colspan="1" style="font-size:12px">19:00<br>~21:00</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  기숙사
-                </td>
-              </tr>
-              <tr class="person3-content">
-                <td colspan="1" style="font-size:12px">21:00<br>~22:00</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  경북대학교 향토관 지하헬스장
-                </td>
-              </tr>
-
-              <!-- day -->
-              <tr class="person3-content">
-                <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                  <b>2월 20일(목)</b> <br>
-                </td>
-              </tr>
-              <tr class="person3-content">
-                <td colspan="1" style="font-size:12px">14:00<br>~14:20</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  경북대학교 첨성관 식당
-                </td>
-              </tr>
-              <tr class="person3-content">
-                <td colspan="1" style="font-size:12px">15:00<br>~15:30</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  도보로 대구북문 헌혈의
-                </td>
-              </tr>
-              <tr class="person3-content">
-                <td colspan="1" style="font-size:12px">15:30<br>~16:30</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  신대학약국(대구 북구 대학로), 복현성모약국(대구 북구 동북로), 동서당약국(대구 북구 경진로1길), 메디팜일선약국(대구 북구 동북로)
-                </td>
-              </tr>
-              <tr class="person3-content">
-                <td colspan="1" style="font-size:12px">16:30<br>~16:40</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  이종현내과의원
-                </td>
-              </tr>
-              <tr class="person3-content">
-                <td colspan="1" style="font-size:12px">16:40<br>~17:00</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  도보로 기숙사 귀가
-                </td>
-              </tr>
-              <tr class="person3-content">
-                <td colspan="1" style="font-size:12px">19:00<br>~19:30</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  경북대학교 첨성관 식당
-                </td>
-              </tr>
-
-              <!-- day -->
-              <tr class="person3-content">
-                <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                  <b>2월 21일(금)</b> <br>
-                </td>
-              </tr>
-              <tr class="person3-content">
-                <td colspan="1" style="font-size:12px">11:30<br>~14:00</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  경북대학교 첨성관 식당
-                </td>
-              </tr>
-              <tr class="person3-content">
-                <td colspan="1" style="font-size:12px">16:00<br>~16:30</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  경북대학교 향토관 지하헬스장
-                </td>
-              </tr>
-              <tr class="person3-content">
-                <td colspan="1" style="font-size:12px">18:00<br>~19:00</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  경북대학교 첨성관 식당
-                </td>
-              </tr>
-
-              <!-- day -->
-              <tr class="person3-content">
-                <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                  <b>2월 22일(토)</b> <br>
-                </td>
-              </tr>
-              <tr class="person3-content">
-                <td colspan="1" style="font-size:12px">13:00<br>~18:00</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  경북대학교 향토관에서 첨성관으로 기숙사 이사
-                </td>
-              </tr>
-              <tr class="person3-content">
-                <td colspan="1" style="font-size:12px">18:00<br>~18:10</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  경북대학교 첨성관 식당
-                </td>
-              </tr>
-              <tr class="person3-content">
-                <td colspan="1" style="font-size:12px">18:10<br>~20:00</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  대구시에서 신천지관련 의심환자라고 문자통보 받은 후 기숙사 조교 2명에게 코로나-19 의심된다고 알림, 격리조치 설명듣고 짐 다른 곳으로 분리
-                </td>
-              </tr>
-
-              <!-- day -->
-              <tr class="person3-content">
-                <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                  <b>2월 23일(일)</b> <br>
-                </td>
-              </tr>
-              <tr class="person3-content">
-                <td colspan="1" style="font-size:12px">-</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  기숙사 내에 있음(식사 방에서 해결)
-                </td>
-              </tr>
-
-              <!-- day -->
-              <tr class="person3-content">
-                <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                  <b>2월 24일(월)</b> <br>
-                </td>
-              </tr>
-              <tr class="person3-content">
-                <td colspan="1" style="font-size:12px">14:00<br>~15:15</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  보건소의 권유로 대구 북구보건소 선별진료소에 방문(대구 북구보건소 차량으로 이송)
-                </td>
-              </tr>
-              <tr class="person3-content">
-                <td colspan="1" style="font-size:12px">15:15<br>~20:00</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  기숙사로 귀가
-                </td>
-              </tr>
-              <tr class="person3-content">
-                <td colspan="1" style="font-size:12px">20:00<br>~22:00</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  부모 차량 이용하여 영양도착 이후 자택에서 자가격리중
-                </td>
-              </tr>
+                <!-- day -->
+                <tr class="person2-content">
+                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
+                    <b>2월 20일(목)</b> <br>
+                  </td>
+                </tr>
+                <tr class="person2-content">
+                  <td colspan="1" style="font-size:12px">14:00<br>~14:20</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    자택
+                  </td>
+                </tr>
+                <!-- day -->
+                <tr class="person2-content">
+                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
+                    <b>2월 21일(금)</b> <br>
+                  </td>
+                </tr>
+                <tr class="person2-content">
+                  <td colspan="1" style="font-size:12px">14:00<br>~14:20</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    자택
+                  </td>
+                </tr>
+                <!-- day -->
+                <tr class="person2-content">
+                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
+                    <b>2월 22일(토)</b> <br>
+                  </td>
+                </tr>
+                <tr class="person2-content">
+                  <td colspan="1" style="font-size:12px">17:00</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    보건소 선별진료소
+                  </td>
+                </tr>
+                <!-- day -->
+                <tr class="person2-content">
+                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
+                    <b>2월 23일(일)</b> <br>
+                  </td>
+                </tr>
+                <tr class="person2-content">
+                  <td colspan="1" style="font-size:12px">-</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    마산의료원
+                  </td>
+                </tr>
 
 
-              <!---------------------------------------------------->
-              <!-- PERSON 4 -->
-              <tr id="person4Tr" style="background-color:rgb(230, 237, 240);">
-                <td style="font-size:13px"><b>창원시</b></td>
-                <td style="font-size:13px"><b>22(남)</b></td>
-                <td style="font-size:13px"><b>신천지 대구교회 방문</b></td>
-                <td style="font-size:13px"><b>2.26(수)</b></td>
-              </tr>
+                <!---------------------------------------------------->
+                <!-- PERSON 3 -->
+                <tr id="person3Tr" style="background-color:rgb(230, 237, 240);">
+                  <td style="font-size:13px"><b>영양군</b></td>
+                  <td style="font-size:13px"><b>21(남)</b></td>
+                  <td style="font-size:13px"><b>신천지 대구교회 방문</b></td>
+                  <td style="font-size:13px"><b>2.26(수)</b></td>
+                </tr>
 
-              <!-- day -->
-              <tr class="person4-content">
-                <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                  <b>2월 9일(일), 12일(수), 16일(일)</b> <br>
-                </td>
-              </tr>
-              <tr class="person4-content">
-                <td colspan="1" style="font-size:12px">-</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  대구 신천지 예배
-                </td>
-              </tr>
+                <!-- day -->
+                <tr class="person3-content">
+                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
+                    <b>2월 19일(수)</b> <br>
+                  </td>
+                </tr>
+                <tr class="person3-content">
+                  <td colspan="1" style="font-size:12px">14:00<br>~14:20</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    경북대학교 첨성관 식당
+                  </td>
+                </tr>
+                <tr class="person3-content">
+                  <td colspan="1" style="font-size:12px">14:20<br>~18:30</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    도보로 기숙사 귀가
+                  </td>
+                </tr>
+                <tr class="person3-content">
+                  <td colspan="1" style="font-size:12px">18:30<br>~19:00</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    경북대학교 첨성관 식당
+                  </td>
+                </tr>
+                <tr class="person3-content">
+                  <td colspan="1" style="font-size:12px">19:00<br>~21:00</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    기숙사
+                  </td>
+                </tr>
+                <tr class="person3-content">
+                  <td colspan="1" style="font-size:12px">21:00<br>~22:00</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    경북대학교 향토관 지하헬스장
+                  </td>
+                </tr>
 
-              <!-- day -->
-              <tr class="person4-content">
-                <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                  <b>2월 17일(월)</b> <br>
-                </td>
-              </tr>
-              <tr class="person4-content">
-                <td colspan="1" style="font-size:12px">-</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  Emart24 S동대구광장점(점심식사)
-                </td>
-              </tr>
-              <tr class="person4-content">
-                <td colspan="1" style="font-size:12px">14:00</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  경북대 기숙사 이동
-                </td>
-              </tr>
+                <!-- day -->
+                <tr class="person3-content">
+                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
+                    <b>2월 20일(목)</b> <br>
+                  </td>
+                </tr>
+                <tr class="person3-content">
+                  <td colspan="1" style="font-size:12px">14:00<br>~14:20</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    경북대학교 첨성관 식당
+                  </td>
+                </tr>
+                <tr class="person3-content">
+                  <td colspan="1" style="font-size:12px">15:00<br>~15:30</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    도보로 대구북문 헌혈의
+                  </td>
+                </tr>
+                <tr class="person3-content">
+                  <td colspan="1" style="font-size:12px">15:30<br>~16:30</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    신대학약국(대구 북구 대학로), 복현성모약국(대구 북구 동북로), 동서당약국(대구 북구 경진로1길), 메디팜일선약국(대구 북구 동북로)
+                  </td>
+                </tr>
+                <tr class="person3-content">
+                  <td colspan="1" style="font-size:12px">16:30<br>~16:40</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    이종현내과의원
+                  </td>
+                </tr>
+                <tr class="person3-content">
+                  <td colspan="1" style="font-size:12px">16:40<br>~17:00</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    도보로 기숙사 귀가
+                  </td>
+                </tr>
+                <tr class="person3-content">
+                  <td colspan="1" style="font-size:12px">19:00<br>~19:30</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    경북대학교 첨성관 식당
+                  </td>
+                </tr>
 
-              <!-- day -->
-              <tr class="person4-content">
-                <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                  <b>2월 18일(화)</b> <br>
-                </td>
-              </tr>
-              <tr class="person4-content">
-                <td colspan="1" style="font-size:12px">14:00</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  경북대 근처 동아리 분식
-                </td>
-              </tr>
-              <tr class="person4-content">
-                <td colspan="1" style="font-size:12px">14:30<br>~20:00</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  경북대 근처 앤유PC방
-                </td>
-              </tr>
-              <tr class="person4-content">
-                <td colspan="1" style="font-size:12px">20:00<br>~20:30</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  경북대 근처 장터돼지국밥
-                </td>
-              </tr>
+                <!-- day -->
+                <tr class="person3-content">
+                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
+                    <b>2월 21일(금)</b> <br>
+                  </td>
+                </tr>
+                <tr class="person3-content">
+                  <td colspan="1" style="font-size:12px">11:30<br>~14:00</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    경북대학교 첨성관 식당
+                  </td>
+                </tr>
+                <tr class="person3-content">
+                  <td colspan="1" style="font-size:12px">16:00<br>~16:30</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    경북대학교 향토관 지하헬스장
+                  </td>
+                </tr>
+                <tr class="person3-content">
+                  <td colspan="1" style="font-size:12px">18:00<br>~19:00</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    경북대학교 첨성관 식당
+                  </td>
+                </tr>
 
-              <!-- day -->
-              <tr class="person4-content">
-                <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                  <b>2월 19일(수)</b> <br>
-                </td>
-              </tr>
-              <tr class="person4-content">
-                <td colspan="1" style="font-size:12px">-</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  대구에서 창원으로 자차로 이동
-                </td>
-              </tr>
+                <!-- day -->
+                <tr class="person3-content">
+                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
+                    <b>2월 22일(토)</b> <br>
+                  </td>
+                </tr>
+                <tr class="person3-content">
+                  <td colspan="1" style="font-size:12px">13:00<br>~18:00</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    경북대학교 향토관에서 첨성관으로 기숙사 이사
+                  </td>
+                </tr>
+                <tr class="person3-content">
+                  <td colspan="1" style="font-size:12px">18:00<br>~18:10</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    경북대학교 첨성관 식당
+                  </td>
+                </tr>
+                <tr class="person3-content">
+                  <td colspan="1" style="font-size:12px">18:10<br>~20:00</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    대구시에서 신천지관련 의심환자라고 문자통보 받은 후 기숙사 조교 2명에게 코로나-19 의심된다고 알림, 격리조치 설명듣고 짐 다른 곳으로 분리
+                  </td>
+                </tr>
 
-              <!-- day -->
-              <tr class="person4-content">
-                <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                  <b>2월 20일(목)</b> <br>
-                </td>
-              </tr>
-              <tr class="person4-content">
-                <td colspan="1" style="font-size:12px">13:39</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  창원축산농협 봉곡점 지점
-                </td>
-              </tr>
-              <tr class="person4-content">
-                <td colspan="1" style="font-size:12px">14:10</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  봉곡동 고고헤어
-                </td>
-              </tr>
-              <tr class="person4-content">
-                <td colspan="1" style="font-size:12px">16:19</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  상남동 참정형외과
-                </td>
-              </tr>
+                <!-- day -->
+                <tr class="person3-content">
+                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
+                    <b>2월 23일(일)</b> <br>
+                  </td>
+                </tr>
+                <tr class="person3-content">
+                  <td colspan="1" style="font-size:12px">-</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    기숙사 내에 있음(식사 방에서 해결)
+                  </td>
+                </tr>
 
-              <!-- day -->
-              <tr class="person4-content">
-                <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                  <b>2월 22일(토)</b> <br>
-                </td>
-              </tr>
-              <tr class="person4-content">
-                <td colspan="1" style="font-size:12px">12:09</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  참정형외과
-                </td>
-              </tr>
-              <tr class="person4-content">
-                <td colspan="1" style="font-size:12px">12:56</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  피아노약국
-                </td>
-              </tr>
-
-              <!-- day -->
-              <tr class="person4-content">
-                <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                  <b>2월 24일(월)</b> <br>
-                </td>
-              </tr>
-              <tr class="person4-content">
-                <td colspan="1" style="font-size:12px">12:56</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  창원보건소 선별진료소
-                </td>
-              </tr>
-
-
-              <!-- PERSON 5 -->
-              <tr id="person5Tr" style="background-color:rgb(230, 237, 240);">
-                <td style="font-size:13px"><b>봉화군</b></td>
-                <td style="font-size:13px"><b>22(남)</b></td>
-                <td style="font-size:13px"><b>확인중</b></td>
-                <td style="font-size:13px"><b>2.27(목)</b></td>
-              </tr>
-
-              <!-- day -->
-              <tr class="person5-content">
-                <td colspan="5" style="background-color:rgb(237, 246, 248); font-size:13px">
-                  <b>2월 12일(수)</b> <br>
-                </td>
-              </tr>
-              <tr class="person5-content">
-                <td colspan="1" style="font-size:12px">15:00</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  장도뚝배기 식사 후 기숙사 입소
-                </td>
-              </tr>
-
-              <!-- day -->
-              <tr class="person5-content">
-                <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                  <b>2월 13일(목)</b> <br>
-                </td>
-              </tr>
-              <tr class="person5-content">
-                <td colspan="1" style="font-size:12px">09:00</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  대구 더원 이비인후과 진료
-                </td>
-              </tr>
-              <tr class="person5-content">
-                <td colspan="1" style="font-size:12px">09:13</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  대구 바른약국 방문
-                </td>
-              </tr>
-
-              <!-- day -->
-              <tr class="person5-content">
-                <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                  <b>2월 14일(금)</b> <br>
-                </td>
-              </tr>
-              <tr class="person5-content">
-                <td colspan="1" style="font-size:12px">15:17</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  대구 드림병원진료
-                </td>
-              </tr>
-              <tr class="person5-content">
-                <td colspan="1" style="font-size:12px">15:20</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  대구 뉴 드림약국 방문
-                </td>
-              </tr>
-
-              <!-- day -->
-              <tr class="person5-content">
-                <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                  <b>2월 15일(토)</b> <br>
-                </td>
-              </tr>
-              <tr class="person5-content">
-                <td colspan="1" style="font-size:12px">10:38</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  대구 GS25방문(지점 미기억)
-                </td>
-              </tr>
-              <tr class="person5-content">
-                <td colspan="1" style="font-size:12px">13:17</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  대구 반월당약국
-                </td>
-              </tr>
-              <tr class="person5-content">
-                <td colspan="1" style="font-size:12px">14:21</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  대구 더원 이비인후과 진료
-                </td>
-              </tr>
-              <tr class="person5-content">
-                <td colspan="1" style="font-size:12px">14:27</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  대구 바른약국 방문
-                </td>
-              </tr>
-              <tr class="person5-content">
-                <td colspan="1" style="font-size:12px">15:18</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  대구 행복제면소 중앙로지점 식사
-                </td>
-              </tr>
-              <tr class="person5-content">
-                <td colspan="1" style="font-size:12px">15:30</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  파스쿠찌 대구점 방문
-                </td>
-              </tr>
-
-              <!-- day -->
-              <tr class="person5-content">
-                <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                  <b>2월 20일(수)</b> <br>
-                </td>
-              </tr>
-              <tr class="person5-content">
-                <td colspan="1" style="font-size:12px">11:55</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  대구 더원 이비인후과 진료, 대구 바른약국 방문
-                </td>
-              </tr>
-
-              <!-- day -->
-              <tr class="person5-content">
-                <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                  <b>2월 24일(월)</b> <br>
-                </td>
-              </tr>
-              <tr class="person5-content">
-                <td colspan="1" style="font-size:12px">18:00</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  경북대학교 기숙사(첨성관)에서 봉화 이동
-                </td>
-              </tr>
-              <tr class="person5-content">
-                <td colspan="1" style="font-size:12px">23:00</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  봉화군보건소 선별진료소 진료 및 검사 후 자택 이동
-                </td>
-              </tr>
-
-              <!-- day -->
-              <tr class="person5-content">
-                <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                  <b>2월 25일(화)</b> <br>
-                </td>
-              </tr>
-              <tr class="person5-content">
-                <td colspan="1" style="font-size:12px">09:00</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  자원 휴양림에 아버지와 분리 입소 격리
-                </td>
-              </tr>
-
-              <!-- day -->
-              <tr class="person5-content">
-                <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                  <b>2월 27일(목)</b> <br>
-                </td>
-              </tr>
-              <tr class="person5-content">
-                <td colspan="1" style="font-size:12px">-</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  확진 판정
-                </td>
-              </tr>
-
-              <!---------------------------------------------------->
-              <!-- PERSON 6 -->
-              <tr id="person6Tr" style="background-color:rgb(230, 237, 240);">
-                <td style="font-size:13px"><b>경주시</b></td>
-                <td style="font-size:13px"><b>19(남)</b></td>
-                <td style="font-size:13px"><b>신천지 대구교회 방문</b></td>
-                <td style="font-size:13px"><b>3.2(월)</b></td>
-              </tr>
-
-              <!-- day -->
-              <tr class="person6-content">
-                <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                  <b>2월 16일(일)</b> <br>
-                </td>
-              </tr>
-              <tr class="person6-content">
-                <td colspan="1" style="font-size:12px">-</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  대구 신천지 교회 예배 참석
-                </td>
-              </tr>
-              <!-- day -->
-              <tr class="person6-content">
-                <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                  <b>2월 22일(토)</b> <br>
-                </td>
-              </tr>
-              <tr class="person6-content">
-                <td colspan="1" style="font-size:12px">22:00<br>~22:50</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  대구에서 경주 성건동 자택(택시)
-                </td>
-              </tr>
-              <!-- day -->
-              <tr class="person6-content">
-                <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                  <b>2월 23일(일)</b> <br>
-                </td>
-              </tr>
-              <tr class="person6-content">
-                <td colspan="1" style="font-size:12px">03:23</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  GS25 경주중앙점(동성로 37)-마스크 착용
-                </td>
-              </tr>
-              <!-- day -->
-              <tr class="person6-content">
-                <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                  <b>2월 24일(월)</b> <br>
-                </td>
-              </tr>
-              <tr class="person6-content">
-                <td colspan="1" style="font-size:12px">18:00</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  대구 북구 보건소로부터 자가격리 대상자임을 통보 받음
-                </td>
-              </tr>
-              <!-- day -->
-              <tr class="person6-content">
-                <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                  <b>2월 27일(목)</b> <br>
-                </td>
-              </tr>
-              <tr class="person6-content">
-                <td colspan="1" style="font-size:12px">23:00</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  경주로 이관(자가격리 확인 및 발열 체크)
-                </td>
-              </tr>
-              <!-- day -->
-              <tr class="person6-content">
-                <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                  <b>2월 28일(금)</b> <br>
-                </td>
-              </tr>
-              <tr class="person6-content">
-                <td colspan="1" style="font-size:12px">15:10</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  한창스튜디오(도보, 마스크착용)
-                </td>
-              </tr>
-              <tr class="person6-content">
-                <td colspan="1" style="font-size:12px">15:22</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  성건동행정복지센터(도보, 마스크착용)
-                </td>
-              </tr>
-              <tr class="person6-content">
-                <td colspan="1" style="font-size:12px">15:30</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  경북대구낙농협동조합 성건지점(금성로 292) 방문 – 귀가(도보, 마스크착용)
-                </td>
-              </tr>
-              <!-- day -->
-              <tr class="person6-content">
-                <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                  <b>3월 1일(일)</b> <br>
-                </td>
-              </tr>
-              <tr class="person6-content">
-                <td colspan="1" style="font-size:12px">10:00</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  보건소 선별진료소
-                </td>
-              </tr>
-              <!-- day -->
-              <tr class="person6-content">
-                <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                  <b>3월 2일(월)</b> <br>
-                </td>
-              </tr>
-              <tr class="person6-content">
-                <td colspan="1" style="font-size:12px">-</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  검사결과 양성
-                </td>
-              </tr>
-
-              <!---------------------------------------------------->
-              <!-- PERSON 7 -->
-              <tr id="person7Tr" style="background-color:rgb(230, 237, 240);">
-                <td style="font-size:13px"><b>대전시</b></td>
-                <td style="font-size:13px"><b>20대(남)</b></td>
-                <td style="font-size:13px"><b>대구 신천지 교육생</b></td>
-                <td style="font-size:13px"><b>3.4(수)</b></td>
-              </tr>
-
-              <!-- day -->
-              <tr class="person7-content">
-                <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                  <b>2월 28일(금) ~ 3월3일(화)</b> <br>
-                </td>
-              </tr>
-              <tr class="person7-content">
-                <td colspan="1" style="font-size:12px">-</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  종일 자택(원내동, 한아름아파트) / 자가격리 중
-                </td>
-              </tr>
-              <!-- day -->
-              <tr class="person7-content">
-                <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                  <b>3월 4일(수)</b> <br>
-                </td>
-              </tr>
-              <tr class="person7-content">
-                <td colspan="1" style="font-size:12px">17:30</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  유성구보건소
-                </td>
-              </tr>
-              <tr class="person7-content">
-                <td colspan="1" style="font-size:12px">18:00</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  자택
-                </td>
-              </tr>
-
-              <!-- day -->
-              <tr class="person7-content">
-                <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                  <b>3월 5일(목)</b> <br>
-                </td>
-              </tr>
-              <tr class="person7-content">
-                <td colspan="1" style="font-size:12px">1130</td>
-                <td colspan="3" style="text-align:left;font-size:12px">
-                  충남대병원 입원
-                </td>
-              </tr>
-
-              <!---------------------------------------------------->
-              <!-- PERSON 8 -->
-              <tr id="person8Tr" style="background-color:rgb(236, 237, 238);">
-                <td td colspan="4" style="font-size:13px"><span style="color:rgb(163, 163, 163)"><b>확인중</b></span></td>
-              </tr>
-
-              <!---------------------------------------------------->
-              <!-- PERSON 9 -->
-              <tr id="person9Tr" style="background-color:rgb(236, 237, 238);">
-                <td td colspan="4" style="font-size:13px"><span style="color:rgb(163, 163, 163)"><b>확인중</b></span></td>
-              </tr>
-
-              <!---------------------------------------------------->
-              <!-- PERSON 10 -->
-              <tr id="person10Tr" style="background-color:rgb(236, 237, 238);">
-                <td td colspan="4" style="font-size:13px"><span style="color:rgb(163, 163, 163)"><b>확인중</b></span></td>
-              </tr>
-
-              <!---------------------------------------------------->
-              <!-- PERSON 11 -->
-              <tr id="person11Tr" style="background-color:rgb(236, 237, 238);">
-                <td td colspan="4" style="font-size:13px"><span style="color:rgb(163, 163, 163)"><b>확인중</b></span></td>
-              </tr>
-
-              <!---------------------------------------------------->
-              <!-- PERSON 12 -->
-              <tr id="person12Tr" style="background-color:rgb(236, 237, 238);">
-                <td td colspan="4" style="font-size:13px"><span style="color:rgb(163, 163, 163)"><b>확인중</b></span></td>
-              </tr>
-
-              <!---------------------------------------------------->
-              <!-- PERSON 13 -->
-              <tr id="person13Tr" style="background-color:rgb(236, 237, 238);">
-                <td td colspan="4" style="font-size:13px"><span style="color:rgb(163, 163, 163)"><b>확인중</b></span></td>
-              </tr>
-
-              <!---------------------------------------------------->
-              <!-- PERSON 14 -->
-              <tr id="person14Tr" style="background-color:rgb(236, 237, 238);">
-                <td td colspan="4" style="font-size:13px"><span style="color:rgb(163, 163, 163)"><b>확인중</b></span></td>
-              </tr>
+                <!-- day -->
+                <tr class="person3-content">
+                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
+                    <b>2월 24일(월)</b> <br>
+                  </td>
+                </tr>
+                <tr class="person3-content">
+                  <td colspan="1" style="font-size:12px">14:00<br>~15:15</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    보건소의 권유로 대구 북구보건소 선별진료소에 방문(대구 북구보건소 차량으로 이송)
+                  </td>
+                </tr>
+                <tr class="person3-content">
+                  <td colspan="1" style="font-size:12px">15:15<br>~20:00</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    기숙사로 귀가
+                  </td>
+                </tr>
+                <tr class="person3-content">
+                  <td colspan="1" style="font-size:12px">20:00<br>~22:00</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    부모 차량 이용하여 영양도착 이후 자택에서 자가격리중
+                  </td>
+                </tr>
 
 
+                <!---------------------------------------------------->
+                <!-- PERSON 4 -->
+                <tr id="person4Tr" style="background-color:rgb(230, 237, 240);">
+                  <td style="font-size:13px"><b>창원시</b></td>
+                  <td style="font-size:13px"><b>22(남)</b></td>
+                  <td style="font-size:13px"><b>신천지 대구교회 방문</b></td>
+                  <td style="font-size:13px"><b>2.26(수)</b></td>
+                </tr>
 
-            </thead>
-          </table>
+                <!-- day -->
+                <tr class="person4-content">
+                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
+                    <b>2월 9일(일), 12일(수), 16일(일)</b> <br>
+                  </td>
+                </tr>
+                <tr class="person4-content">
+                  <td colspan="1" style="font-size:12px">-</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    대구 신천지 예배
+                  </td>
+                </tr>
+
+                <!-- day -->
+                <tr class="person4-content">
+                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
+                    <b>2월 17일(월)</b> <br>
+                  </td>
+                </tr>
+                <tr class="person4-content">
+                  <td colspan="1" style="font-size:12px">-</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    Emart24 S동대구광장점(점심식사)
+                  </td>
+                </tr>
+                <tr class="person4-content">
+                  <td colspan="1" style="font-size:12px">14:00</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    경북대 기숙사 이동
+                  </td>
+                </tr>
+
+                <!-- day -->
+                <tr class="person4-content">
+                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
+                    <b>2월 18일(화)</b> <br>
+                  </td>
+                </tr>
+                <tr class="person4-content">
+                  <td colspan="1" style="font-size:12px">14:00</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    경북대 근처 동아리 분식
+                  </td>
+                </tr>
+                <tr class="person4-content">
+                  <td colspan="1" style="font-size:12px">14:30<br>~20:00</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    경북대 근처 앤유PC방
+                  </td>
+                </tr>
+                <tr class="person4-content">
+                  <td colspan="1" style="font-size:12px">20:00<br>~20:30</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    경북대 근처 장터돼지국밥
+                  </td>
+                </tr>
+
+                <!-- day -->
+                <tr class="person4-content">
+                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
+                    <b>2월 19일(수)</b> <br>
+                  </td>
+                </tr>
+                <tr class="person4-content">
+                  <td colspan="1" style="font-size:12px">-</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    대구에서 창원으로 자차로 이동
+                  </td>
+                </tr>
+
+                <!-- day -->
+                <tr class="person4-content">
+                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
+                    <b>2월 20일(목)</b> <br>
+                  </td>
+                </tr>
+                <tr class="person4-content">
+                  <td colspan="1" style="font-size:12px">13:39</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    창원축산농협 봉곡점 지점
+                  </td>
+                </tr>
+                <tr class="person4-content">
+                  <td colspan="1" style="font-size:12px">14:10</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    봉곡동 고고헤어
+                  </td>
+                </tr>
+                <tr class="person4-content">
+                  <td colspan="1" style="font-size:12px">16:19</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    상남동 참정형외과
+                  </td>
+                </tr>
+
+                <!-- day -->
+                <tr class="person4-content">
+                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
+                    <b>2월 22일(토)</b> <br>
+                  </td>
+                </tr>
+                <tr class="person4-content">
+                  <td colspan="1" style="font-size:12px">12:09</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    참정형외과
+                  </td>
+                </tr>
+                <tr class="person4-content">
+                  <td colspan="1" style="font-size:12px">12:56</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    피아노약국
+                  </td>
+                </tr>
+
+                <!-- day -->
+                <tr class="person4-content">
+                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
+                    <b>2월 24일(월)</b> <br>
+                  </td>
+                </tr>
+                <tr class="person4-content">
+                  <td colspan="1" style="font-size:12px">12:56</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    창원보건소 선별진료소
+                  </td>
+                </tr>
 
 
+                <!-- PERSON 5 -->
+                <tr id="person5Tr" style="background-color:rgb(230, 237, 240);">
+                  <td style="font-size:13px"><b>봉화군</b></td>
+                  <td style="font-size:13px"><b>22(남)</b></td>
+                  <td style="font-size:13px"><b>확인중</b></td>
+                  <td style="font-size:13px"><b>2.27(목)</b></td>
+                </tr>
+
+                <!-- day -->
+                <tr class="person5-content">
+                  <td colspan="5" style="background-color:rgb(237, 246, 248); font-size:13px">
+                    <b>2월 12일(수)</b> <br>
+                  </td>
+                </tr>
+                <tr class="person5-content">
+                  <td colspan="1" style="font-size:12px">15:00</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    장도뚝배기 식사 후 기숙사 입소
+                  </td>
+                </tr>
+
+                <!-- day -->
+                <tr class="person5-content">
+                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
+                    <b>2월 13일(목)</b> <br>
+                  </td>
+                </tr>
+                <tr class="person5-content">
+                  <td colspan="1" style="font-size:12px">09:00</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    대구 더원 이비인후과 진료
+                  </td>
+                </tr>
+                <tr class="person5-content">
+                  <td colspan="1" style="font-size:12px">09:13</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    대구 바른약국 방문
+                  </td>
+                </tr>
+
+                <!-- day -->
+                <tr class="person5-content">
+                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
+                    <b>2월 14일(금)</b> <br>
+                  </td>
+                </tr>
+                <tr class="person5-content">
+                  <td colspan="1" style="font-size:12px">15:17</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    대구 드림병원진료
+                  </td>
+                </tr>
+                <tr class="person5-content">
+                  <td colspan="1" style="font-size:12px">15:20</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    대구 뉴 드림약국 방문
+                  </td>
+                </tr>
+
+                <!-- day -->
+                <tr class="person5-content">
+                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
+                    <b>2월 15일(토)</b> <br>
+                  </td>
+                </tr>
+                <tr class="person5-content">
+                  <td colspan="1" style="font-size:12px">10:38</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    대구 GS25방문(지점 미기억)
+                  </td>
+                </tr>
+                <tr class="person5-content">
+                  <td colspan="1" style="font-size:12px">13:17</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    대구 반월당약국
+                  </td>
+                </tr>
+                <tr class="person5-content">
+                  <td colspan="1" style="font-size:12px">14:21</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    대구 더원 이비인후과 진료
+                  </td>
+                </tr>
+                <tr class="person5-content">
+                  <td colspan="1" style="font-size:12px">14:27</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    대구 바른약국 방문
+                  </td>
+                </tr>
+                <tr class="person5-content">
+                  <td colspan="1" style="font-size:12px">15:18</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    대구 행복제면소 중앙로지점 식사
+                  </td>
+                </tr>
+                <tr class="person5-content">
+                  <td colspan="1" style="font-size:12px">15:30</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    파스쿠찌 대구점 방문
+                  </td>
+                </tr>
+
+                <!-- day -->
+                <tr class="person5-content">
+                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
+                    <b>2월 20일(수)</b> <br>
+                  </td>
+                </tr>
+                <tr class="person5-content">
+                  <td colspan="1" style="font-size:12px">11:55</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    대구 더원 이비인후과 진료, 대구 바른약국 방문
+                  </td>
+                </tr>
+
+                <!-- day -->
+                <tr class="person5-content">
+                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
+                    <b>2월 24일(월)</b> <br>
+                  </td>
+                </tr>
+                <tr class="person5-content">
+                  <td colspan="1" style="font-size:12px">18:00</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    경북대학교 기숙사(첨성관)에서 봉화 이동
+                  </td>
+                </tr>
+                <tr class="person5-content">
+                  <td colspan="1" style="font-size:12px">23:00</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    봉화군보건소 선별진료소 진료 및 검사 후 자택 이동
+                  </td>
+                </tr>
+
+                <!-- day -->
+                <tr class="person5-content">
+                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
+                    <b>2월 25일(화)</b> <br>
+                  </td>
+                </tr>
+                <tr class="person5-content">
+                  <td colspan="1" style="font-size:12px">09:00</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    자원 휴양림에 아버지와 분리 입소 격리
+                  </td>
+                </tr>
+
+                <!-- day -->
+                <tr class="person5-content">
+                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
+                    <b>2월 27일(목)</b> <br>
+                  </td>
+                </tr>
+                <tr class="person5-content">
+                  <td colspan="1" style="font-size:12px">-</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    확진 판정
+                  </td>
+                </tr>
+
+                <!---------------------------------------------------->
+                <!-- PERSON 6 -->
+                <tr id="person6Tr" style="background-color:rgb(230, 237, 240);">
+                  <td style="font-size:13px"><b>경주시</b></td>
+                  <td style="font-size:13px"><b>19(남)</b></td>
+                  <td style="font-size:13px"><b>신천지 대구교회 방문</b></td>
+                  <td style="font-size:13px"><b>3.2(월)</b></td>
+                </tr>
+
+                <!-- day -->
+                <tr class="person6-content">
+                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
+                    <b>2월 16일(일)</b> <br>
+                  </td>
+                </tr>
+                <tr class="person6-content">
+                  <td colspan="1" style="font-size:12px">-</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    대구 신천지 교회 예배 참석
+                  </td>
+                </tr>
+                <!-- day -->
+                <tr class="person6-content">
+                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
+                    <b>2월 22일(토)</b> <br>
+                  </td>
+                </tr>
+                <tr class="person6-content">
+                  <td colspan="1" style="font-size:12px">22:00<br>~22:50</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    대구에서 경주 성건동 자택(택시)
+                  </td>
+                </tr>
+                <!-- day -->
+                <tr class="person6-content">
+                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
+                    <b>2월 23일(일)</b> <br>
+                  </td>
+                </tr>
+                <tr class="person6-content">
+                  <td colspan="1" style="font-size:12px">03:23</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    GS25 경주중앙점(동성로 37)-마스크 착용
+                  </td>
+                </tr>
+                <!-- day -->
+                <tr class="person6-content">
+                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
+                    <b>2월 24일(월)</b> <br>
+                  </td>
+                </tr>
+                <tr class="person6-content">
+                  <td colspan="1" style="font-size:12px">18:00</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    대구 북구 보건소로부터 자가격리 대상자임을 통보 받음
+                  </td>
+                </tr>
+                <!-- day -->
+                <tr class="person6-content">
+                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
+                    <b>2월 27일(목)</b> <br>
+                  </td>
+                </tr>
+                <tr class="person6-content">
+                  <td colspan="1" style="font-size:12px">23:00</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    경주로 이관(자가격리 확인 및 발열 체크)
+                  </td>
+                </tr>
+                <!-- day -->
+                <tr class="person6-content">
+                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
+                    <b>2월 28일(금)</b> <br>
+                  </td>
+                </tr>
+                <tr class="person6-content">
+                  <td colspan="1" style="font-size:12px">15:10</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    한창스튜디오(도보, 마스크착용)
+                  </td>
+                </tr>
+                <tr class="person6-content">
+                  <td colspan="1" style="font-size:12px">15:22</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    성건동행정복지센터(도보, 마스크착용)
+                  </td>
+                </tr>
+                <tr class="person6-content">
+                  <td colspan="1" style="font-size:12px">15:30</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    경북대구낙농협동조합 성건지점(금성로 292) 방문 – 귀가(도보, 마스크착용)
+                  </td>
+                </tr>
+                <!-- day -->
+                <tr class="person6-content">
+                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
+                    <b>3월 1일(일)</b> <br>
+                  </td>
+                </tr>
+                <tr class="person6-content">
+                  <td colspan="1" style="font-size:12px">10:00</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    보건소 선별진료소
+                  </td>
+                </tr>
+                <!-- day -->
+                <tr class="person6-content">
+                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
+                    <b>3월 2일(월)</b> <br>
+                  </td>
+                </tr>
+                <tr class="person6-content">
+                  <td colspan="1" style="font-size:12px">-</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    검사결과 양성
+                  </td>
+                </tr>
+
+                <!---------------------------------------------------->
+                <!-- PERSON 7 -->
+                <tr id="person7Tr" style="background-color:rgb(230, 237, 240);">
+                  <td style="font-size:13px"><b>대전시</b></td>
+                  <td style="font-size:13px"><b>20대(남)</b></td>
+                  <td style="font-size:13px"><b>대구 신천지 교육생</b></td>
+                  <td style="font-size:13px"><b>3.4(수)</b></td>
+                </tr>
+
+                <!-- day -->
+                <tr class="person7-content">
+                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
+                    <b>2월 28일(금) ~ 3월3일(화)</b> <br>
+                  </td>
+                </tr>
+                <tr class="person7-content">
+                  <td colspan="1" style="font-size:12px">-</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    종일 자택(원내동, 한아름아파트) / 자가격리 중
+                  </td>
+                </tr>
+                <!-- day -->
+                <tr class="person7-content">
+                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
+                    <b>3월 4일(수)</b> <br>
+                  </td>
+                </tr>
+                <tr class="person7-content">
+                  <td colspan="1" style="font-size:12px">17:30</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    유성구보건소
+                  </td>
+                </tr>
+                <tr class="person7-content">
+                  <td colspan="1" style="font-size:12px">18:00</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    자택
+                  </td>
+                </tr>
+
+                <!-- day -->
+                <tr class="person7-content">
+                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
+                    <b>3월 5일(목)</b> <br>
+                  </td>
+                </tr>
+                <tr class="person7-content">
+                  <td colspan="1" style="font-size:12px">1130</td>
+                  <td colspan="3" style="text-align:left;font-size:12px">
+                    충남대병원 입원
+                  </td>
+                </tr>
+
+                <!---------------------------------------------------->
+                <!-- PERSON 8 -->
+                <tr id="person8Tr" style="background-color:rgb(236, 237, 238);">
+                  <td td colspan="4" style="font-size:13px"><span style="color:rgb(163, 163, 163)"><b>확인중</b></span>
+                  </td>
+                </tr>
+
+                <!---------------------------------------------------->
+                <!-- PERSON 9 -->
+                <tr id="person9Tr" style="background-color:rgb(236, 237, 238);">
+                  <td td colspan="4" style="font-size:13px"><span style="color:rgb(163, 163, 163)"><b>확인중</b></span>
+                  </td>
+                </tr>
+
+                <!---------------------------------------------------->
+                <!-- PERSON 10 -->
+                <tr id="person10Tr" style="background-color:rgb(236, 237, 238);">
+                  <td td colspan="4" style="font-size:13px"><span style="color:rgb(163, 163, 163)"><b>확인중</b></span>
+                  </td>
+                </tr>
+
+                <!---------------------------------------------------->
+                <!-- PERSON 11 -->
+                <tr id="person11Tr" style="background-color:rgb(236, 237, 238);">
+                  <td td colspan="4" style="font-size:13px"><span style="color:rgb(163, 163, 163)"><b>확인중</b></span>
+                  </td>
+                </tr>
+
+                <!---------------------------------------------------->
+                <!-- PERSON 12 -->
+                <tr id="person12Tr" style="background-color:rgb(236, 237, 238);">
+                  <td td colspan="4" style="font-size:13px"><span style="color:rgb(163, 163, 163)"><b>확인중</b></span>
+                  </td>
+                </tr>
+
+                <!---------------------------------------------------->
+                <!-- PERSON 13 -->
+                <tr id="person13Tr" style="background-color:rgb(236, 237, 238);">
+                  <td td colspan="4" style="font-size:13px"><span style="color:rgb(163, 163, 163)"><b>확인중</b></span>
+                  </td>
+                </tr>
+
+                <!---------------------------------------------------->
+                <!-- PERSON 14 -->
+                <tr id="person14Tr" style="background-color:rgb(236, 237, 238);">
+                  <td td colspan="4" style="font-size:13px"><span style="color:rgb(163, 163, 163)"><b>확인중</b></span>
+                  </td>
+                </tr>
+
+
+
+              </thead>
+            </table>
+
+
+          </div>
+          <div id="row 7 col 1" class="footer">
+            <p style="font-size: 11px"> * 직접적으로 파악한 인원들만 우선적으로 나타낸 것이며, 지도에 나타난 지역은 확진 판정을 받은 장소를 나타냈습니다. <br>따라서 모든 경북대생들의
+              확진 판정 정보는 아님을 알려드립니다. </p>
+          </div>
         </div>
 
       </div>
-
-      <div id="row 7 col 1" class="footer">
-        <p style="font-size:13px"> * 직접적으로 파악한 인원들만 우선적으로 나타낸 것이며, 지도에 나타난 지역은 확진 판정을 받은 장소를 나타냈습니다. <br>따라서 모든 경북대생들의
-          확진
-          판정 정보는 아님을 알려드립니다. </p>
-      </div>
-
-      <div id="row 8 col 1" class="footer">
-        <hr width="100%" color="lightgray" size="1">
-        <p style="font-size:12px"> <a href="https://www.notion.so/41c18523ef264a65953829902a90a9fe" target="_blank">[현황
-            및
-            확진자 이동경로 출처]</a> </p>
-        <p style="font-size:12px"> <a href="https://www.notion.so/chanhui/3c3f593d20cd42ee9241451ee9225a4b"
-            target="_blank"> [사이트 기능 업데이트 현황]</a> </p>
-      </div>
-
     </div>
 
+     <!-- 관련 링크 -->
+     <div id="linkContent" class="contentItem" style="width:100%; 
+     float:left; border-radius:10px; border:2px solid rgb(231, 231, 231)">
+       <h3>
+         <span id="Gcorona">
+           <span style="color:rgb(50, 132, 240)">
+             <i class="fas fa-link"></span></i>
+           공지사항 및 마스크 구매처 링크
+         </span>
+          
+          <div class="col2" style="margin-top:10px; margin-bottom:-12px">
+            <p><button class="btn btn-danger"
+                onclick="location.href='https://knu.ac.kr/wbbs/wbbs/bbs/btin/list.action?bbs_cde=34&amp;menu_idx=224'">
+                경북대 코로나19 대응관련 공지</button></p>
+          </div>
+          <div class="col2" style="margin-bottom:-12px">
+            <p><button class="btn btn-success" onclick="window.open('https://instagram.com/knu_ch/')">경북대 총학생회
+                인스타그램</button>
+            </p>
+          </div>
+          <div class="col2" style="margin-bottom:-12px">
+            <p><button class="btn btn-info" onclick="window.open('https://www.facebook.com/knuchonghak/')">경북대 총학생회
+                페이스북</button></p>
+          </div>
+          <div class="col2" style="margin-bottom:-12px">
+            <p><button class="btn btn-warning" onclick="window.open('https://coronamask.kr/')">마스크 판매처 바로가기</button></p>
+          </div>
+          <div class="col2" style="margin-bottom:-12px">
+            <p><button class="btn btn-primary" onclick="window.open('https://mohw.go.kr/react/popup_200128.html')">전국 안심병원
+                현황</button></p>
+          </div>
+        
 
-    <!-- 데이터셋 처리 -->
-    <script src="검사자현황.js"></script>
-    <script src="국내현황.js"></script>
-    <script src="지역별현황.js"></script>
-    <script src="세계현황.js"></script>
-    <script src="세계순위현황.js"></script>
-    <script src="직접수정.js"></script>
-    <script language="javascript" type="text/javascript">
+     </div>
 
-      //국내 현황
-      document.getElementById("국내확진자").innerHTML = '+' + String(국내현황[1].toLocaleString());
-      document.getElementById("국내완치자").innerHTML = '+' + String(국내현황[2].toLocaleString());
-      document.getElementById("국내사망자").innerHTML = '+' + String(국내현황[3].toLocaleString());
+  </section>
+
+  <p id="footer2" style="font-size:12px"> <a href="https://www.notion.so/chanhui/3c3f593d20cd42ee9241451ee9225a4b"
+    target="_blank"> [사이트 기능 업데이트 현황]</a> </p>
+
+</body>
+
+<!-- 데이터셋 처리 -->
+<script src="검사자현황.js"></script>
+<script src="국내현황.js"></script>
+<script src="지역별현황.js"></script>
+<script src="세계현황.js"></script>
+<script src="세계순위현황.js"></script>
+<script src="직접수정.js"></script>
+<script language="javascript" type="text/javascript">
+
+//국내 현황
+      document.getElementById("국내확진자").innerHTML = String(국내현황[1].toLocaleString());
+      document.getElementById("국내완치자").innerHTML = String(국내현황[2].toLocaleString());
+      document.getElementById("국내사망자").innerHTML = String(국내현황[3].toLocaleString());
 
       document.getElementById("국내확진자차이").innerHTML = '+' + String(국내현황[0].toLocaleString());
       document.getElementById("국내사망자차이").innerHTML = '+' + String(전일대비차이[0].toLocaleString());
       document.getElementById("국내완치자차이").innerHTML = '+' + String(전일대비차이[1].toLocaleString());
 
       //경북대 현황
-      document.getElementById("경대확진자").innerHTML = '+' + String(경북대현황[0].toLocaleString());
-      document.getElementById("경대사망자").innerHTML = '+' + String(경북대현황[1].toLocaleString());
-      document.getElementById("경대완치자").innerHTML = '+' + String(경북대현황[2].toLocaleString());
+      document.getElementById("경대확진자").innerHTML = String(경북대현황[0].toLocaleString());
+      document.getElementById("경대사망자").innerHTML = String(경북대현황[1].toLocaleString());
+      document.getElementById("경대완치자").innerHTML = String(경북대현황[2].toLocaleString());
       document.getElementById("경대확진자차이").innerHTML = '+' + String(경북대현황[3].toLocaleString());
       document.getElementById("경대사망자차이").innerHTML = '+' + String(경북대현황[4].toLocaleString());
       document.getElementById("경대완치자차이").innerHTML = '+' + String(경북대현황[5].toLocaleString());
 
-      //지역별 확진자수
-      document.getElementById("seoul").innerHTML = '<b>' + String(전국지역확진자[0].toLocaleString()) + '</b>';
-      document.getElementById("busan").innerHTML = '<b>' + String(전국지역확진자[1].toLocaleString()) + '</b>';
-      document.getElementById("daegu").innerHTML = '<b>' + String(전국지역확진자[2].toLocaleString()) + '</b>';
-      document.getElementById("incheon").innerHTML = '<b>' + String(전국지역확진자[3].toLocaleString()) + '</b>';
-      document.getElementById("gwangju").innerHTML = '<b>' + String(전국지역확진자[4].toLocaleString()) + '</b>';
-      document.getElementById("daejeon").innerHTML = '<b>' + String(전국지역확진자[5].toLocaleString()) + '</b>';
-      document.getElementById("ulsan").innerHTML = '<b>' + String(전국지역확진자[6].toLocaleString()) + '</b>';
-      document.getElementById("sejong").innerHTML = '<b>' + String(전국지역확진자[7].toLocaleString()) + '</b>';
-      document.getElementById("gyeong").innerHTML = '<b>' + String(전국지역확진자[8].toLocaleString()) + '</b>';
-      document.getElementById("kangwon").innerHTML = '<b>' + String(전국지역확진자[9].toLocaleString()) + '</b>';
-      document.getElementById("chbuk").innerHTML = '<b>' + String(전국지역확진자[10].toLocaleString()) + '</b>';
-      document.getElementById("chnam").innerHTML = '<b>' + String(전국지역확진자[11].toLocaleString()) + '</b>';
-      document.getElementById("jnbuk").innerHTML = '<b>' + String(전국지역확진자[12].toLocaleString()) + '</b>';
-      document.getElementById("jnnam").innerHTML = '<b>' + String(전국지역확진자[13].toLocaleString()) + '</b>';
-      document.getElementById("kybuk").innerHTML = '<b>' + String(전국지역확진자[14].toLocaleString()) + '</b>';
-      document.getElementById("kynam").innerHTML = '<b>' + String(전국지역확진자[15].toLocaleString()) + '</b>';
-      document.getElementById("jeju").innerHTML = '<b>' + String(전국지역확진자[16].toLocaleString()) + '</b>';
+  //지역별 확진자수
+  document.getElementById("seoul").innerHTML = '<b>' + String(전국지역확진자[0].toLocaleString()) + '</b>';
+  document.getElementById("busan").innerHTML = '<b>' + String(전국지역확진자[1].toLocaleString()) + '</b>';
+  document.getElementById("daegu").innerHTML = '<b>' + String(전국지역확진자[2].toLocaleString()) + '</b>';
+  document.getElementById("incheon").innerHTML = '<b>' + String(전국지역확진자[3].toLocaleString()) + '</b>';
+  document.getElementById("gwangju").innerHTML = '<b>' + String(전국지역확진자[4].toLocaleString()) + '</b>';
+  document.getElementById("daejeon").innerHTML = '<b>' + String(전국지역확진자[5].toLocaleString()) + '</b>';
+  document.getElementById("ulsan").innerHTML = '<b>' + String(전국지역확진자[6].toLocaleString()) + '</b>';
+  document.getElementById("sejong").innerHTML = '<b>' + String(전국지역확진자[7].toLocaleString()) + '</b>';
+  document.getElementById("gyeong").innerHTML = '<b>' + String(전국지역확진자[8].toLocaleString()) + '</b>';
+  document.getElementById("kangwon").innerHTML = '<b>' + String(전국지역확진자[9].toLocaleString()) + '</b>';
+  document.getElementById("chbuk").innerHTML = '<b>' + String(전국지역확진자[10].toLocaleString()) + '</b>';
+  document.getElementById("chnam").innerHTML = '<b>' + String(전국지역확진자[11].toLocaleString()) + '</b>';
+  document.getElementById("jnbuk").innerHTML = '<b>' + String(전국지역확진자[12].toLocaleString()) + '</b>';
+  document.getElementById("jnnam").innerHTML = '<b>' + String(전국지역확진자[13].toLocaleString()) + '</b>';
+  document.getElementById("kybuk").innerHTML = '<b>' + String(전국지역확진자[14].toLocaleString()) + '</b>';
+  document.getElementById("kynam").innerHTML = '<b>' + String(전국지역확진자[15].toLocaleString()) + '</b>';
+  document.getElementById("jeju").innerHTML = '<b>' + String(전국지역확진자[16].toLocaleString()) + '</b>';
 
-      // 검사자수
-      document.getElementById("결과음성").innerHTML = String(검사자현황[0].toLocaleString());
-      document.getElementById("검사중").innerHTML = String(검사자현황[1].toLocaleString());
-      document.getElementById("결과합계").innerHTML = String((검사자현황[0] + 검사자현황[1]).toLocaleString());
+  // 검사자수
+  document.getElementById("결과음성").innerHTML = String(검사자현황[0].toLocaleString());
+  document.getElementById("검사중").innerHTML = String(검사자현황[1].toLocaleString());
+  document.getElementById("결과합계").innerHTML = String((검사자현황[0] + 검사자현황[1]).toLocaleString());
 
-      // 세계현황
-      document.getElementById("세계확진자").innerHTML = String(세계현황[0].toLocaleString());
-      document.getElementById("세계사망자").innerHTML = String(세계현황[1].toLocaleString());
-      document.getElementById("세계완치자").innerHTML = String(세계현황[2].toLocaleString());
+  // 세계현황
+  document.getElementById("세계확진자").innerHTML = String(세계현황[0].toLocaleString());
+  document.getElementById("세계사망자").innerHTML = String(세계현황[1].toLocaleString());
+  document.getElementById("세계완치자").innerHTML = String(세계현황[2].toLocaleString());
 
-      // 세계순위현황 업데이트시간 텍스트
-      document.getElementById("W_updateDate").innerHTML = String(세계현황[3])+' (한국시간 : GMT +9시간)';
+  // 세계순위현황 업데이트시간 텍스트
+  document.getElementById("W_updateDate").innerHTML = String(세계현황[3]) + ' (한국시간 : GMT +9시간)';
 
-      // 세계순위현황
-      document.getElementById("w_name_1").innerHTML = '<b>' + String(세계확진자[0].Name) + '</b>';
-      document.getElementById("w_infect_1").innerHTML = '<span style="color:#DA5672"> <b>' + String(세계확진자[0].확진자수.toLocaleString()) + '</b> </span> ';
-      document.getElementById("w_death_1").innerHTML = '<span style="color:#4C525D"> <b>' + String(세계확진자[0].사망자수.toLocaleString()) + '</b> </span> ';
-      document.getElementById("w_cured_1").innerHTML = '<span style="color:#4874C3"> <b>' + String(세계확진자[0].완치자수.toLocaleString()) + '</b> </span> ';
-      document.getElementById("w_rate_1").innerHTML = '<span style="color:#8F8F8F"> <b>' + String((세계확진자[0].사망자수 / 세계확진자[0].확진자수 * 100).toFixed(2)) + '%</b> </span> ';
+  // 세계순위현황
+  document.getElementById("w_name_1").innerHTML = '<b>' + String(세계확진자[0].Name) + '</b>';
+  document.getElementById("w_infect_1").innerHTML = '<span style="color:#DA5672"> <b>' + String(세계확진자[0].확진자수.toLocaleString()) + '</b> </span> ';
+  document.getElementById("w_death_1").innerHTML = '<span style="color:#4C525D"> <b>' + String(세계확진자[0].사망자수.toLocaleString()) + '</b> </span> ';
+  document.getElementById("w_cured_1").innerHTML = '<span style="color:#4874C3"> <b>' + String(세계확진자[0].완치자수.toLocaleString()) + '</b> </span> ';
+  document.getElementById("w_rate_1").innerHTML = '<span style="color:#8F8F8F"> <b>' + String((세계확진자[0].사망자수 / 세계확진자[0].확진자수 * 100).toFixed(2)) + '%</b> </span> ';
 
-      document.getElementById("w_name_2").innerHTML = '<b>' + String(세계확진자[1].Name) + '</b>';
-      document.getElementById("w_infect_2").innerHTML = '<span style="color:#DA5672"> <b>' + String(세계확진자[1].확진자수.toLocaleString()) + '</b> </span> ';
-      document.getElementById("w_death_2").innerHTML = '<span style="color:#4C525D"> <b>' + String(세계확진자[1].사망자수.toLocaleString()) + '</b> </span> ';
-      document.getElementById("w_cured_2").innerHTML = '<span style="color:#4874C3"> <b>' + String(세계확진자[1].완치자수.toLocaleString()) + '</b> </span> ';
-      document.getElementById("w_rate_2").innerHTML = '<span style="color:#8F8F8F"> <b>' + String((세계확진자[1].사망자수 / 세계확진자[1].확진자수 * 100).toFixed(2)) + '%</b> </span> ';
+  document.getElementById("w_name_2").innerHTML = '<b>' + String(세계확진자[1].Name) + '</b>';
+  document.getElementById("w_infect_2").innerHTML = '<span style="color:#DA5672"> <b>' + String(세계확진자[1].확진자수.toLocaleString()) + '</b> </span> ';
+  document.getElementById("w_death_2").innerHTML = '<span style="color:#4C525D"> <b>' + String(세계확진자[1].사망자수.toLocaleString()) + '</b> </span> ';
+  document.getElementById("w_cured_2").innerHTML = '<span style="color:#4874C3"> <b>' + String(세계확진자[1].완치자수.toLocaleString()) + '</b> </span> ';
+  document.getElementById("w_rate_2").innerHTML = '<span style="color:#8F8F8F"> <b>' + String((세계확진자[1].사망자수 / 세계확진자[1].확진자수 * 100).toFixed(2)) + '%</b> </span> ';
 
-      document.getElementById("w_name_3").innerHTML = '<b>' + String(세계확진자[2].Name) + '</b>';
-      document.getElementById("w_infect_3").innerHTML = '<span style="color:#DA5672"> <b>' + String(세계확진자[2].확진자수.toLocaleString()) + '</b> </span> ';
-      document.getElementById("w_death_3").innerHTML = '<span style="color:#4C525D"> <b>' + String(세계확진자[2].사망자수.toLocaleString()) + '</b> </span> ';
-      document.getElementById("w_cured_3").innerHTML = '<span style="color:#4874C3"> <b>' + String(세계확진자[2].완치자수.toLocaleString()) + '</b> </span> ';
-      document.getElementById("w_rate_3").innerHTML = '<span style="color:#8F8F8F"> <b>' + String((세계확진자[2].사망자수 / 세계확진자[2].확진자수 * 100).toFixed(2)) + '%</b> </span> ';
+  document.getElementById("w_name_3").innerHTML = '<b>' + String(세계확진자[2].Name) + '</b>';
+  document.getElementById("w_infect_3").innerHTML = '<span style="color:#DA5672"> <b>' + String(세계확진자[2].확진자수.toLocaleString()) + '</b> </span> ';
+  document.getElementById("w_death_3").innerHTML = '<span style="color:#4C525D"> <b>' + String(세계확진자[2].사망자수.toLocaleString()) + '</b> </span> ';
+  document.getElementById("w_cured_3").innerHTML = '<span style="color:#4874C3"> <b>' + String(세계확진자[2].완치자수.toLocaleString()) + '</b> </span> ';
+  document.getElementById("w_rate_3").innerHTML = '<span style="color:#8F8F8F"> <b>' + String((세계확진자[2].사망자수 / 세계확진자[2].확진자수 * 100).toFixed(2)) + '%</b> </span> ';
 
-      document.getElementById("w_name_4").innerHTML = '<b>' + String(세계확진자[3].Name) + '</b>';
-      document.getElementById("w_infect_4").innerHTML = '<span style="color:#DA5672"> <b>' + String(세계확진자[3].확진자수.toLocaleString()) + '</b> </span> ';
-      document.getElementById("w_death_4").innerHTML = '<span style="color:#4C525D"> <b>' + String(세계확진자[3].사망자수.toLocaleString()) + '</b> </span> ';
-      document.getElementById("w_cured_4").innerHTML = '<span style="color:#4874C3"> <b>' + String(세계확진자[3].완치자수.toLocaleString()) + '</b> </span> ';
-      document.getElementById("w_rate_4").innerHTML = '<span style="color:#8F8F8F"> <b>' + String((세계확진자[3].사망자수 / 세계확진자[3].확진자수 * 100).toFixed(2)) + '%</b> </span> ';
+  document.getElementById("w_name_4").innerHTML = '<b>' + String(세계확진자[3].Name) + '</b>';
+  document.getElementById("w_infect_4").innerHTML = '<span style="color:#DA5672"> <b>' + String(세계확진자[3].확진자수.toLocaleString()) + '</b> </span> ';
+  document.getElementById("w_death_4").innerHTML = '<span style="color:#4C525D"> <b>' + String(세계확진자[3].사망자수.toLocaleString()) + '</b> </span> ';
+  document.getElementById("w_cured_4").innerHTML = '<span style="color:#4874C3"> <b>' + String(세계확진자[3].완치자수.toLocaleString()) + '</b> </span> ';
+  document.getElementById("w_rate_4").innerHTML = '<span style="color:#8F8F8F"> <b>' + String((세계확진자[3].사망자수 / 세계확진자[3].확진자수 * 100).toFixed(2)) + '%</b> </span> ';
 
-      document.getElementById("w_name_5").innerHTML = '<b>' + String(세계확진자[4].Name) + '</b>';
-      document.getElementById("w_infect_5").innerHTML = '<span style="color:#DA5672"> <b>' + String(세계확진자[4].확진자수.toLocaleString()) + '</b> </span> ';
-      document.getElementById("w_death_5").innerHTML = '<span style="color:#4C525D"> <b>' + String(세계확진자[4].사망자수.toLocaleString()) + '</b> </span> ';
-      document.getElementById("w_cured_5").innerHTML = '<span style="color:#4874C3"> <b>' + String(세계확진자[4].완치자수.toLocaleString()) + '</b> </span> ';
-      document.getElementById("w_rate_5").innerHTML = '<span style="color:#8F8F8F"> <b>' + String((세계확진자[4].사망자수 / 세계확진자[4].확진자수 * 100).toFixed(2)) + '%</b> </span> ';
+  document.getElementById("w_name_5").innerHTML = '<b>' + String(세계확진자[4].Name) + '</b>';
+  document.getElementById("w_infect_5").innerHTML = '<span style="color:#DA5672"> <b>' + String(세계확진자[4].확진자수.toLocaleString()) + '</b> </span> ';
+  document.getElementById("w_death_5").innerHTML = '<span style="color:#4C525D"> <b>' + String(세계확진자[4].사망자수.toLocaleString()) + '</b> </span> ';
+  document.getElementById("w_cured_5").innerHTML = '<span style="color:#4874C3"> <b>' + String(세계확진자[4].완치자수.toLocaleString()) + '</b> </span> ';
+  document.getElementById("w_rate_5").innerHTML = '<span style="color:#8F8F8F"> <b>' + String((세계확진자[4].사망자수 / 세계확진자[4].확진자수 * 100).toFixed(2)) + '%</b> </span> ';
 
-      document.getElementById("w_name_6").innerHTML = '<b>' + String(세계확진자[5].Name) + '</b>';
-      document.getElementById("w_infect_6").innerHTML = '<span style="color:#DA5672"> <b>' + String(세계확진자[5].확진자수.toLocaleString()) + '</b> </span> ';
-      document.getElementById("w_death_6").innerHTML = '<span style="color:#4C525D"> <b>' + String(세계확진자[5].사망자수.toLocaleString()) + '</b> </span> ';
-      document.getElementById("w_cured_6").innerHTML = '<span style="color:#4874C3"> <b>' + String(세계확진자[5].완치자수.toLocaleString()) + '</b> </span> ';
-      document.getElementById("w_rate_6").innerHTML = '<span style="color:#8F8F8F"> <b>' + String((세계확진자[5].사망자수 / 세계확진자[5].확진자수 * 100).toFixed(2)) + '%</b> </span> ';
+  document.getElementById("w_name_6").innerHTML = '<b>' + String(세계확진자[5].Name) + '</b>';
+  document.getElementById("w_infect_6").innerHTML = '<span style="color:#DA5672"> <b>' + String(세계확진자[5].확진자수.toLocaleString()) + '</b> </span> ';
+  document.getElementById("w_death_6").innerHTML = '<span style="color:#4C525D"> <b>' + String(세계확진자[5].사망자수.toLocaleString()) + '</b> </span> ';
+  document.getElementById("w_cured_6").innerHTML = '<span style="color:#4874C3"> <b>' + String(세계확진자[5].완치자수.toLocaleString()) + '</b> </span> ';
+  document.getElementById("w_rate_6").innerHTML = '<span style="color:#8F8F8F"> <b>' + String((세계확진자[5].사망자수 / 세계확진자[5].확진자수 * 100).toFixed(2)) + '%</b> </span> ';
 
-      document.getElementById("w_name_7").innerHTML = '<b>' + String(세계확진자[6].Name) + '</b>';
-      document.getElementById("w_infect_7").innerHTML = '<span style="color:#DA5672"> <b>' + String(세계확진자[6].확진자수.toLocaleString()) + '</b> </span> ';
-      document.getElementById("w_death_7").innerHTML = '<span style="color:#4C525D"> <b>' + String(세계확진자[6].사망자수.toLocaleString()) + '</b> </span> ';
-      document.getElementById("w_cured_7").innerHTML = '<span style="color:#4874C3"> <b>' + String(세계확진자[6].완치자수.toLocaleString()) + '</b> </span> ';
-      document.getElementById("w_rate_7").innerHTML = '<span style="color:#8F8F8F"> <b>' + String((세계확진자[6].사망자수 / 세계확진자[6].확진자수 * 100).toFixed(2)) + '%</b> </span> ';
+  document.getElementById("w_name_7").innerHTML = '<b>' + String(세계확진자[6].Name) + '</b>';
+  document.getElementById("w_infect_7").innerHTML = '<span style="color:#DA5672"> <b>' + String(세계확진자[6].확진자수.toLocaleString()) + '</b> </span> ';
+  document.getElementById("w_death_7").innerHTML = '<span style="color:#4C525D"> <b>' + String(세계확진자[6].사망자수.toLocaleString()) + '</b> </span> ';
+  document.getElementById("w_cured_7").innerHTML = '<span style="color:#4874C3"> <b>' + String(세계확진자[6].완치자수.toLocaleString()) + '</b> </span> ';
+  document.getElementById("w_rate_7").innerHTML = '<span style="color:#8F8F8F"> <b>' + String((세계확진자[6].사망자수 / 세계확진자[6].확진자수 * 100).toFixed(2)) + '%</b> </span> ';
 
-      document.getElementById("w_name_8").innerHTML = '<b>' + String(세계확진자[7].Name) + '</b>';
-      document.getElementById("w_infect_8").innerHTML = '<span style="color:#DA5672"> <b>' + String(세계확진자[7].확진자수.toLocaleString()) + '</b> </span> ';
-      document.getElementById("w_death_8").innerHTML = '<span style="color:#4C525D"> <b>' + String(세계확진자[7].사망자수.toLocaleString()) + '</b> </span> ';
-      document.getElementById("w_cured_8").innerHTML = '<span style="color:#4874C3"> <b>' + String(세계확진자[7].완치자수.toLocaleString()) + '</b> </span> ';
-      document.getElementById("w_rate_8").innerHTML = '<span style="color:#8F8F8F"> <b>' + String((세계확진자[7].사망자수 / 세계확진자[7].확진자수 * 100).toFixed(2)) + '%</b> </span> ';
+  document.getElementById("w_name_8").innerHTML = '<b>' + String(세계확진자[7].Name) + '</b>';
+  document.getElementById("w_infect_8").innerHTML = '<span style="color:#DA5672"> <b>' + String(세계확진자[7].확진자수.toLocaleString()) + '</b> </span> ';
+  document.getElementById("w_death_8").innerHTML = '<span style="color:#4C525D"> <b>' + String(세계확진자[7].사망자수.toLocaleString()) + '</b> </span> ';
+  document.getElementById("w_cured_8").innerHTML = '<span style="color:#4874C3"> <b>' + String(세계확진자[7].완치자수.toLocaleString()) + '</b> </span> ';
+  document.getElementById("w_rate_8").innerHTML = '<span style="color:#8F8F8F"> <b>' + String((세계확진자[7].사망자수 / 세계확진자[7].확진자수 * 100).toFixed(2)) + '%</b> </span> ';
 
-      document.getElementById("w_name_9").innerHTML = '<b>' + String(세계확진자[8].Name) + '</b>';
-      document.getElementById("w_infect_9").innerHTML = '<span style="color:#DA5672"> <b>' + String(세계확진자[8].확진자수.toLocaleString()) + '</b> </span> ';
-      document.getElementById("w_death_9").innerHTML = '<span style="color:#4C525D"> <b>' + String(세계확진자[8].사망자수.toLocaleString()) + '</b> </span> ';
-      document.getElementById("w_cured_9").innerHTML = '<span style="color:#4874C3"> <b>' + String(세계확진자[8].완치자수.toLocaleString()) + '</b> </span> ';
-      document.getElementById("w_rate_9").innerHTML = '<span style="color:#8F8F8F"> <b>' + String((세계확진자[8].사망자수 / 세계확진자[8].확진자수 * 100).toFixed(2)) + '%</b> </span> ';
+  document.getElementById("w_name_9").innerHTML = '<b>' + String(세계확진자[8].Name) + '</b>';
+  document.getElementById("w_infect_9").innerHTML = '<span style="color:#DA5672"> <b>' + String(세계확진자[8].확진자수.toLocaleString()) + '</b> </span> ';
+  document.getElementById("w_death_9").innerHTML = '<span style="color:#4C525D"> <b>' + String(세계확진자[8].사망자수.toLocaleString()) + '</b> </span> ';
+  document.getElementById("w_cured_9").innerHTML = '<span style="color:#4874C3"> <b>' + String(세계확진자[8].완치자수.toLocaleString()) + '</b> </span> ';
+  document.getElementById("w_rate_9").innerHTML = '<span style="color:#8F8F8F"> <b>' + String((세계확진자[8].사망자수 / 세계확진자[8].확진자수 * 100).toFixed(2)) + '%</b> </span> ';
 
-      document.getElementById("w_name_10").innerHTML = '<b>' + String(세계확진자[9].Name) + '</b>';
-      document.getElementById("w_infect_10").innerHTML = '<span style="color:#DA5672"> <b>' + String(세계확진자[9].확진자수.toLocaleString()) + '</b> </span> ';
-      document.getElementById("w_death_10").innerHTML = '<span style="color:#4C525D"> <b>' + String(세계확진자[9].사망자수.toLocaleString()) + '</b> </span> ';
-      document.getElementById("w_cured_10").innerHTML = '<span style="color:#4874C3"> <b>' + String(세계확진자[9].완치자수.toLocaleString()) + '</b> </span> ';
-      document.getElementById("w_rate_10").innerHTML = '<span style="color:#8F8F8F"> <b>' + String((세계확진자[9].사망자수 / 세계확진자[9].확진자수 * 100).toFixed(2)) + '%</b> </span> ';
+  document.getElementById("w_name_10").innerHTML = '<b>' + String(세계확진자[9].Name) + '</b>';
+  document.getElementById("w_infect_10").innerHTML = '<span style="color:#DA5672"> <b>' + String(세계확진자[9].확진자수.toLocaleString()) + '</b> </span> ';
+  document.getElementById("w_death_10").innerHTML = '<span style="color:#4C525D"> <b>' + String(세계확진자[9].사망자수.toLocaleString()) + '</b> </span> ';
+  document.getElementById("w_cured_10").innerHTML = '<span style="color:#4874C3"> <b>' + String(세계확진자[9].완치자수.toLocaleString()) + '</b> </span> ';
+  document.getElementById("w_rate_10").innerHTML = '<span style="color:#8F8F8F"> <b>' + String((세계확진자[9].사망자수 / 세계확진자[9].확진자수 * 100).toFixed(2)) + '%</b> </span> ';
 
+</script>
 
-      // 업데이트 시간
-      document.getElementById("update").innerHTML = String(업데이트시간);
+<!-- 테이블 접기 -->
+<script language="javascript" type="text/javascript">
+  var person1Cnt = 0;
+  var person2Cnt = 0;
+  var person3Cnt = 0;
+  var person4Cnt = 0;
+  var person5Cnt = 0;
+  var person6Cnt = 0;
+  var person7Cnt = 0;
 
-      
-    </script>
+  var L1Cnt = 0;
+  var WcoronaCnt = 0;
+  var KcoronaCnt = 0;
+  var LcoronaCnt = 0;
+  var GcoronaCnt = 0;
+  var McoronaCnt = 0;
 
-    <!-- 숫자 카운트 애니메이션 -->
-    <script language="javascript" type="text/javascript">
-      $('.death').counterUp({
-        delay: 10,
-        time: 350
-      });
-      $('.cured').counterUp({
-        delay: 10,
-        time: 350
-      });
-      $('.infect').counterUp({
-        delay: 10,
-        time: 350
-      });
+  // 지역별 현황 펼치기/접기
+  $('#regionDiv').hide();
+  $('#linkDiv').hide();
+  $('#worldDiv').hide();
+  $('#graphDiv').hide();
 
+  $('#closeButton1').hide();
+  $('#closeButton2').hide();
+  $('#closeButton3').hide();
+  $('#closeButton4').hide();
+  $('#closeButton5').hide();
+  $('#openButton6').hide();
 
-    </script>
+// 제목을 눌러도 오픈 : 전세계 코로나
+  $('#MenuLink1').click(function () {
+    if (L1Cnt == 0) {
+      $('#innerMenu').slideDown();
+      L1Cnt = 1;
+    }
+    else {
+      $('#innerMenu').slideUp();
+      L1Cnt = 0;
+    }
+  });
 
-    <!-- 테이블 접기 -->
-    <script language="javascript" type="text/javascript">
-      var person1Cnt = 0;
-      var person2Cnt = 0;
-      var person3Cnt = 0;
-      var person4Cnt = 0;
-      var person5Cnt = 0;
-      var person6Cnt = 0;
-      var person7Cnt = 0;
-
-      var WcoronaCnt = 0;
-      var KcoronaCnt = 0;
-      var LcoronaCnt = 0;
-      var DcoronaCnt = 0;
-
-      // 지역별 현황 펼치기/접기
-      $('#regionDiv').hide();
-      $('#linkDiv').hide();
-      $('#diffDiv').hide();
-      $('#worldDiv').hide();
-      $('#closeButton').hide();
-      $('#closeButton2').hide();
-      $('#closeButton3').hide();
+  // 제목을 눌러도 오픈 : 전세계 코로나
+  $('#Wcorona').click(function () {
+    if (WcoronaCnt == 0) {
+      $('#worldDiv').slideDown();
+      $('#closeButton4').show();
+      $('#openButton4').hide();
+      WcoronaCnt = 1;
+    }
+    else {
+      $('#worldDiv').slideUp();
       $('#closeButton4').hide();
+      $('#openButton4').show();
+      WcoronaCnt = 0;
+    }
+  });
+
+  // 제목을 눌러도 오픈 : 국내 지역별
+  $('#Kcorona').click(function () {
+    if (KcoronaCnt == 0) {
+      $('#regionDiv').slideDown();
+      $('#closeButton1').show();
+      $('#openButton1').hide();
+      KcoronaCnt = 1;
+    }
+    else {
+      $('#regionDiv').slideUp();
+      $('#closeButton1').hide();
+      $('#openButton1').show();
+      KcoronaCnt = 0;
+    }
+  });
+
+  // 제목을 눌러도 오픈 : 각종 링크
+  $('#Lcorona').click(function () {
+    if (LcoronaCnt == 0) {
+      $('#linkDiv').slideDown();
+      $('#closeButton2').show();
+      $('#openButton2').hide();
+      LcoronaCnt = 1;
+    }
+    else {
+      $('#linkDiv').slideUp();
+      $('#closeButton2').hide();
+      $('#openButton2').show();
+      LcoronaCnt = 0;
+    }
+  });
+
+  // 제목을 눌러도 오픈 : 추세선 그래프
+  $('#Gcorona').click(function () {
+    if (GcoronaCnt == 0) {
+      $('#graphDiv').slideDown();
+      $('#closeButton5').show();
+      $('#openButton5').hide();
+      GcoronaCnt = 1;
+    }
+    else {
+      $('#graphDiv').slideUp();
+      $('#closeButton5').hide();
+      $('#openButton5').show();
+      GcoronaCnt = 0;
+    }
+  });
+
+  // 제목을 눌러도 오픈 : 경북대 지도 및 동선
+  $('#Mcorona').click(function () {
+    if (McoronaCnt == 0) {
+      $('#mapDiv').slideUp();
+      $('#closeButton6').hide();
+      $('#openButton6').show();
+      McoronaCnt = 1;
+    }
+    else {
+      $('#mapDiv').slideDown();
+      $('#closeButton6').show();
+      $('#openButton6').hide();
+      McoronaCnt = 0;
+    }
+  });
+
+  // 지역별 현황
+  $('#openButton1').click(function () {
+    $('#regionDiv').slideDown();
+    $('#closeButton1').show();
+    $('#openButton1').hide();
+  });
+
+  $('#closeButton1').click(function () {
+    $('#regionDiv').slideUp();
+    $('#openButton1').show();
+    $('#closeButton1').hide();
+  });
+
+  // 전 세계 현황 
+  $('#openButton4').click(function () {
+    $('#worldDiv').slideDown();
+    $('#closeButton4').show();
+    $('#openButton4').hide();
+  });
+
+  $('#closeButton4').click(function () {
+    $('#worldDiv').slideUp();
+    $('#openButton4').show();
+    $('#closeButton4').hide();
+  });
+
+  // 추세선 그래프
+  $('#openButton5').click(function () {
+    $('#graphDiv').slideDown();
+    $('#closeButton5').show();
+    $('#openButton5').hide();
+  });
+
+  $('#closeButton5').click(function () {
+    $('#graphDiv').slideUp();
+    $('#openButton5').show();
+    $('#closeButton5').hide();
+  });
+
+  // 지도 섹션
+  $('#openButton6').click(function () {
+    $('#mapDiv').slideDown();
+    $('#closeButton6').show();
+    $('#openButton6').hide();
+    McoronaCnt = 0;
+  });
+
+  $('#closeButton6').click(function () {
+    $('#mapDiv').slideUp();
+    $('#openButton6').show();
+    $('#closeButton6').hide();
+    McoronaCnt = 1;
+  });
 
 
-      // 제목을 눌러도 오픈 : 전세계 코로나
-      $('#Wcorona').click(function () {
-        if (WcoronaCnt == 0) {
-          $('#worldDiv').slideDown();
-          $('#closeButton4').show();
-          $('#openButton4').hide();
-          WcoronaCnt = 1;
-        }
-        else {
-          $('#worldDiv').slideUp();
-          $('#closeButton4').hide();
-          $('#openButton4').show();
-          WcoronaCnt = 0;
-        }
-      });
+  // 테이블 행 펼치기/접기
+  $('.person1-content').hide();
+  $('.person2-content').hide();
+  $('.person3-content').hide();
+  $('.person4-content').hide();
+  $('.person5-content').hide();
+  $('.person6-content').hide();
+  $('.person7-content').hide();
 
-      // 제목을 눌러도 오픈 : 국내 지역별
-      $('#Kcorona').click(function () {
-        if (KcoronaCnt == 0) {
-          $('#regionDiv').slideDown();
-          $('#closeButton').show();
-          $('#openButton').hide();
-          KcoronaCnt = 1;
-        }
-        else {
-          $('#regionDiv').slideUp();
-          $('#closeButton').hide();
-          $('#openButton').show();
-          KcoronaCnt = 0;
-        }
-      });
-
-      // 제목을 눌러도 오픈 : 각종 링크
-      $('#Lcorona').click(function () {
-        if (LcoronaCnt == 0) {
-          $('#linkDiv').slideDown();
-          $('#closeButton2').show();
-          $('#openButton2').hide();
-          LcoronaCnt = 1;
-        }
-        else {
-          $('#linkDiv').slideUp();
-          $('#closeButton2').hide();
-          $('#openButton2').show();
-          LcoronaCnt = 0;
-        }
-      });
-
-      // 제목을 눌러도 오픈 : 일일 그래프
-      $('#Dcorona').click(function () {
-        if (DcoronaCnt == 0) {
-          $('#diffDiv').slideDown();
-          $('#closeButton3').show();
-          $('#openButton3').hide();
-          DcoronaCnt = 1;
-        }
-        else {
-          $('#diffDiv').slideUp();
-          $('#closeButton3').hide();
-          $('#openButton3').show();
-          DcoronaCnt = 0;
-        }
-      });
-
-      $('#openButton').click(function () {
-        $('#regionDiv').slideDown();
-        $('#closeButton').show();
-        $('#openButton').hide();
-      });
-
-      $('#closeButton').click(function () {
-        $('#regionDiv').slideUp();
-        $('#openButton').show();
-        $('#closeButton').hide();
-      });
-
-      $('#openButton2').click(function () {
-        $('#linkDiv').slideDown();
-        $('#closeButton2').show();
-        $('#openButton2').hide();
-      });
-
-      $('#closeButton2').click(function () {
-        $('#linkDiv').slideUp();
-        $('#openButton2').show();
-        $('#closeButton2').hide();
-      });
-
-      $('#openButton3').click(function () {
-        $('#diffDiv').slideDown();
-        $('#closeButton3').show();
-        $('#openButton3').hide();
-      });
-
-      $('#closeButton3').click(function () {
-        $('#diffDiv').slideUp();
-        $('#openButton3').show();
-        $('#closeButton3').hide();
-      });
-
-      $('#openButton4').click(function () {
-        $('#worldDiv').slideDown();
-        $('#closeButton4').show();
-        $('#openButton4').hide();
-      });
-
-      $('#closeButton4').click(function () {
-        $('#worldDiv').slideUp();
-        $('#openButton4').show();
-        $('#closeButton4').hide();
-      });
-
-      // 테이블 행 펼치기/접기
+  $('#person1Tr').click(function () {
+    if (person1Cnt == 0) {
+      person1Cnt = 1;
+      $('#person1Tr').css("background-color", "#A9AED6");
+      $('.person1-content').fadeIn(300);
+    }
+    else {
+      person1Cnt = 0;
+      $('#person1Tr').css("background-color", "#E6EDF0");
       $('.person1-content').hide();
+    }
+  });
+
+  $('#person2Tr').click(function () {
+    if (person2Cnt == 0) {
+      person2Cnt = 1;
+      $('#person2Tr').css("background-color", "#A9AED6");
+      $('.person2-content').fadeIn(300);
+    }
+    else {
+      person2Cnt = 0;
+      $('#person2Tr').css("background-color", "#E6EDF0");
       $('.person2-content').hide();
+    }
+  });
+
+  $('#person3Tr').click(function () {
+    if (person3Cnt == 0) {
+      person3Cnt = 1;
+      $('#person3Tr').css("background-color", "#A9AED6");
+      $('.person3-content').fadeIn(300);
+    }
+    else {
+      person3Cnt = 0;
+      $('#person3Tr').css("background-color", "#E6EDF0");
       $('.person3-content').hide();
+    }
+  });
+
+  $('#person4Tr').click(function () {
+    if (person4Cnt == 0) {
+      person4Cnt = 1;
+      $('#person4Tr').css("background-color", "#A9AED6");
+      $('.person4-content').fadeIn(300);
+    }
+    else {
+      person4Cnt = 0;
+      $('#person4Tr').css("background-color", "#E6EDF0");
       $('.person4-content').hide();
+    }
+  });
+
+  $('#person5Tr').click(function () {
+    if (person5Cnt == 0) {
+      person5Cnt = 1;
+      $('#person5Tr').css("background-color", "#A9AED6");
+      $('.person5-content').fadeIn(300);
+    }
+    else {
+      person5Cnt = 0;
+      $('#person5Tr').css("background-color", "#E6EDF0");
       $('.person5-content').hide();
+    }
+  });
+
+  $('#person6Tr').click(function () {
+    if (person6Cnt == 0) {
+      person6Cnt = 1;
+      $('#person6Tr').css("background-color", "#A9AED6");
+      $('.person6-content').fadeIn(300);
+    }
+    else {
+      person6Cnt = 0;
+      $('#person6Tr').css("background-color", "#E6EDF0");
       $('.person6-content').hide();
+    }
+  });
+
+  $('#person7Tr').click(function () {
+    if (person7Cnt == 0) {
+      person7Cnt = 1;
+      $('#person7Tr').css("background-color", "#A9AED6");
+      $('.person7-content').fadeIn(300);
+    }
+    else {
+      person7Cnt = 0;
+      $('#person7Tr').css("background-color", "#E6EDF0");
       $('.person7-content').hide();
+    }
+  });
 
-      $('#person1Tr').click(function () {
-        if (person1Cnt == 0) {
-          person1Cnt = 1;
-          $('#person1Tr').css("background-color", "#A9AED6");
-          $('.person1-content').fadeIn(300);
-        }
-        else {
-          person1Cnt = 0;
-          $('#person1Tr').css("background-color", "#E6EDF0");
-          $('.person1-content').hide();
-        }
-      });
+</script>
 
-      $('#person2Tr').click(function () {
-        if (person2Cnt == 0) {
-          person2Cnt = 1;
-          $('#person2Tr').css("background-color", "#A9AED6");
-          $('.person2-content').fadeIn(300);
-        }
-        else {
-          person2Cnt = 0;
-          $('#person2Tr').css("background-color", "#E6EDF0");
-          $('.person2-content').hide();
-        }
-      });
-
-      $('#person3Tr').click(function () {
-        if (person3Cnt == 0) {
-          person3Cnt = 1;
-          $('#person3Tr').css("background-color", "#A9AED6");
-          $('.person3-content').fadeIn(300);
-        }
-        else {
-          person3Cnt = 0;
-          $('#person3Tr').css("background-color", "#E6EDF0");
-          $('.person3-content').hide();
-        }
-      });
-
-      $('#person4Tr').click(function () {
-        if (person4Cnt == 0) {
-          person4Cnt = 1;
-          $('#person4Tr').css("background-color", "#A9AED6");
-          $('.person4-content').fadeIn(300);
-        }
-        else {
-          person4Cnt = 0;
-          $('#person4Tr').css("background-color", "#E6EDF0");
-          $('.person4-content').hide();
-        }
-      });
-
-      $('#person5Tr').click(function () {
-        if (person5Cnt == 0) {
-          person5Cnt = 1;
-          $('#person5Tr').css("background-color", "#A9AED6");
-          $('.person5-content').fadeIn(300);
-        }
-        else {
-          person5Cnt = 0;
-          $('#person5Tr').css("background-color", "#E6EDF0");
-          $('.person5-content').hide();
-        }
-      });
-
-      $('#person6Tr').click(function () {
-        if (person6Cnt == 0) {
-          person6Cnt = 1;
-          $('#person6Tr').css("background-color", "#A9AED6");
-          $('.person6-content').fadeIn(300);
-        }
-        else {
-          person6Cnt = 0;
-          $('#person6Tr').css("background-color", "#E6EDF0");
-          $('.person6-content').hide();
-        }
-      });
-
-      $('#person7Tr').click(function () {
-        if (person7Cnt == 0) {
-          person7Cnt = 1;
-          $('#person7Tr').css("background-color", "#A9AED6");
-          $('.person7-content').fadeIn(300);
-        }
-        else {
-          person7Cnt = 0;
-          $('#person7Tr').css("background-color", "#E6EDF0");
-          $('.person7-content').hide();
-        }
-      });
-
-    </script>
-
-    <!-- 자동 스크롤 기능 -->
-    <script>
-      function Move() {
+<!-- 자동 스크롤 기능 -->
+<script>
+      function Move1() {
+        var offset = $(".nowData").offset();
+        $('html, body').animate({ scrollTop: offset.top -20}, 400);
+      }
+      function Move2() {
+        var offset = $("#Kcorona").offset();
+        $('html, body').animate({ scrollTop: offset.top -20}, 400);
+      }
+      function Move3() {
+        var offset = $("#Wcorona").offset();
+        $('html, body').animate({ scrollTop: offset.top -20}, 400);
+      }
+      function Move4() {
+        var offset = $("#Gcorona").offset();
+        $('html, body').animate({ scrollTop: offset.top -20}, 400);
+      }
+      function Move5() {
+        var offset = $("#Mcorona").offset();
+        $('html, body').animate({ scrollTop: offset.top -20}, 400);
+      }
+      function Move6() {
         var offset = $(".path").offset();
-        $('html, body').animate({ scrollTop: offset.top }, 400);
+        $('html, body').animate({ scrollTop: offset.top -20}, 400);
       }
-    </script>
-
-    <script>
-      var mapOptions = {
-        center: new naver.maps.LatLng(35.889672, 128.610472),
-        zoom: 7,
-        zoomControl: true,
-        zoomControlOptions: {
-          position: naver.maps.Position.TOP_RIGHT
-        }
-      };
-
-      var map = new naver.maps.Map('map', mapOptions);
-      var 지역별확진자 = [
-        2, //창원
-        2, //경주
-        1, //영양
-        1, //봉화
-        1, //대전
-        3, //대구
-      ];
-
-      var 지역이름 = ['창원', '경주', '영양', '봉화', '대전', '대구']
-      var 지역좌표 = [
-        [35.228000, 128.681802],  //창원시청
-        [35.856728, 129.224696],  //경주시청
-        [36.669226, 129.111796],  //영양군청
-        [36.896468, 128.732478],  //봉화군청
-        [36.350660, 127.384829],  //대전시청
-        [35.871502, 128.601805],  //대구시청
-      ];
-
-      var 지역별마커 = [];
-      var 지역별정보윈도우 = [];
-      for (let i in 지역이름) {
-
-        var point = new naver.maps.LatLng(지역좌표[i][0], 지역좌표[i][1]);
-        var contentString = [
-          '<div class="iw_inner">',
-          '<p style="font-size: small; color:black; margin:10px;">지역이름 : ', 지역이름[i], '<br>',
-          '확진자수 : ', 지역별확진자[i], '<br>',
-          '</p>',
-          '</div>'
-        ].join('');
-
-        var marker = new naver.maps.Marker({
-          map: map,
-          position: point
-        });
-        var circle = new naver.maps.Circle({
-          map: map,
-          center: point,
-          radius: 지역별확진자[i] * 5000,
-          strokeWeight: 1.5,
-          fillColor: "#ff0000",
-          fillOpacity: 0.6
-        });
-        var infowindow = new naver.maps.InfoWindow({
-          content: contentString,
-        });
-        지역별마커.push(marker);
-        지역별정보윈도우.push(infowindow);
+      function Move7() {
+        var offset = $("#linkContent").offset();
+        $('html, body').animate({ scrollTop: offset.top -20}, 400);
       }
-
-      naver.maps.Event.addListener(지역별마커[0], "click", function (e) {
-        if (지역별정보윈도우[0].getMap()) {
-          지역별정보윈도우[0].close();
-        } else {
-          지역별정보윈도우[0].open(map, 지역별마커[0]);
-        }
-      });
-
-      naver.maps.Event.addListener(지역별마커[1], "click", function (e) {
-        if (지역별정보윈도우[1].getMap()) {
-          지역별정보윈도우[1].close();
-        } else {
-          지역별정보윈도우[1].open(map, 지역별마커[1]);
-        }
-      });
-
-      naver.maps.Event.addListener(지역별마커[2], "click", function (e) {
-        if (지역별정보윈도우[2].getMap()) {
-          지역별정보윈도우[2].close();
-        } else {
-          지역별정보윈도우[2].open(map, 지역별마커[2]);
-        }
-      });
-
-      naver.maps.Event.addListener(지역별마커[3], "click", function (e) {
-        if (지역별정보윈도우[3].getMap()) {
-          지역별정보윈도우[3].close();
-        } else {
-          지역별정보윈도우[3].open(map, 지역별마커[3]);
-        }
-      });
-
-      naver.maps.Event.addListener(지역별마커[4], "click", function (e) {
-        if (지역별정보윈도우[4].getMap()) {
-          지역별정보윈도우[4].close();
-        } else {
-          지역별정보윈도우[4].open(map, 지역별마커[4]);
-        }
-      });
-      naver.maps.Event.addListener(지역별마커[5], "click", function (e) {
-        if (지역별정보윈도우[5].getMap()) {
-          지역별정보윈도우[5].close();
-        } else {
-          지역별정보윈도우[5].open(map, 지역별마커[5]);
-        }
-      });
+</script>
 
 
-    </script>
+<script>
+  var mapOptions = {
+    center: new naver.maps.LatLng(35.889672, 128.610472),
+    zoom: 7,
+    zoomControl: true,
+    zoomControlOptions: {
+      position: naver.maps.Position.TOP_RIGHT
+    }
+  };
 
-    <script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
-    <script type="text/javascript">
-      if (!wcs_add) var wcs_add = {};
-      wcs_add["wa"] = "49bef71a2dfba8";
-      wcs_do();
-    </script>
+  var map = new naver.maps.Map('map', mapOptions);
+  var 지역별확진자 = [
+    2, //창원
+    2, //경주
+    1, //영양
+    1, //봉화
+    1, //대전
+    3, //대구
+  ];
 
-    <script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
-    <script type="text/javascript">
-      if (!wcs_add) var wcs_add = {};
-      wcs_add["wa"] = "4a452c022f3f98";
-      wcs_do();
-    </script>
+  var 지역이름 = ['창원', '경주', '영양', '봉화', '대전', '대구']
+  var 지역좌표 = [
+    [35.228000, 128.681802],  //창원시청
+    [35.856728, 129.224696],  //경주시청
+    [36.669226, 129.111796],  //영양군청
+    [36.896468, 128.732478],  //봉화군청
+    [36.350660, 127.384829],  //대전시청
+    [35.871502, 128.601805],  //대구시청
+  ];
+
+  var 지역별마커 = [];
+  var 지역별정보윈도우 = [];
+  for (let i in 지역이름) {
+
+    var point = new naver.maps.LatLng(지역좌표[i][0], 지역좌표[i][1]);
+    var contentString = [
+      '<div class="iw_inner">',
+      '<p style="font-size: small; color:black; margin:10px;">지역이름 : ', 지역이름[i], '<br>',
+      '확진자수 : ', 지역별확진자[i], '<br>',
+      '</p>',
+      '</div>'
+    ].join('');
+
+    var marker = new naver.maps.Marker({
+      map: map,
+      position: point
+    });
+    var circle = new naver.maps.Circle({
+      map: map,
+      center: point,
+      radius: 지역별확진자[i] * 5000,
+      strokeWeight: 1.5,
+      fillColor: "#ff0000",
+      fillOpacity: 0.6
+    });
+    var infowindow = new naver.maps.InfoWindow({
+      content: contentString,
+    });
+    지역별마커.push(marker);
+    지역별정보윈도우.push(infowindow);
+  }
+
+  naver.maps.Event.addListener(지역별마커[0], "click", function (e) {
+    if (지역별정보윈도우[0].getMap()) {
+      지역별정보윈도우[0].close();
+    } else {
+      지역별정보윈도우[0].open(map, 지역별마커[0]);
+    }
+  });
+
+  naver.maps.Event.addListener(지역별마커[1], "click", function (e) {
+    if (지역별정보윈도우[1].getMap()) {
+      지역별정보윈도우[1].close();
+    } else {
+      지역별정보윈도우[1].open(map, 지역별마커[1]);
+    }
+  });
+
+  naver.maps.Event.addListener(지역별마커[2], "click", function (e) {
+    if (지역별정보윈도우[2].getMap()) {
+      지역별정보윈도우[2].close();
+    } else {
+      지역별정보윈도우[2].open(map, 지역별마커[2]);
+    }
+  });
+
+  naver.maps.Event.addListener(지역별마커[3], "click", function (e) {
+    if (지역별정보윈도우[3].getMap()) {
+      지역별정보윈도우[3].close();
+    } else {
+      지역별정보윈도우[3].open(map, 지역별마커[3]);
+    }
+  });
+
+  naver.maps.Event.addListener(지역별마커[4], "click", function (e) {
+    if (지역별정보윈도우[4].getMap()) {
+      지역별정보윈도우[4].close();
+    } else {
+      지역별정보윈도우[4].open(map, 지역별마커[4]);
+    }
+  });
+  naver.maps.Event.addListener(지역별마커[5], "click", function (e) {
+    if (지역별정보윈도우[5].getMap()) {
+      지역별정보윈도우[5].close();
+    } else {
+      지역별정보윈도우[5].open(map, 지역별마커[5]);
+    }
+  });
+
+
+</script>
+
+<script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
+<script type="text/javascript">
+  if (!wcs_add) var wcs_add = {};
+  wcs_add["wa"] = "49bef71a2dfba8";
+  wcs_do();
+</script>
+
+<script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
+<script type="text/javascript">
+  if (!wcs_add) var wcs_add = {};
+  wcs_add["wa"] = "4a452c022f3f98";
+  wcs_do();
+</script>
 </body>
 
 </html>
