@@ -307,19 +307,19 @@
 
       <table id="dataSection">
         <tr style="border-bottom:2px solid rgb(228, 228, 228)">
-          <th style="font-size:20px; color:rgb(204, 58, 70);width:30%">확진자</th>
-          <td id="국내확진자" style="font-size:27px; font-weight:800; color:rgb(255, 78, 93)"></td>
-          <td id="국내확진자차이" style="font-size:17px; font-weight:700; color:rgb(255, 78, 93)"></td>
+          <th style="font-size:20px; color:rgb(233, 64, 78);width:40%">확진자 |</th>
+          <td id="국내확진자" style="text-align:left;font-size:26px; font-weight:800; color:rgb(255, 78, 93)"></td>
+          <td id="국내확진자차이" style="text-align:left;font-size:17px; font-weight:700; color:rgb(255, 78, 93) ;width:30%"></td>
         </tr>
         <tr style="border-bottom:2px solid rgb(228, 228, 228)">
-          <th style="font-size:20px; color:rgb(3, 125, 224)">완치자</th>
-          <td id="국내완치자" style="font-size:27px; font-weight:800; color:rgb(3, 125, 224)"></td>
-          <td id="국내완치자차이" style="font-size:17px; font-weight:700; color:rgb(3, 125, 224)"></td>
+          <th style="font-size:20px; color:rgb(3, 125, 224)">완치자 |</th>
+          <td id="국내완치자" style="text-align:left;font-size:26px; font-weight:800; color:rgb(3, 125, 224)"></td>
+          <td id="국내완치자차이" style="text-align:left;font-size:17px; font-weight:700; color:rgb(3, 125, 224)"></td>
         </tr>
         <tr>
-          <th style="font-size:20px; color:rgb(110, 102, 103)">사망자</th>
-          <td id="국내사망자" style="font-size:27px; font-weight:800; color:rgb(110, 102, 103)"></td>
-          <td id="국내사망자차이" style="font-size:17px; font-weight:700; color:rgb(110, 102, 103)"></td>
+          <th style="font-size:20px; color:rgb(110, 102, 103)">사망자 |</th>
+          <td id="국내사망자" style="text-align:left;font-size:26px; font-weight:800; color:rgb(110, 102, 103)"></td>
+          <td id="국내사망자차이" style="text-align:left;font-size:17px; font-weight:700; color:rgb(110, 102, 103)"></td>
         </tr>
       </table>
 
@@ -333,19 +333,19 @@
 
       <table id="dataSection">
         <tr style="border-bottom:2px solid rgb(228, 228, 228)">
-          <th style="font-size:20px; color:rgb(204, 58, 70);width:30%">확진자</th>
-          <td id="경대확진자" style="font-size:27px; font-weight:800; color:rgb(255, 78, 93)"></td>
-          <td id="경대확진자차이" style="font-size:17px; font-weight:700; color:rgb(255, 78, 93)"></td>
+          <th style="font-size:20px; color:rgb(233, 64, 78);width:40%">확진자 |</th>
+          <td id="경대확진자" style="text-align:left;font-size:26px; font-weight:800; color:rgb(255, 78, 93)"></td>
+          <td id="경대확진자차이" style="text-align:left;font-size:17px; font-weight:700; color:rgb(255, 78, 93);width:30%"></td>
         </tr>
         <tr style="border-bottom:2px solid rgb(228, 228, 228)">
-          <th style="font-size:20px; color:rgb(3, 125, 224)">완치자</th>
-          <td id="경대완치자" style="font-size:27px; font-weight:800; color:rgb(3, 125, 224)"></td>
-          <td id="경대완치자차이" style="font-size:17px; font-weight:700; color:rgb(3, 125, 224)"></td>
+          <th style="font-size:20px; color:rgb(3, 125, 224)">완치자 |</th>
+          <td id="경대완치자" style="text-align:left;font-size:26px; font-weight:800; color:rgb(3, 125, 224)"></td>
+          <td id="경대완치자차이" style="text-align:left;font-size:17px; font-weight:700; color:rgb(3, 125, 224);width:30%"></td>
         </tr>
         <tr>
-          <th style="font-size:20px; color:rgb(110, 102, 103)">사망자</th>
-          <td id="경대사망자" style="font-size:27px; font-weight:800; color:rgb(110, 102, 103)"></td>
-          <td id="경대사망자차이" style="font-size:17px; font-weight:700; color:rgb(110, 102, 103)"></td>
+          <th style="font-size:20px; color:rgb(110, 102, 103)">사망자 |</th>
+          <td id="경대사망자" style="text-align:left;font-size:26px; font-weight:800; color:rgb(110, 102, 103)"></td>
+          <td id="경대사망자차이" style="text-align:left;font-size:17px; font-weight:700; color:rgb(110, 102, 103);width:30%"></td>
         </tr>
       </table>
 
@@ -1598,21 +1598,22 @@
 <script language="javascript" type="text/javascript">
 
 //국내 현황
-      document.getElementById("국내확진자").innerHTML = String(국내현황[1].toLocaleString());
-      document.getElementById("국내완치자").innerHTML = String(국내현황[2].toLocaleString());
-      document.getElementById("국내사망자").innerHTML = String(국내현황[3].toLocaleString());
+document.getElementById("국내확진자").innerHTML = String(국내현황[1].toLocaleString());
+document.getElementById("국내완치자").innerHTML = String(국내현황[2].toLocaleString());
+document.getElementById("국내사망자").innerHTML = String(국내현황[3].toLocaleString());
 
-      document.getElementById("국내확진자차이").innerHTML = '+' + String(국내현황[0].toLocaleString());
-      document.getElementById("국내사망자차이").innerHTML = '+' + String(전일대비차이[0].toLocaleString());
-      document.getElementById("국내완치자차이").innerHTML = '+' + String(전일대비차이[1].toLocaleString());
+document.getElementById("국내확진자차이").innerHTML = '(+' + String(국내현황[0].toLocaleString()) + ')';
+document.getElementById("국내사망자차이").innerHTML = '(+' + String(전일대비차이[0].toLocaleString()) + ')';
+document.getElementById("국내완치자차이").innerHTML = '(+' + String(전일대비차이[1].toLocaleString()) + ')';
 
-      //경북대 현황
-      document.getElementById("경대확진자").innerHTML = String(경북대현황[0].toLocaleString());
-      document.getElementById("경대사망자").innerHTML = String(경북대현황[1].toLocaleString());
-      document.getElementById("경대완치자").innerHTML = String(경북대현황[2].toLocaleString());
-      document.getElementById("경대확진자차이").innerHTML = '+' + String(경북대현황[3].toLocaleString());
-      document.getElementById("경대사망자차이").innerHTML = '+' + String(경북대현황[4].toLocaleString());
-      document.getElementById("경대완치자차이").innerHTML = '+' + String(경북대현황[5].toLocaleString());
+//경북대 현황
+document.getElementById("경대확진자").innerHTML = String(경북대현황[0].toLocaleString());
+document.getElementById("경대사망자").innerHTML = String(경북대현황[1].toLocaleString());
+document.getElementById("경대완치자").innerHTML = String(경북대현황[2].toLocaleString());
+
+document.getElementById("경대확진자차이").innerHTML = '(+' + String(경북대현황[3].toLocaleString())+')';
+document.getElementById("경대사망자차이").innerHTML = '(+' + String(경북대현황[4].toLocaleString())+')';
+document.getElementById("경대완치자차이").innerHTML = '(+' + String(경북대현황[5].toLocaleString())+')';
 
   //지역별 확진자수
   document.getElementById("seoul").innerHTML = '<b>' + String(전국지역확진자[0].toLocaleString()) + '</b>';
