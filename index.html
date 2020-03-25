@@ -444,8 +444,7 @@
         </tr>
       </table>
 
-      <p id="update1" class="e"><br><i class="fas fa-sync-alt"></i>
-        업데이트: 03.24 (10:00) 기준 (차이: 전날 00시 대비)</p>
+      <p id="update1" class="e"><br><i class="fas fa-sync-alt"></i></p>
 
     </div>
 
@@ -473,8 +472,7 @@
         </tr>
       </table>
 
-      <p id="update2" class="e"><br><i class="fas fa-sync-alt"></i>
-        업데이트: 03.24 (10:00) 기준 (차이: 전날 00시 대비)</p>
+      <p id="update2" class="e"><br><i class="fas fa-sync-alt"></i></p>
 
     </div>
 
@@ -1826,6 +1824,10 @@
   document.getElementById("세계확진자").innerHTML = String(세계현황[0].toLocaleString());
   document.getElementById("세계사망자").innerHTML = String(세계현황[1].toLocaleString());
   document.getElementById("세계완치자").innerHTML = String(세계현황[2].toLocaleString());
+
+  // 업데이트 시간
+  document.getElementById("update1").innerHTML = String(업데이트시간) +' 기준 (차이 : 전일 00시 대비)';
+  document.getElementById("update2").innerHTML = String(업데이트시간) +' 기준 (차이 : 전일 00시 대비)';
 
   // 세계순위현황 업데이트시간 텍스트
   document.getElementById("W_updateDate").innerHTML = String(세계현황[3]) + ' (한국시간 : GMT +9시간)';
