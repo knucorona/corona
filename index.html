@@ -50,6 +50,10 @@
       font-weight: 700;
     }
 
+    p{
+      font-family: 'NanumSquareRound', sans-serif;
+    }
+
     p.menu1 {
       font-family: 'NanumSquareRound', sans-serif;
       text-align: left;
@@ -58,7 +62,7 @@
       margin-left: 1em;
     }
 
-    p.menu2 {
+    p.menu2{
       font-family: 'NanumSquareRound', sans-serif;
       text-align: left;
       font-size: 14px;
@@ -66,7 +70,7 @@
       margin-left: 1em;
     }
 
-    p.menu1:hover {
+    p.menu1:hover{
       font-family: 'NanumSquareRound', sans-serif;
       background-color: rgb(50, 52, 143);
       text-align: left;
@@ -75,7 +79,7 @@
       margin-left: 1em;
     }
 
-    p.menu2:hover {
+    p.menu2:hover{
       font-family: 'NanumSquareRound', sans-serif;
       background-color: rgb(50, 52, 143);
       text-align: left;
@@ -96,7 +100,7 @@
     }
 
     .contentItem {
-      padding: 2em;
+      padding:2em;
       margin-bottom: 7px;
     }
 
@@ -106,9 +110,12 @@
       margin-bottom: 5px;
       text-align: center;
     }
+
+
   </style>
 
-  <style media="(min-width: 7800px) and (max-width: 3000px)">
+  <style media="(min-width: 950px) and (max-width: 3000px)">
+  
     .header1 {
       position: fixed;
       left: 0;
@@ -117,8 +124,7 @@
       width: 280px;
       background: linear-gradient(to top, rgb(105, 106, 175), rgb(43, 77, 170));
       overflow-y: auto;
-    }
-
+    }    
     .wrapper {
       padding: 4rem;
       margin-left: 280px;
@@ -126,12 +132,12 @@
       height: 320px;
     }
 
-    #link-popup {
-      display: none;
+    #link-popup{
+      display:none;
     }
 
-    #footer2 {
-      display: none;
+    #footer2{
+      display:none;
     }
 
     .content {
@@ -139,46 +145,50 @@
       margin-left: 280px;
     }
 
-    .nowData {
-      width: 50%;
-      float: left;
-    }
+    .nowData{
+      width:50%;
+      min-width:300px;
+      float:left;
+    }  
 
     #dataSection {
       background-color: white;
       box-shadow: 0 2px 8px rgb(228, 228, 228);
       border-radius: 10px;
       width: 85%;
-      margin-right: 20px;
-      float: left;
+      margin-right:20px;    
+      min-width:300px;
+      float:left;
       text-align: center;
     }
 
-    #update3 {
-      display: none;
+    #update3{
+      display:none;
     }
 
-    h2 {
-      font-size: 32px;
+    h2{
+      font-size:32px;
     }
 
-    #linkContent {
-      display: none;
+    #linkContent{
+      display:none;
     }
+
+
   </style>
-  <style media="all and (max-width: 779px)">
-    button {
-      width: 300px;
+  <style media="all and (max-width: 949px)">
+
+    button{
+      width:300px;
     }
 
-    #footer {
+    #footer{
+      display:none;
+    }
+
+    #menu {
       display: none;
     }
-
-    #menu, #quickMenu {
-      display: none;
-    }
-
     .header1 {
       left: 0;
       top: 0;
@@ -194,55 +204,55 @@
       background-color: rgb(248, 248, 248);
       height: 425px;
     }
-
-    h2 {
-      font-size: 21px;
-      font-weight: 800;
-      margin-top: 1em;
-      text-align: center;
+  
+    h2{
+      font-size:21px;
+      font-weight:800;
+      margin-top:1em;
+      text-align:center;
     }
 
-    h3 {
-      margin-top: .2em;
-      font-size: 20px;
-      text-align: center;
+    h3{              
+      margin-top:.2em;
+      font-size:20px;
+      text-align:center;
     }
 
     .content {
       padding: .5rem;
     }
-
+    
     .contentItem {
-      padding: .5em;
+      padding:.5em;
       margin-bottom: 7px;
     }
 
-    .nowData {
-      width: 100%;
+    .nowData{
+      width:100%;
       margin: 0 auto;
-    }
+    }  
 
     #dataSection {
       background-color: white;
       box-shadow: 0 2px 8px rgb(228, 228, 228);
       border-radius: 10px;
       width: 85%;
-      margin-right: .5em;
+      margin-right:.5em;
       margin: 0 auto;
       text-align: center;
-      max-width: 385px;
+      max-width:385px;
     }
 
-    #update1,
-    #update2 {
-      display: none;
+    #update1, #update2{
+      display:none;
     }
 
-    #update3 {
-      width: 100%;
-      text-align: center;
-      font-size: 11px;
+    #update3{
+      width:100%;
+      text-align:center;
+      font-size:11px;
     }
+
   </style>
 
 </head>
