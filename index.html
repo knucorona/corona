@@ -50,7 +50,7 @@
       font-weight: 700;
     }
 
-    p{
+    p {
       font-family: 'NanumSquareRound', sans-serif;
     }
 
@@ -62,7 +62,7 @@
       margin-left: 1em;
     }
 
-    p.menu2{
+    p.menu2 {
       font-family: 'NanumSquareRound', sans-serif;
       text-align: left;
       font-size: 14px;
@@ -70,7 +70,7 @@
       margin-left: 1em;
     }
 
-    p.menu1:hover{
+    p.menu1:hover {
       font-family: 'NanumSquareRound', sans-serif;
       background-color: rgb(50, 52, 143);
       text-align: left;
@@ -79,7 +79,7 @@
       margin-left: 1em;
     }
 
-    p.menu2:hover{
+    p.menu2:hover {
       font-family: 'NanumSquareRound', sans-serif;
       background-color: rgb(50, 52, 143);
       text-align: left;
@@ -100,7 +100,7 @@
     }
 
     .contentItem {
-      padding:2em;
+      padding: 2em;
       margin-bottom: 7px;
     }
 
@@ -110,12 +110,21 @@
       margin-bottom: 5px;
       text-align: center;
     }
-
-
   </style>
 
   <style media="(min-width: 950px) and (max-width: 3000px)">
-  
+    #s_left_common {
+      width: 630px;
+    }
+
+    #newsIcon2 {
+      display: none;
+    }
+
+    .lists {
+      font-size: 11px;
+    }
+
     .header1 {
       position: fixed;
       left: 0;
@@ -124,7 +133,8 @@
       width: 280px;
       background: linear-gradient(to top, rgb(105, 106, 175), rgb(43, 77, 170));
       overflow-y: auto;
-    }    
+    }
+
     .wrapper {
       padding: 4rem;
       margin-left: 280px;
@@ -132,12 +142,12 @@
       height: 330px;
     }
 
-    #link-popup{
-      display:none;
+    #link-popup {
+      display: none;
     }
 
-    #footer2{
-      display:none;
+    #footer2 {
+      display: none;
     }
 
     .content {
@@ -145,54 +155,60 @@
       margin-left: 280px;
     }
 
-    .nowData{
-      width:50%;
-      min-width:300px;
-      float:left;
-    }  
+    .nowData {
+      width: 50%;
+      min-width: 300px;
+      float: left;
+    }
 
     #dataSection {
       background-color: white;
       box-shadow: 0 2px 8px rgb(228, 228, 228);
       border-radius: 10px;
       width: 85%;
-      margin-right:20px;    
-      min-width:300px;
-      float:left;
+      margin-right: 20px;
+      min-width: 300px;
+      float: left;
       text-align: center;
     }
 
-    #update3{
-      display:none;
-    }
-
-    h2{
-      font-size:32px;
-    }
-
-    #linkContent{
-      display:none;
-    }
-
-
-  </style>
-  <style media="all and (max-width: 949px)">
-
-    #news_section{
+    #update3 {
       display: none;
     }
 
-    button{
-      width:300px;
+    h2 {
+      font-size: 32px;
     }
 
-    #footer{
-      display:none;
+    #linkContent {
+      display: none;
+    }
+  </style>
+  <style media="all and (max-width: 949px)">
+    #s_left_common {
+      width: 350px;
+    }
+
+    #newsIcon1 {
+      display: none;
+    }
+
+    .lists {
+      font-size: 6px;
+    }
+
+    button {
+      width: 300px;
+    }
+
+    #footer {
+      display: none;
     }
 
     #menu {
       display: none;
     }
+
     .header1 {
       left: 0;
       top: 0;
@@ -206,57 +222,57 @@
     .wrapper {
       padding: .2rem;
       background-color: rgb(248, 248, 248);
-      height: 425px;
-    }
-  
-    h2{
-      font-size:21px;
-      font-weight:800;
-      margin-top:1em;
-      text-align:center;
+      height: 460px;
     }
 
-    h3{              
-      margin-top:.2em;
-      font-size:20px;
-      text-align:center;
+    h2 {
+      font-size: 21px;
+      font-weight: 800;
+      margin-top: 1em;
+      text-align: center;
+    }
+
+    h3 {
+      margin-top: .2em;
+      font-size: 20px;
+      text-align: center;
     }
 
     .content {
       padding: .5rem;
     }
-    
+
     .contentItem {
-      padding:.5em;
+      padding: .5em;
       margin-bottom: 7px;
     }
 
-    .nowData{
-      width:100%;
+    .nowData {
+      width: 100%;
       margin: 0 auto;
-    }  
+    }
 
     #dataSection {
       background-color: white;
       box-shadow: 0 2px 8px rgb(228, 228, 228);
       border-radius: 10px;
       width: 85%;
-      margin-right:.5em;
+      margin-right: .5em;
       margin: 0 auto;
       text-align: center;
-      max-width:385px;
+      max-width: 385px;
     }
 
-    #update1, #update2{
-      display:none;
+    #update1,
+    #update2 {
+      display: none;
     }
 
-    #update3{
-      width:100%;
-      text-align:center;
-      font-size:11px;
+    #update3 {
+      width: 100%;
+      text-align: center;
+      font-size: 11px;
     }
-
   </style>
 
 </head>
@@ -264,55 +280,55 @@
 <body>
 
   <!-- 공지사항 제목 스크롤링 -->
-	<script type="text/javascript">
-		function textScroll(scroll_el_id) {
-			this.objElement = document.getElementById(scroll_el_id);
-			this.objElement.style.position = 'relative';
-			this.objElement.style.overflow = 'hidden';
+  <script type="text/javascript">
+    function textScroll(scroll_el_id) {
+      this.objElement = document.getElementById(scroll_el_id);
+      this.objElement.style.position = 'relative';
+      this.objElement.style.overflow = 'hidden';
 
-			this.objLi = this.objElement.getElementsByTagName('li');
-			this.height = this.objElement.offsetHeight; // li 엘리먼트가 움직이는 높이(외부에서 변경가능)
-			this.num = this.objLi.length; // li 엘리먼트의 총 갯수
-			this.totalHeight = this.height * this.num; // 총 높이
-			this.scrollspeed = 3; // 스크롤되는 px
-			this.objTop = new Array(); // 각 li의 top 위치를 저장
-			this.timer = null;
+      this.objLi = this.objElement.getElementsByTagName('li');
+      this.height = this.objElement.offsetHeight; // li 엘리먼트가 움직이는 높이(외부에서 변경가능)
+      this.num = this.objLi.length; // li 엘리먼트의 총 갯수
+      this.totalHeight = this.height * this.num; // 총 높이
+      this.scrollspeed = 3; // 스크롤되는 px
+      this.objTop = new Array(); // 각 li의 top 위치를 저장
+      this.timer = null;
 
-			for (var i = 0; i < this.num; i++) {
-				this.objLi[i].style.position = 'absolute';
-				this.objTop[i] = this.height * i;
-				this.objLi[i].style.top = this.objTop[i] + "px";
-			}
-		}
+      for (var i = 0; i < this.num; i++) {
+        this.objLi[i].style.position = 'absolute';
+        this.objTop[i] = this.height * i;
+        this.objLi[i].style.top = this.objTop[i] + "px";
+      }
+    }
 
-		textScroll.prototype.move = function () {
-			for (var i = 0; i < this.num; i++) {
-				this.objTop[i] = this.objTop[i] - this.scrollspeed;
-				this.objLi[i].style.top = this.objTop[i] + "px";
-			}
-			if (this.objTop[0] % this.height == 0) {
-				this.jump();
-			} else {
-				clearTimeout(this.timer);
-				this.timer = setTimeout(this.name + ".move()", 50);
-			}
-		}
+    textScroll.prototype.move = function () {
+      for (var i = 0; i < this.num; i++) {
+        this.objTop[i] = this.objTop[i] - this.scrollspeed;
+        this.objLi[i].style.top = this.objTop[i] + "px";
+      }
+      if (this.objTop[0] % this.height == 0) {
+        this.jump();
+      } else {
+        clearTimeout(this.timer);
+        this.timer = setTimeout(this.name + ".move()", 50);
+      }
+    }
 
-		textScroll.prototype.jump = function () {
-			for (var i = 0; i < this.num; i++) {
-				if (this.objTop[i] == this.height * (-2)) {
-					this.objTop[i] = this.objTop[i] + this.totalHeight;
-					this.objLi[i].style.top = this.objTop[i] + "px";
-				}
-			}
-			clearTimeout(this.timer);
-			this.timer = setTimeout(this.name + ".move()", 3000);
-		}
+    textScroll.prototype.jump = function () {
+      for (var i = 0; i < this.num; i++) {
+        if (this.objTop[i] == this.height * (-2)) {
+          this.objTop[i] = this.objTop[i] + this.totalHeight;
+          this.objLi[i].style.top = this.objTop[i] + "px";
+        }
+      }
+      clearTimeout(this.timer);
+      this.timer = setTimeout(this.name + ".move()", 3000);
+    }
 
-		textScroll.prototype.start = function () {
-			this.timer = setTimeout(this.name + ".move()", 3000);
-		}
-	</script>
+    textScroll.prototype.start = function () {
+      this.timer = setTimeout(this.name + ".move()", 3000);
+    }
+  </script>
 
   <header class="header1">
 
@@ -464,48 +480,54 @@
     <p id="update3" class="e"><br><i class="fas fa-sync-alt"></i>
       업데이트: 03.24 (10:00) 기준 (차이: 전날 00시 대비)</p>
 
-      <div id="news_section">
+    <div id="news_section">
       <div class="s_left_common" style="padding:6px; margin-top:35px; margin-left:5px; width: 630px; height:40px;">
-        <p style="float:left; margin-left:-11px; margin-top:4px; margin-right:10px; font-size:13px; font-weight:700"><i class="fas fa-bell"></i> 학교 코로나19 공지사항</p>
-        <ul id="scroll" style="border-radius:10px; box-shadow:0 2px 8px rgb(238, 238, 238); list-style-type:none; height:30px; padding:15px; background-color: white;">
+        <p id="newsIcon1"
+          style="float:left; margin-left:-11px; margin-top:4px; margin-right:10px; font-size:13px; font-weight:700"><i
+            class="fas fa-bell"></i> 학교 코로나19 공지사항</p>
+        <p id="newsIcon2"
+          style="float:left; margin-left:-4px; margin-top:5px; margin-right:10px; font-size:14px; font-weight:700">
+          <span style="color:rgb(83, 121, 126)"><i class="fas fa-volume-down"></i></span></p>
+        <ul id="scroll"
+          style="border-radius:10px; box-shadow:0 2px 8px rgb(238, 238, 238); list-style-type:none; height:30px; padding:15px; background-color: white;">
           <li id="list1" style="font-size:11px; margin-top:5px;">
-            
+
           </li>
           <li id="list2" style="font-size:11px; margin-top:5px;">
-            
+
           </li>
           <li id="list3" style="font-size:11px; margin-top:5px;">
-            
+
           </li>
           <li id="list4" style="font-size:11px; margin-top:5px;">
-            
+
           </li>
           <li id="list5" style="font-size:11px; margin-top:5px;">
-            
-          </li> 
+
+          </li>
           <li id="list6" style="font-size:11px; margin-top:5px;">
-            
-          </li> 
+
+          </li>
           <li id="list7" style="font-size:11px; margin-top:5px;">
-            
-          </li> 
+
+          </li>
           <li id="list8" style="font-size:11px; margin-top:5px;">
-            
-          </li> 
+
+          </li>
           <li id="list9" style="font-size:11px; margin-top:5px;">
-            
-          </li> 
+
+          </li>
           <li id="list10" style="font-size:11px; margin-top:5px;">
-            
-          </li> 
+
+          </li>
         </ul>
-  
+
         <script type="text/javascript">
           var real_search_keyword = new textScroll('scroll'); // 스크롤링 하고자하는 ul 엘리먼트의 id값을 인자로 넣습니다
           real_search_keyword.name = "real_search_keyword"; // 인스턴스 네임을 등록합니다
           real_search_keyword.start(); // 스크롤링 시작
         </script>
-  
+
       </div>
     </div>
   </section>
@@ -1881,17 +1903,17 @@
   var temp_href_data;
 
   $.getJSON(jsonLocation, function (data) {
-    $.each(data, function (I, item) {     
-      temp_data = I;     
+    $.each(data, function (I, item) {
+      temp_data = I;
       temp_href_data = item;
       count = count + 1;
 
-      if(count>=12){
-        document.getElementById("list"+idx).innerHTML = '<a href="https://knu.ac.kr'+ temp_href_data+'" target="_blank">' + temp_data +'</a>';
+      if (count >= 12) {
+        document.getElementById("list" + idx).innerHTML = '<a href="https://knu.ac.kr' + temp_href_data + '" target="_blank">' + temp_data + '</a>';
         idx++;
       }
 
-      if(count >= 21)
+      if (count >= 21)
         return false;
     });
   });
