@@ -58,7 +58,7 @@
       margin-left: 1em;
     }
 
-    p.menu2{
+    p.menu2 {
       font-family: 'NanumSquareRound', sans-serif;
       text-align: left;
       font-size: 14px;
@@ -66,7 +66,7 @@
       margin-left: 1em;
     }
 
-    p.menu1:hover{
+    p.menu1:hover {
       font-family: 'NanumSquareRound', sans-serif;
       background-color: rgb(50, 52, 143);
       text-align: left;
@@ -75,7 +75,7 @@
       margin-left: 1em;
     }
 
-    p.menu2:hover{
+    p.menu2:hover {
       font-family: 'NanumSquareRound', sans-serif;
       background-color: rgb(50, 52, 143);
       text-align: left;
@@ -96,7 +96,7 @@
     }
 
     .contentItem {
-      padding:2em;
+      padding: 2em;
       margin-bottom: 7px;
     }
 
@@ -106,12 +106,9 @@
       margin-bottom: 5px;
       text-align: center;
     }
-
-
   </style>
 
-  <style media="(min-width: 950px) and (max-width: 3000px)">
-  
+  <style media="(min-width: 7800px) and (max-width: 3000px)">
     .header1 {
       position: fixed;
       left: 0;
@@ -120,7 +117,8 @@
       width: 280px;
       background: linear-gradient(to top, rgb(105, 106, 175), rgb(43, 77, 170));
       overflow-y: auto;
-    }    
+    }
+
     .wrapper {
       padding: 4rem;
       margin-left: 280px;
@@ -128,12 +126,12 @@
       height: 320px;
     }
 
-    #link-popup{
-      display:none;
+    #link-popup {
+      display: none;
     }
 
-    #footer2{
-      display:none;
+    #footer2 {
+      display: none;
     }
 
     .content {
@@ -141,48 +139,46 @@
       margin-left: 280px;
     }
 
-    .nowData{
-      width:50%;
-      float:left;
-    }  
+    .nowData {
+      width: 50%;
+      float: left;
+    }
 
     #dataSection {
       background-color: white;
       box-shadow: 0 2px 8px rgb(228, 228, 228);
       border-radius: 10px;
       width: 85%;
-      margin-right:20px;    
-      float:left;
+      margin-right: 20px;
+      float: left;
       text-align: center;
     }
 
-    #update3{
-      display:none;
+    #update3 {
+      display: none;
     }
 
-    h2{
-      font-size:32px;
+    h2 {
+      font-size: 32px;
     }
 
-    #linkContent{
-      display:none;
+    #linkContent {
+      display: none;
     }
-
-
   </style>
-  <style media="all and (max-width: 949px)">
-
-    button{
-      width:300px;
+  <style media="all and (max-width: 779px)">
+    button {
+      width: 300px;
     }
 
-    #footer{
-      display:none;
+    #footer {
+      display: none;
     }
 
     #menu {
       display: none;
     }
+
     .header1 {
       left: 0;
       top: 0;
@@ -198,55 +194,55 @@
       background-color: rgb(248, 248, 248);
       height: 425px;
     }
-  
-    h2{
-      font-size:21px;
-      font-weight:800;
-      margin-top:1em;
-      text-align:center;
+
+    h2 {
+      font-size: 21px;
+      font-weight: 800;
+      margin-top: 1em;
+      text-align: center;
     }
 
-    h3{              
-      margin-top:.2em;
-      font-size:20px;
-      text-align:center;
+    h3 {
+      margin-top: .2em;
+      font-size: 20px;
+      text-align: center;
     }
 
     .content {
       padding: .5rem;
     }
-    
+
     .contentItem {
-      padding:.5em;
+      padding: .5em;
       margin-bottom: 7px;
     }
 
-    .nowData{
-      width:100%;
+    .nowData {
+      width: 100%;
       margin: 0 auto;
-    }  
+    }
 
     #dataSection {
       background-color: white;
       box-shadow: 0 2px 8px rgb(228, 228, 228);
       border-radius: 10px;
       width: 85%;
-      margin-right:.5em;
+      margin-right: .5em;
       margin: 0 auto;
       text-align: center;
-      max-width:385px;
+      max-width: 385px;
     }
 
-    #update1, #update2{
-      display:none;
+    #update1,
+    #update2 {
+      display: none;
     }
 
-    #update3{
-      width:100%;
-      text-align:center;
-      font-size:11px;
+    #update3 {
+      width: 100%;
+      text-align: center;
+      font-size: 11px;
     }
-
   </style>
 
 </head>
@@ -265,61 +261,103 @@
     <!-- 크기 줄여질 시 나타나는 구역 -->
     <div id="link-popup" style="margin-top:-.5em">
       <p onclick="Move7()" style="font-size:12px; text-align:center"><span style="color:rgb(255, 251, 0)">
-        <i class="fas fa-link"></i>
-        &nbsp; 학교 코로나 공지사항 · 마스크 구매처 링크</span></p>
+          <i class="fas fa-link"></i>
+          &nbsp; 학교 코로나 공지사항 · 마스크 구매처 링크</span></p>
     </div>
 
     <div id="menu">
 
-      <p class="menu1" id="MenuLink1"><span style="color:rgb(255, 251, 0)"><i class="fas fa-link"></i>&nbsp; 공지사항 및 마스크 구매처</span></p>
+      <p class="menu1" id="MenuLink1"><span style="color:rgb(255, 251, 0)"><i class="fas fa-link"></i>&nbsp; 공지사항 및 마스크
+          구매처</span></p>
 
       <div id="innerMenu" style="display:none">
-        <p class="menu2" onclick="window.open('https://knu.ac.kr/wbbs/wbbs/bbs/btin/list.action?bbs_cde=34&amp;menu_idx=224')" style="margin-left:3em"><span style="color:rgb(255, 255, 255)"><i class="fas fa-link"></i>&nbsp; 경북대 코로나 대응관련 공지</span></p>
-        <p class="menu2" onclick="window.open('https://instagram.com/knu_ch/')" style="margin-left:3em"><span style="color:rgb(255, 255, 255)"><i class="fas fa-link"></i>&nbsp; 경북대 총학생회 인스타그램</span></p>
-        <p class="menu2" onclick="window.open('https://www.facebook.com/knuchonghak/')" style="margin-left:3em"><span style="color:rgb(255, 255, 255)"><i class="fas fa-link"></i>&nbsp; 경북대 총학생회 페이스북 </span></p>
-        <p class="menu2" onclick="window.open('https://coronamask.kr/')" style="margin-left:3em"><span style="color:rgb(255, 255, 255)"><i class="fas fa-link"></i>&nbsp; 마스크 판매처 바로가기 </span></p>
-        <p class="menu2" onclick="window.open('https://mohw.go.kr/react/popup_200128.html')" style="margin-left:3em"><span style="color:rgb(255, 255, 255)"><i class="fas fa-link"></i>&nbsp; 전국 안심병원 현황 </span></p>
+        <p class="menu2"
+          onclick="window.open('https://knu.ac.kr/wbbs/wbbs/bbs/btin/list.action?bbs_cde=34&amp;menu_idx=224')"
+          style="margin-left:3em"><span style="color:rgb(255, 255, 255)"><i class="fas fa-link"></i>&nbsp; 경북대 코로나 대응관련
+            공지</span></p>
+        <p class="menu2" onclick="window.open('https://instagram.com/knu_ch/')" style="margin-left:3em"><span
+            style="color:rgb(255, 255, 255)"><i class="fas fa-link"></i>&nbsp; 경북대 총학생회 인스타그램</span></p>
+        <p class="menu2" onclick="window.open('https://www.facebook.com/knuchonghak/')" style="margin-left:3em"><span
+            style="color:rgb(255, 255, 255)"><i class="fas fa-link"></i>&nbsp; 경북대 총학생회 페이스북 </span></p>
+        <p class="menu2" onclick="window.open('https://coronamask.kr/')" style="margin-left:3em"><span
+            style="color:rgb(255, 255, 255)"><i class="fas fa-link"></i>&nbsp; 마스크 판매처 바로가기 </span></p>
+        <p class="menu2" onclick="window.open('https://mohw.go.kr/react/popup_200128.html')" style="margin-left:3em">
+          <span style="color:rgb(255, 255, 255)"><i class="fas fa-link"></i>&nbsp; 전국 안심병원 현황 </span></p>
       </div>
 
-      <p class="menu1" onclick="Move1()"><span style="color:white"><i class="fas fa-user-friends"></i>&nbsp; 국내 및 경북대 현황</span></p>
+      <p class="menu1" onclick="Move1()"><span style="color:white"><i class="fas fa-user-friends"></i>&nbsp; 국내 및 경북대
+          현황</span></p>
 
-      <p class="menu1" onclick="Move2()"><span style="color:white"><i class="fas fa-search-plus"></i>&nbsp; 국내 지역별 현황</span></p>
+      <p class="menu1" onclick="Move2()"><span style="color:white"><i class="fas fa-search-plus"></i>&nbsp; 국내 지역별
+          현황</span></p>
 
-      <p class="menu1" onclick="Move3()"><span style="color:white"><i class="fas fa-globe"></i>&nbsp; 전 세계 코로나19 현황</span></p>
+      <p class="menu1" onclick="Move3()"><span style="color:white"><i class="fas fa-globe"></i>&nbsp; 전 세계 코로나19
+          현황</span></p>
 
-      <p class="menu1" onclick="Move4()"><span style="color:white"><i class="fas fa-chart-line"></i>&nbsp; 확진자 추세 그래프</span></p>
+      <p class="menu1" onclick="Move4()"><span style="color:white"><i class="fas fa-chart-line"></i>&nbsp; 확진자 추세
+          그래프</span></p>
 
-      <p class="menu1" onclick="Move5()"><span style="color:white"><i class="fas fa-map-marked-alt"></i>&nbsp; 경북대 확진자 지도</span></p>
+      <p class="menu1" onclick="Move5()"><span style="color:white"><i class="fas fa-map-marked-alt"></i>&nbsp; 경북대 확진자
+          지도</span></p>
 
       <p class="menu1" onclick="Move6()"><span style="color:white"><i class="fas fa-road"></i>&nbsp; 확진자 이동경로</span></p>
 
     </div>
 
+    <hr style="margin-top:.5em; background-color: rgb(167, 173, 199); width:80%">
+
+    <div id="quickMenu">
+
+      <p style="text-align:center;color:white"><i class="fas fa-globe"></i> 전 세계 현황</p>
+
+      <table style="width:250px">
+        <tr>
+          <th width="60%" style="text-align:center;font-size:14px"><span style="color:white">확진자</span></th>
+          <td class="infect" id="quickInfect" style="text-align:center;font-size:14px;color:white"></td>
+        </tr>
+        <tr>
+          <th width="60%" style="text-align:center;font-size:14px"><span style="color:white">완치자</span></th>
+          <td class="cured" id="quickCured" style="text-align:center;font-size:14px;color:white"></td>
+        </tr>
+        <tr>
+          <th width="60%" style="text-align:center;font-size:14px"><span style="color:white">사망자</span></th>
+          <td class="death" id="quickDeath" style="text-align:center;font-size:14px;color:white"></td>
+        </tr>
+      </table>
+
+      <p id="Now" style="text-align:center;font-size:11px;color:white"></p>
+    </div>
+
     <a href="https://www.notion.so/chanhui/3c3f593d20cd42ee9241451ee9225a4b" target="_blank">
-      <p id="footer" class="menu1" style="bottom:0; position:fixed; font-size:12px; color:rgb(228, 228, 228)">&gt; 사이트 기능 업데이트 현황</p>
+      <p id="footer" class="menu1" style="bottom:0; position:fixed; font-size:12px; color:rgb(228, 228, 228)">&gt; 사이트
+        기능 업데이트 현황</p>
     </a>
   </header>
 
   <section class="wrapper">
 
     <div class="nowData">
-      <a id = "section1"></a>
+      <a id="section1"></a>
       <h2><i class="fas fa-user-friends"></span></i> 국내 현황 </h2>
 
       <table id="dataSection">
         <tr style="border-bottom:2px solid rgb(228, 228, 228)">
           <th style="font-size:20px; color:rgb(233, 64, 78);width:40%">확진자 |</th>
-          <td id="국내확진자" style="text-align:left;font-size:26px; font-weight:800; color:rgb(255, 78, 93)"></td>
-          <td id="국내확진자차이" style="text-align:left;font-size:17px; font-weight:700; color:rgb(255, 78, 93) ;width:30%"></td>
+          <td class="infect" id="국내확진자" style="text-align:left;font-size:26px; font-weight:800; color:rgb(255, 78, 93)">
+          </td>
+          <td id="국내확진자차이" style="text-align:left;font-size:17px; font-weight:700; color:rgb(255, 78, 93) ;width:30%">
+          </td>
         </tr>
         <tr style="border-bottom:2px solid rgb(228, 228, 228)">
           <th style="font-size:20px; color:rgb(3, 125, 224)">완치자 |</th>
-          <td id="국내완치자" style="text-align:left;font-size:26px; font-weight:800; color:rgb(3, 125, 224)"></td>
+          <td class="cured" id="국내완치자" style="text-align:left;font-size:26px; font-weight:800; color:rgb(3, 125, 224)">
+          </td>
           <td id="국내완치자차이" style="text-align:left;font-size:17px; font-weight:700; color:rgb(3, 125, 224)"></td>
         </tr>
         <tr>
           <th style="font-size:20px; color:rgb(110, 102, 103)">사망자 |</th>
-          <td id="국내사망자" style="text-align:left;font-size:26px; font-weight:800; color:rgb(110, 102, 103)"></td>
+          <td class="death" id="국내사망자"
+            style="text-align:left;font-size:26px; font-weight:800; color:rgb(110, 102, 103)"></td>
           <td id="국내사망자차이" style="text-align:left;font-size:17px; font-weight:700; color:rgb(110, 102, 103)"></td>
         </tr>
       </table>
@@ -336,17 +374,20 @@
         <tr style="border-bottom:2px solid rgb(228, 228, 228)">
           <th style="font-size:20px; color:rgb(233, 64, 78);width:40%">확진자 |</th>
           <td id="경대확진자" style="text-align:left;font-size:26px; font-weight:800; color:rgb(255, 78, 93)"></td>
-          <td id="경대확진자차이" style="text-align:left;font-size:17px; font-weight:700; color:rgb(255, 78, 93);width:30%"></td>
+          <td id="경대확진자차이" style="text-align:left;font-size:17px; font-weight:700; color:rgb(255, 78, 93);width:30%">
+          </td>
         </tr>
         <tr style="border-bottom:2px solid rgb(228, 228, 228)">
           <th style="font-size:20px; color:rgb(3, 125, 224)">완치자 |</th>
           <td id="경대완치자" style="text-align:left;font-size:26px; font-weight:800; color:rgb(3, 125, 224)"></td>
-          <td id="경대완치자차이" style="text-align:left;font-size:17px; font-weight:700; color:rgb(3, 125, 224);width:30%"></td>
+          <td id="경대완치자차이" style="text-align:left;font-size:17px; font-weight:700; color:rgb(3, 125, 224);width:30%">
+          </td>
         </tr>
         <tr>
           <th style="font-size:20px; color:rgb(110, 102, 103)">사망자 |</th>
           <td id="경대사망자" style="text-align:left;font-size:26px; font-weight:800; color:rgb(110, 102, 103)"></td>
-          <td id="경대사망자차이" style="text-align:left;font-size:17px; font-weight:700; color:rgb(110, 102, 103);width:30%"></td>
+          <td id="경대사망자차이" style="text-align:left;font-size:17px; font-weight:700; color:rgb(110, 102, 103);width:30%">
+          </td>
         </tr>
       </table>
 
@@ -1539,7 +1580,8 @@
 
           </div>
           <div id="row 7 col 1" class="footer">
-            <p style="font-size: 11px"> * 직접적으로 파악한 인원들만 우선적으로 나타낸 것이며, 지도에 나타난 지역은 확진 판정을 받은 장소를 나타냈습니다. <br>따라서 모든 경북대생들의
+            <p style="font-size: 11px"> * 직접적으로 파악한 인원들만 우선적으로 나타낸 것이며, 지도에 나타난 지역은 확진 판정을 받은 장소를 나타냈습니다. <br>따라서 모든
+              경북대생들의
               확진 판정 정보는 아님을 알려드립니다. </p>
           </div>
         </div>
@@ -1547,45 +1589,45 @@
       </div>
     </div>
 
-     <!-- 관련 링크 -->
-     <div id="linkContent" class="contentItem" style="width:100%; 
+    <!-- 관련 링크 -->
+    <div id="linkContent" class="contentItem" style="width:100%; 
      float:left; border-radius:10px; border:2px solid rgb(231, 231, 231)">
-       <h3>
-         <span id="Gcorona">
-           <span style="color:rgb(50, 132, 240)">
-             <i class="fas fa-link"></span></i>
-           공지사항 및 마스크 구매처 링크
-         </span>
-          
-          <div class="col2" style="margin-top:10px; margin-bottom:-12px">
-            <p><button class="btn btn-danger"
-                onclick="location.href='https://knu.ac.kr/wbbs/wbbs/bbs/btin/list.action?bbs_cde=34&amp;menu_idx=224'">
-                경북대 코로나19 대응관련 공지</button></p>
-          </div>
-          <div class="col2" style="margin-bottom:-12px">
-            <p><button class="btn btn-success" onclick="window.open('https://instagram.com/knu_ch/')">경북대 총학생회
-                인스타그램</button>
-            </p>
-          </div>
-          <div class="col2" style="margin-bottom:-12px">
-            <p><button class="btn btn-info" onclick="window.open('https://www.facebook.com/knuchonghak/')">경북대 총학생회
-                페이스북</button></p>
-          </div>
-          <div class="col2" style="margin-bottom:-12px">
-            <p><button class="btn btn-warning" onclick="window.open('https://coronamask.kr/')">마스크 판매처 바로가기</button></p>
-          </div>
-          <div class="col2" style="margin-bottom:-12px">
-            <p><button class="btn btn-primary" onclick="window.open('https://mohw.go.kr/react/popup_200128.html')">전국 안심병원
-                현황</button></p>
-          </div>
-        
+      <h3>
+        <span id="Gcorona">
+          <span style="color:rgb(50, 132, 240)">
+            <i class="fas fa-link"></span></i>
+          공지사항 및 마스크 구매처 링크
+        </span>
 
-     </div>
+        <div class="col2" style="margin-top:10px; margin-bottom:-12px">
+          <p><button class="btn btn-danger"
+              onclick="location.href='https://knu.ac.kr/wbbs/wbbs/bbs/btin/list.action?bbs_cde=34&amp;menu_idx=224'">
+              경북대 코로나19 대응관련 공지</button></p>
+        </div>
+        <div class="col2" style="margin-bottom:-12px">
+          <p><button class="btn btn-success" onclick="window.open('https://instagram.com/knu_ch/')">경북대 총학생회
+              인스타그램</button>
+          </p>
+        </div>
+        <div class="col2" style="margin-bottom:-12px">
+          <p><button class="btn btn-info" onclick="window.open('https://www.facebook.com/knuchonghak/')">경북대 총학생회
+              페이스북</button></p>
+        </div>
+        <div class="col2" style="margin-bottom:-12px">
+          <p><button class="btn btn-warning" onclick="window.open('https://coronamask.kr/')">마스크 판매처 바로가기</button></p>
+        </div>
+        <div class="col2" style="margin-bottom:-12px">
+          <p><button class="btn btn-primary" onclick="window.open('https://mohw.go.kr/react/popup_200128.html')">전국 안심병원
+              현황</button></p>
+        </div>
+
+
+    </div>
 
   </section>
 
   <p id="footer2" style="font-size:12px"> <a href="https://www.notion.so/chanhui/3c3f593d20cd42ee9241451ee9225a4b"
-    target="_blank"> [사이트 기능 업데이트 현황]</a> </p>
+      target="_blank"> [사이트 기능 업데이트 현황]</a> </p>
 
 </body>
 
@@ -1598,23 +1640,27 @@
 <script src="직접수정.js"></script>
 <script language="javascript" type="text/javascript">
 
-//국내 현황
-document.getElementById("국내확진자").innerHTML = String(국내현황[1].toLocaleString());
-document.getElementById("국내완치자").innerHTML = String(국내현황[2].toLocaleString());
-document.getElementById("국내사망자").innerHTML = String(국내현황[3].toLocaleString());
+  //업데이트 시간
+  let today = new Date();
+  document.getElementById("Now").innerHTML = '(업데이트 : ' + today.toLocaleString() + ')';
 
-document.getElementById("국내확진자차이").innerHTML = '(+' + String(국내현황[0].toLocaleString()) + ')';
-document.getElementById("국내사망자차이").innerHTML = '(+' + String(전일대비차이[0].toLocaleString()) + ')';
-document.getElementById("국내완치자차이").innerHTML = '(+' + String(전일대비차이[1].toLocaleString()) + ')';
+  //국내 현황
+  document.getElementById("국내확진자").innerHTML = String(국내현황[1].toLocaleString());
+  document.getElementById("국내완치자").innerHTML = String(국내현황[2].toLocaleString());
+  document.getElementById("국내사망자").innerHTML = String(국내현황[3].toLocaleString());
 
-//경북대 현황
-document.getElementById("경대확진자").innerHTML = String(경북대현황[0].toLocaleString());
-document.getElementById("경대사망자").innerHTML = String(경북대현황[1].toLocaleString());
-document.getElementById("경대완치자").innerHTML = String(경북대현황[2].toLocaleString());
+  document.getElementById("국내확진자차이").innerHTML = '(+' + String(국내현황[0].toLocaleString()) + ')';
+  document.getElementById("국내사망자차이").innerHTML = '(+' + String(전일대비차이[0].toLocaleString()) + ')';
+  document.getElementById("국내완치자차이").innerHTML = '(+' + String(전일대비차이[1].toLocaleString()) + ')';
 
-document.getElementById("경대확진자차이").innerHTML = '(+' + String(경북대현황[3].toLocaleString())+')';
-document.getElementById("경대사망자차이").innerHTML = '(+' + String(경북대현황[4].toLocaleString())+')';
-document.getElementById("경대완치자차이").innerHTML = '(+' + String(경북대현황[5].toLocaleString())+')';
+  //경북대 현황
+  document.getElementById("경대확진자").innerHTML = String(경북대현황[0].toLocaleString());
+  document.getElementById("경대사망자").innerHTML = String(경북대현황[1].toLocaleString());
+  document.getElementById("경대완치자").innerHTML = String(경북대현황[2].toLocaleString());
+
+  document.getElementById("경대확진자차이").innerHTML = '(+' + String(경북대현황[3].toLocaleString()) + ')';
+  document.getElementById("경대사망자차이").innerHTML = '(+' + String(경북대현황[4].toLocaleString()) + ')';
+  document.getElementById("경대완치자차이").innerHTML = '(+' + String(경북대현황[5].toLocaleString()) + ')';
 
   //지역별 확진자수
   document.getElementById("seoul").innerHTML = '<b>' + String(전국지역확진자[0].toLocaleString()) + '</b>';
@@ -1641,6 +1687,10 @@ document.getElementById("경대완치자차이").innerHTML = '(+' + String(경�
   document.getElementById("결과합계").innerHTML = String((검사자현황[0] + 검사자현황[1]).toLocaleString());
 
   // 세계현황
+  document.getElementById("quickInfect").innerHTML = String(세계현황[0].toLocaleString());
+  document.getElementById("quickDeath").innerHTML = String(세계현황[1].toLocaleString());
+  document.getElementById("quickCured").innerHTML = String(세계현황[2].toLocaleString());
+
   document.getElementById("세계확진자").innerHTML = String(세계현황[0].toLocaleString());
   document.getElementById("세계사망자").innerHTML = String(세계현황[1].toLocaleString());
   document.getElementById("세계완치자").innerHTML = String(세계현황[2].toLocaleString());
@@ -1741,7 +1791,7 @@ document.getElementById("경대완치자차이").innerHTML = '(+' + String(경�
   $('#closeButton5').hide();
   $('#openButton6').hide();
 
-// 제목을 눌러도 오픈 : 전세계 코로나
+  // 제목을 눌러도 오픈 : 전세계 코로나
   $('#MenuLink1').click(function () {
     if (L1Cnt == 0) {
       $('#innerMenu').slideDown();
@@ -1990,38 +2040,54 @@ document.getElementById("경대완치자차이").innerHTML = '(+' + String(경�
 
 </script>
 
-<!-- 자동 스크롤 기능 -->
-<script>
-      function Move1() {
-        var offset = $(".nowData").offset();
-        $('html, body').animate({ scrollTop: offset.top -20}, 400);
-      }
-      function Move2() {
-        var offset = $("#Kcorona").offset();
-        $('html, body').animate({ scrollTop: offset.top -20}, 400);
-      }
-      function Move3() {
-        var offset = $("#Wcorona").offset();
-        $('html, body').animate({ scrollTop: offset.top -20}, 400);
-      }
-      function Move4() {
-        var offset = $("#Gcorona").offset();
-        $('html, body').animate({ scrollTop: offset.top -20}, 400);
-      }
-      function Move5() {
-        var offset = $("#Mcorona").offset();
-        $('html, body').animate({ scrollTop: offset.top -20}, 400);
-      }
-      function Move6() {
-        var offset = $(".path").offset();
-        $('html, body').animate({ scrollTop: offset.top -20}, 400);
-      }
-      function Move7() {
-        var offset = $("#linkContent").offset();
-        $('html, body').animate({ scrollTop: offset.top -20}, 400);
-      }
+<!-- 숫자 카운트 애니메이션 -->
+<script language="javascript" type="text/javascript">
+  $('.infect').counterUp({
+    delay: 10,
+    time: 350
+  });
+  $('.cured').counterUp({
+    delay: 10,
+    time: 350
+  });
+  $('.death').counterUp({
+    delay: 10,
+    time: 350
+  });
 </script>
 
+
+<!-- 자동 스크롤 기능 -->
+<script>
+  function Move1() {
+    var offset = $(".nowData").offset();
+    $('html, body').animate({ scrollTop: offset.top - 20 }, 400);
+  }
+  function Move2() {
+    var offset = $("#Kcorona").offset();
+    $('html, body').animate({ scrollTop: offset.top - 20 }, 400);
+  }
+  function Move3() {
+    var offset = $("#Wcorona").offset();
+    $('html, body').animate({ scrollTop: offset.top - 20 }, 400);
+  }
+  function Move4() {
+    var offset = $("#Gcorona").offset();
+    $('html, body').animate({ scrollTop: offset.top - 20 }, 400);
+  }
+  function Move5() {
+    var offset = $("#Mcorona").offset();
+    $('html, body').animate({ scrollTop: offset.top - 20 }, 400);
+  }
+  function Move6() {
+    var offset = $(".path").offset();
+    $('html, body').animate({ scrollTop: offset.top - 20 }, 400);
+  }
+  function Move7() {
+    var offset = $("#linkContent").offset();
+    $('html, body').animate({ scrollTop: offset.top - 20 }, 400);
+  }
+</script>
 
 <script>
   var mapOptions = {
