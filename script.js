@@ -2,7 +2,7 @@
   //업데이트 시간
   var updateString = String(세계현황[3]);
   var month = updateString.substring(14,19);
-  var day = updateString.substring(20,21);
+  var day = updateString.substring(20,22);
   var year = updateString.substring(23,28);
   var time = updateString.substring(30,35);
   document.getElementById("Now").innerHTML = '(Update : '+month+' '+day+', '+year+', '+time+' GMT)';
