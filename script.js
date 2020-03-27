@@ -4,8 +4,30 @@
   var month = updateString.substring(14,19);
   var day = updateString.substring(20,22);
   var year = updateString.substring(23,28);
-  var time = updateString.substring(30,35);
-  document.getElementById("Now").innerHTML = '(Update : '+month+' '+day+', '+year+', '+time+' GMT)';
+  var hour = updateString.substring(30,32);
+  var min = updateString.substring(33,35);
+
+  var korHour = Number(hour) + 12;
+  var korDay = Number(day);
+  var korMonth = month;
+  if (korMonth == 'March')
+    korMonth = '3월';
+  else if(korMonth == 'April')
+    korMonth = '4월';
+  else if(korMonth == 'May')
+    korMonth = '5월'; 
+  else if(korMonth == 'June')
+    korMonth = '6월'; 
+
+  if (korHour == 24){
+    korHour = '00';
+    korDay = korDay + 1;
+  }
+  else if(korHour > 24){
+    korHour = korHour - 24;
+    korDay = korDay + 1;
+  }
+  document.getElementById("Now").innerHTML = '(업데이트 : '+year+'년 '+korMonth+' '+korDay+'일, '+korHour+':'+min+')';
 
   //국내 현황
   document.getElementById("국내확진자").innerHTML = String(국내현황[1].toLocaleString());
@@ -63,7 +85,7 @@
   document.getElementById("update3").innerHTML = '<br><i class="fas fa-sync-alt"></i> '+ String(업데이트시간) +' 기준 (차이 : 전일 00시 대비)';
 
   // 세계순위현황 업데이트시간 텍스트
-  document.getElementById("W_updateDate").innerHTML = String(세계현황[3]) + ' (한국시간 : GMT +9시간)';
+  document.getElementById("W_updateDate").innerHTML = '(업데이트 : '+year+'년 '+korMonth+' '+korDay+'일, '+korHour+':'+min+')';
 
   // 세계순위현황
   document.getElementById("w_name_1").innerHTML = '<b>' + String(세계확진자[0].Name) + '</b>';
