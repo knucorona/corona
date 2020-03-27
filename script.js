@@ -7,7 +7,7 @@
   var hour = updateString.substring(30,32);
   var min = updateString.substring(33,35);
 
-  var korHour = Number(hour) + 12;
+  var korHour = Number(hour) + 9;
   var korDay = Number(day);
   var korMonth = month;
   if (korMonth == 'March')
