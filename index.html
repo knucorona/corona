@@ -113,8 +113,12 @@
       margin-top:210px;
     }
 
+    #alertNotice{
+      color:rgb(255, 255, 255);
+    }
+
     #alertNotice:hover{
-      background-color:rgb(167, 234, 255);
+      color:rgb(167, 234, 255);
     }
 
     #detailMap{
@@ -207,6 +211,10 @@
     }
   </style>
   <style media="all and (max-width: 1025px)">
+    #tempPopup{
+      display:none;
+    }
+
     #newest_section{
       margin-top:47px;
     }
@@ -257,7 +265,7 @@
     .header1 {
       left: 0;
       top: 0;
-      height: 160px;
+      height: 180px;
       width: 100%;
       background: linear-gradient(to top, rgb(105, 106, 175), rgb(43, 77, 170));
       margin: 0 auto;
@@ -382,7 +390,9 @@
   <header class="header1">
 
     <br>
+    <!--<h4 class="title" style="font-size:27px">경북대 코로나 알리미</h4>-->
     <h4 style="text-align:center"><img src="img/title_logo2.png" width="270px" height="49px"></h4>
+
     <h6 class="title" style="font-size:13px"><i class="fas fa-envelope-open-text"></i>
       확진자 관련 제보 및 피드백 <a href="mailto:knucorona@gmail.com">knucorona@gmail.com</a></h6>
 
@@ -395,10 +405,15 @@
           &nbsp; 학교 코로나 공지사항 · 마스크 구매처 링크</span></p>
       
       <!-- [임시] 비대면 강의 연장 관련 공지-->
-      <p onclick="window.open('https://knu.ac.kr/wbbs/wbbs/bbs/btin/viewBtin.action?bbs_cde=34&btin.bbs_cde=34&btin.doc_no=1320909&btin.appl_no=000000&btin.page=1&btin.search_type=&btin.search_text=&popupDeco=false&btin.note_div=row&menu_idx=224')" style="font-size: 15px; font-weight:800; text-align:center">
-        <span style="color:rgb(255, 255, 255); background-color:rgb(44, 44, 97)">
+      <div id="tempSmallPopup"
+      style="background-color: rgb(40, 41, 110);
+      border-radius:10px; margin:0 auto; width:300px;">
+      <p onclick="window.open('https://knu.ac.kr/wbbs/wbbs/bbs/btin/viewBtin.action?bbs_cde=34&btin.bbs_cde=34&btin.doc_no=1320909&btin.appl_no=000000&btin.page=1&btin.search_type=&btin.search_text=&popupDeco=false&btin.note_div=row&menu_idx=224')"
+      style="font-size: 15px; font-weight:800; text-align:center">
+        <span style="color:rgb(255, 255, 255);">
             <i class="fas fa-bell"></i>
-            &nbsp; [클릭] 비대면 강의 기간 연장 (~5.3)</span></p>
+            &nbsp; [클릭!] 비대면 강의 기간 연장 (~5.3)</span></p>
+      </div>
     </div>
 
     <div id="menu">
@@ -477,13 +492,23 @@
   <section class="wrapper">
 
         <!-- [임시] 비대면 연장 관련 임시 공지라인(추후 삭제)-->
-        <p id="alertNotice" style="width:290px; margin-top:-2em;font-size:17px;font-weight:800"
+        <div id="tempPopup" style="margin-top:-5.1em;
+        background-color:rgb(52, 55, 77);
+        width:300px;
+        border-radius:10px;
+        position:relative;
+        box-shadow:0 2px 8px rgb(192, 192, 192)">
+        <button id="closePopupButton" type="button" onclick="closePopup()" style="margin-top:20px; margin-right:10px;" class="close">&times;</button>  
+        <p>&nbsp;</p>       
+        <p id="alertNotice" style="text-align:center; width:290px; font-size:15px; font-weight:800"
         onclick="window.open('https://knu.ac.kr/wbbs/wbbs/bbs/btin/viewBtin.action?bbs_cde=34&btin.bbs_cde=34&btin.doc_no=1320909&btin.appl_no=000000&btin.page=1&btin.search_type=&btin.search_text=&popupDeco=false&btin.note_div=row&menu_idx=224')" style="font-size: 15px; font-weight:800; text-align:center">
-          <span style="color:rgb(54, 54, 240)"><i class="fas fa-bell"></i>
-          &nbsp; [클릭] 비대면 강의 기간 연장 (~5.3)</span>
+        
+        <span> &nbsp; <i class="fas fa-bell"></i>
+          &nbsp; [클릭!] 비대면 강의 기간 연장 (~5.3)</span>
         </p>
+        </div>
         <!-- -->
-
+        
     <div class="nowData">
       <a id="section1"></a>
       <h2><i class="fas fa-user-friends"></span></i> 국내 현황 </h2>

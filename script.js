@@ -732,3 +732,14 @@ $('#KR-49').click(function(){
          return false;
      });
    });
+
+    // button close
+    function closePopup() {
+      $('#tempPopup').css("box-shadow","none");
+      $('#tempPopup').css("background-color","rgba(255,255,255,0)");
+      $('#tempPopup').css("background-color","rgba(255,255,255,0)");
+      document.getElementById('alertNotice').innerHTML = '&nbsp;';
+      document.getElementById('alertNotice').onclick = null;
+      $('#alertNotice').css("color","rgba(255,255,255,0)");
+      $('#closePopupButton').hide();
+    }
