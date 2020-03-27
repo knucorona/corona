@@ -109,6 +109,10 @@
   </style>
 
   <style media="(min-width: 1026px) and (max-width: 3000px)">
+    #newest_section{
+      margin-top:210px;
+    }
+
     #alertNotice:hover{
       background-color:rgb(167, 234, 255);
     }
@@ -122,7 +126,12 @@
       margin-top: 35px;
     }
 
-    #newsIcon2 {
+    #s_left_common2 {
+      width: 320px;
+      margin-top: 35px;
+    }
+
+    #newsIcon2, #newsIcon2_1 {
       display: none;
     }
 
@@ -144,7 +153,7 @@
       padding: 3.5rem;
       margin-left: 280px;
       background-color: rgb(248, 248, 248);
-      height: 345px;
+      height: 385px;
     }
 
     #link-popup {
@@ -198,6 +207,10 @@
     }
   </style>
   <style media="all and (max-width: 1025px)">
+    #newest_section{
+      margin-top:47px;
+    }
+
     #alertNotice{
       display:none;
     }
@@ -217,7 +230,11 @@
       width:98%;
     }
 
-    #newsIcon1{
+    #s_left_common2{
+      width:98%;
+    }
+
+    #newsIcon1, #newsIcon1_1{
       display:none;
     }
 
@@ -250,7 +267,7 @@
     .wrapper {
       padding: .2rem;
       background-color: rgb(248, 248, 248);
-      height: 460px;
+      height: 510px;
     }
 
     h2 {
@@ -527,11 +544,20 @@
     <div id="news_section">
       <div id="s_left_common" style="padding:6px; margin-left:5px; height:40px;">
         <p id="newsIcon1"
-          style="float:left; margin-left:-11px; margin-top:5px; margin-right:10px; font-size:13px; font-weight:700"><i
+          style="float:left;
+          margin-left:-11px;
+          margin-top:5px;
+          margin-right:10px;
+          font-size:13px;
+          font-weight:700;
+          color:rgb(212, 16, 16);"><i
             class="fas fa-bell"></i> 학교 코로나19 공지사항</p>
         <p id="newsIcon2"
-          style="float:left; margin-left:-4px; margin-top:5px; margin-right:10px; font-size:14px; font-weight:700">
-          <span style="color:rgb(83, 121, 126)"><i class="fas fa-volume-down"></i></span></p>
+          style="float:left;
+          margin-left:-4px; margin-top:5px;
+          margin-right:10px; font-size:14px;
+          font-weight:700">
+          <span style="color:rgb(221, 68, 68)"><i class="fas fa-school"></i></span></p>
         <ul id="scroll"
           style="border-radius:10px; box-shadow:0 2px 8px rgb(238, 238, 238); list-style-type:none; height:30px; padding:15px; background-color: white;">
           <li class="lists" id="list1" style="margin-left:-6px; margin-top:7px;">
@@ -571,9 +597,68 @@
           real_search_keyword.name = "real_search_keyword"; // 인스턴스 네임을 등록합니다
           real_search_keyword.start(); // 스크롤링 시작
         </script>
-
-      </div>
+      </div>     
     </div>
+
+    <div id="newest_section">
+      <div id="s_left_common" style="padding:6px; margin-left:5px; height:40px;">
+      <p id="newsIcon1_1"
+          style="float:left;
+          margin-left:-11px;
+          margin-top:5px;
+          margin-right:10px;
+          font-size:13px;
+          font-weight:700;
+          color:rgb(8, 8, 151)"><i
+            class="fas fa-bell"></i> 최신 코로나19 관련뉴스</p>
+        <p id="newsIcon2_1"
+          style="float:left;
+          margin-left:-4px; margin-top:5px;
+          margin-right:10px; font-size:14px;
+          font-weight:700">
+          <span style="color:rgb(55, 119, 172)"><i class="far fa-newspaper"></i></span></p>
+        <ul id="scroll2"
+          style="border-radius:10px; box-shadow:0 2px 8px rgb(238, 238, 238); list-style-type:none; height:30px; padding:15px; background-color: white;">
+          <li class="lists" id="2list1" style="margin-left:-6px; margin-top:7px;">
+
+          </li>
+          <li class="lists" id="2list2" style="margin-left:-6px; margin-top:7px;">
+
+          </li>
+          <li class="lists" id="2list3" style="margin-left:-6px; margin-top:7px;">
+
+          </li>
+          <li class="lists" id="2list4" style="margin-left:-6px; margin-top:7px;">
+
+          </li>
+          <li class="lists" id="2list5" style="margin-left:-6px; margin-top:7px;">
+
+          </li>
+          <li class="lists" id="2list6" style="margin-left:-6px; margin-top:7px;">
+
+          </li>
+          <li class="lists" id="2list7" style="margin-left:-6px; margin-top:7px;">
+
+          </li>
+          <li class="lists" id="2list8" style="margin-left:-6px; margin-top:7px;">
+
+          </li>
+          <li class="lists" id="2list9" style="margin-left:-6px; margin-top:7px;">
+
+          </li>
+          <li class="lists" id="2list10" style="margin-left:-6px; margin-top:7px;">
+
+          </li>
+        </ul>
+
+        <script type="text/javascript">
+          var real_search_keyword2 = new textScroll('scroll2'); // 스크롤링 하고자하는 ul 엘리먼트의 id값을 인자로 넣습니다
+          real_search_keyword2.name = "real_search_keyword2"; // 인스턴스 네임을 등록합니다
+          real_search_keyword2.start(); // 스크롤링 시작
+        </script>
+        </div>
+    </div>
+
   </section>
 
   <section class="content">

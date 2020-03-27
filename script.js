@@ -704,3 +704,31 @@ $('#KR-49').click(function(){
         return false;
     });
   });
+
+
+   // 뉴스기사 스크롤링
+  
+   var jsonLocation2 = 'news.json';
+   var html = '';
+   var count2 = 0;
+   var idx2 = 1;
+   var temp_data = 0;
+   var temp_href_data = 0;
+ 
+   $.getJSON(jsonLocation2, function (data) {
+     $.each(data, function (I, item) {     
+       temp_data = I;     
+       temp_href_data = item;
+
+       console.log(temp_data)
+       console.log(temp_href_data)
+       console.log("2list"+idx2)
+
+       count2 = count2 + 1;
+       document.getElementById("2list"+idx2).innerHTML = '<a href="'+temp_href_data+'" target="_blank">' + temp_data +'</a>';
+       idx2++;
+       
+       if(count2 >= 11)
+         return false;
+     });
+   });
