@@ -263,6 +263,49 @@ with open("세계순위현황.js", "w", encoding='UTF-8-sig') as f_write:
 
 
 print('세계순위현황크롤러 끝')
-print('완료')
 
+
+############################################################################
+print('')
+print('맵크롤러 시작')
+
+req = requests.get('http://ncov.mohw.go.kr/bdBoardList_Real.do?brdId=1&brdGubun=13&ncvContSeq=&contSeq=&board_id=&gubun=')
+req.encoding= None
+html = req.content
+soup = BeautifulSoup(html, 'html.parser')
+datas = soup.select(
+    '#main_maplayout > button'
+    )
+
+d = datas[0:]
+
+맵_지역확진자 = []
+
+for d in datas:
+    지역명 = d.find_all('span', class_='name')[0].text
+    확진자 = d.find_all('span', class_='num')[0].text
+    차이 = d.find_all('span', class_='before')[0].text
+
+    맵_지역확진자.append({
+        '지역명' : 지역명,
+        '확진자' : 확진자,
+        '차이' : 차이,
+    })
+
+with open("Map_지역별차이현황.js", "w", encoding='UTF-8-sig') as json_file:
+    json.dump(맵_지역확진자, json_file, ensure_ascii=False, indent=4)
+
+data = ''
+with open("Map_지역별차이현황.js", "r", encoding='UTF-8-sig') as f:
+    while True:
+        line = f.readline()
+        if not line: break
+        data += line
+data = 'var 맵_지역확진자 = ' + data + ';'
+
+with open("Map_지역별차이현황.js", "w", encoding='UTF-8-sig') as f_write:
+    f_write.write(data)
+
+print('맵크롤러 끝')
+print('완료')
 ############################################################################

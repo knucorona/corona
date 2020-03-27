@@ -126,6 +126,216 @@
   document.getElementById("w_cured_10").innerHTML = '<span style="color:#4874C3"> <b>' + String(세계확진자[9].완치자수.toLocaleString()) + '</b> </span> ';
   document.getElementById("w_rate_10").innerHTML = '<span style="color:#8F8F8F"> <b>' + String((세계확진자[9].사망자수 / 세계확진자[9].확진자수 * 100).toFixed(2)) + '%</b> </span> ';
 
+// 지역별 현황 hover 업데이트
+$('#sKR-11').click(function(){
+  $('#description').hide();
+  document.getElementById("kr_name").innerHTML = String(맵_지역확진자[0].지역명);
+  document.getElementById("kr_infect").innerHTML = String(맵_지역확진자[0].확진자)+"명";
+  document.getElementById("kr_diff").innerHTML = String(맵_지역확진자[0].차이);
+});
+$('#sKR-26').click(function(){
+  $('#description').hide();
+  document.getElementById("kr_name").innerHTML = String(맵_지역확진자[1].지역명);
+  document.getElementById("kr_infect").innerHTML = String(맵_지역확진자[1].확진자)+"명";
+  document.getElementById("kr_diff").innerHTML = String(맵_지역확진자[1].차이);
+});
+$('#sKR-27').click(function(){
+  $('#description').hide();
+  document.getElementById("kr_name").innerHTML = String(맵_지역확진자[2].지역명);
+  document.getElementById("kr_infect").innerHTML = String(맵_지역확진자[2].확진자)+"명";
+  document.getElementById("kr_diff").innerHTML = String(맵_지역확진자[2].차이);
+});
+$('#sKR-28').click(function(){
+  $('#description').hide();
+  document.getElementById("kr_name").innerHTML = String(맵_지역확진자[3].지역명);
+  document.getElementById("kr_infect").innerHTML = String(맵_지역확진자[3].확진자)+"명";
+  document.getElementById("kr_diff").innerHTML = String(맵_지역확진자[3].차이);
+});
+$('#sKR-29').click(function(){
+  $('#description').hide();
+  document.getElementById("kr_name").innerHTML = String(맵_지역확진자[4].지역명);
+  document.getElementById("kr_infect").innerHTML = String(맵_지역확진자[4].확진자)+"명";
+  document.getElementById("kr_diff").innerHTML = String(맵_지역확진자[4].차이);
+});
+$('#sKR-30').click(function(){
+  $('#description').hide();
+  document.getElementById("kr_name").innerHTML = String(맵_지역확진자[5].지역명);
+  document.getElementById("kr_infect").innerHTML = String(맵_지역확진자[5].확진자)+"명";
+  document.getElementById("kr_diff").innerHTML = String(맵_지역확진자[5].차이);
+});
+$('#sKR-31').click(function(){
+  $('#description').hide();
+  document.getElementById("kr_name").innerHTML = String(맵_지역확진자[6].지역명);
+  document.getElementById("kr_infect").innerHTML = String(맵_지역확진자[6].확진자)+"명";
+  document.getElementById("kr_diff").innerHTML = String(맵_지역확진자[6].차이);
+});
+$('#sKR-50').click(function(){
+  $('#description').hide();
+  document.getElementById("kr_name").innerHTML = String(맵_지역확진자[7].지역명);
+  document.getElementById("kr_infect").innerHTML = String(맵_지역확진자[7].확진자)+"명";
+  document.getElementById("kr_diff").innerHTML = String(맵_지역확진자[7].차이);
+});
+$('#sKR-41').click(function(){
+  $('#description').hide();
+  document.getElementById("kr_name").innerHTML = String(맵_지역확진자[8].지역명);
+  document.getElementById("kr_infect").innerHTML = String(맵_지역확진자[8].확진자)+"명";
+  document.getElementById("kr_diff").innerHTML = String(맵_지역확진자[8].차이);
+});
+$('#sKR-42').click(function(){
+  $('#description').hide();
+  document.getElementById("kr_name").innerHTML = String(맵_지역확진자[9].지역명);
+  document.getElementById("kr_infect").innerHTML = String(맵_지역확진자[9].확진자)+"명";
+  document.getElementById("kr_diff").innerHTML = String(맵_지역확진자[9].차이);
+});
+$('#sKR-43').click(function(){
+  $('#description').hide();
+  document.getElementById("kr_name").innerHTML = String(맵_지역확진자[10].지역명);
+  document.getElementById("kr_infect").innerHTML = String(맵_지역확진자[10].확진자)+"명";
+  document.getElementById("kr_diff").innerHTML = String(맵_지역확진자[10].차이);
+});
+$('#sKR-44').click(function(){
+  $('#description').hide();
+  document.getElementById("kr_name").innerHTML = String(맵_지역확진자[11].지역명);
+  document.getElementById("kr_infect").innerHTML = String(맵_지역확진자[11].확진자)+"명";
+  document.getElementById("kr_diff").innerHTML = String(맵_지역확진자[11].차이);
+});
+$('#sKR-45').click(function(){
+  $('#description').hide();
+  document.getElementById("kr_name").innerHTML = String(맵_지역확진자[12].지역명);
+  document.getElementById("kr_infect").innerHTML = String(맵_지역확진자[12].확진자)+"명";
+  document.getElementById("kr_diff").innerHTML = String(맵_지역확진자[12].차이);
+});
+$('#sKR-46').click(function(){
+  $('#description').hide();
+  document.getElementById("kr_name").innerHTML = String(맵_지역확진자[13].지역명);
+  document.getElementById("kr_infect").innerHTML = String(맵_지역확진자[13].확진자)+"명";
+  document.getElementById("kr_diff").innerHTML = String(맵_지역확진자[13].차이);
+});
+$('#sKR-47').click(function(){
+  $('#description').hide();
+  document.getElementById("kr_name").innerHTML = String(맵_지역확진자[14].지역명);
+  document.getElementById("kr_infect").innerHTML = String(맵_지역확진자[14].확진자)+"명";
+  document.getElementById("kr_diff").innerHTML = String(맵_지역확진자[14].차이);
+});
+$('#sKR-48').click(function(){
+  $('#description').hide();
+  document.getElementById("kr_name").innerHTML = String(맵_지역확진자[15].지역명);
+  document.getElementById("kr_infect").innerHTML = String(맵_지역확진자[15].확진자)+"명";
+  document.getElementById("kr_diff").innerHTML = String(맵_지역확진자[15].차이);
+});
+$('#sKR-49').click(function(){
+  $('#description').hide();
+  document.getElementById("kr_name").innerHTML = String(맵_지역확진자[16].지역명);
+  document.getElementById("kr_infect").innerHTML = String(맵_지역확진자[16].확진자)+"명";
+  document.getElementById("kr_diff").innerHTML = String(맵_지역확진자[16].차이);
+});
+
+
+$('#KR-11').click(function(){
+  $('#description').hide();
+  document.getElementById("kr_name").innerHTML = String(맵_지역확진자[0].지역명);
+  document.getElementById("kr_infect").innerHTML = String(맵_지역확진자[0].확진자)+"명";
+  document.getElementById("kr_diff").innerHTML = String(맵_지역확진자[0].차이);
+});
+$('#KR-26').click(function(){
+  $('#description').hide();
+  document.getElementById("kr_name").innerHTML = String(맵_지역확진자[1].지역명);
+  document.getElementById("kr_infect").innerHTML = String(맵_지역확진자[1].확진자)+"명";
+  document.getElementById("kr_diff").innerHTML = String(맵_지역확진자[1].차이);
+});
+$('#KR-27').click(function(){
+  $('#description').hide();
+  document.getElementById("kr_name").innerHTML = String(맵_지역확진자[2].지역명);
+  document.getElementById("kr_infect").innerHTML = String(맵_지역확진자[2].확진자)+"명";
+  document.getElementById("kr_diff").innerHTML = String(맵_지역확진자[2].차이);
+});
+$('#KR-28').click(function(){
+  $('#description').hide();
+  document.getElementById("kr_name").innerHTML = String(맵_지역확진자[3].지역명);
+  document.getElementById("kr_infect").innerHTML = String(맵_지역확진자[3].확진자)+"명";
+  document.getElementById("kr_diff").innerHTML = String(맵_지역확진자[3].차이);
+});
+$('#KR-29').click(function(){
+  $('#description').hide();
+  document.getElementById("kr_name").innerHTML = String(맵_지역확진자[4].지역명);
+  document.getElementById("kr_infect").innerHTML = String(맵_지역확진자[4].확진자)+"명";
+  document.getElementById("kr_diff").innerHTML = String(맵_지역확진자[4].차이);
+});
+$('#KR-30').click(function(){
+  $('#description').hide();
+  document.getElementById("kr_name").innerHTML = String(맵_지역확진자[5].지역명);
+  document.getElementById("kr_infect").innerHTML = String(맵_지역확진자[5].확진자)+"명";
+  document.getElementById("kr_diff").innerHTML = String(맵_지역확진자[5].차이);
+});
+$('#KR-31').click(function(){
+  $('#description').hide();
+  document.getElementById("kr_name").innerHTML = String(맵_지역확진자[6].지역명);
+  document.getElementById("kr_infect").innerHTML = String(맵_지역확진자[6].확진자)+"명";
+  document.getElementById("kr_diff").innerHTML = String(맵_지역확진자[6].차이);
+});
+$('#KR-50').click(function(){
+  $('#description').hide();
+  document.getElementById("kr_name").innerHTML = String(맵_지역확진자[7].지역명);
+  document.getElementById("kr_infect").innerHTML = String(맵_지역확진자[7].확진자)+"명";
+  document.getElementById("kr_diff").innerHTML = String(맵_지역확진자[7].차이);
+});
+$('#KR-41').click(function(){
+  $('#description').hide();
+  document.getElementById("kr_name").innerHTML = String(맵_지역확진자[8].지역명);
+  document.getElementById("kr_infect").innerHTML = String(맵_지역확진자[8].확진자)+"명";
+  document.getElementById("kr_diff").innerHTML = String(맵_지역확진자[8].차이);
+});
+$('#KR-42').click(function(){
+  $('#description').hide();
+  document.getElementById("kr_name").innerHTML = String(맵_지역확진자[9].지역명);
+  document.getElementById("kr_infect").innerHTML = String(맵_지역확진자[9].확진자)+"명";
+  document.getElementById("kr_diff").innerHTML = String(맵_지역확진자[9].차이);
+});
+$('#KR-43').click(function(){
+  $('#description').hide();
+  document.getElementById("kr_name").innerHTML = String(맵_지역확진자[10].지역명);
+  document.getElementById("kr_infect").innerHTML = String(맵_지역확진자[10].확진자)+"명";
+  document.getElementById("kr_diff").innerHTML = String(맵_지역확진자[10].차이);
+});
+$('#KR-44').click(function(){
+  $('#description').hide();
+  document.getElementById("kr_name").innerHTML = String(맵_지역확진자[11].지역명);
+  document.getElementById("kr_infect").innerHTML = String(맵_지역확진자[11].확진자)+"명";
+  document.getElementById("kr_diff").innerHTML = String(맵_지역확진자[11].차이);
+});
+$('#KR-45').click(function(){
+  $('#description').hide();
+  document.getElementById("kr_name").innerHTML = String(맵_지역확진자[12].지역명);
+  document.getElementById("kr_infect").innerHTML = String(맵_지역확진자[12].확진자)+"명";
+  document.getElementById("kr_diff").innerHTML = String(맵_지역확진자[12].차이);
+});
+$('#KR-46').click(function(){
+  $('#description').hide();
+  document.getElementById("kr_name").innerHTML = String(맵_지역확진자[13].지역명);
+  document.getElementById("kr_infect").innerHTML = String(맵_지역확진자[13].확진자)+"명";
+  document.getElementById("kr_diff").innerHTML = String(맵_지역확진자[13].차이);
+});
+$('#KR-47').click(function(){
+  $('#description').hide();
+  document.getElementById("kr_name").innerHTML = String(맵_지역확진자[14].지역명);
+  document.getElementById("kr_infect").innerHTML = String(맵_지역확진자[14].확진자)+"명";
+  document.getElementById("kr_diff").innerHTML = String(맵_지역확진자[14].차이);
+});
+$('#KR-48').click(function(){
+  $('#description').hide();
+  document.getElementById("kr_name").innerHTML = String(맵_지역확진자[15].지역명);
+  document.getElementById("kr_infect").innerHTML = String(맵_지역확진자[15].확진자)+"명";
+  document.getElementById("kr_diff").innerHTML = String(맵_지역확진자[15].차이);
+});
+$('#KR-49').click(function(){
+  $('#description').hide();
+  document.getElementById("kr_name").innerHTML = String(맵_지역확진자[16].지역명);
+  document.getElementById("kr_infect").innerHTML = String(맵_지역확진자[16].확진자)+"명";
+  document.getElementById("kr_diff").innerHTML = String(맵_지역확진자[16].차이);
+});
+
+
+
   // 테이블 접기
   var person1Cnt = 0;
   var person2Cnt = 0;
