@@ -211,6 +211,13 @@
     }
   </style>
   <style media="all and (max-width: 1025px)">
+    #SmallalertNotice{
+      color:white;
+    }
+    #SmallalertNotice:hover{
+      color:rgb(121, 212, 255);
+    }
+
     #tempPopup{
       display:none;
     }
@@ -408,9 +415,9 @@
       <div id="tempSmallPopup"
       style="background-color: rgb(40, 41, 110);
       border-radius:10px; margin:0 auto; width:300px;">
-      <p onclick="window.open('https://knu.ac.kr/wbbs/wbbs/bbs/btin/viewBtin.action?bbs_cde=34&btin.bbs_cde=34&btin.doc_no=1320909&btin.appl_no=000000&btin.page=1&btin.search_type=&btin.search_text=&popupDeco=false&btin.note_div=row&menu_idx=224')"
+      <p id="SmallalertNotice" onclick="window.open('https://knu.ac.kr/wbbs/wbbs/bbs/btin/viewBtin.action?bbs_cde=34&btin.bbs_cde=34&btin.doc_no=1320909&btin.appl_no=000000&btin.page=1&btin.search_type=&btin.search_text=&popupDeco=false&btin.note_div=row&menu_idx=224')"
       style="font-size: 15px; font-weight:800; text-align:center">
-        <span style="color:rgb(255, 255, 255);">
+        <span>
             <i class="fas fa-bell"></i>
             &nbsp; [클릭!] 비대면 강의 기간 연장 (~5.3)</span></p>
       </div>
