@@ -720,10 +720,6 @@ $('#KR-49').click(function(){
        temp_data = I;     
        temp_href_data = item;
 
-       console.log(temp_data)
-       console.log(temp_href_data)
-       console.log("2list"+idx2)
-
        count2 = count2 + 1;
        document.getElementById("2list"+idx2).innerHTML = '<a href="'+temp_href_data+'" target="_blank">' + temp_data +'</a>';
        idx2++;
