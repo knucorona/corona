@@ -176,12 +176,12 @@ html = requests.get("https://www.worldometers.info/coronavirus/").text
 soup = BeautifulSoup(html, 'html.parser')
 datas = soup.select('#main_table_countries_today > tbody > tr')
 
-dictonary = [{
-    "eng": "China", 
-    "kor": "중국",
-  }, {
+dictonary = [ {
     "eng": "Italy", 
     "kor": "이탈리아",
+  },{
+    "eng": "China", 
+    "kor": "중국",
   },{
     "eng": "Spain", 
     "kor": "스페인",
