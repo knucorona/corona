@@ -244,7 +244,7 @@ dictonary = [ {
 
 세계확진자 = []
 
-for d in datas[0:10]:
+for d in datas:
     한글국가명 = ''
     해당국가명 = d.find_all('td')[0].text
     해당국가확진자 = d.find_all('td')[1].text
