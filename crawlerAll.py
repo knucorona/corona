@@ -326,7 +326,7 @@ with open("Map_지역별차이현황.js", "w", encoding='UTF-8-sig') as f_write:
 print('맵크롤러 끝')
 print('완료')
 ############################################################################
-
+print('')
 print('뉴스기사크롤러 시작')
 
 req = requests.get('https://www.yna.co.kr/safe/news')
@@ -348,5 +348,33 @@ with open(os.path.join(BASE_DIR, 'news.json'), 'w+',encoding='utf-8') as json_fi
     json.dump(data, json_file, ensure_ascii = False, indent='\t')
 
 print('뉴스기사크롤러 끝')
+############################################################################
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+print('')
+print('학교공지사항크롤러 시작')
+
+req = requests.get('https://knu.ac.kr/wbbs/wbbs/bbs/btin/list.action?bbs_cde=34&menu_idx=224')
+req.encoding= None
+html = req.content
+soup = BeautifulSoup(html, 'html.parser')
+my_titles = soup.select(
+    'tbody >tr> td>a'
+    )
+
+
+data = {}
+
+for title in my_titles:
+    dataB = title.text.replace('\t','')
+    dataB = dataB.replace('\n','')
+    dataB = dataB.replace('\r','')
+    data[dataB] = title.get('href')
+
+with open(os.path.join(BASE_DIR, 'result.json'), 'w+',encoding='utf-8') as json_file:
+    json.dump(data, json_file, ensure_ascii = False, indent='\t')
+
+print('학교공지사항크롤러 끝')
 print('완료')
 ############################################################################
