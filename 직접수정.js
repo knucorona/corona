@@ -31,7 +31,7 @@ var SchoolDayData = [0, 2, 2, 3, 4, 7, 7, 8, 8, 11, 14, 16, 16, 16, 16, 16, 19, 
 //////////////////////////////////////////////////////////////////
 ////////////////////아래부터는 자동 데이터//////////////////////////
 
-var todayMonth = 업데이트시간.substring(2,2);
+var todayMonth = 업데이트시간.substring(1,2);
 var todayDay = 업데이트시간.substring(3,5);
 
 var dayXaxis = ['2.23', '2.24', '2.25', '2.26', '2.27', '2.28',
@@ -63,18 +63,21 @@ var plusData = [231, 144, 284, 505, 571, 813,
   100, 104, 91,
 ]
 
-var update_date = new Date(2020,Number(todayMonth),Number(todayDay));
+var update_date = new Date(2020,Number(todayMonth)-1,Number(todayDay));
 var before_update_date = update_date;
 before_update_date.setTime(update_date.getTime() - (1*24*60*60*1000));
 
+var before_update_Month = before_update_date.getMonth();
+var before_update_day = before_update_date.getDate();
+
 var ListEndMonth = dayXaxis[dayXaxis.length-1].split('.')[0];
 var ListEndDay = dayXaxis[dayXaxis.length-1].split('.')[1];
-var List_End_Date = new Date(2020,Number(ListEndMonth),Number(ListEndDay));
+var List_End_Date = new Date(2020,Number(ListEndMonth)-1,Number(ListEndDay));
 
 if (List_End_Date.getTime() < before_update_date.getTime())
 {
-    dayXaxis.push(todayMonth+'.'+todayDay);
-    plusXaxis.push(todayMonth+'.'+todayDay);
+    dayXaxis.push(String(before_update_Month+1)+'.'+String(before_update_day));
+    plusXaxis.push(String(before_update_Month+1)+'.'+String(before_update_day));
     AllDayData.push(Number(국내현황[0]));
     plusData.push(Number(국내현황[1].substring(2,4)));
 }

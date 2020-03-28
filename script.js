@@ -727,7 +727,7 @@ $('#KR-49').click(function(){
        document.getElementById("2list"+idx2).innerHTML = '<a href="'+temp_href_data+'" target="_blank">' + temp_data +'</a>';
        idx2++;
        
-       if(count2 >= 11)
+       if(count2 >= 10)
          return false;
      });
    });
