@@ -31,12 +31,12 @@
 
     //국내 현황
   document.getElementById("국내확진자").innerHTML = String(Number(국내현황[0]).toLocaleString());
-  document.getElementById("국내완치자").innerHTML = String(Number(국내현황[0]).toLocaleString());
-  document.getElementById("국내사망자").innerHTML = String(Number(국내현황[0]).toLocaleString());
+  document.getElementById("국내완치자").innerHTML = String(Number(국내현황[2]).toLocaleString());
+  document.getElementById("국내사망자").innerHTML = String(Number(국내현황[4]).toLocaleString());
   
-  document.getElementById("국내확진자차이").innerHTML = String(Number(국내현황[0]).toLocaleString());
-  document.getElementById("국내사망자차이").innerHTML = String(Number(국내현황[0]).toLocaleString());
-  document.getElementById("국내완치자차이").innerHTML = String(Number(국내현황[0]).toLocaleString());
+  document.getElementById("국내확진자차이").innerHTML = String(Number(국내현황[1]).toLocaleString());
+  document.getElementById("국내사망자차이").innerHTML = String(Number(국내현황[3]).toLocaleString());
+  document.getElementById("국내완치자차이").innerHTML = String(Number(국내현황[5]).toLocaleString());
 
   //경북대 현황
   document.getElementById("경대확진자").innerHTML = String(경북대현황[0].toLocaleString());
