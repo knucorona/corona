@@ -79,7 +79,7 @@ if (List_End_Date.getTime() < before_update_date.getTime())
     dayXaxis.push(String(before_update_Month+1)+'.'+String(before_update_day));
     plusXaxis.push(String(before_update_Month+1)+'.'+String(before_update_day));
     AllDayData.push(Number(국내현황[0]));
-    plusData.push(Number(국내현황[1].substring(2,4)));
+    plusData.push(Number(국내현황[1]));
 }
 
 // (5) 일일확진자 차트

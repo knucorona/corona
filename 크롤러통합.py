@@ -58,12 +58,21 @@ data = []
 
 infect = datas[0].find_all('span', class_='num')[0].text.replace(",","")
 diff_infect = datas[0].find_all('span', class_='before')[0].text.replace(" ","")
+diff_infect = diff_infect.replace("+","")
+diff_infect = diff_infect.replace("(","")
+diff_infect = diff_infect.replace(")","")
 
 cured = datas[1].find_all('span', class_='num')[0].text.replace(",","")
 diff_cured = datas[1].find_all('span', class_='before')[0].text.replace(" ","")
+diff_cured = diff_cured.replace("+","")
+diff_cured = diff_cured.replace("(","")
+diff_cured = diff_cured.replace(")","")
 
 death = datas[3].find_all('span', class_='num')[0].text.replace(",","")
 diff_death = datas[3].find_all('span', class_='before')[0].text.replace(" ","")
+diff_death = diff_death.replace("+","")
+diff_death = diff_death.replace("(","")
+diff_death = diff_death.replace(")","")
 
 infect = infect.split('(누적)')[1]
 diff_infect = diff_infect.split('전일대비 ')[0].replace("전일대비","")
