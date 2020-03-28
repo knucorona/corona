@@ -15,14 +15,13 @@ var 경북대현황 = [
   0, //완치자 차이(전일 00시 대비)
 ];
 
-
-/*경북대 일일 현황 (직접 수정 3)*/
+//(직접수정 3) 경북대 일일 현황
 var SchoolDayData = [0, 2, 2, 3, 4, 7, 7, 8, 8, 11, 14, 16, 16, 16, 16, 16, 19, 24,
   27, 27, 29, 29, 29, 34, 
   34, 34, 35, 35, 35, 
   35, 35,
   36,
-  36, // 3.26
+  36, // 3.26 00시
 ]
 
 ///////////////////////직접수정 끝/////////////////////////////////
@@ -31,8 +30,9 @@ var SchoolDayData = [0, 2, 2, 3, 4, 7, 7, 8, 8, 11, 14, 16, 16, 16, 16, 16, 19, 
 //////////////////////////////////////////////////////////////////
 ////////////////////아래부터는 자동 데이터//////////////////////////
 
-var todayMonth = 업데이트시간.substring(1,2);
+var todayMonth = 업데이트시간.substring(2,2);
 var todayDay = 업데이트시간.substring(3,5);
+
 var dayXaxis = ['2.23', '2.24', '2.25', '2.26', '2.27', '2.28',
 '2.29', '3.1', '3.2', '3.3', '3.4', '3.5', '3.6', '3.7', '3.8',
 '3.9', '3.10','3.11','3.12','3.13','3.14','3.15',
@@ -62,14 +62,21 @@ var plusData = [231, 144, 284, 505, 571, 813,
   100, 104, 91,
 ]
 
-if (dayXaxis[dayXaxis.length-1] != todayMonth+'.'+String(Number(todayDay)-1))
+var update_date = new Date(2020,Number(todayMonth),Number(todayDay));
+var before_update_date = update_date;
+before_update_date.setTime(update_date.getTime() - (1*24*60*60*1000));
+
+var ListEndMonth = dayXaxis[dayXaxis.length-1].split('.')[0];
+var ListEndDay = dayXaxis[dayXaxis.length-1].split('.')[1];
+var List_End_Date = new Date(2020,Number(ListEndMonth),Number(ListEndDay));
+
+if (List_End_Date.getTime() < before_update_date.getTime())
 {
     dayXaxis.push(todayMonth+'.'+todayDay);
     plusXaxis.push(todayMonth+'.'+todayDay);
     AllDayData.push(Number(국내현황[0]));
     plusData.push(Number(국내현황[1].substring(2,4)));
 }
-
 
 // (5) 일일확진자 차트
 var chart0 = new Highcharts.Chart('container', {
