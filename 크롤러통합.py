@@ -46,30 +46,37 @@ print('지역별현황크롤러 끝')
 print('')
 print('국내현황크롤러 시작')
 
-req = requests.get('http://ncov.mohw.go.kr/bdBoardList_Real.do?brdId=1&brdGubun=13&ncvContSeq=&contSeq=&board_id=&gubun=')
+req = requests.get('http://ncov.mohw.go.kr')
 req.encoding= None
 html = req.content
 soup = BeautifulSoup(html, 'html.parser')
-my_data = soup.select(
-    'table >tbody>tr'
+datas = soup.select(
+    'body>div>div.mainlive_container>div.container>div>div>div>div>ul>li'
     )
 
-#print(my_data[0])
+data = []
 
-국내현황 = []
-datas = my_data[0:]
+infect = datas[0].find_all('span', class_='num')[0].text
+diff_infect = datas[0].find_all('span', class_='before')[0].text.replace(" ","")
 
-전일대비증감 = int(datas[0].find_all('td', class_='number')[0].text.replace(',',''))
-확진자수 = int(datas[0].find_all('td', class_='number')[1].text.replace(',',''))
-완치자수 = int(datas[0].find_all('td', class_='number')[2].text.replace(',',''))
-사망자수 = int(datas[0].find_all('td', class_='number')[3].text.replace(',',''))
-국내현황.append(전일대비증감)
-국내현황.append(확진자수)
-국내현황.append(완치자수)
-국내현황.append(사망자수)
+cured = datas[1].find_all('span', class_='num')[0].text
+diff_cured = datas[1].find_all('span', class_='before')[0].text.replace(" ","")
+
+death = datas[3].find_all('span', class_='num')[0].text
+diff_death = datas[3].find_all('span', class_='before')[0].text.replace(" ","")
+
+infect = infect.split('(누적)')[1]
+diff_infect = diff_infect.split('전일대비 ')[0].replace("전일대비","")
+
+data.append(infect)
+data.append(diff_infect)
+data.append(cured)
+data.append(diff_cured)
+data.append(death)
+data.append(diff_death)
 
 with open("국내현황.js", "w", encoding='UTF-8-sig') as json_file:
-    json.dump(국내현황[0:], json_file, ensure_ascii=False, indent=4)
+    json.dump(data[0:], json_file, ensure_ascii=False, indent=4)
 
 dataA = ''
 with open("국내현황.js", "r", encoding='UTF-8-sig') as f:
@@ -83,7 +90,6 @@ with open("국내현황.js", "w", encoding='UTF-8-sig') as f_write:
     f_write.write(dataA)
 
 print('국내현황크롤러 끝')
-
 ############################################################################
 print('')
 print('검사자크롤러 시작')
