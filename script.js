@@ -66,6 +66,9 @@
   document.getElementById("kynam").innerHTML = '<b>' + String(전국지역확진자[15].toLocaleString()) + '</b>';
   document.getElementById("jeju").innerHTML = '<b>' + String(전국지역확진자[16].toLocaleString()) + '</b>';
 
+  document.getElementById("others").innerHTML = '<b>' + String(맵_지역확진자[17].확진자.toLocaleString()) + '</b>';
+  document.getElementById("sum").innerHTML = '<b>' +String(국내현황[1].toLocaleString()) + '</b>';
+
   // 검사자수
   document.getElementById("결과음성").innerHTML = String(검사자현황[0].toLocaleString());
   document.getElementById("검사중").innerHTML = String(검사자현황[1].toLocaleString());
