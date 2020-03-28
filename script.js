@@ -382,13 +382,14 @@ $('#KR-49').click(function(){
   $('#linkDiv').hide();
   $('#worldDiv').hide();
   $('#graphDiv').hide();
+  $('#mapDiv').hide();
 
   $('#closeButton1').hide();
   $('#closeButton2').hide();
   $('#closeButton3').hide();
   $('#closeButton4').hide();
   $('#closeButton5').hide();
-  $('#openButton6').hide();
+  $('#closeButton6').hide();
 
   // 제목을 눌러도 오픈 : 전세계 코로나
   $('#MenuLink1').click(function () {
