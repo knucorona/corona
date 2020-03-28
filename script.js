@@ -699,12 +699,12 @@ $('#KR-49').click(function(){
       temp_href_data = item;
       count = count + 1;
 
-      if(count>=12){
+      if(count>=1){
         document.getElementById("list"+idx).innerHTML = '<a href="https://knu.ac.kr'+ temp_href_data+'" target="_blank">' + temp_data +'</a>';
         idx++;
       }
 
-      if(count >= 21)
+      if(count >= 10)
         return false;
     });
   });
