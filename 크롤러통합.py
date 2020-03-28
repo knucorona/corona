@@ -56,13 +56,13 @@ datas = soup.select(
 
 data = []
 
-infect = datas[0].find_all('span', class_='num')[0].text
+infect = datas[0].find_all('span', class_='num')[0].text.replace(",","")
 diff_infect = datas[0].find_all('span', class_='before')[0].text.replace(" ","")
 
-cured = datas[1].find_all('span', class_='num')[0].text
+cured = datas[1].find_all('span', class_='num')[0].text.replace(",","")
 diff_cured = datas[1].find_all('span', class_='before')[0].text.replace(" ","")
 
-death = datas[3].find_all('span', class_='num')[0].text
+death = datas[3].find_all('span', class_='num')[0].text.replace(",","")
 diff_death = datas[3].find_all('span', class_='before')[0].text.replace(" ","")
 
 infect = infect.split('(누적)')[1]
