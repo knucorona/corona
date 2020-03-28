@@ -262,8 +262,10 @@ for d in datas[0:10]:
         '완치자수' : int(0 if 해당국가완치자.strip().replace(',', '') == "" else 해당국가완치자.strip().replace(',', '')),
     })
 
+세계확진자_sort = sorted(세계확진자, key=lambda e: (-e['확진자수']))
+
 with open("세계순위현황.js", "w", encoding='UTF-8-sig') as json_file:
-    json.dump(세계확진자, json_file, ensure_ascii=False, indent=4)
+    json.dump(세계확진자_sort, json_file, ensure_ascii=False, indent=4)
 
 data = ''
 with open("세계순위현황.js", "r", encoding='UTF-8-sig') as f:
