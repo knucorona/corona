@@ -688,7 +688,7 @@ $('#KR-49').click(function(){
   
   var jsonLocation = 'result.json';
   var html = '';
-  var count = 1;
+  var count = 0;
   var idx = 1;
   var temp_data;
   var temp_href_data;
@@ -699,11 +699,9 @@ $('#KR-49').click(function(){
       temp_href_data = item;
       count = count + 1;
 
-      if(count>=1){
         document.getElementById("list"+idx).innerHTML = '<a href="https://knu.ac.kr'+ temp_href_data+'" target="_blank">' + temp_data +'</a>';
         idx++;
-      }
-
+      
       if(count >= 10)
         return false;
     });
