@@ -14,6 +14,8 @@ var new_month = updateDate.getMonth();
 var new_day = updateDate.getDate();
 var new_hour = updateDate.getHours();
 var new_min = updateDate.getMinutes();
+if(new_hour < 10)
+  new_hour = '0'+String(new_hour);
 if(new_min < 10)
   new_min = '0'+String(new_min);
 
