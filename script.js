@@ -14,6 +14,8 @@ var new_month = updateDate.getMonth();
 var new_day = updateDate.getDate();
 var new_hour = updateDate.getHours();
 var new_min = updateDate.getMinutes();
+if(new_min < 10)
+  new_min = '0'+String(new_min);
 
 document.getElementById("Now").innerHTML = '(업데이트 : '+new_year+'년 '+(new_month+1)+'월 '+new_day+'일, '+new_hour+':'+new_min+')';
 
