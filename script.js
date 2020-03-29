@@ -514,19 +514,17 @@ $('#KR-49').click(function(){
     $('#closeButton5').hide();
   });
 
-  // 지도 섹션
-  $('#openButton6').click(function () {
+   // 지도 섹션
+   $('#openButton6').click(function () {
     $('#mapDiv').slideDown();
     $('#closeButton6').show();
     $('#openButton6').hide();
-    McoronaCnt = 0;
   });
 
   $('#closeButton6').click(function () {
     $('#mapDiv').slideUp();
     $('#openButton6').show();
     $('#closeButton6').hide();
-    McoronaCnt = 1;
   });
 
 
@@ -635,24 +633,52 @@ $('#KR-49').click(function(){
   function Move1() {
     var offset = $(".nowData").offset();
     $('html, body').animate({ scrollTop: offset.top - 20 }, 400);
+
   }
   function Move2() {
+    KcoronaCnt = 1;
+    $('#regionDiv').slideDown();
+    $('#closeButton1').show();
+    $('#openButton1').hide();
+
     var offset = $("#Kcorona").offset();
     $('html, body').animate({ scrollTop: offset.top - 20 }, 400);
   }
   function Move3() {
+    WcoronaCnt = 1;
+    $('#worldDiv').slideDown();
+    $('#closeButton4').show();
+    $('#openButton4').hide();
+
     var offset = $("#Wcorona").offset();
     $('html, body').animate({ scrollTop: offset.top - 20 }, 400);
   }
   function Move4() {
+    GcoronaCnt = 1;
+    $('#graphDiv').slideDown();
+    $('#closeButton5').show();
+    $('#openButton5').hide();
+
     var offset = $("#Gcorona").offset();
     $('html, body').animate({ scrollTop: offset.top - 20 }, 400);
   }
   function Move5() {
+
+    McoronaCnt = 1;
+    $('#mapDiv').slideDown();
+    $('#closeButton6').show();
+    $('#openButton6').hide();
+
     var offset = $("#Mcorona").offset();
     $('html, body').animate({ scrollTop: offset.top - 20 }, 400);
   }
   function Move6() {
+
+    McoronaCnt = 1;
+    $('#mapDiv').slideDown();
+    $('#closeButton6').show();
+    $('#openButton6').hide();
+    
     var offset = $(".path").offset();
     $('html, body').animate({ scrollTop: offset.top - 20 }, 400);
   }
@@ -660,7 +686,6 @@ $('#KR-49').click(function(){
     var offset = $("#linkContent").offset();
     $('html, body').animate({ scrollTop: offset.top - 20 }, 400);
   }
-
   
 // 숫자 카운트 애니메이션 
   $('.infect').counterUp({
