@@ -83,9 +83,9 @@
   document.getElementById("세계사망자").innerHTML = String(세계현황[1].toLocaleString());
   document.getElementById("세계완치자").innerHTML = String(세계현황[2].toLocaleString());
 
-  document.getElementById("update1").innerHTML = '<br><i class="fas fa-sync-alt"></i> '+ String(업데이트시간) +' 기준 (차이 : 전일 00시 대비)';
-  document.getElementById("update2").innerHTML = '<br><i class="fas fa-sync-alt"></i> '+ String(업데이트시간) +' 기준 (차이 : 전일 00시 대비)';
-  document.getElementById("update3").innerHTML = '<br><i class="fas fa-sync-alt"></i> '+ String(업데이트시간) +' 기준 (차이 : 전일 00시 대비)';
+  document.getElementById("update1").innerHTML = '<br><i class="fas fa-sync-alt"></i> '+ String(국내현황[6]) +' (차이 : 전일 00시 대비)';
+  document.getElementById("update2").innerHTML = '<br><i class="fas fa-sync-alt"></i> '+ String(국내현황[6]) +' (차이 : 전일 00시 대비)';
+  document.getElementById("update3").innerHTML = '<br><i class="fas fa-sync-alt"></i> '+ String(국내현황[6]) +' (차이 : 전일 00시 대비)';
 
   // 세계순위현황 업데이트시간 텍스트
   document.getElementById("W_updateDate").innerHTML = '(업데이트 : '+year+'년 '+korMonth+' '+korDay+'일, '+korHour+':'+min+')';

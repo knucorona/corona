@@ -53,6 +53,14 @@ soup = BeautifulSoup(html, 'html.parser')
 datas = soup.select(
     'body>div>div.mainlive_container>div.container>div>div>div>div>ul>li'
     )
+updateDate = soup.select(
+    'div.container>div>div>div>h2>a'
+    )
+
+date = updateDate[0].find_all('span',class_='livedate')[0].text.replace("(","")
+date.replace(")","")
+date = date.split(",")[0]
+
 
 data = []
 
@@ -83,6 +91,7 @@ data.append(cured)
 data.append(diff_cured)
 data.append(death)
 data.append(diff_death)
+data.append(date)
 
 with open("국내현황.js", "w", encoding='UTF-8-sig') as json_file:
     json.dump(data[0:], json_file, ensure_ascii=False, indent=4)
