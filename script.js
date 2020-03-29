@@ -1,33 +1,21 @@
 
-  //업데이트 시간
-  var updateString = String(세계현황[3]);
-  var month = updateString.substring(14,19);
-  var day = updateString.substring(20,22);
-  var year = updateString.substring(23,28);
-  var hour = updateString.substring(30,32);
-  var min = updateString.substring(33,35);
+//업데이트 시간
+var updateString = String(세계현황[3]);
+var a_month = updateString.substring(14,22);
+var a_year = updateString.substring(24,28);
+var a_hour = updateString.substring(30,32);
+var a_min = updateString.substring(33,35);
 
-  var korHour = Number(hour) + 9;
-  var korDay = Number(day);
-  var korMonth = month;
-  if (korMonth == 'March')
-    korMonth = '3월';
-  else if(korMonth == 'April')
-    korMonth = '4월';
-  else if(korMonth == 'May')
-    korMonth = '5월'; 
-  else if(korMonth == 'June')
-    korMonth = '6월'; 
+var updateDate = new Date(a_month+', '+a_year+' '+a_hour+':'+a_min);
+updateDate.setHours(updateDate.getHours()+9);
 
-  if (korHour == 24){
-    korHour = '00';
-    korDay = korDay + 1;
-  }
-  else if(korHour > 24){
-    korHour = korHour - 24;
-    korDay = korDay + 1;
-  }
-  document.getElementById("Now").innerHTML = '(업데이트 : '+year+'년 '+korMonth+' '+korDay+'일, '+korHour+':'+min+')';
+var new_year = updateDate.getFullYear();
+var new_month = updateDate.getMonth();
+var new_day = updateDate.getDate();
+var new_hour = updateDate.getHours();
+var new_min = updateDate.getMinutes();
+
+document.getElementById("Now").innerHTML = '(업데이트 : '+new_year+'년 '+(new_month+1)+'월 '+new_day+'일, '+new_hour+':'+new_min+')';
 
   //국내 현황
   document.getElementById("국내확진자").innerHTML = String(Number(국내현황[0]).toLocaleString());
@@ -88,7 +76,7 @@
   document.getElementById("update3").innerHTML = '<br><i class="fas fa-sync-alt"></i> '+ String(국내현황[6]) +' (차이 : 전일 00시 대비)';
 
   // 세계순위현황 업데이트시간 텍스트
-  document.getElementById("W_updateDate").innerHTML = '(업데이트 : '+year+'년 '+korMonth+' '+korDay+'일, '+korHour+':'+min+')';
+  document.getElementById("W_updateDate").innerHTML = '(업데이트 : '+new_year+'년 '+(new_month+1)+'월 '+new_day+'일, '+new_hour+':'+new_min+')';
 
   // 세계순위현황
   document.getElementById("w_name_1").innerHTML = '<b>' + String(세계확진자[1].Name) + '</b>';
