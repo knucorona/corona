@@ -462,15 +462,15 @@ $('#KR-49').click(function(){
   // 제목을 눌러도 오픈 : 경북대 지도 및 동선
   $('#Mcorona').click(function () {
     if (McoronaCnt == 0) {
-      $('#mapDiv').slideUp();
-      $('#closeButton6').hide();
-      $('#openButton6').show();
-      McoronaCnt = 1;
-    }
-    else {
       $('#mapDiv').slideDown();
       $('#closeButton6').show();
       $('#openButton6').hide();
+      McoronaCnt = 1;
+    }
+    else {
+      $('#mapDiv').slideUp();
+      $('#closeButton6').hide();
+      $('#openButton6').show();
       McoronaCnt = 0;
     }
   });
