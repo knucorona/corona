@@ -248,6 +248,24 @@ dictonary = [ {
   },{
     "eng": "Sweden", 
     "kor": "스웨덴",
+  },{
+    "eng": "Canada", 
+    "kor": "캐나다",
+  },{
+    "eng": "Portugal", 
+    "kor": "포르투갈",
+  },{
+    "eng": "Norway", 
+    "kor": "노르웨이",
+  },{
+    "eng": "Turkey", 
+    "kor": "터키",
+  },{
+    "eng": "Brazil", 
+    "kor": "브라질",
+  },{
+    "eng": "Israel", 
+    "kor": "이스라엘",
   },
 ]
 
