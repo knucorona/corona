@@ -275,7 +275,11 @@ for d in datas:
     한글국가명 = ''
     해당국가명 = d.find_all('td')[0].text
     해당국가확진자 = d.find_all('td')[1].text
+    해당국가확진자증가수 = d.find_all('td')[2].text
+
     해당국가사망자 = d.find_all('td')[3].text
+    해당국가사망자증가수 = d.find_all('td')[4].text
+
     해당국가완치자 = d.find_all('td')[5].text
 
     for val in dictonary:
@@ -287,6 +291,8 @@ for d in datas:
         '확진자수' : int(0 if 해당국가확진자.strip().replace(',', '') == "" else 해당국가확진자.strip().replace(',', '')),
         '사망자수' : int(0 if 해당국가사망자.strip().replace(',', '') == "" else 해당국가사망자.strip().replace(',', '')),
         '완치자수' : int(0 if 해당국가완치자.strip().replace(',', '') == "" else 해당국가완치자.strip().replace(',', '')),
+        '확진자증가수' : int(0 if 해당국가확진자증가수.strip().replace(',', '') == "" else 해당국가확진자증가수.strip().replace(',', '')),
+        '사망자증가수' : int(0 if 해당국가사망자증가수.strip().replace(',', '') == "" else 해당국가사망자증가수.strip().replace(',', '')),
     })
 
 세계확진자_sort = sorted(세계확진자, key=lambda e: (-e['확진자수']))
