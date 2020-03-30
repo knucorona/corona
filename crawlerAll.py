@@ -14,15 +14,15 @@ req.encoding= None
 html = req.content
 soup = BeautifulSoup(html, 'html.parser')
 my_titles = soup.select(
-    '.maplist > div'
+    '#content > div > div.data_table.mgt24 >.num > tbody > tr'
     )
 
 지역별확진자 = []
 datas = my_titles[0:]
 
 for data in datas:
-    지역이름 = data.find_all('h4', class_='cityname')[0].text
-    확진자수 = int(data.find_all('span', class_='num')[0].text[:-1].replace(',', ''))
+    지역이름 = data.find_all('th')[0].text
+    확진자수 = int(data.find_all('td', class_='number')[1].text.replace(',', ''))
 
     지역별확진자.append(확진자수)
 
