@@ -113,7 +113,7 @@ var chart0 = new Highcharts.Chart('container', {
         }
       }
     }, { // Secondary yAxis
-      max: 60,
+      max: 80,
       title: {
         text: '경북대 확진자 수',
         style: {
