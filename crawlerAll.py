@@ -199,6 +199,7 @@ print('세계순위현황크롤러 시작')
 html = requests.get("https://www.worldometers.info/coronavirus/").text
 soup = BeautifulSoup(html, 'html.parser')
 datas = soup.select('#main_table_countries_today > tbody > tr')
+datasYesterDay = soup.select('#main_table_countries_yesterday > tbody > tr')
 
 dictonary = [ {
     "eng": "Italy", 
@@ -270,6 +271,7 @@ dictonary = [ {
 ]
 
 세계확진자 = []
+세계확진자증가수 = []
 
 for d in datas:
     한글국가명 = ''
@@ -295,7 +297,26 @@ for d in datas:
         '사망자증가수' : int(0 if 해당국가사망자증가수.strip().replace(',', '') == "" else 해당국가사망자증가수.strip().replace(',', '')),
     })
 
+for d in datasYesterDay:
+    한글국가명 = ''
+    해당국가명 = d.find_all('td')[0].text
+    해당국가확진자 = d.find_all('td')[1].text
+    해당국가확진자증가수 = d.find_all('td')[2].text
+    해당국가사망자증가수 = d.find_all('td')[4].text
+
+    for val in dictonary:
+      if val['eng'] == 해당국가명.strip():
+          한글국가명 = val['kor']
+
+    세계확진자증가수.append({
+      'Name' : 한글국가명,
+      '확진자수' : int(0 if 해당국가확진자.strip().replace(',', '') == "" else 해당국가확진자.strip().replace(',', '')),
+      '확진자증가수' : int(0 if 해당국가확진자증가수.strip().replace(',', '') == "" else 해당국가확진자증가수.strip().replace(',', '')),
+      '사망자증가수' : int(0 if 해당국가사망자증가수.strip().replace(',', '') == "" else 해당국가사망자증가수.strip().replace(',', '')),
+    })
+
 세계확진자_sort = sorted(세계확진자, key=lambda e: (-e['확진자수']))
+세계확진자증가수_sort = sorted(세계확진자증가수, key=lambda e: (-e['확진자수']))
 
 with open("세계순위현황.js", "w", encoding='UTF-8-sig') as json_file:
     json.dump(세계확진자_sort, json_file, ensure_ascii=False, indent=4)
@@ -311,10 +332,23 @@ data = 'var 세계확진자 = ' + data + ';'
 with open("세계순위현황.js", "w", encoding='UTF-8-sig') as f_write:
     f_write.write(data)
 
+###
+
+with open("세계확진자증가수현황.js", "w", encoding='UTF-8-sig') as json_file:
+    json.dump(세계확진자증가수_sort, json_file, ensure_ascii=False, indent=4)    
+
+data2 = ''        
+with open("세계확진자증가수현황.js", "r", encoding='UTF-8-sig') as f:
+    while True:
+        line = f.readline()
+        if not line: break
+        data2 += line
+data2 = 'var 세계확진자증가수 = ' + data2 + ';'
+
+with open("세계확진자증가수현황.js", "w", encoding='UTF-8-sig') as f_write:
+    f_write.write(data2)
 
 print('세계순위현황크롤러 끝')
-
-
 ############################################################################
 print('')
 print('맵크롤러 시작')

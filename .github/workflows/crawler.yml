@@ -28,7 +28,7 @@ jobs:
       run: |
         git config --local user.email "chanhuiseok@gmail.com"
         git config --local user.name "knucoronaCrawler"
-        git add 검사자현황.js 국내현황.js 세계순위현황.js 세계현황.js 지역별현황.js Map_지역별차이현황.js news.json result.json
+        git add 검사자현황.js 국내현황.js 세계순위현황.js 세계확진자증가수현황.js 세계현황.js 지역별현황.js Map_지역별차이현황.js news.json result.json
         git commit -m "Auto - Update data with Crawling"
     - name: Push
       uses: ad-m/github-push-action@master
