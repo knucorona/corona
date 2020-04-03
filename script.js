@@ -84,63 +84,63 @@ document.getElementById("Now").innerHTML = '(업데이트 : '+new_year+'년 '+(n
 
   // 세계순위현황
   document.getElementById("w_name_1").innerHTML = '<b>' + String(세계확진자[1].Name) + '</b>';
-  document.getElementById("w_infect_1").innerHTML = '<span style="color:#DA5672"> <b>' + String(세계확진자[1].확진자수.toLocaleString()) + '</b> </span> <br> <span style="color:#DA5672; font-size:11px"> (+'+ String(세계확진자증가수[1].확진자증가수.toLocaleString()) +') </span>';
+  document.getElementById("w_infect_1").innerHTML = '<span style="color:#C51C1C"> <b>' + String(세계확진자[1].확진자수.toLocaleString()) + '</b> </span> <br> <span style="color:#DA5672; font-size:11px"> (+'+ String(세계확진자증가수[1].확진자증가수.toLocaleString()) +') </span>';
   document.getElementById("w_death_1").innerHTML = '<span style="color:#4C525D"> <b>' + String(세계확진자[1].사망자수.toLocaleString()) + '</b> </span> <br> <span style="color:#4C525D; font-size:11px"> (+'+ String(세계확진자증가수[1].사망자증가수.toLocaleString()) +') </span>';
-  document.getElementById("w_cured_1").innerHTML = '<span style="color:#4874C3"> <b>' + String(세계확진자[1].완치자수.toLocaleString()) + '</b> </span>';
+  document.getElementById("w_cured_1").innerHTML = '<span style="color:#154FC6"> <b>' + String(세계확진자[1].완치자수.toLocaleString()) + '</b> </span>';
   document.getElementById("w_rate_1").innerHTML = '<span style="color:#8F8F8F; font-size:12px"> <b>' + String((세계확진자[1].사망자수 / 세계확진자[1].확진자수 * 100).toFixed(1)) + '%</b> </span> ';
 
   document.getElementById("w_name_2").innerHTML = '<b>' + String(세계확진자[2].Name) + '</b>';
-  document.getElementById("w_infect_2").innerHTML = '<span style="color:#DA5672"> <b>' + String(세계확진자[2].확진자수.toLocaleString()) + '</b> </span> <br> <span style="color:#DA5672; font-size:11px"> (+'+ String(세계확진자증가수[2].확진자증가수.toLocaleString()) +') </span>';
+  document.getElementById("w_infect_2").innerHTML = '<span style="color:#C51C1C"> <b>' + String(세계확진자[2].확진자수.toLocaleString()) + '</b> </span> <br> <span style="color:#DA5672; font-size:11px"> (+'+ String(세계확진자증가수[2].확진자증가수.toLocaleString()) +') </span>';
   document.getElementById("w_death_2").innerHTML = '<span style="color:#4C525D"> <b>' + String(세계확진자[2].사망자수.toLocaleString()) + '</b> </span> <br> <span style="color:#4C525D; font-size:11px"> (+'+ String(세계확진자증가수[2].사망자증가수.toLocaleString()) +') </span>';
-  document.getElementById("w_cured_2").innerHTML = '<span style="color:#4874C3"> <b>' + String(세계확진자[2].완치자수.toLocaleString()) + '</b> </span>';
+  document.getElementById("w_cured_2").innerHTML = '<span style="color:#154FC6"> <b>' + String(세계확진자[2].완치자수.toLocaleString()) + '</b> </span>';
   document.getElementById("w_rate_2").innerHTML = '<span style="color:#8F8F8F; font-size:12px"> <b>' + String((세계확진자[2].사망자수 / 세계확진자[2].확진자수 * 100).toFixed(1)) + '%</b> </span> ';
 
   document.getElementById("w_name_3").innerHTML = '<b>' + String(세계확진자[3].Name) + '</b>';
-  document.getElementById("w_infect_3").innerHTML = '<span style="color:#DA5672"> <b>' + String(세계확진자[3].확진자수.toLocaleString()) + '</b> </span> <br> <span style="color:#DA5672; font-size:11px"> (+'+ String(세계확진자증가수[3].확진자증가수.toLocaleString()) +') </span>';
+  document.getElementById("w_infect_3").innerHTML = '<span style="color:#C51C1C"> <b>' + String(세계확진자[3].확진자수.toLocaleString()) + '</b> </span> <br> <span style="color:#DA5672; font-size:11px"> (+'+ String(세계확진자증가수[3].확진자증가수.toLocaleString()) +') </span>';
   document.getElementById("w_death_3").innerHTML = '<span style="color:#4C525D"> <b>' + String(세계확진자[3].사망자수.toLocaleString()) + '</b> </span> <br> <span style="color:#4C525D; font-size:11px"> (+'+ String(세계확진자증가수[3].사망자증가수.toLocaleString()) +') </span>';
-  document.getElementById("w_cured_3").innerHTML = '<span style="color:#4874C3"> <b>' + String(세계확진자[3].완치자수.toLocaleString()) + '</b> </span>';
+  document.getElementById("w_cured_3").innerHTML = '<span style="color:#154FC6"> <b>' + String(세계확진자[3].완치자수.toLocaleString()) + '</b> </span>';
   document.getElementById("w_rate_3").innerHTML = '<span style="color:#8F8F8F; font-size:12px"> <b>' + String((세계확진자[3].사망자수 / 세계확진자[3].확진자수 * 100).toFixed(1)) + '%</b> </span> ';
 
   document.getElementById("w_name_4").innerHTML = '<b>' + String(세계확진자[4].Name) + '</b>';
-  document.getElementById("w_infect_4").innerHTML = '<span style="color:#DA5672"> <b>' + String(세계확진자[4].확진자수.toLocaleString()) + '</b> </span> <br> <span style="color:#DA5672; font-size:11px"> (+'+ String(세계확진자증가수[4].확진자증가수.toLocaleString()) +') </span>';
+  document.getElementById("w_infect_4").innerHTML = '<span style="color:#C51C1C"> <b>' + String(세계확진자[4].확진자수.toLocaleString()) + '</b> </span> <br> <span style="color:#DA5672; font-size:11px"> (+'+ String(세계확진자증가수[4].확진자증가수.toLocaleString()) +') </span>';
   document.getElementById("w_death_4").innerHTML = '<span style="color:#4C525D"> <b>' + String(세계확진자[4].사망자수.toLocaleString()) + '</b> </span> <br> <span style="color:#4C525D; font-size:11px"> (+'+ String(세계확진자증가수[4].사망자증가수.toLocaleString()) +') </span>';
-  document.getElementById("w_cured_4").innerHTML = '<span style="color:#4874C3"> <b>' + String(세계확진자[4].완치자수.toLocaleString()) + '</b> </span>';
+  document.getElementById("w_cured_4").innerHTML = '<span style="color:#154FC6"> <b>' + String(세계확진자[4].완치자수.toLocaleString()) + '</b> </span>';
   document.getElementById("w_rate_4").innerHTML = '<span style="color:#8F8F8F; font-size:12px"> <b>' + String((세계확진자[4].사망자수 / 세계확진자[4].확진자수 * 100).toFixed(1)) + '%</b> </span> ';
 
   document.getElementById("w_name_5").innerHTML = '<b>' + String(세계확진자[5].Name) + '</b>';
-  document.getElementById("w_infect_5").innerHTML = '<span style="color:#DA5672"> <b>' + String(세계확진자[5].확진자수.toLocaleString()) + '</b> </span> <br> <span style="color:#DA5672; font-size:11px"> (+'+ String(세계확진자증가수[5].확진자증가수.toLocaleString()) +') </span>';
+  document.getElementById("w_infect_5").innerHTML = '<span style="color:#C51C1C"> <b>' + String(세계확진자[5].확진자수.toLocaleString()) + '</b> </span> <br> <span style="color:#DA5672; font-size:11px"> (+'+ String(세계확진자증가수[5].확진자증가수.toLocaleString()) +') </span>';
   document.getElementById("w_death_5").innerHTML = '<span style="color:#4C525D"> <b>' + String(세계확진자[5].사망자수.toLocaleString()) + '</b> </span> <br> <span style="color:#4C525D; font-size:11px"> (+'+ String(세계확진자증가수[5].사망자증가수.toLocaleString()) +') </span>';
-  document.getElementById("w_cured_5").innerHTML = '<span style="color:#4874C3"> <b>' + String(세계확진자[5].완치자수.toLocaleString()) + '</b> </span>';
+  document.getElementById("w_cured_5").innerHTML = '<span style="color:#154FC6"> <b>' + String(세계확진자[5].완치자수.toLocaleString()) + '</b> </span>';
   document.getElementById("w_rate_5").innerHTML = '<span style="color:#8F8F8F; font-size:12px"> <b>' + String((세계확진자[5].사망자수 / 세계확진자[5].확진자수 * 100).toFixed(1)) + '%</b> </span> ';
 
   document.getElementById("w_name_6").innerHTML = '<b>' + String(세계확진자[6].Name) + '</b>';
-  document.getElementById("w_infect_6").innerHTML = '<span style="color:#DA5672"> <b>' + String(세계확진자[6].확진자수.toLocaleString()) + '</b> </span> <br> <span style="color:#DA5672; font-size:11px"> (+'+ String(세계확진자증가수[6].확진자증가수.toLocaleString()) +') </span>';
+  document.getElementById("w_infect_6").innerHTML = '<span style="color:#C51C1C"> <b>' + String(세계확진자[6].확진자수.toLocaleString()) + '</b> </span> <br> <span style="color:#DA5672; font-size:11px"> (+'+ String(세계확진자증가수[6].확진자증가수.toLocaleString()) +') </span>';
   document.getElementById("w_death_6").innerHTML = '<span style="color:#4C525D"> <b>' + String(세계확진자[6].사망자수.toLocaleString()) + '</b> </span> <br> <span style="color:#4C525D; font-size:11px"> (+'+ String(세계확진자증가수[6].사망자증가수.toLocaleString()) +') </span>';
-  document.getElementById("w_cured_6").innerHTML = '<span style="color:#4874C3"> <b>' + String(세계확진자[6].완치자수.toLocaleString()) + '</b> </span>';
+  document.getElementById("w_cured_6").innerHTML = '<span style="color:#154FC6"> <b>' + String(세계확진자[6].완치자수.toLocaleString()) + '</b> </span>';
   document.getElementById("w_rate_6").innerHTML = '<span style="color:#8F8F8F; font-size:12px"> <b>' + String((세계확진자[6].사망자수 / 세계확진자[6].확진자수 * 100).toFixed(1)) + '%</b> </span> ';
 
   document.getElementById("w_name_7").innerHTML = '<b>' + String(세계확진자[7].Name) + '</b>';
-  document.getElementById("w_infect_7").innerHTML = '<span style="color:#DA5672"> <b>' + String(세계확진자[7].확진자수.toLocaleString()) + '</b> </span> <br> <span style="color:#DA5672; font-size:11px"> (+'+ String(세계확진자증가수[7].확진자증가수.toLocaleString()) +') </span>';
+  document.getElementById("w_infect_7").innerHTML = '<span style="color:#C51C1C"> <b>' + String(세계확진자[7].확진자수.toLocaleString()) + '</b> </span> <br> <span style="color:#DA5672; font-size:11px"> (+'+ String(세계확진자증가수[7].확진자증가수.toLocaleString()) +') </span>';
   document.getElementById("w_death_7").innerHTML = '<span style="color:#4C525D"> <b>' + String(세계확진자[7].사망자수.toLocaleString()) + '</b> </span> <br> <span style="color:#4C525D; font-size:11px"> (+'+ String(세계확진자증가수[7].사망자증가수.toLocaleString()) +') </span>';
-  document.getElementById("w_cured_7").innerHTML = '<span style="color:#4874C3"> <b>' + String(세계확진자[7].완치자수.toLocaleString()) + '</b> </span>';
+  document.getElementById("w_cured_7").innerHTML = '<span style="color:#154FC6"> <b>' + String(세계확진자[7].완치자수.toLocaleString()) + '</b> </span>';
   document.getElementById("w_rate_7").innerHTML = '<span style="color:#8F8F8F; font-size:12px"> <b>' + String((세계확진자[7].사망자수 / 세계확진자[7].확진자수 * 100).toFixed(1)) + '%</b> </span> ';
 
   document.getElementById("w_name_8").innerHTML = '<b>' + String(세계확진자[8].Name) + '</b>';
-  document.getElementById("w_infect_8").innerHTML = '<span style="color:#DA5672"> <b>' + String(세계확진자[8].확진자수.toLocaleString()) + '</b> </span> <br> <span style="color:#DA5672; font-size:11px"> (+'+ String(세계확진자증가수[8].확진자증가수.toLocaleString()) +') </span>';
+  document.getElementById("w_infect_8").innerHTML = '<span style="color:#C51C1C"> <b>' + String(세계확진자[8].확진자수.toLocaleString()) + '</b> </span> <br> <span style="color:#DA5672; font-size:11px"> (+'+ String(세계확진자증가수[8].확진자증가수.toLocaleString()) +') </span>';
   document.getElementById("w_death_8").innerHTML = '<span style="color:#4C525D"> <b>' + String(세계확진자[8].사망자수.toLocaleString()) + '</b> </span> <br> <span style="color:#4C525D; font-size:11px"> (+'+ String(세계확진자증가수[8].사망자증가수.toLocaleString()) +') </span>';
-  document.getElementById("w_cured_8").innerHTML = '<span style="color:#4874C3"> <b>' + String(세계확진자[8].완치자수.toLocaleString()) + '</b> </span>';
+  document.getElementById("w_cured_8").innerHTML = '<span style="color:#154FC6"> <b>' + String(세계확진자[8].완치자수.toLocaleString()) + '</b> </span>';
   document.getElementById("w_rate_8").innerHTML = '<span style="color:#8F8F8F; font-size:12px"> <b>' + String((세계확진자[8].사망자수 / 세계확진자[8].확진자수 * 100).toFixed(1)) + '%</b> </span> ';
 
   document.getElementById("w_name_9").innerHTML = '<b>' + String(세계확진자[9].Name) + '</b>';
-  document.getElementById("w_infect_9").innerHTML = '<span style="color:#DA5672"> <b>' + String(세계확진자[9].확진자수.toLocaleString()) + '</b> </span> <br> <span style="color:#DA5672; font-size:11px"> (+'+ String(세계확진자증가수[9].확진자증가수.toLocaleString()) +') </span>';
+  document.getElementById("w_infect_9").innerHTML = '<span style="color:#C51C1C"> <b>' + String(세계확진자[9].확진자수.toLocaleString()) + '</b> </span> <br> <span style="color:#DA5672; font-size:11px"> (+'+ String(세계확진자증가수[9].확진자증가수.toLocaleString()) +') </span>';
   document.getElementById("w_death_9").innerHTML = '<span style="color:#4C525D"> <b>' + String(세계확진자[9].사망자수.toLocaleString()) + '</b> </span> <br> <span style="color:#4C525D; font-size:11px"> (+'+ String(세계확진자증가수[9].사망자증가수.toLocaleString()) +') </span>';
-  document.getElementById("w_cured_9").innerHTML = '<span style="color:#4874C3"> <b>' + String(세계확진자[9].완치자수.toLocaleString()) + '</b> </span>';
+  document.getElementById("w_cured_9").innerHTML = '<span style="color:#154FC6"> <b>' + String(세계확진자[9].완치자수.toLocaleString()) + '</b> </span>';
   document.getElementById("w_rate_9").innerHTML = '<span style="color:#8F8F8F; font-size:12px"> <b>' + String((세계확진자[9].사망자수 / 세계확진자[9].확진자수 * 100).toFixed(1)) + '%</b> </span> ';
 
   document.getElementById("w_name_10").innerHTML = '<b>' + String(세계확진자[10].Name) + '</b>';
-  document.getElementById("w_infect_10").innerHTML = '<span style="color:#DA5672"> <b>' + String(세계확진자[10].확진자수.toLocaleString()) + '</b> </span> <br> <span style="color:#DA5672; font-size:11px"> (+'+ String(세계확진자증가수[10].확진자증가수.toLocaleString()) +') </span>';
+  document.getElementById("w_infect_10").innerHTML = '<span style="color:#C51C1C"> <b>' + String(세계확진자[10].확진자수.toLocaleString()) + '</b> </span> <br> <span style="color:#DA5672; font-size:11px"> (+'+ String(세계확진자증가수[10].확진자증가수.toLocaleString()) +') </span>';
   document.getElementById("w_death_10").innerHTML = '<span style="color:#4C525D"> <b>' + String(세계확진자[10].사망자수.toLocaleString()) + '</b> </span> <br> <span style="color:#4C525D; font-size:11px"> (+'+ String(세계확진자증가수[10].사망자증가수.toLocaleString()) +') </span>';
-  document.getElementById("w_cured_10").innerHTML = '<span style="color:#4874C3"> <b>' + String(세계확진자[10].완치자수.toLocaleString()) + '</b> </span>';
+  document.getElementById("w_cured_10").innerHTML = '<span style="color:#154FC6"> <b>' + String(세계확진자[10].완치자수.toLocaleString()) + '</b> </span>';
   document.getElementById("w_rate_10").innerHTML = '<span style="color:#8F8F8F; font-size:12px"> <b>' + String((세계확진자[10].사망자수 / 세계확진자[10].확진자수 * 100).toFixed(1)) + '%</b> </span> ';
 
 // 지역별 현황 hover 업데이트
