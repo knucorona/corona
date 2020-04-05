@@ -273,7 +273,7 @@ dictonary = [ {
 세계확진자 = []
 세계확진자증가수 = []
 
-for d in datas:
+for d in datas[0:17]:
     한글국가명 = ''
     해당국가명 = d.find_all('td')[0].text
     해당국가확진자 = d.find_all('td')[1].text
@@ -297,7 +297,7 @@ for d in datas:
         '사망자증가수' : int(0 if 해당국가사망자증가수.strip().replace(',', '') == "" else 해당국가사망자증가수.strip().replace(',', '')),
     })
 
-for d in datasYesterDay:
+for d in datasYesterDay[0:17]:
     한글국가명 = ''
     해당국가명 = d.find_all('td')[0].text
     해당국가확진자 = d.find_all('td')[1].text
