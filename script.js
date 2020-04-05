@@ -527,6 +527,19 @@ $('#KR-49').click(function(){
     $('#closeButton6').hide();
   });
 
+  // 각종 링크
+  $('#openButton2').click(function () {
+      $('#linkDiv').slideDown();
+      $('#closeButton2').show();
+      $('#openButton2').hide();
+    });
+  
+  $('#closeButton2').click(function () {
+      $('#linkDiv').slideUp();
+      $('#openButton2').show();
+      $('#closeButton2').hide();
+    });
+
 
   // 테이블 행 펼치기/접기
   $('.person1-content').hide();
@@ -683,6 +696,11 @@ $('#KR-49').click(function(){
     $('html, body').animate({ scrollTop: offset.top - 20 }, 400);
   }
   function Move7() {
+    LcoronaCnt = 1;
+    $('#linkDiv').slideDown();
+    $('#closeButton2').show();
+    $('#openButton2').hide();
+
     var offset = $("#linkContent").offset();
     $('html, body').animate({ scrollTop: offset.top - 20 }, 400);
   }

@@ -552,9 +552,12 @@
 
     <!-- 크기 줄여질 시 나타나는 구역 -->
     <div id="link-popup" style="margin-top:-.5em">
-      <p onclick="Move7()" style="font-size:12px; text-align:center"><span style="color:rgb(255, 251, 0)">
+
+      <a href="javascript:Move7()">
+        <p style="font-size:12px; text-align:center; color:yellow">
           <i class="fas fa-link"></i>
-          &nbsp; 학교 코로나 공지사항 · 마스크 구매처 링크</span></p>
+          &nbsp; 학교 코로나 공지사항 · 마스크 구매처 링크
+        </p></a>
       
       <!-- [임시] 비대면 강의 연장 관련 공지-->
       <div id="tempSmallPopup"
@@ -1334,7 +1337,7 @@
         <span id="Gcorona">
           <span style="color:rgb(240, 142, 50)">
             <i class="fas fa-chart-line"></span></i>
-          확진자 추세 그래프
+          확진자 추세 그래프 확인
         </span>
 
         <button id="openButton5" class="btn btn-warning" style="width:30px;height:30px;padding:1px;">
@@ -1374,7 +1377,7 @@
         <span id="Mcorona">
           <span style="color:rgb(29, 185, 133)">
             <i class="fas fa-map-marked-alt"></span></i>
-          경북대 확진자 지도
+          경북대 확진자 지도 및 동선
         </span>
 
         <button id="openButton6" class="btn btn-success" style="width:30px;height:30px;padding:1px;">
@@ -2286,12 +2289,18 @@
     <div id="linkContent" class="contentItem" style="width:100%; 
      float:left; border-radius:10px; border:2px solid rgb(231, 231, 231)">
       <h3>
-        <span id="Gcorona">
+        <span id="Lcorona">
           <span style="color:rgb(50, 132, 240)">
             <i class="fas fa-link"></span></i>
           공지사항 및 마스크 구매처 링크
         </span>
 
+        <button id="openButton2" class="btn btn-info" style="width:30px;height:30px;padding:1px;">
+          <i class="fas fa-angle-down fa-2x"></i></button>
+        <button id="closeButton2" class="btn btn-info" style="width:30px;height:30px;padding:1px;">
+          <i class="fas fa-angle-up fa-2x"></i></button>
+
+        <div id = "linkDiv">
         <div class="col2" style="margin-top:10px; margin-bottom:-12px">
           <p><button class="btn btn-danger"
               onclick="location.href='https://knu.ac.kr/wbbs/wbbs/bbs/btin/list.action?bbs_cde=34&amp;menu_idx=224'">
@@ -2313,7 +2322,7 @@
           <p><button class="btn btn-primary" onclick="window.open('https://mohw.go.kr/react/popup_200128.html')">전국 안심병원
               현황</button></p>
         </div>
-
+      </div>
 
     </div>
 
