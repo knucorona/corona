@@ -289,6 +289,9 @@ dictonary = [ {
   },{
     "eng": "South America", 
     "kor": "남미",
+  },{
+    "eng": "World", 
+    "kor": "전세계",
   },
 ]
 
@@ -296,7 +299,7 @@ dictonary = [ {
 세계확진자증가수 = []
 
 try:
-  for d in datas[0:17]:
+  for d in datas:
     한글국가명 = ''
     해당국가명 = d.find_all('td')[0].text
     해당국가확진자 = d.find_all('td')[1].text
@@ -311,7 +314,7 @@ try:
         if val['eng'] == 해당국가명.strip():
             한글국가명 = val['kor']
 
-    if 한글국가명 == '유럽' or 한글국가명 == '아시아' or 한글국가명 == '북미' or 한글국가명 == '남미':
+    if 한글국가명 == '유럽' or 한글국가명 == '아시아' or 한글국가명 == '북미' or 한글국가명 == '남미' or 한글국가명 == '전세계':
       print('x')
     else:
       세계확진자.append({
@@ -323,7 +326,7 @@ try:
         '사망자증가수' : int(0 if 해당국가사망자증가수.strip().replace(',', '') == "" else 해당국가사망자증가수.strip().replace(',', '')),
       })
 
-  for d in datasYesterDay[0:17]:
+  for d in datasYesterDay:
     한글국가명 = ''
     해당국가명 = d.find_all('td')[0].text
     해당국가확진자 = d.find_all('td')[1].text
@@ -334,7 +337,7 @@ try:
       if val['eng'] == 해당국가명.strip():
           한글국가명 = val['kor']
 
-    if 한글국가명 == '유럽' or 한글국가명 == '아시아' or 한글국가명 == '북미' or 한글국가명 == '남미':
+    if 한글국가명 == '유럽' or 한글국가명 == '아시아' or 한글국가명 == '북미' or 한글국가명 == '남미' or 한글국가명 == '전세계':
       print('x')
 
     else:
