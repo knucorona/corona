@@ -277,6 +277,15 @@ dictonary = [ {
   },{
     "eng": "Israel", 
     "kor": "이스라엘",
+  },{
+    "eng": "Europe", 
+    "kor": "유럽",
+  },{
+    "eng": "Asia", 
+    "kor": "아시아",
+  },{
+    "eng": "North America", 
+    "kor": "북미",
   },
 ]
 
@@ -299,14 +308,17 @@ try:
         if val['eng'] == 해당국가명.strip():
             한글국가명 = val['kor']
 
-    세계확진자.append({
+    if 한글국가명 == '유럽' or 한글국가명 == '아시아' or 한글국가명 == '북미':
+      print('x')
+    else:
+      세계확진자.append({
         'Name' : 한글국가명,
         '확진자수' : int(0 if 해당국가확진자.strip().replace(',', '') == "" else 해당국가확진자.strip().replace(',', '')),
         '사망자수' : int(0 if 해당국가사망자.strip().replace(',', '') == "" else 해당국가사망자.strip().replace(',', '')),
         '완치자수' : int(0 if 해당국가완치자.strip().replace(',', '') == "" else 해당국가완치자.strip().replace(',', '')),
         '확진자증가수' : int(0 if 해당국가확진자증가수.strip().replace(',', '') == "" else 해당국가확진자증가수.strip().replace(',', '')),
         '사망자증가수' : int(0 if 해당국가사망자증가수.strip().replace(',', '') == "" else 해당국가사망자증가수.strip().replace(',', '')),
-    })
+      })
 
   for d in datasYesterDay[0:17]:
     한글국가명 = ''
