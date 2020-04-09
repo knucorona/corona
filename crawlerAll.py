@@ -286,6 +286,9 @@ dictonary = [ {
   },{
     "eng": "North America", 
     "kor": "북미",
+  },{
+    "eng": "South America", 
+    "kor": "남미",
   },
 ]
 
@@ -308,7 +311,7 @@ try:
         if val['eng'] == 해당국가명.strip():
             한글국가명 = val['kor']
 
-    if 한글국가명 == '유럽' or 한글국가명 == '아시아' or 한글국가명 == '북미':
+    if 한글국가명 == '유럽' or 한글국가명 == '아시아' or 한글국가명 == '북미' or 한글국가명 == '남미':
       print('x')
     else:
       세계확진자.append({
@@ -331,7 +334,7 @@ try:
       if val['eng'] == 해당국가명.strip():
           한글국가명 = val['kor']
 
-    if 한글국가명 == '유럽' or 한글국가명 == '아시아' or 한글국가명 == '북미':
+    if 한글국가명 == '유럽' or 한글국가명 == '아시아' or 한글국가명 == '북미' or 한글국가명 == '남미':
       print('x')
 
     else:
