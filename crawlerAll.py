@@ -23,7 +23,7 @@ try:
 
  for data in datas:
     지역이름 = data.find_all('th')[0].text
-    확진자수 = int(data.find_all('td', class_='number')[1].text.replace(',', ''))
+    확진자수 = int(data.find_all('td', class_='number')[3].text.replace(',', ''))
 
     지역별확진자.append(확진자수)
 
@@ -314,7 +314,7 @@ try:
         if val['eng'] == 해당국가명.strip():
             한글국가명 = val['kor']
 
-    if 한글국가명 == '유럽' or 한글국가명 == '아시아' or 한글국가명 == '북미' or 한글국가명 == '남미' or 한글국가명 == '전세계':
+    if 한글국가명 == "" or 한글국가명 == '유럽' or 한글국가명 == '아시아' or 한글국가명 == '북미' or 한글국가명 == '남미':
       print('x')
     else:
       세계확진자.append({
@@ -337,7 +337,7 @@ try:
       if val['eng'] == 해당국가명.strip():
           한글국가명 = val['kor']
 
-    if 한글국가명 == '유럽' or 한글국가명 == '아시아' or 한글국가명 == '북미' or 한글국가명 == '남미' or 한글국가명 == '전세계':
+    if 한글국가명 == "" or 한글국가명 == '유럽' or 한글국가명 == '아시아' or 한글국가명 == '북미' or 한글국가명 == '남미':
       print('x')
 
     else:
