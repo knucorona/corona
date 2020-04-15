@@ -734,7 +734,7 @@ $('#KR-49').click(function(){
       temp_href_data = item;
       count = count + 1;
 
-        document.getElementById("list"+idx).innerHTML = '<a href="https://knu.ac.kr'+ temp_href_data+'" style="color:blue;"; target="_blank">' + temp_data +'</a>';
+        document.getElementById("list"+idx).innerHTML = '<a href="https://knu.ac.kr'+ temp_href_data+'" style="color:#2457A2;"; target="_blank">' + temp_data +'</a>';
         idx++;
       
       if(count >= 10)
@@ -758,7 +758,7 @@ $('#KR-49').click(function(){
        temp_href_data = item;
 
        count2 = count2 + 1;
-       document.getElementById("2list"+idx2).innerHTML = '<a href="'+temp_href_data+'" style="color:blue;"; target="_blank">' + temp_data +'</a>';
+       document.getElementById("2list"+idx2).innerHTML = '<a href="'+temp_href_data+'" style="color:#2457A2 ;"; target="_blank">' + temp_data +'</a>';
        idx2++;
        
        if(count2 >= 10)
