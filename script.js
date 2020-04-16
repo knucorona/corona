@@ -403,6 +403,12 @@ $('#KR-49').click(function(){
   var $person6_content = $('.person6-content');
   var $person7_content = $('.person7-content');
 
+  var $Wcorona = $('#Wcorona')
+  var $Gcorona = $('#Gcorona')
+  var $Lcorona = $('#Lcorona')
+  var $Kcorona = $('#Kcorona')
+  var $Mcorona = $('#Mcorona')
+
   // 지역별 현황 펼치기/접기
   $regionDiv.hide();
   $linkDiv.hide();
@@ -430,7 +436,7 @@ $('#KR-49').click(function(){
   });
 
   // 제목을 눌러도 오픈 : 전세계 코로나
-  $('#Wcorona').click(function () {
+  $Wcorona.click(function () {
     if (WcoronaCnt == 0) {
       $worldDiv.slideDown();
       $closeButton4.show();
@@ -446,7 +452,7 @@ $('#KR-49').click(function(){
   });
 
   // 제목을 눌러도 오픈 : 국내 지역별
-  $('#Kcorona').click(function () {
+  $Kcorona.click(function () {
     if (KcoronaCnt == 0) {
       $regionDiv.slideDown();
       $closeButton1.show();
@@ -462,7 +468,7 @@ $('#KR-49').click(function(){
   });
 
   // 제목을 눌러도 오픈 : 각종 링크
-  $('#Lcorona').click(function () {
+  $Lcorona.click(function () {
     if (LcoronaCnt == 0) {
       $linkDiv.slideDown();
       $closeButton2.show();
@@ -478,7 +484,7 @@ $('#KR-49').click(function(){
   });
 
   // 제목을 눌러도 오픈 : 추세선 그래프
-  $('#Gcorona').click(function () {
+  $Gcorona.click(function () {
     if (GcoronaCnt == 0) {
       $graphDiv.slideDown();
       $closeButton5.show();
@@ -494,7 +500,7 @@ $('#KR-49').click(function(){
   });
 
   // 제목을 눌러도 오픈 : 경북대 지도 및 동선
-  $('#Mcorona').click(function () {
+  $Mcorona.click(function () {
     if (McoronaCnt == 0) {
       $mapDiv.slideDown();
       $closeButton6.show();
@@ -688,7 +694,7 @@ $('#KR-49').click(function(){
     $closeButton1.show();
     $openButton1.hide();
 
-    var offset = $("#Kcorona").offset();
+    var offset = $Kcorona.offset();
     $('html, body').animate({ scrollTop: offset.top - 20 }, 400);
   }
   function Move3() {
@@ -697,7 +703,7 @@ $('#KR-49').click(function(){
     $closeButton4.show();
     $openButton4.hide();
 
-    var offset = $("#Wcorona").offset();
+    var offset = $Wcorona.offset();
     $('html, body').animate({ scrollTop: offset.top - 20 }, 400);
   }
   function Move4() {
@@ -706,7 +712,7 @@ $('#KR-49').click(function(){
     $closeButton5.show();
     $openButton5.hide();
 
-    var offset = $("#Gcorona").offset();
+    var offset = $Gcorona.offset();
     $('html, body').animate({ scrollTop: offset.top - 20 }, 400);
   }
   function Move5() {
@@ -716,7 +722,7 @@ $('#KR-49').click(function(){
     $closeButton6.show();
     $openButton6.hide();
 
-    var offset = $("#Mcorona").offset();
+    var offset = $Mcorona.offset();
     $('html, body').animate({ scrollTop: offset.top - 20 }, 400);
   }
   function Move6() {
