@@ -395,6 +395,14 @@ $('#KR-49').click(function(){
   var $openButton5 = $('#openButton5');
   var $openButton6 = $('#openButton6');
 
+  var $person1_content = $('.person1-content');
+  var $person2_content = $('.person2-content');
+  var $person3_content = $('.person3-content');
+  var $person4_content = $('.person4-content');
+  var $person5_content = $('.person5-content');
+  var $person6_content = $('.person6-content');
+  var $person7_content = $('.person7-content');
+
   // 지역별 현황 펼치기/접기
   $regionDiv.hide();
   $linkDiv.hide();
@@ -568,24 +576,24 @@ $('#KR-49').click(function(){
 
 
   // 테이블 행 펼치기/접기
-  $('.person1-content').hide();
-  $('.person2-content').hide();
-  $('.person3-content').hide();
-  $('.person4-content').hide();
-  $('.person5-content').hide();
-  $('.person6-content').hide();
-  $('.person7-content').hide();
+  $person1_content.hide();
+  $person2_content.hide();
+  $person3_content.hide();
+  $person4_content.hide();
+  $person5_content.hide();
+  $person6_content.hide();
+  $person7_content.hide();
 
   $('#person1Tr').click(function () {
     if (person1Cnt == 0) {
       person1Cnt = 1;
       $('#person1Tr').css("background-color", "#A9AED6");
-      $('.person1-content').fadeIn(300);
+      $person1_content.fadeIn(300);
     }
     else {
       person1Cnt = 0;
       $('#person1Tr').css("background-color", "#E6EDF0");
-      $('.person1-content').hide();
+      $person1_content.hide();
     }
   });
 
@@ -593,12 +601,12 @@ $('#KR-49').click(function(){
     if (person2Cnt == 0) {
       person2Cnt = 1;
       $('#person2Tr').css("background-color", "#A9AED6");
-      $('.person2-content').fadeIn(300);
+      $person2_content.fadeIn(300);
     }
     else {
       person2Cnt = 0;
       $('#person2Tr').css("background-color", "#E6EDF0");
-      $('.person2-content').hide();
+      $person2_content.hide();
     }
   });
 
@@ -606,12 +614,12 @@ $('#KR-49').click(function(){
     if (person3Cnt == 0) {
       person3Cnt = 1;
       $('#person3Tr').css("background-color", "#A9AED6");
-      $('.person3-content').fadeIn(300);
+      $person3_content.fadeIn(300);
     }
     else {
       person3Cnt = 0;
       $('#person3Tr').css("background-color", "#E6EDF0");
-      $('.person3-content').hide();
+      $person3_content.hide();
     }
   });
 
@@ -619,12 +627,12 @@ $('#KR-49').click(function(){
     if (person4Cnt == 0) {
       person4Cnt = 1;
       $('#person4Tr').css("background-color", "#A9AED6");
-      $('.person4-content').fadeIn(300);
+      $person4_content.fadeIn(300);
     }
     else {
       person4Cnt = 0;
       $('#person4Tr').css("background-color", "#E6EDF0");
-      $('.person4-content').hide();
+      $person4_content.hide();
     }
   });
 
@@ -632,12 +640,12 @@ $('#KR-49').click(function(){
     if (person5Cnt == 0) {
       person5Cnt = 1;
       $('#person5Tr').css("background-color", "#A9AED6");
-      $('.person5-content').fadeIn(300);
+      $person5_content.fadeIn(300);
     }
     else {
       person5Cnt = 0;
       $('#person5Tr').css("background-color", "#E6EDF0");
-      $('.person5-content').hide();
+      $person5_content.hide();
     }
   });
 
@@ -645,12 +653,12 @@ $('#KR-49').click(function(){
     if (person6Cnt == 0) {
       person6Cnt = 1;
       $('#person6Tr').css("background-color", "#A9AED6");
-      $('.person6-content').fadeIn(300);
+      $person6_content.fadeIn(300);
     }
     else {
       person6Cnt = 0;
       $('#person6Tr').css("background-color", "#E6EDF0");
-      $('.person6-content').hide();
+      $person6_content.hide();
     }
   });
 
@@ -658,12 +666,12 @@ $('#KR-49').click(function(){
     if (person7Cnt == 0) {
       person7Cnt = 1;
       $('#person7Tr').css("background-color", "#A9AED6");
-      $('.person7-content').fadeIn(300);
+      $person7_content.fadeIn(300);
     }
     else {
       person7Cnt = 0;
       $('#person7Tr').css("background-color", "#E6EDF0");
-      $('.person7-content').hide();
+      $person7_content.hide();
     }
   });
 
