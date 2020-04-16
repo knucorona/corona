@@ -86,6 +86,7 @@ document.getElementById("Now").innerHTML = '(업데이트 : '+new_year+'년 '+(n
 
   // 세계순위현황 업데이트시간 텍스트
   document.getElementById("W_updateDate").innerHTML = '(업데이트 : '+new_year+'년 '+(new_month+1)+'월 '+new_day+'일, '+new_hour+':'+new_min+')';
+  document.getElementById("mobile_update").innerHTML = new_year+'.'+(new_month+1)+'.'+new_day+', '+new_hour+':'+new_min+')';
 
   // 세계순위현황
   document.getElementById("w_name_1").innerHTML = '<b>' + String(세계확진자[1].Name) + '</b>';
