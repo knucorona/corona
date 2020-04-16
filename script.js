@@ -375,19 +375,39 @@ $('#KR-49').click(function(){
   var GcoronaCnt = 0;
   var McoronaCnt = 0;
 
-  // 지역별 현황 펼치기/접기
-  $('#regionDiv').hide();
-  $('#linkDiv').hide();
-  $('#worldDiv').hide();
-  $('#graphDiv').hide();
-  $('#mapDiv').hide();
+  var $regionDiv = $('#regionDiv');
+  var $linkDiv = $('#linkDiv');
+  var $worldDiv = $('#worldDiv');
+  var $graphDiv = $('#graphDiv');
+  var $mapDiv = $('#mapDiv');
 
-  $('#closeButton1').hide();
-  $('#closeButton2').hide();
-  $('#closeButton3').hide();
-  $('#closeButton4').hide();
-  $('#closeButton5').hide();
-  $('#closeButton6').hide();
+  var $closeButton1 = $('#closeButton1');
+  var $closeButton2 = $('#closeButton2');
+  var $closeButton3 = $('#closeButton3');
+  var $closeButton4 = $('#closeButton4');
+  var $closeButton5 = $('#closeButton5');
+  var $closeButton6 = $('#closeButton6');
+
+  var $openButton1 = $('#openButton1');
+  var $openButton2 = $('#openButton2');
+  var $openButton3 = $('#openButton3');
+  var $openButton4 = $('#openButton4');
+  var $openButton5 = $('#openButton5');
+  var $openButton6 = $('#openButton6');
+
+  // 지역별 현황 펼치기/접기
+  $regionDiv.hide();
+  $linkDiv.hide();
+  $worldDiv.hide();
+  $graphDiv.hide();
+  $mapDiv.hide();
+
+  $closeButton1.hide();
+  $closeButton2.hide();
+  $closeButton3.hide();
+  $closeButton4.hide();
+  $closeButton5.hide();
+  $closeButton6.hide();
 
   // 제목을 눌러도 오픈 : 전세계 코로나
   $('#MenuLink1').click(function () {
@@ -404,15 +424,15 @@ $('#KR-49').click(function(){
   // 제목을 눌러도 오픈 : 전세계 코로나
   $('#Wcorona').click(function () {
     if (WcoronaCnt == 0) {
-      $('#worldDiv').slideDown();
-      $('#closeButton4').show();
-      $('#openButton4').hide();
+      $worldDiv.slideDown();
+      $closeButton4.show();
+      $openButton4.hide();
       WcoronaCnt = 1;
     }
     else {
-      $('#worldDiv').slideUp();
-      $('#closeButton4').hide();
-      $('#openButton4').show();
+      $worldDiv.slideUp();
+      $closeButton4.hide();
+      $openButton4.show();
       WcoronaCnt = 0;
     }
   });
@@ -420,15 +440,15 @@ $('#KR-49').click(function(){
   // 제목을 눌러도 오픈 : 국내 지역별
   $('#Kcorona').click(function () {
     if (KcoronaCnt == 0) {
-      $('#regionDiv').slideDown();
-      $('#closeButton1').show();
-      $('#openButton1').hide();
+      $regionDiv.slideDown();
+      $closeButton1.show();
+      $openButton1.hide();
       KcoronaCnt = 1;
     }
     else {
-      $('#regionDiv').slideUp();
-      $('#closeButton1').hide();
-      $('#openButton1').show();
+      $regionDiv.slideUp();
+      $closeButton1.hide();
+      $openButton1.show();
       KcoronaCnt = 0;
     }
   });
@@ -436,15 +456,15 @@ $('#KR-49').click(function(){
   // 제목을 눌러도 오픈 : 각종 링크
   $('#Lcorona').click(function () {
     if (LcoronaCnt == 0) {
-      $('#linkDiv').slideDown();
-      $('#closeButton2').show();
-      $('#openButton2').hide();
+      $linkDiv.slideDown();
+      $closeButton2.show();
+      $openButton2.hide();
       LcoronaCnt = 1;
     }
     else {
-      $('#linkDiv').slideUp();
-      $('#closeButton2').hide();
-      $('#openButton2').show();
+      $linkDiv.slideUp();
+      $closeButton2.hide();
+      $openButton2.show();
       LcoronaCnt = 0;
     }
   });
@@ -452,15 +472,15 @@ $('#KR-49').click(function(){
   // 제목을 눌러도 오픈 : 추세선 그래프
   $('#Gcorona').click(function () {
     if (GcoronaCnt == 0) {
-      $('#graphDiv').slideDown();
-      $('#closeButton5').show();
-      $('#openButton5').hide();
+      $graphDiv.slideDown();
+      $closeButton5.show();
+      $openButton5.hide();
       GcoronaCnt = 1;
     }
     else {
-      $('#graphDiv').slideUp();
-      $('#closeButton5').hide();
-      $('#openButton5').show();
+      $graphDiv.slideUp();
+      $closeButton5.hide();
+      $openButton5.show();
       GcoronaCnt = 0;
     }
   });
@@ -468,43 +488,43 @@ $('#KR-49').click(function(){
   // 제목을 눌러도 오픈 : 경북대 지도 및 동선
   $('#Mcorona').click(function () {
     if (McoronaCnt == 0) {
-      $('#mapDiv').slideDown();
-      $('#closeButton6').show();
-      $('#openButton6').hide();
+      $mapDiv.slideDown();
+      $closeButton6.show();
+      $openButton6.hide();
       McoronaCnt = 1;
     }
     else {
-      $('#mapDiv').slideUp();
-      $('#closeButton6').hide();
-      $('#openButton6').show();
+      $mapDiv.slideUp();
+      $closeButton6.hide();
+      $openButton6.show();
       McoronaCnt = 0;
     }
   });
 
   // 지역별 현황
-  $('#openButton1').click(function () {
-    $('#regionDiv').slideDown();
-    $('#closeButton1').show();
-    $('#openButton1').hide();
+  $openButton1.click(function () {
+    $regionDiv.slideDown();
+    $closeButton1.show();
+    $openButton1.hide();
   });
 
-  $('#closeButton1').click(function () {
-    $('#regionDiv').slideUp();
-    $('#openButton1').show();
-    $('#closeButton1').hide();
+  $closeButton1.click(function () {
+    $regionDiv.slideUp();
+    $openButton1.show();
+    $closeButton1.hide();
   });
 
   // 전 세계 현황 
-  $('#openButton4').click(function () {
-    $('#worldDiv').slideDown();
-    $('#closeButton4').show();
-    $('#openButton4').hide();
+  $openButton4.click(function () {
+    $worldDiv.slideDown();
+    $closeButton4.show();
+    $openButton4.hide();
   });
 
-  $('#closeButton4').click(function () {
-    $('#worldDiv').slideUp();
-    $('#openButton4').show();
-    $('#closeButton4').hide();
+  $closeButton4.click(function () {
+    $worldDiv.slideUp();
+    $closeButton4.show();
+    $openButton4.hide();
   });
 
   // 추세선 그래프
