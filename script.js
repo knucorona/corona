@@ -676,27 +676,27 @@ $('#KR-49').click(function(){
   }
   function Move2() {
     KcoronaCnt = 1;
-    $('#regionDiv').slideDown();
-    $('#closeButton1').show();
-    $('#openButton1').hide();
+    $regionDiv.slideDown();
+    $closeButton1.show();
+    $openButton1.hide();
 
     var offset = $("#Kcorona").offset();
     $('html, body').animate({ scrollTop: offset.top - 20 }, 400);
   }
   function Move3() {
     WcoronaCnt = 1;
-    $('#worldDiv').slideDown();
-    $('#closeButton4').show();
-    $('#openButton4').hide();
+    $worldDiv.slideDown();
+    $closeButton4.show();
+    $openButton4.hide();
 
     var offset = $("#Wcorona").offset();
     $('html, body').animate({ scrollTop: offset.top - 20 }, 400);
   }
   function Move4() {
     GcoronaCnt = 1;
-    $('#graphDiv').slideDown();
-    $('#closeButton5').show();
-    $('#openButton5').hide();
+    $graphDiv.slideDown();
+    $closeButton5.show();
+    $openButton5.hide();
 
     var offset = $("#Gcorona").offset();
     $('html, body').animate({ scrollTop: offset.top - 20 }, 400);
@@ -704,9 +704,9 @@ $('#KR-49').click(function(){
   function Move5() {
 
     McoronaCnt = 1;
-    $('#mapDiv').slideDown();
-    $('#closeButton6').show();
-    $('#openButton6').hide();
+    $mapDiv.slideDown();
+    $closeButton6.show();
+    $openButton6.hide();
 
     var offset = $("#Mcorona").offset();
     $('html, body').animate({ scrollTop: offset.top - 20 }, 400);
@@ -714,18 +714,18 @@ $('#KR-49').click(function(){
   function Move6() {
 
     McoronaCnt = 1;
-    $('#mapDiv').slideDown();
-    $('#closeButton6').show();
-    $('#openButton6').hide();
+    $mapDiv.slideDown();
+    $closeButton6.show();
+    $openButton6.hide();
     
     var offset = $(".path").offset();
     $('html, body').animate({ scrollTop: offset.top - 20 }, 400);
   }
   function Move7() {
     LcoronaCnt = 1;
-    $('#linkDiv').slideDown();
-    $('#closeButton2').show();
-    $('#openButton2').hide();
+    $linkDiv.slideDown();
+    $closeButton2.show();
+    $openButton2.hide();
 
     var offset = $("#linkContent").offset();
     $('html, body').animate({ scrollTop: offset.top - 20 }, 400);
