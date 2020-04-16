@@ -1,4 +1,13 @@
 
+document.write('<script src="검사자현황.js"></script>')
+document.write('<script src="국내현황.js"></script>')
+document.write('<script src="지역별현황.js"></script>')
+document.write('<script src="세계현황.js"></script>')
+document.write('<script src="세계확진자증가수현황.js"></script>')
+document.write('<script src="세계순위현황.js"></script>')
+document.write('<script src="Map_지역별차이현황.js"></script>')
+document.write('<script src="직접수정.js"></script>')
+
 //업데이트 시간
 var updateString = String(세계현황[3]);
 var a_month = updateString.substring(14,22);
