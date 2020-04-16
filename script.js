@@ -523,47 +523,47 @@ $('#KR-49').click(function(){
 
   $closeButton4.click(function () {
     $worldDiv.slideUp();
-    $closeButton4.show();
-    $openButton4.hide();
+    $openButton4.show();
+    $closeButton4.hide();
   });
 
   // 추세선 그래프
-  $('#openButton5').click(function () {
-    $('#graphDiv').slideDown();
-    $('#closeButton5').show();
-    $('#openButton5').hide();
+  $openButton5.click(function () {
+    $graphDiv.slideDown();
+    $closeButton5.show();
+    $openButton5.hide();
   });
 
-  $('#closeButton5').click(function () {
-    $('#graphDiv').slideUp();
-    $('#openButton5').show();
-    $('#closeButton5').hide();
+  $closeButton5.click(function () {
+    $graphDiv.slideUp();
+    $openButton5.show();
+    $closeButton5.hide();
   });
 
    // 지도 섹션
-   $('#openButton6').click(function () {
-    $('#mapDiv').slideDown();
-    $('#closeButton6').show();
-    $('#openButton6').hide();
+  $openButton6.click(function () {
+    $mapDiv.slideDown();
+    $closeButton6.show();
+    $openButton6.hide();
   });
 
-  $('#closeButton6').click(function () {
-    $('#mapDiv').slideUp();
-    $('#openButton6').show();
-    $('#closeButton6').hide();
+  $closeButton6.click(function () {
+   $mapDiv.slideUp();
+    $openButton6.show();
+    $closeButton6.hide();
   });
 
   // 각종 링크
-  $('#openButton2').click(function () {
-      $('#linkDiv').slideDown();
-      $('#closeButton2').show();
-      $('#openButton2').hide();
+  $openButton2.click(function () {
+      $linkDiv.slideDown();
+      $closeButton2.show();
+      $openButton2.hide();
     });
   
-  $('#closeButton2').click(function () {
-      $('#linkDiv').slideUp();
-      $('#openButton2').show();
-      $('#closeButton2').hide();
+  $closeButton2.click(function () {
+      $linkDiv.slideUp();
+      $openButton2.show();
+      $closeButton2.hide();
     });
 
 
