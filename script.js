@@ -1,6 +1,6 @@
 
 var doc = document;
-var $description = $('description');
+var $description = $('#description');
 
 //업데이트 시간
 var updateString = String(세계현황[3]);
