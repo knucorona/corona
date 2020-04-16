@@ -73,8 +73,8 @@ document.getElementById("Now").innerHTML = '(업데이트 : '+new_year+'년 '+(n
 
   // mobile 보기에서 세계 현황 간략 보기 추가
   document.getElementById("mobile_infect").innerHTML = String(세계현황[0].toLocaleString())+" | ";
-  document.getElementById("mobile_death").innerHTML = String(세계현황[1].toLocaleString())+" | ";
-  document.getElementById("mobile_cured").innerHTML = String(세계현황[2].toLocaleString()); 
+  document.getElementById("mobile_death").innerHTML = String(세계현황[1].toLocaleString());
+  document.getElementById("mobile_cured").innerHTML = String(세계현황[2].toLocaleString())+" | ";
 
   document.getElementById("세계확진자").innerHTML = String(세계현황[0].toLocaleString());
   document.getElementById("세계사망자").innerHTML = String(세계현황[1].toLocaleString());
