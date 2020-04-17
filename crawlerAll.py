@@ -124,13 +124,13 @@ try:
   html = req.content
   soup = BeautifulSoup(html, 'html.parser')
   my_data = soup.select(
-    'table >tbody >tr'
+    '#content > div > div.data_table.mgt16.mini > table >tbody >tr'
     )
 
 #print(my_data[1])
 
   검사자현황 = []
-  datas = my_data[1]
+  datas = my_data[0]
 
   결과음성 = int(datas.find_all('td')[4].text.replace(',',''))
   검사중 = int(datas.find_all('td')[6].text.replace(',',''))
