@@ -310,6 +310,7 @@ try:
 
     해당국가완치자 = d.find_all('td')[5].text
 
+
     for val in dictonary:
         if val['eng'] == 해당국가명.strip():
             한글국가명 = val['kor']
@@ -317,11 +318,16 @@ try:
     if 한글국가명 == "" or 한글국가명 == '유럽' or 한글국가명 == '아시아' or 한글국가명 == '북미' or 한글국가명 == '남미':
       print(end='')
     else:
-      세계확진자.append({
+        if 해당국가완치자=='N/A' :
+            해당국가완치자변수 = "N/A"
+        else:
+            해당국가완치자변수 = int(0 if 해당국가완치자.strip().replace(',', '') == "" else 해당국가완치자.strip().replace(',', ''))
+
+        세계확진자.append({
         'Name' : 한글국가명,
         '확진자수' : int(0 if 해당국가확진자.strip().replace(',', '') == "" else 해당국가확진자.strip().replace(',', '')),
         '사망자수' : int(0 if 해당국가사망자.strip().replace(',', '') == "" else 해당국가사망자.strip().replace(',', '')),
-        '완치자수' : int(0 if 해당국가완치자.strip().replace(',', '') == "" else 해당국가완치자.strip().replace(',', '')),
+        '완치자수' : 해당국가완치자변수,
         '확진자증가수' : int(0 if 해당국가확진자증가수.strip().replace(',', '') == "" else 해당국가확진자증가수.strip().replace(',', '')),
         '사망자증가수' : int(0 if 해당국가사망자증가수.strip().replace(',', '') == "" else 해당국가사망자증가수.strip().replace(',', '')),
       })
@@ -338,15 +344,15 @@ try:
           한글국가명 = val['kor']
 
     if 한글국가명 == "" or 한글국가명 == '유럽' or 한글국가명 == '아시아' or 한글국가명 == '북미' or 한글국가명 == '남미':
-      print(end='')
+        print(end='')
 
     else:
-      세계확진자증가수.append({
-      'Name' : 한글국가명,
-      '확진자수' : int(0 if 해당국가확진자.strip().replace(',', '') == "" else 해당국가확진자.strip().replace(',', '')),
-      '확진자증가수' : int(0 if 해당국가확진자증가수.strip().replace(',', '') == "" else 해당국가확진자증가수.strip().replace(',', '')),
-      '사망자증가수' : int(0 if 해당국가사망자증가수.strip().replace(',', '') == "" else 해당국가사망자증가수.strip().replace(',', '')),
-      })
+        세계확진자증가수.append({
+        'Name' : 한글국가명,
+        '확진자수' : int(0 if 해당국가확진자.strip().replace(',', '') == "" else 해당국가확진자.strip().replace(',', '')),
+        '확진자증가수' : int(0 if 해당국가확진자증가수.strip().replace(',', '') == "" else 해당국가확진자증가수.strip().replace(',', '')),
+        '사망자증가수' : int(0 if 해당국가사망자증가수.strip().replace(',', '') == "" else 해당국가사망자증가수.strip().replace(',', '')),
+        })
 
   세계확진자_sort = sorted(세계확진자, key=lambda e: (-e['확진자수']))
   세계확진자증가수_sort = sorted(세계확진자증가수, key=lambda e: (-e['확진자수']))
@@ -380,6 +386,8 @@ try:
 
   with open("세계확진자증가수현황.js", "w", encoding='UTF-8-sig') as f_write:
     f_write.write(data2)
+
+  print('세계순위현황크롤러 끝')
 
 except:
   print('일시적인 오류 발생, 해당 크롤링 skip')
