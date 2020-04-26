@@ -243,7 +243,7 @@ var chart = new Highcharts.Chart('diffDiv', {
     },
 
     yAxis: [{ // Primary yAxis
-      max: 1400,
+      max: 1200,
       title: {
         text: '',
         style: {
