@@ -301,14 +301,14 @@ dictonary = [ {
 try:
   for d in datas:
     한글국가명 = ''
-    해당국가명 = d.find_all('td')[0].text
-    해당국가확진자 = d.find_all('td')[1].text
-    해당국가확진자증가수 = d.find_all('td')[2].text
+    해당국가명 = d.find_all('td')[1].text
+    해당국가확진자 = d.find_all('td')[2].text
+    해당국가확진자증가수 = d.find_all('td')[3].text
 
-    해당국가사망자 = d.find_all('td')[3].text
-    해당국가사망자증가수 = d.find_all('td')[4].text
+    해당국가사망자 = d.find_all('td')[4].text
+    해당국가사망자증가수 = d.find_all('td')[5].text
 
-    해당국가완치자 = d.find_all('td')[5].text
+    해당국가완치자 = d.find_all('td')[6].text
 
 
     for val in dictonary:
@@ -334,10 +334,10 @@ try:
 
   for d in datasYesterDay:
     한글국가명 = ''
-    해당국가명 = d.find_all('td')[0].text
-    해당국가확진자 = d.find_all('td')[1].text
-    해당국가확진자증가수 = d.find_all('td')[2].text
-    해당국가사망자증가수 = d.find_all('td')[4].text
+    해당국가명 = d.find_all('td')[1].text
+    해당국가확진자 = d.find_all('td')[2].text
+    해당국가확진자증가수 = d.find_all('td')[3].text
+    해당국가사망자증가수 = d.find_all('td')[5].text
 
     for val in dictonary:
       if val['eng'] == 해당국가명.strip():
