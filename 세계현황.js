@@ -2,5 +2,5 @@
     24908975,
     841331,
     17298404,
-    "Last updated: August 29, 2020, 02:54 GMT"
+    "Last updated: August 29, 2020, 03:28 GMT"
 ];
