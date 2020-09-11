@@ -34,7 +34,7 @@
 
   <style>
     body{
-      font-family: 'NanumSquareRound', 'Apple SD Gothic NEO', '삼성 고딕', 'LG스마트 고딕', '나눔 고딕', 'Dotum', '맑은 고딕',  sans-serif;
+      font-family: 'Noto Sans KR', 'NanumSquareRound', 'Apple SD Gothic NEO', '삼성 고딕', 'LG스마트 고딕', '나눔 고딕', 'Dotum', '맑은 고딕',  sans-serif;
       font-display: fallback;
     }
 
@@ -51,8 +51,8 @@
 
     p.menu1 {
       text-align: left;
-      font-size: 17px;
-      font-weight: 500;
+      font-size: 16px;
+      font-weight: 300;
       margin-left: 1em;
     }
 
@@ -64,10 +64,9 @@
     }
 
     p.menu1:hover {
-      background-color: rgb(50, 52, 143);
       text-align: left;
-      font-size: 115%;
-      font-weight: 650;
+      font-size: 110%;
+      font-weight: 300;
       margin-left: 1em;
     }
 
@@ -151,7 +150,7 @@
       top: 0;
       height: 100%;
       width: 280px;
-      background: linear-gradient(to top, rgb(48, 47, 114), rgb(41, 45, 95));
+      background: rgb(36, 43, 61);
       overflow-y: auto;
     }
 
@@ -178,6 +177,7 @@
     .nowData {
       width: 50%;
       min-width: 300px;
+      max-width: 500px;
       float: left;
     }
 
@@ -280,9 +280,9 @@
     .header1 {
       left: 0;
       top: 0;
-      height: 180px;
+      height: 120px;
       width: 100%;
-      background: linear-gradient(to top, rgb(48, 47, 114), rgb(41, 45, 95));
+      background: rgb(36, 43, 61);
       margin: 0 auto;
     }
 
@@ -290,7 +290,7 @@
     .wrapper {
       padding: .2rem;
       background-color: rgb(248, 248, 248);
-      height: 510px;
+      height: 480px;
     }
 
     h2 {
@@ -302,7 +302,7 @@
 
     h3 {
       margin-top: .2em;
-      font-size: 20px;
+      font-size: 16px;
       text-align: center;
     }
 
@@ -415,9 +415,9 @@
     .header1 {
       left: 0;
       top: 0;
-      height: 180px;
+      height: 120px;
       width: 100%;
-      background: linear-gradient(to top, rgb(48, 47, 114), rgb(41, 45, 95));
+      background: rgb(36, 43, 61);
       margin: 0 auto;
     }
 
@@ -425,7 +425,7 @@
     .wrapper {
       padding: .2rem;
       background-color: rgb(248, 248, 248);
-      height: 510px;
+      height: 480px;
     }
 
     h2 {
@@ -437,7 +437,7 @@
 
     h3 {
       margin-top: .2em;
-      font-size: 20px;
+      font-size: 16px;
       text-align: center;
     }
 
@@ -539,32 +539,24 @@
   <header class="header1">
 
     <br>
-    <h4 class="title" style="font-size:30px; font-weight:800">경북대 코로나 알리미</h4>
-    <!--<h4 style="text-align:center"><a href="http://knucorona.site/" target="_self"><img src="img/title_logo2.png" width="270px" height="49px"></a> </h4>-->
+    <h4 class="title" style="font-size:23px; font-weight:600"><span style="color:rgb(247, 152, 168)">KNU</span>CORONA.SITE</h4> 
+    <h6 class="title" style="font-size:12px; font-weight:300"><i class="fas fa-envelope-open-text"></i>
+      확진자 관련 제보 및 피드백 | <a href="mailto:knucorona@gmail.com">knucorona@gmail.com</a></h6>
 
-    <h6 class="title" style="font-size:13px"><i class="fas fa-envelope-open-text"></i>
-      확진자 관련 제보 및 피드백 <a href="mailto:knucorona@gmail.com">knucorona@gmail.com</a></h6>
-
-    <hr style="margin-top:.5em; background-color: rgb(167, 173, 199); width:80%">
+    <hr style="margin-top:.5em; background-color: rgb(105, 109, 128); width:60%">
 
     <!-- 크기 줄여질 시 나타나는 구역 -->
     <div id="link-popup" style="margin-top:-.5em">
 
-      <a href="javascript:Move7()">
-        <p style="font-size:12px; text-align:center; color:yellow">
-          <i class="fas fa-link"></i>
-          &nbsp; 학교 코로나 공지사항 · 마스크 구매처 링크
-        </p></a>
-      
       <!-- [임시] 비대면 강의 연장 관련 공지-->
       <div id="tempSmallPopup"
       style="background-color: rgb(38, 44, 63);
       border-radius:10px; margin:0 auto; width:370px;">
-      <p id="SmallalertNotice" onclick="window.open('https://knu.ac.kr/wbbs/wbbs/bbs/btin/viewBtin.action?bbs_cde=34&amp;btin.bbs_cde=34&amp;btin.doc_no=1321432&amp;btin.appl_no=000000&amp;btin.page=1&amp;btin.search_type=&amp;btin.search_text=&amp;popupDeco=false&amp;btin.note_div=row&amp;menu_idx=224')"
-      style="font-size: 15px; font-weight:800; text-align:center">
+      <p id="SmallalertNotice" onclick="window.open('https://knu.ac.kr/wbbs/wbbs/bbs/btin/viewBtin.action?bbs_cde=34&btin.bbs_cde=34&btin.doc_no=1321910&btin.appl_no=000000&btin.page=1&btin.search_type=&btin.search_text=&popupDeco=false&btin.note_div=row&menu_idx=224')"
+      style="font-size: 13px; font-weight:500; text-align:center">
         <span>
             <i class="fas fa-bell"></i>
-            &nbsp; [클릭!] 코로나-19 대응 2020. 2학기 학사운영 계획</span></p>
+            &nbsp; [클릭!] 2020학년도 2학기 수업운영 조정(2차)</span></p>
       </div>
     </div>
 
@@ -632,71 +624,71 @@
   <section class="wrapper">
         <!-- [임시] 비대면 연장 관련 임시 공지라인(추후 삭제)-->
         <div id="tempPopup" style="margin-top:-5.1em;
-        background-color:rgb(13, 34, 94);
+        background-color:rgb(39, 52, 87);
         width:380px;
         border-radius:10px;
         position:relative;
         box-shadow:0 2px 8px rgb(192, 192, 192)">
         <button id="closePopupButton" type="button" onclick="closePopup()" style="margin-top:20px; margin-right:10px;" class="close">&times;</button>  
         <p>&nbsp;</p>       
-        <p id="alertNotice" style="text-align:center; width:360px; font-size:15px; font-weight:800"
-        onclick="window.open('https://knu.ac.kr/wbbs/wbbs/bbs/btin/viewBtin.action?bbs_cde=34&amp;btin.bbs_cde=34&amp;btin.doc_no=1321432&amp;btin.appl_no=000000&amp;btin.page=1&amp;btin.search_type=&amp;btin.search_text=&amp;popupDeco=false&amp;btin.note_div=row&amp;menu_idx=224')" style="font-size: 15px; font-weight:800; text-align:center">
+        <p id="alertNotice" style="text-align:center; width:360px; font-size:15px; font-weight:500"
+        onclick="window.open('https://knu.ac.kr/wbbs/wbbs/bbs/btin/viewBtin.action?bbs_cde=34&btin.bbs_cde=34&btin.doc_no=1321910&btin.appl_no=000000&btin.page=1&btin.search_type=&btin.search_text=&popupDeco=false&btin.note_div=row&menu_idx=224')">
         
         <span style="cursor:pointer"> &nbsp; <i class="fas fa-bell"></i>
-          &nbsp; [클릭!] 코로나-19 대응 2020. 2학기 학사운영 계획</span>
+          &nbsp; [클릭!] 2020학년도 2학기 수업운영 조정(2차)</span>
         </p>
         </div>
         <!-- -->
         
     <div class="nowData">
       <a id="section1"></a>
-      <h2><i class="fas fa-user-friends"></span></i> 국내 현황 </h2>
+      <h2 style="font-weight: 600;"><i class="fas fa-user-friends"></span></i> 국내 현황 </h2>
       <table id="dataSection">
         <tr style="border-bottom:2px solid rgb(228, 228, 228)">
-          <th style="font-size:20px; color:rgb(233, 64, 78);width:40%">확진자 |</th>
-          <td class="infect" id="국내확진자" style="text-align:left;font-size:26px; font-weight:800; color:rgb(255, 78, 93)">
+          <th style="font-size:17px; color:rgb(233, 64, 78);width:40%">확진자 </th>
+          <td class="infect" id="국내확진자" style="text-align:left;font-size:23px; font-weight:600; color:rgb(255, 78, 93)">
           </td>
           <td id="국내확진자차이" style="text-align:left;font-size:17px; font-weight:700; color:rgb(255, 78, 93) ;width:30%">
           </td>
         </tr>
         <tr style="border-bottom:2px solid rgb(228, 228, 228)">
-          <th style="font-size:20px; color:rgb(3, 125, 224)">완치자 |</th>
-          <td class="cured" id="국내완치자" style="text-align:left;font-size:26px; font-weight:800; color:rgb(3, 125, 224)">
+          <th style="font-size:17px; color:rgb(3, 125, 224)">완치자 </th>
+          <td class="cured" id="국내완치자" style="text-align:left;font-size:23px; font-weight:600; color:rgb(3, 125, 224)">
           </td>
           <td id="국내완치자차이" style="text-align:left;font-size:17px; font-weight:700; color:rgb(3, 125, 224)"></td>
         </tr>
         <tr>
-          <th style="font-size:20px; color:rgb(110, 102, 103)">사망자 |</th>
+          <th style="font-size:17px; color:rgb(110, 102, 103)">사망자 </th>
           <td class="death" id="국내사망자"
-            style="text-align:left;font-size:26px; font-weight:800; color:rgb(110, 102, 103)"></td>
+            style="text-align:left;font-size:23px; font-weight:600; color:rgb(110, 102, 103)"></td>
           <td id="국내사망자차이" style="text-align:left;font-size:17px; font-weight:700; color:rgb(110, 102, 103)"></td>
         </tr>
       </table>
       <p id="update1" class="e"><br><i class="fas fa-sync-alt"></i></p>
     </div>
     <div class="nowData">
-      <h2><i class="fas fa-user-friends"></span></i> 경북대 현황</h2>
+      <h2 style="font-weight: 600;"><i class="fas fa-user-friends"></span></i> 경북대 현황 <span style="font-size:12px">(일시중지)</span></h2>
       <table id="dataSection">
         <tr style="border-bottom:2px solid rgb(228, 228, 228)">
-          <th style="font-size:20px; color:rgb(233, 64, 78);width:40%">확진자 |</th>
-          <td id="경대확진자" style="text-align:left;font-size:26px; font-weight:800; color:rgb(255, 78, 93)"></td>
+          <th style="font-size:17px; color:rgb(233, 64, 78);width:40%">확진자 </th>
+          <td id="경대확진자" style="text-align:left;font-size:23px; font-weight:600; color:rgb(255, 78, 93)"></td>
           <td id="경대확진자차이" style="text-align:left;font-size:17px; font-weight:700; color:rgb(255, 78, 93);width:30%">
           </td>
         </tr>
         <tr style="border-bottom:2px solid rgb(228, 228, 228)">
-          <th style="font-size:20px; color:rgb(3, 125, 224)">완치자 |</th>
-          <td id="경대완치자" style="text-align:left;font-size:26px; font-weight:800; color:rgb(3, 125, 224)"></td>
+          <th style="font-size:17px; color:rgb(3, 125, 224)">완치자 </th>
+          <td id="경대완치자" style="text-align:left;font-size:23px; font-weight:600; color:rgb(3, 125, 224)"></td>
           <td id="경대완치자차이" style="text-align:left;font-size:17px; font-weight:700; color:rgb(3, 125, 224);width:30%">
           </td>
         </tr>
         <tr>
-          <th style="font-size:20px; color:rgb(110, 102, 103)">사망자 |</th>
-          <td id="경대사망자" style="text-align:left;font-size:26px; font-weight:800; color:rgb(110, 102, 103)"></td>
+          <th style="font-size:17px; color:rgb(110, 102, 103)">사망자 </th>
+          <td id="경대사망자" style="text-align:left;font-size:23px; font-weight:600; color:rgb(110, 102, 103)"></td>
           <td id="경대사망자차이" style="text-align:left;font-size:17px; font-weight:700; color:rgb(110, 102, 103);width:30%">
           </td>
         </tr>
       </table>
-      <p id="update2" class="e"><br><i class="fas fa-sync-alt"></i></p>
+      <p id="update2" class="e"><br><i class="fas fa-sync-alt"></i> 업데이트 일시 중지</p>
     </div>
     <p id="update3" class="e">
     </p>
@@ -704,13 +696,13 @@
       <div id="s_left_common" style="padding:6px; margin-left:5px; height:40px;">
         <p id="newsIcon1"
           style="float:left;margin-left:-11px;margin-top:5px;
-          margin-right:10px;font-size:13px;font-weight:700;color:rgb(212, 16, 16);"><i
+          margin-right:10px;font-size:13px;font-weight:500;color:rgb(212, 16, 16);"><i
             class="fas fa-bell"></i> 학교 코로나19 공지사항</p>
         <p id="newsIcon2"
           style="float:left;
           margin-left:-4px; margin-top:5px;
           margin-right:10px; font-size:14px;
-          font-weight:700">
+          font-weight:500">
           <span style="color:rgb(221, 68, 68)"><i class="fas fa-school"></i></span></p>
         <ul id="scroll"
           style="border-radius:10px; box-shadow:0 2px 8px rgb(238, 238, 238); list-style-type:none; height:30px; padding:15px; background-color: white;">
@@ -745,11 +737,11 @@
     <div id="newest_section">
       <div id="s_left_common" style="padding:6px; margin-left:5px; height:40px;">
       <p id="newsIcon1_1"
-          style="float:left;margin-left:-11px; margin-top:5px;margin-right:10px;font-size:13px; font-weight:700; color:rgb(8, 8, 151)"><i
+          style="float:left;margin-left:-11px; margin-top:5px;margin-right:10px;font-size:13px; font-weight:500; color:rgb(8, 8, 151)"><i
             class="fas fa-bell"></i> 최신 코로나19 관련뉴스</p>
         <p id="newsIcon2_1"
           style="float:left;margin-left:-4px; margin-top:5px;margin-right:10px; font-size:14px;
-          font-weight:700">
+          font-weight:500">
           <span style="color:rgb(55, 119, 172)"><i class="far fa-newspaper"></i></span></p>
         <ul id="scroll2"
           style="border-radius:10px; box-shadow:0 2px 8px rgb(238, 238, 238); list-style-type:none; height:30px; padding:15px; background-color: white;">
@@ -783,23 +775,22 @@
     </div>
   </section>
   <section id="mobile_world">
-    <div style="padding:0.3em; background:rgb(231, 231, 231);
-    border-top:2px solid lightgray; border-bottom:2px solid lightgray;">
+    <div style="padding:0.7em; background:rgb(231, 231, 231);">
       <div style="text-align:center">
-        <span style="padding:0.3em; background:rgb(0, 99, 99);
-        border-radius:5px;
-        color:white; font-size:13px; font-weight:800">
+        <span style="padding:0.3em; background:rgb(43, 43, 65);
+        border-radius:7px;
+        color:white; font-size:13px; font-weight:500">
           <i class="fas fa-globe"></i> 전 세계</span>
-        <span style="padding:0.3em; font-weight:800; font-size:12px; color:rgb(199, 3, 3)"><b>확진</b></span>
-        <span id="mobile_infect" style="margin-left:-0.5em; font-weight:800; padding:0.3em; font-size:12px;"></span>
-        <span style="margin-left:-0.4em; font-weight:800; padding:0.3em; font-size:12px; color:rgb(3, 55, 199)"><b>완치</b></span>
-        <span id="mobile_cured" style="margin-left:-0.5em; font-weight:800; padding:0.3em; font-size:12px;"></span>
-        <span style="margin-left:-0.4em; font-weight:800; padding:0.3em; font-size:12px; color:rgb(75, 75, 75)"><b>사망</b></span>
-        <span id="mobile_death" style="margin-left:-0.5em; font-weight:800; padding:0.3em; font-size:12px;"></span>
+        <span style="padding:0.3em; font-weight:600; font-size:12px; color:rgb(199, 3, 3)"><b>확진</b></span>
+        <span id="mobile_infect" style="margin-left:-0.5em; font-weight:600; padding:0.3em; font-size:12px;"></span>
+        <span style="margin-left:-0.4em; font-weight:600; padding:0.3em; font-size:12px; color:rgb(3, 55, 199)"><b>완치</b></span>
+        <span id="mobile_cured" style="margin-left:-0.5em; font-weight:600; padding:0.3em; font-size:12px;"></span>
+        <span style="margin-left:-0.4em; font-weight:600; padding:0.3em; font-size:12px; color:rgb(75, 75, 75)"><b>사망</b></span>
+        <span id="mobile_death" style="margin-left:-0.5em; font-weight:600; padding:0.3em; font-size:12px;"></span>
       </div>
       <div style="text-align:center;margin-bottom:-.3em;">
-          <span style="font-weight:700; font-size:11px;">(업데이트 : </span>
-          <span id="mobile_update" style="font-weight:700; font-size:11px;"></span>
+          <span style="font-weight:500; font-size:11px;">(업데이트 : </span>
+          <span id="mobile_update" style="font-weight:500; font-size:11px;"></span>
       </div>
     </div>
   </section>
@@ -807,7 +798,7 @@
     <!-- 국내 지역별 현황-->
     <div class="contentItem" style="width:100%; 
     float:left; border-radius:10px; border:2px solid rgb(231, 231, 231);">
-      <h3 style="position:relative; z-index:3">
+      <h3 style="position:relative; z-index:3; font-weight:600">
         <span id="Kcorona">
           <span style="color:rgb(23, 116, 255)">
             <i class="fas fa-search-plus"></span></i>
@@ -1128,7 +1119,7 @@
     <!-- 전 세계 현황-->
     <div class="contentItem" style="width:100%; 
     float:left; border-radius:10px; border:2px solid rgb(231, 231, 231)">
-      <h3>
+      <h3 style="font-weight:600">
         <span id="Wcorona">
           <span style="color:rgb(41, 30, 102)">
             <i class="fas fa-globe"></span></i>
@@ -1240,7 +1231,7 @@
     <!-- 추세선 그래프 -->
     <div class="contentItem" style="width:100%; 
     float:left; border-radius:10px; border:2px solid rgb(231, 231, 231)">
-      <h3><span id="Gcorona">
+      <h3 style="font-weight:600"><span id="Gcorona">
           <span style="color:rgb(240, 142, 50)">
             <i class="fas fa-chart-line"></span></i>
           확진자 추세 그래프 확인
@@ -1272,7 +1263,7 @@
     <!-- 확진자 지도 및 동선 -->
     <div class="contentItem" style="width:100%; 
     float:left; border-radius:10px; border:2px solid rgb(231, 231, 231)">
-      <h3>
+      <h3 style="font-weight:600">
         <span id="Mcorona">
           <span style="color:rgb(29, 185, 133)">
             <i class="fas fa-map-marked-alt"></span></i>
@@ -1313,100 +1304,6 @@
                   <td style="font-size:13px"><b>2.22(토)</b></td>
                   <td style="font-size:13px"><b> O </b></td>
                 </tr>
-                <!-- <tr class="person1-content">
-                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                    <b>2월 19일(수)</b> <br>
-                  </td>
-                </tr>
-                <tr class="person1-content">
-                  <td colspan="1" style="font-size:12px">18:00</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    (버스이동) 동성로 KB ATM 이용, 동생 만남
-                  </td>
-                </tr>
-                <tr class="person1-content">
-                  <td colspan="1" style="font-size:12px">18:10</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    대구 동성로 인플라워 꽃집
-                  </td>
-                </tr>
-                <tr class="person1-content">
-                  <td colspan="1" style="font-size:12px">18:20</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    대구 동성로 스시라스또 식당
-                  </td>
-                </tr>
-                <tr class="person1-content">
-                  <td colspan="1" style="font-size:12px">18:50</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    (택시 이동) 동대구역 이동
-                  </td>
-                </tr>
-                <tr class="person1-content">
-                  <td colspan="1" style="font-size:12px">19:05</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    기차(1791, 3호차 자석 21·22)
-                  </td>
-                </tr>
-                <tr class="person1-content">
-                  <td colspan="1" style="font-size:12px">20:15</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    서경주역 도착, 귀가도보
-                  </td>
-                </tr>
-
-                <tr class="person1-content">
-                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                    <b>2월 20일(목)</b> <br>
-                  </td>
-                </tr>
-                <tr class="person1-content">
-                  <td colspan="1" style="font-size:12px">10:00<br>~14:00</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    현곡 준PC방
-                  </td>
-                </tr>
-                <tr class="person1-content">
-                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                    <b>2월 21일(금)</b> <br>
-                  </td>
-                </tr>
-                <tr class="person1-content">
-                  <td colspan="1" style="font-size:12px">10:00</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    (아버지 차 이동) 동국대학교 경주병원 이동
-                  </td>
-                </tr>
-
-                <tr class="person1-content">
-                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                    <b>2월 22일(토)</b> <br>
-                  </td>
-                </tr>
-                <tr class="person1-content">
-                  <td colspan="1" style="font-size:12px">10:32</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    검사결과 양성 통보(동국대경주병원)
-                  </td>
-                </tr>
-                <tr class="person1-content">
-                  <td colspan="1" style="font-size:12px">10:56</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    역학조사 진행, 조사중(자가격리)
-                  </td>
-                </tr>
-
-                <tr class="person1-content">
-                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                    <b>2월 24일(월)</b> <br>
-                  </td>
-                </tr>
-                <tr class="person1-content">
-                  <td colspan="1" style="font-size:12px">10:32</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    동국대학교경주병원 격리병상 입원
-                  </td>
-                </tr> -->
                 <!---------------------------------------------------->
                 <!-- PERSON 2 -->
                 <tr id="person2Tr" style="background-color:rgb(230, 237, 240);">
@@ -1416,55 +1313,6 @@
                   <td style="font-size:13px"><b>2.23(일)</b></td>
                   <td style="font-size:13px"><b> O </b></td>
                 </tr>
-
-                <!-- day -->
-                <!-- <tr class="person2-content">
-                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                    <b>2월 20일(목)</b> <br>
-                  </td>
-                </tr>
-                <tr class="person2-content">
-                  <td colspan="1" style="font-size:12px">14:00<br>~14:20</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    자택
-                  </td>
-                </tr>
-                
-                <tr class="person2-content">
-                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                    <b>2월 21일(금)</b> <br>
-                  </td>
-                </tr>
-                <tr class="person2-content">
-                  <td colspan="1" style="font-size:12px">14:00<br>~14:20</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    자택
-                  </td>
-                </tr>
-                
-                <tr class="person2-content">
-                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                    <b>2월 22일(토)</b> <br>
-                  </td>
-                </tr>
-                <tr class="person2-content">
-                  <td colspan="1" style="font-size:12px">17:00</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    보건소 선별진료소
-                  </td>
-                </tr>
-                
-                <tr class="person2-content">
-                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                    <b>2월 23일(일)</b> <br>
-                  </td>
-                </tr>
-                <tr class="person2-content">
-                  <td colspan="1" style="font-size:12px">-</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    마산의료원
-                  </td>
-                </tr> -->
                 <!---------------------------------------------------->
                 <!-- PERSON 3 -->
                 <tr id="person3Tr" style="background-color:rgb(230, 237, 240);">
@@ -1474,174 +1322,6 @@
                   <td style="font-size:13px"><b>2.26(수)</b></td>
                   <td style="font-size:13px"><b> O </b></td>
                 </tr>
-
-                <!-- day -->
-                <!-- <tr class="person3-content">
-                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                    <b>2월 19일(수)</b> <br>
-                  </td>
-                </tr>
-                <tr class="person3-content">
-                  <td colspan="1" style="font-size:12px">14:00<br>~14:20</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    경북대학교 첨성관 식당
-                  </td>
-                </tr>
-                <tr class="person3-content">
-                  <td colspan="1" style="font-size:12px">14:20<br>~18:30</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    도보로 기숙사 귀가
-                  </td>
-                </tr>
-                <tr class="person3-content">
-                  <td colspan="1" style="font-size:12px">18:30<br>~19:00</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    경북대학교 첨성관 식당
-                  </td>
-                </tr>
-                <tr class="person3-content">
-                  <td colspan="1" style="font-size:12px">19:00<br>~21:00</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    기숙사
-                  </td>
-                </tr>
-                <tr class="person3-content">
-                  <td colspan="1" style="font-size:12px">21:00<br>~22:00</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    경북대학교 향토관 지하헬스장
-                  </td>
-                </tr>
-
-                
-                <tr class="person3-content">
-                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                    <b>2월 20일(목)</b> <br>
-                  </td>
-                </tr>
-                <tr class="person3-content">
-                  <td colspan="1" style="font-size:12px">14:00<br>~14:20</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    경북대학교 첨성관 식당
-                  </td>
-                </tr>
-                <tr class="person3-content">
-                  <td colspan="1" style="font-size:12px">15:00<br>~15:30</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    도보로 대구북문 헌혈의
-                  </td>
-                </tr>
-                <tr class="person3-content">
-                  <td colspan="1" style="font-size:12px">15:30<br>~16:30</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    신대학약국(대구 북구 대학로), 복현성모약국(대구 북구 동북로), 동서당약국(대구 북구 경진로1길), 메디팜일선약국(대구 북구 동북로)
-                  </td>
-                </tr>
-                <tr class="person3-content">
-                  <td colspan="1" style="font-size:12px">16:30<br>~16:40</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    이종현내과의원
-                  </td>
-                </tr>
-                <tr class="person3-content">
-                  <td colspan="1" style="font-size:12px">16:40<br>~17:00</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    도보로 기숙사 귀가
-                  </td>
-                </tr>
-                <tr class="person3-content">
-                  <td colspan="1" style="font-size:12px">19:00<br>~19:30</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    경북대학교 첨성관 식당
-                  </td>
-                </tr>
-
-                
-                <tr class="person3-content">
-                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                    <b>2월 21일(금)</b> <br>
-                  </td>
-                </tr>
-                <tr class="person3-content">
-                  <td colspan="1" style="font-size:12px">11:30<br>~14:00</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    경북대학교 첨성관 식당
-                  </td>
-                </tr>
-                <tr class="person3-content">
-                  <td colspan="1" style="font-size:12px">16:00<br>~16:30</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    경북대학교 향토관 지하헬스장
-                  </td>
-                </tr>
-                <tr class="person3-content">
-                  <td colspan="1" style="font-size:12px">18:00<br>~19:00</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    경북대학교 첨성관 식당
-                  </td>
-                </tr>
-
-                
-                <tr class="person3-content">
-                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                    <b>2월 22일(토)</b> <br>
-                  </td>
-                </tr>
-                <tr class="person3-content">
-                  <td colspan="1" style="font-size:12px">13:00<br>~18:00</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    경북대학교 향토관에서 첨성관으로 기숙사 이사
-                  </td>
-                </tr>
-                <tr class="person3-content">
-                  <td colspan="1" style="font-size:12px">18:00<br>~18:10</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    경북대학교 첨성관 식당
-                  </td>
-                </tr>
-                <tr class="person3-content">
-                  <td colspan="1" style="font-size:12px">18:10<br>~20:00</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    대구시에서 신천지관련 의심환자라고 문자통보 받은 후 기숙사 조교 2명에게 코로나-19 의심된다고 알림, 격리조치 설명듣고 짐 다른 곳으로 분리
-                  </td>
-                </tr>
-
-                
-                <tr class="person3-content">
-                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                    <b>2월 23일(일)</b> <br>
-                  </td>
-                </tr>
-                <tr class="person3-content">
-                  <td colspan="1" style="font-size:12px">-</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    기숙사 내에 있음(식사 방에서 해결)
-                  </td>
-                </tr>
-
-                
-                <tr class="person3-content">
-                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                    <b>2월 24일(월)</b> <br>
-                  </td>
-                </tr>
-                <tr class="person3-content">
-                  <td colspan="1" style="font-size:12px">14:00<br>~15:15</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    보건소의 권유로 대구 북구보건소 선별진료소에 방문(대구 북구보건소 차량으로 이송)
-                  </td>
-                </tr>
-                <tr class="person3-content">
-                  <td colspan="1" style="font-size:12px">15:15<br>~20:00</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    기숙사로 귀가
-                  </td>
-                </tr>
-                <tr class="person3-content">
-                  <td colspan="1" style="font-size:12px">20:00<br>~22:00</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    부모 차량 이용하여 영양도착 이후 자택에서 자가격리중
-                  </td>
-                </tr> -->
                 <!---------------------------------------------------->
                 <!-- PERSON 4 -->
                 <tr id="person4Tr" style="background-color:rgb(230, 237, 240);">
@@ -1651,133 +1331,6 @@
                   <td style="font-size:13px"><b>2.26(수)</b></td>
                   <td style="font-size:13px"><b> O </b></td>
                 </tr>
-
-                <!-- day -->
-                <!-- <tr class="person4-content">
-                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                    <b>2월 9일(일), 12일(수), 16일(일)</b> <br>
-                  </td>
-                </tr>
-                <tr class="person4-content">
-                  <td colspan="1" style="font-size:12px">-</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    대구 신천지 예배
-                  </td>
-                </tr>
-
-                
-                <tr class="person4-content">
-                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                    <b>2월 17일(월)</b> <br>
-                  </td>
-                </tr>
-                <tr class="person4-content">
-                  <td colspan="1" style="font-size:12px">-</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    Emart24 S동대구광장점(점심식사)
-                  </td>
-                </tr>
-                <tr class="person4-content">
-                  <td colspan="1" style="font-size:12px">14:00</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    경북대 기숙사 이동
-                  </td>
-                </tr>
-
-                
-                <tr class="person4-content">
-                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                    <b>2월 18일(화)</b> <br>
-                  </td>
-                </tr>
-                <tr class="person4-content">
-                  <td colspan="1" style="font-size:12px">14:00</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    경북대 근처 동아리 분식
-                  </td>
-                </tr>
-                <tr class="person4-content">
-                  <td colspan="1" style="font-size:12px">14:30<br>~20:00</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    경북대 근처 앤유PC방
-                  </td>
-                </tr>
-                <tr class="person4-content">
-                  <td colspan="1" style="font-size:12px">20:00<br>~20:30</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    경북대 근처 장터돼지국밥
-                  </td>
-                </tr>
-
-                
-                <tr class="person4-content">
-                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                    <b>2월 19일(수)</b> <br>
-                  </td>
-                </tr>
-                <tr class="person4-content">
-                  <td colspan="1" style="font-size:12px">-</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    대구에서 창원으로 자차로 이동
-                  </td>
-                </tr>
-
-                
-                <tr class="person4-content">
-                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                    <b>2월 20일(목)</b> <br>
-                  </td>
-                </tr>
-                <tr class="person4-content">
-                  <td colspan="1" style="font-size:12px">13:39</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    창원축산농협 봉곡점 지점
-                  </td>
-                </tr>
-                <tr class="person4-content">
-                  <td colspan="1" style="font-size:12px">14:10</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    봉곡동 고고헤어
-                  </td>
-                </tr>
-                <tr class="person4-content">
-                  <td colspan="1" style="font-size:12px">16:19</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    상남동 참정형외과
-                  </td>
-                </tr>
-
-                
-                <tr class="person4-content">
-                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                    <b>2월 22일(토)</b> <br>
-                  </td>
-                </tr>
-                <tr class="person4-content">
-                  <td colspan="1" style="font-size:12px">12:09</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    참정형외과
-                  </td>
-                </tr>
-                <tr class="person4-content">
-                  <td colspan="1" style="font-size:12px">12:56</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    피아노약국
-                  </td>
-                </tr>
-
-                
-                <tr class="person4-content">
-                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                    <b>2월 24일(월)</b> <br>
-                  </td>
-                </tr>
-                <tr class="person4-content">
-                  <td colspan="1" style="font-size:12px">12:56</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    창원보건소 선별진료소
-                  </td>
-                </tr> -->
                 <!-- PERSON 5 -->
                 <tr id="person5Tr" style="background-color:rgb(230, 237, 240);">
                   <td style="font-size:13px"><b>봉화군</b></td>
@@ -1786,158 +1339,6 @@
                   <td style="font-size:13px"><b>2.27(목)</b></td>
                   <td style="font-size:13px"><b> O </b></td>
                 </tr>
-
-                <!-- day -->
-                <!-- <tr class="person5-content">
-                  <td colspan="5" style="background-color:rgb(237, 246, 248); font-size:13px">
-                    <b>2월 12일(수)</b> <br>
-                  </td>
-                </tr>
-                <tr class="person5-content">
-                  <td colspan="1" style="font-size:12px">15:00</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    장도뚝배기 식사 후 기숙사 입소
-                  </td>
-                </tr>
-
-          
-                <tr class="person5-content">
-                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                    <b>2월 13일(목)</b> <br>
-                  </td>
-                </tr>
-                <tr class="person5-content">
-                  <td colspan="1" style="font-size:12px">09:00</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    대구 더원 이비인후과 진료
-                  </td>
-                </tr>
-                <tr class="person5-content">
-                  <td colspan="1" style="font-size:12px">09:13</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    대구 바른약국 방문
-                  </td>
-                </tr>
-
-      
-                <tr class="person5-content">
-                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                    <b>2월 14일(금)</b> <br>
-                  </td>
-                </tr>
-                <tr class="person5-content">
-                  <td colspan="1" style="font-size:12px">15:17</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    대구 드림병원진료
-                  </td>
-                </tr>
-                <tr class="person5-content">
-                  <td colspan="1" style="font-size:12px">15:20</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    대구 뉴 드림약국 방문
-                  </td>
-                </tr>
-
-   
-                <tr class="person5-content">
-                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                    <b>2월 15일(토)</b> <br>
-                  </td>
-                </tr>
-                <tr class="person5-content">
-                  <td colspan="1" style="font-size:12px">10:38</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    대구 GS25방문(지점 미기억)
-                  </td>
-                </tr>
-                <tr class="person5-content">
-                  <td colspan="1" style="font-size:12px">13:17</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    대구 반월당약국
-                  </td>
-                </tr>
-                <tr class="person5-content">
-                  <td colspan="1" style="font-size:12px">14:21</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    대구 더원 이비인후과 진료
-                  </td>
-                </tr>
-                <tr class="person5-content">
-                  <td colspan="1" style="font-size:12px">14:27</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    대구 바른약국 방문
-                  </td>
-                </tr>
-                <tr class="person5-content">
-                  <td colspan="1" style="font-size:12px">15:18</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    대구 행복제면소 중앙로지점 식사
-                  </td>
-                </tr>
-                <tr class="person5-content">
-                  <td colspan="1" style="font-size:12px">15:30</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    파스쿠찌 대구점 방문
-                  </td>
-                </tr>
-
-   
-                <tr class="person5-content">
-                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                    <b>2월 20일(수)</b> <br>
-                  </td>
-                </tr>
-                <tr class="person5-content">
-                  <td colspan="1" style="font-size:12px">11:55</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    대구 더원 이비인후과 진료, 대구 바른약국 방문
-                  </td>
-                </tr>
-
-         
-                <tr class="person5-content">
-                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                    <b>2월 24일(월)</b> <br>
-                  </td>
-                </tr>
-                <tr class="person5-content">
-                  <td colspan="1" style="font-size:12px">18:00</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    경북대학교 기숙사(첨성관)에서 봉화 이동
-                  </td>
-                </tr>
-                <tr class="person5-content">
-                  <td colspan="1" style="font-size:12px">23:00</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    봉화군보건소 선별진료소 진료 및 검사 후 자택 이동
-                  </td>
-                </tr>
-
-   
-                <tr class="person5-content">
-                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                    <b>2월 25일(화)</b> <br>
-                  </td>
-                </tr>
-                <tr class="person5-content">
-                  <td colspan="1" style="font-size:12px">09:00</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    자원 휴양림에 아버지와 분리 입소 격리
-                  </td>
-                </tr>
-
- 
-                <tr class="person5-content">
-                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                    <b>2월 27일(목)</b> <br>
-                  </td>
-                </tr>
-                <tr class="person5-content">
-                  <td colspan="1" style="font-size:12px">-</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    확진 판정
-                  </td>
-                </tr> -->
                 <!---------------------------------------------------->
                 <!-- PERSON 6 -->
                 <tr id="person6Tr" style="background-color:rgb(230, 237, 240);">
@@ -1947,115 +1348,6 @@
                   <td style="font-size:13px"><b>3.2(월)</b></td>
                   <td style="font-size:13px"><b> O </b></td>
                 </tr>
-
-                <!-- day -->
-                <!-- <tr class="person6-content">
-                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                    <b>2월 16일(일)</b> <br>
-                  </td>
-                </tr>
-                <tr class="person6-content">
-                  <td colspan="1" style="font-size:12px">-</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    대구 신천지 교회 예배 참석
-                  </td>
-                </tr>
-
-                <tr class="person6-content">
-                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                    <b>2월 22일(토)</b> <br>
-                  </td>
-                </tr>
-                <tr class="person6-content">
-                  <td colspan="1" style="font-size:12px">22:00<br>~22:50</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    대구에서 경주 성건동 자택(택시)
-                  </td>
-                </tr>
-       
-                <tr class="person6-content">
-                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                    <b>2월 23일(일)</b> <br>
-                  </td>
-                </tr>
-                <tr class="person6-content">
-                  <td colspan="1" style="font-size:12px">03:23</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    GS25 경주중앙점(동성로 37)-마스크 착용
-                  </td>
-                </tr>
-      
-                <tr class="person6-content">
-                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                    <b>2월 24일(월)</b> <br>
-                  </td>
-                </tr>
-                <tr class="person6-content">
-                  <td colspan="1" style="font-size:12px">18:00</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    대구 북구 보건소로부터 자가격리 대상자임을 통보 받음
-                  </td>
-                </tr>
-   
-                <tr class="person6-content">
-                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                    <b>2월 27일(목)</b> <br>
-                  </td>
-                </tr>
-                <tr class="person6-content">
-                  <td colspan="1" style="font-size:12px">23:00</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    경주로 이관(자가격리 확인 및 발열 체크)
-                  </td>
-                </tr>
-         
-                <tr class="person6-content">
-                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                    <b>2월 28일(금)</b> <br>
-                  </td>
-                </tr>
-                <tr class="person6-content">
-                  <td colspan="1" style="font-size:12px">15:10</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    한창스튜디오(도보, 마스크착용)
-                  </td>
-                </tr>
-                <tr class="person6-content">
-                  <td colspan="1" style="font-size:12px">15:22</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    성건동행정복지센터(도보, 마스크착용)
-                  </td>
-                </tr>
-                <tr class="person6-content">
-                  <td colspan="1" style="font-size:12px">15:30</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    경북대구낙농협동조합 성건지점(금성로 292) 방문 – 귀가(도보, 마스크착용)
-                  </td>
-                </tr>
-           
-                <tr class="person6-content">
-                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                    <b>3월 1일(일)</b> <br>
-                  </td>
-                </tr>
-                <tr class="person6-content">
-                  <td colspan="1" style="font-size:12px">10:00</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    보건소 선별진료소
-                  </td>
-                </tr>
-
-                <tr class="person6-content">
-                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                    <b>3월 2일(월)</b> <br>
-                  </td>
-                </tr>
-                <tr class="person6-content">
-                  <td colspan="1" style="font-size:12px">-</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    검사결과 양성
-                  </td>
-                </tr> -->
                 <!---------------------------------------------------->
                 <!-- PERSON 7 -->
                 <tr id="person7Tr" style="background-color:rgb(230, 237, 240);">
@@ -2066,49 +1358,6 @@
                   <td style="font-size:13px"><b> O </b></td>
                 </tr>
 
-                <!-- day -->
-                <!-- <tr class="person7-content">
-                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                    <b>2월 28일(금) ~ 3월3일(화)</b> <br>
-                  </td>
-                </tr>
-                <tr class="person7-content">
-                  <td colspan="1" style="font-size:12px">-</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    종일 자택(원내동, 한아름아파트) / 자가격리 중
-                  </td>
-                </tr>
-
-                <tr class="person7-content">
-                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                    <b>3월 4일(수)</b> <br>
-                  </td>
-                </tr>
-                <tr class="person7-content">
-                  <td colspan="1" style="font-size:12px">17:30</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    유성구보건소
-                  </td>
-                </tr>
-                <tr class="person7-content">
-                  <td colspan="1" style="font-size:12px">18:00</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    자택
-                  </td>
-                </tr>
-                <tr class="person7-content">
-                  <td colspan="4" style="background-color:rgb(237, 246, 248); font-size:13px">
-                    <b>3월 5일(목)</b> <br>
-                  </td>
-                </tr>
-                <tr class="person7-content">
-                  <td colspan="1" style="font-size:12px">1130</td>
-                  <td colspan="3" style="text-align:left;font-size:12px">
-                    충남대병원 입원
-                  </td>
-                </tr> -->
-                <!---------------------------------------------------->
-                
               </thead>
             </table>
           </div>
@@ -2127,7 +1376,7 @@
     <!-- 관련 링크 -->
     <div id="linkContent" class="contentItem" style="width:100%; 
      float:left; border-radius:10px; border:2px solid rgb(231, 231, 231)">
-      <h3>
+      <h3 style="font-weight:600">
         <span id="Lcorona">
           <span style="color:rgb(50, 132, 240)">
             <i class="fas fa-link"></span></i>
