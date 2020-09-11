@@ -5,8 +5,8 @@ var $description = $('#description');
 //업데이트 시간
 var updateString = String(세계현황[3]);
 var a_month = updateString.substring(14,26);
-var a_year = updateString.substring(27,31);
-var a_hour = updateString.substring(33,35);
+var a_year = updateString.substring(28,32);
+var a_hour = updateString.substring(34,36);
 var a_min = updateString.substring(37,39);
 
 var updateDate = new Date(a_month+', '+a_year+' '+a_hour+':'+a_min);
