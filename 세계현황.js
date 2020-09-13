@@ -1,6 +1,6 @@
 ﻿var 세계현황 = [
-    28917260,
-    923727,
-    20772440,
-    "Last updated: September 12, 2020, 22:58 GMT"
+    28928750,
+    924054,
+    20785468,
+    "Last updated: September 13, 2020, 00:04 GMT"
 ];
