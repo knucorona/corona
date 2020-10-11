@@ -52,7 +52,7 @@ var chart0 = new Highcharts.Chart('container', {
           color: Highcharts.getOptions().colors[1]
         }
       },
-      max: 30000,
+      max: 28000,
       title: {
         text: '전체 확진자 수',
         style: {
@@ -98,7 +98,7 @@ var chart = new Highcharts.Chart('diffDiv', {
     },
 
     yAxis: [{ // Primary yAxis
-      max: 1200,
+      max: 300,
       title: {
         text: '',
         style: {
