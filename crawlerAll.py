@@ -218,6 +218,12 @@ dictonary = [ {
     "eng": "China", 
     "kor": "중국",
   },{
+    "eng": "Russia", 
+    "kor": "러시아",
+  },{
+    "eng": "India", 
+    "kor": "인도",
+  },{
     "eng": "Spain", 
     "kor": "스페인",
   },{
@@ -233,6 +239,9 @@ dictonary = [ {
     "eng": "USA", 
     "kor": "미국",
   },{
+    "eng": "Argentina", 
+    "kor": "아르헨티나",
+  },{
     "eng": "France", 
     "kor": "프랑스",
   },{
@@ -241,6 +250,9 @@ dictonary = [ {
   },{
     "eng": "Switzerland", 
     "kor": "스위스",
+  },{
+    "eng": "Peru", 
+    "kor": "페루",
   },{
     "eng": "UK", 
     "kor": "영국",
@@ -253,6 +265,9 @@ dictonary = [ {
   },{
     "eng": "Belgium", 
     "kor": "벨기에",
+  },{
+    "eng": "South Africa", 
+    "kor": "남아프리카",
   },{
     "eng": "Norway", 
     "kor": "노르웨이",
@@ -268,6 +283,9 @@ dictonary = [ {
   },{
     "eng": "Norway", 
     "kor": "노르웨이",
+  },{
+    "eng": "Colombia", 
+    "kor": "콜롬비아",
   },{
     "eng": "Turkey", 
     "kor": "터키",
