@@ -490,7 +490,7 @@ print('')
 print('학교공지사항크롤러 시작')
 
 try:
- req = requests.get('https://knu.ac.kr/wbbs/wbbs/bbs/btin/list.action?bbs_cde=34&menu_idx=224')
+ req = requests.get('http://knu.ac.kr/wbbs/wbbs/bbs/btin/list.action?bbs_cde=34&menu_idx=224')
  req.encoding= None
  html = req.content
  soup = BeautifulSoup(html, 'html.parser')
