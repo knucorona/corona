@@ -9,6 +9,8 @@
   <link rel="icon" href="/favicon.ico">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" type="text/css" href="//cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
  
   <meta name="naver-site-verification" content="4d3351009873ce58503ee84bae28c9e420d235d7" />
   <meta name="google-site-verification" content="usbcnCZd6-vsKUQ556A4u4EHOLFg-ZifOPvSyVvQBa8" />
@@ -27,500 +29,8 @@
     gtag('js', new Date());
     gtag('config', 'UA-156002547-2');
   </script>
-
-  <link rel="stylesheet" type="text/css" href="//cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
-
-  <title>경북대 코로나 알리미</title>
-
-  <style>
-    body{
-      font-family: 'Noto Sans KR', 'Apple SD Gothic NEO', 'NanumSquareRound', '삼성 고딕', 'LG스마트 고딕', '나눔 고딕', 'Dotum', '맑은 고딕',  sans-serif;
-      font-display: fallback;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5 {
-      font-weight: 800;
-    }
-    ul li {
-      font-weight: 700;
-    }
-
-    p.menu1 {
-      text-align: left;
-      font-size: 16px;
-      font-weight: 300;
-      margin-left: 1em;
-    }
-
-    p.menu2 {
-      text-align: left;
-      font-size: 14px;
-      font-weight: 500;
-      margin-left: 1em;
-    }
-
-    p.menu1:hover {
-      text-align: left;
-      font-size: 110%;
-      font-weight: 300;
-      margin-left: 1em;
-    }
-
-    p.menu2:hover {
-      background-color: rgb(50, 52, 143);
-      text-align: left;
-    }
-
-    p.e {
-      font-weight: 600;
-      font-size: 12px;
-      float: left;
-    }
-
-    .title {
-      color: white;
-      text-align: center;
-      font-weight: 700;
-    }
-
-    #Kcorona:hover{
-      -webkit-transition: all 0.2s ease-in-out;
-      -moz-transition: all 0.2s ease-in-out;
-      -o-transition: all 0.2s ease-in-out;
-      transition: all 0.2s ease-in-out;
-      color:rgb(37, 74, 192);
-    }
-
-    #Wcorona:hover{
-      -webkit-transition: all 0.2s ease-in-out;
-      -moz-transition: all 0.2s ease-in-out;
-      -o-transition: all 0.2s ease-in-out;
-      transition: all 0.2s ease-in-out;
-      color:rgb(31, 57, 143);
-    }
-
-    #Gcorona:hover{
-      -webkit-transition: all 0.2s ease-in-out;
-      -moz-transition: all 0.2s ease-in-out;
-      -o-transition: all 0.2s ease-in-out;
-      transition: all 0.2s ease-in-out;
-      color:rgb(218, 110, 23);
-    }
-
-    #Mcorona:hover{
-      -webkit-transition: all 0.2s ease-in-out;
-      -moz-transition: all 0.2s ease-in-out;
-      -o-transition: all 0.2s ease-in-out;
-      transition: all 0.2s ease-in-out;
-      color:rgb(4, 121, 95);
-    }
-
-    #Lcorona:hover{
-      -webkit-transition: all 0.2s ease-in-out;
-      -moz-transition: all 0.2s ease-in-out;
-      -o-transition: all 0.2s ease-in-out;
-      transition: all 0.2s ease-in-out;
-      color:rgb(37, 74, 192);
-    }
-
-    .contentItem {
-      padding: 2em;
-      margin-bottom: 7px;
-    }
-
-    #dataSection2 {
-      background-color: white;
-      width: 100%;
-      margin-bottom: 5px;
-      text-align: center;
-    }
-  </style>
-
-  <style media="(min-width: 1026px) and (max-width: 3000px)">
-    #mobile_world{
-      display:none;
-    }
-
-    #newest_section{
-      margin-top:210px;
-    }
-
-    #alertNotice{
-      color:rgb(255, 255, 255);
-    }
-
-    #alertNotice:hover{
-      color:rgb(89, 255, 219);
-    }
-
-    #detailMap{
-      width:220px;
-    }
-
-    #s_left_common {
-      width: 650px;
-      margin-top: 35px;
-    }
-
-    #s_left_common2 {
-      width: 320px;
-      margin-top: 35px;
-    }
-
-    #newsIcon2, #newsIcon2_1 {
-      display: none;
-    }
-
-    .lists {
-      letter-spacing:-1px;
-      width:490px;
-      text-overflow:ellipsis;
-      overflow:hidden;
-      white-space:nowrap;
-      font-size:13px;
-    }
-
-    .header1 {
-      position: fixed;
-      left: 0;
-      top: 0;
-      height: 100%;
-      width: 280px;
-      background: rgb(36, 43, 61);
-      overflow-y: auto;
-    }
-
-    .wrapper {
-      padding: 3.5rem;
-      margin-left: 280px;
-      background-color: rgb(248, 248, 248);
-      height: 385px;
-    }
-
-    #link-popup {
-      display: none;
-    }
-
-    #footer3, #footer4 {
-      display: none;
-    }
-
-    .content {
-      padding: 3rem;
-      margin-left: 280px;
-    }
-
-    .nowData {
-      width: 50%;
-      min-width: 300px;
-      max-width: 500px;
-      float: left;
-    }
-
-    #dataSection {
-      background-color: white;
-      box-shadow: 0 2px 8px rgb(228, 228, 228);
-      border-radius: 10px;
-      width: 85%;
-      margin-right: 20px;
-      min-width: 300px;
-      float: left;
-      text-align: center;
-    }
-
-    #update3 {
-      display: none;
-    }
-
-    h2 {
-      font-size: 32px;
-    }
-
-    #linkContent {
-      display: none;
-    }
-
-    #koreaMap{    
-      width:100%; 
-      margin-left:1.5em;
-    }
-    #smallKoreaMap{
-      display:none;
-    }
-  </style>
-
-  <style media="(min-width: 550px) and (max-width: 1025px)">
-    .lists{
-      letter-spacing:-1px;
-      width:500px;
-      text-overflow:ellipsis;
-      overflow:hidden;
-      white-space:nowrap;
-      font-size:13px;
-    }
-    #SmallalertNotice{
-      color:white;
-    }
-    #SmallalertNotice:hover{
-      color:rgb(89, 255, 219);
-    }
-
-    #tempPopup{
-      display:none;
-    }
-
-    #newest_section{
-      margin-top:47px;
-    }
-
-    #alertNotice{
-      display:none;
-    }
-
-    #detailMap{
-      width:180px; 
-      margin : 0 auto;
-    }
-    #BigKoreaMap{
-      display:none;
-    }
-
-    #koreaMap{    
-      margin-left:-3em;
-    }
-
-    #s_left_common{
-      width:98%;
-    }
-
-    #s_left_common2{
-      width:98%;
-    }
-
-    #newsIcon1, #newsIcon1_1{
-      display:none;
-    }
-
-    button {
-      width: 300px;
-    }
-
-    #footer1, #footer2 {
-      display: none;
-    }
-
-    #menu {
-      display: none;
-    }
-
-    .header1 {
-      left: 0;
-      top: 0;
-      height: 120px;
-      width: 100%;
-      background: rgb(36, 43, 61);
-      margin: 0 auto;
-    }
-
-
-    .wrapper {
-      padding: .2rem;
-      background-color: rgb(248, 248, 248);
-      height: 480px;
-    }
-
-    h2 {
-      font-size: 21px;
-      font-weight: 800;
-      margin-top: 1em;
-      text-align: center;
-    }
-
-    h3 {
-      margin-top: .2em;
-      font-size: 16px;
-      text-align: center;
-    }
-
-    .content {
-      padding: .4em;
-    }
-
-    .contentItem {
-      padding: .3em;
-      margin-bottom: 7px;
-    }
-
-    .nowData {
-      width: 100%;
-      margin: 0 auto;
-    }
-
-    #dataSection {
-      background-color: white;
-      box-shadow: 0 2px 8px rgb(228, 228, 228);
-      border-radius: 10px;
-      width: 85%;
-      margin-right: .5em;
-      margin: 0 auto;
-      text-align: center;
-      max-width: 385px;
-    }
-
-    #update1,
-    #update2 {
-      display: none;
-    }
-
-    #update3 {
-      width: 100%;
-      text-align: center;
-      font-size: 11px;
-    }
-
-    #quickMenu{
-      display:none;
-    }
-  </style>
-
-  <style media="all and (max-width: 549px)">
-    #SmallalertNotice{
-      color:white;
-    }
-    #SmallalertNotice:hover{
-      color:rgb(89, 255, 219);
-    }
-
-    #tempPopup{
-      display:none;
-    }
-
-    #newest_section{
-      margin-top:47px;
-    }
-
-    #alertNotice{
-      display:none;
-    }
-
-    #detailMap{
-      width:180px; 
-      margin : 0 auto;
-    }
-    #BigKoreaMap{
-      display:none;
-    }
-
-    #koreaMap{    
-      margin-left:-3em;
-    }
-
-    #s_left_common{
-      width:98%;
-    }
-
-    #s_left_common2{
-      width:98%;
-    }
-
-    #newsIcon1, #newsIcon1_1{
-      display:none;
-    }
-
-    .lists{
-      letter-spacing:-1px;
-      width:330px;
-      text-overflow:ellipsis;
-      overflow:hidden;
-      white-space:nowrap;
-      font-size:12.5px;
-    }
-
-    button {
-      width: 300px;
-    }
-
-    #footer1, #footer2 {
-      display: none;
-    }
-
-    #menu {
-      display: none;
-    }
-
-    .header1 {
-      left: 0;
-      top: 0;
-      height: 120px;
-      width: 100%;
-      background: rgb(36, 43, 61);
-      margin: 0 auto;
-    }
-
-
-    .wrapper {
-      padding: .2rem;
-      background-color: rgb(248, 248, 248);
-      height: 480px;
-    }
-
-    h2 {
-      font-size: 21px;
-      font-weight: 800;
-      margin-top: 1em;
-      text-align: center;
-    }
-
-    h3 {
-      margin-top: .2em;
-      font-size: 16px;
-      text-align: center;
-    }
-
-    .content {
-      padding: .4em;
-    }
-
-    .contentItem {
-      padding: .3em;
-      margin-bottom: 7px;
-    }
-
-    .nowData {
-      width: 100%;
-      margin: 0 auto;
-    }
-
-    #dataSection {
-      background-color: white;
-      box-shadow: 0 2px 8px rgb(228, 228, 228);
-      border-radius: 10px;
-      width: 85%;
-      margin-right: .5em;
-      margin: 0 auto;
-      text-align: center;
-      max-width: 385px;
-    }
-
-    #update1,
-    #update2 {
-      display: none;
-    }
-
-    #update3 {
-      width: 100%;
-      text-align: center;
-      font-size: 11px;
-    }
-
-    #quickMenu{
-      display:none;
-    }
-  </style>
+  
+   <title>경북대 코로나 알리미</title>
 </head>
 
 <body>
@@ -590,8 +100,7 @@
 
       <!-- [임시] 비대면 강의 연장 관련 공지-->
       <div id="tempSmallPopup"
-      style="background-color: rgb(38, 44, 63);
-      border-radius:10px; margin:0 auto; width:370px;">
+      style="border-radius:10px; margin:0 auto; width:370px;">
       <p id="SmallalertNotice" onclick="window.open('https://knu.ac.kr/wbbs/wbbs/bbs/btin/viewBtin.action?bbs_cde=34&btin.bbs_cde=34&btin.doc_no=1321910&btin.appl_no=000000&btin.page=1&btin.search_type=&btin.search_text=&popupDeco=false&btin.note_div=row&menu_idx=224')"
       style="font-size: 13px; font-weight:500; text-align:center">
         <span>
@@ -601,13 +110,13 @@
     </div>
 
     <div id="menu">
-      <p class="menu1" id="MenuLink1" style="cursor:pointer"><span style="color:rgb(255, 251, 0)"><i class="fas fa-link"></i>&nbsp; 공지사항 및 마스크
+      <p class="menu1" id="MenuLink1" style="cursor:pointer"><span><i class="fas fa-link"></i>&nbsp; 공지사항 및 마스크
           구매처</span></p>
 
       <div id="innerMenu" style="display:none">
         <p class="menu2"
           onclick="window.open('https://knu.ac.kr/wbbs/wbbs/bbs/btin/list.action?bbs_cde=34&amp;menu_idx=224')"
-          style="margin-left:3em; cursor:pointer"><span style="color:rgb(255, 255, 255)"><i class="fas fa-link"></i>&nbsp; 경북대 코로나 대응관련
+          style="margin-left:3em; cursor:pointer"><span><i class="fas fa-link"></i>&nbsp; 경북대 코로나 대응관련
             공지</span></p>
         <p class="menu2" onclick="window.open('https://instagram.com/knu_ch/')" style="margin-left:3em; cursor:pointer"><span
             style="color:rgb(255, 255, 255); cursor:pointer"><i class="fas fa-link"></i>&nbsp; 경북대 총학생회 인스타그램</span></p>
@@ -618,16 +127,16 @@
         <p class="menu2" onclick="window.open('https://mohw.go.kr/react/popup_200128.html')" style="margin-left:3em; cursor:pointer">
           <span style="color:rgb(255, 255, 255); cursor:pointer"><i class="fas fa-link"></i>&nbsp; 전국 안심병원 현황 </span></p>
       </div>
-      <p class="menu1" onclick="Move1()" style="cursor:pointer"><span style="color:white"><i class="fas fa-user-friends"></i>&nbsp; 국내 및 경북대
+      <p class="menu1" onclick="Move1()" style="cursor:pointer"><span><i class="fas fa-user-friends"></i>&nbsp; 국내 및 경북대
           현황</span></p>
-      <p class="menu1" onclick="Move2()" style="cursor:pointer"><span style="color:white"><i class="fas fa-search-plus"></i>&nbsp; 국내 지역별 확진자 현황</span></p>
-      <p class="menu1" onclick="Move3()" style="cursor:pointer"><span style="color:white"><i class="fas fa-globe"></i>&nbsp; 전 세계 코로나19
+      <p class="menu1" onclick="Move2()" style="cursor:pointer"><span><i class="fas fa-search-plus"></i>&nbsp; 국내 지역별 확진자 현황</span></p>
+      <p class="menu1" onclick="Move3()" style="cursor:pointer"><span><i class="fas fa-globe"></i>&nbsp; 전 세계 코로나19
           현황</span></p>
-      <p class="menu1" onclick="Move4()" style="cursor:pointer"><span style="color:white"><i class="fas fa-chart-line"></i>&nbsp; 확진자 추세
+      <p class="menu1" onclick="Move4()" style="cursor:pointer"><span ><i class="fas fa-chart-line"></i>&nbsp; 확진자 추세
           그래프</span></p>
-      <p class="menu1" onclick="Move5()" style="cursor:pointer"><span style="color:white"><i class="fas fa-map-marked-alt"></i>&nbsp; 경북대 확진자
+      <p class="menu1" onclick="Move5()" style="cursor:pointer"><span><i class="fas fa-map-marked-alt"></i>&nbsp; 경북대 확진자
           지도</span></p>
-      <p class="menu1" onclick="Move6()" style="cursor:pointer"><span style="color:white"><i class="fas fa-road"></i>&nbsp; 확진자 이동경로</span></p>
+      <p class="menu1" onclick="Move6()" style="cursor:pointer"><span><i class="fas fa-road"></i>&nbsp; 확진자 이동경로</span></p>
     </div>
 
     <hr style="margin-top:.5em; background-color: rgb(167, 173, 199); width:80%">
@@ -684,20 +193,20 @@
       <a id="section1"></a>
       <h2 style="font-weight: 600;"><i class="fas fa-user-friends"></span></i> 국내 현황 </h2>
       <table id="dataSection">
-        <tr style="border-bottom:1px solid rgb(228, 228, 228)">
+        <tr class="border-left-infect border-bottom">
           <th style="font-size:17px; color:rgb(233, 64, 78);width:40%">확진자 </th>
           <td class="infect" id="국내확진자" style="text-align:left;font-size:23px; font-weight:600; color:rgb(255, 78, 93)">
           </td>
           <td id="국내확진자차이" style="text-align:left;font-size:17px; font-weight:700; color:rgb(255, 78, 93) ;width:30%">
           </td>
         </tr>
-        <tr style="border-bottom:1px solid rgb(228, 228, 228)">
-          <th style="font-size:17px; color:rgb(3, 125, 224)">완치자 </th>
-          <td class="cured" id="국내완치자" style="text-align:left;font-size:23px; font-weight:600; color:rgb(3, 125, 224)">
+        <tr class="border-left-cure border-bottom">
+          <th style="font-size:17px; color:#1481db">완치자 </th>
+          <td class="cured" id="국내완치자" style="text-align:left;font-size:23px; font-weight:600; color:#1481db">
           </td>
-          <td id="국내완치자차이" style="text-align:left;font-size:17px; font-weight:700; color:rgb(3, 125, 224)"></td>
+          <td id="국내완치자차이" style="text-align:left;font-size:17px; font-weight:700; color:#1481db"></td>
         </tr>
-        <tr>
+        <tr class="border-left-death">
           <th style="font-size:17px; color:rgb(110, 102, 103)">사망자 </th>
           <td class="death" id="국내사망자"
             style="text-align:left;font-size:23px; font-weight:600; color:rgb(110, 102, 103)"></td>
@@ -707,21 +216,21 @@
       <p id="update1" class="e"><br><i class="fas fa-sync-alt"></i></p>
     </div>
     <div class="nowData">
-      <h2 style="font-weight: 600;"><i class="fas fa-user-friends"></span></i> 경북대 현황 <span style="font-size:12px">(일시중지)</span></h2>
+      <h2 style="color:gray; font-weight: 600;"><i class="fas fa-user-friends"></span></i> 경북대 현황 <span style="font-size:12px">(일시중지)</span></h2>
       <table id="dataSection">
-        <tr style="border-bottom:1px solid rgb(228, 228, 228)">
-          <th style="font-size:17px; color:rgb(233, 64, 78);width:40%">확진자 </th>
+        <tr class="border-left-none border-bottom">
+          <th style="font-size:17px; color:rgb(110, 102, 103);width:40%">확진자 </th>
           <td id="경대확진자" style="text-align:left;font-size:23px; font-weight:600; color:rgb(153, 153, 153)"></td>
           <td id="경대확진자차이" style="text-align:left;font-size:17px; font-weight:700; color:rgb(153, 153, 153);width:30%">
           </td>
         </tr>
-        <tr style="border-bottom:1px solid rgb(228, 228, 228)">
-          <th style="font-size:17px; color:rgb(3, 125, 224)">완치자 </th>
+        <tr s class="border-left-none border-bottom">
+          <th style="font-size:17px; color:rgb(110, 102, 103)">완치자 </th>
           <td id="경대완치자" style="text-align:left;font-size:23px; font-weight:600; color:rgb(153, 153, 153)"></td>
           <td id="경대완치자차이" style="text-align:left;font-size:17px; font-weight:700; color:rgb(153, 153, 153);width:30%">
           </td>
         </tr>
-        <tr>
+        <tr  class="border-left-none border-bottom">
           <th style="font-size:17px; color:rgb(110, 102, 103)">사망자 </th>
           <td id="경대사망자" style="text-align:left;font-size:23px; font-weight:600; color:rgb(153, 153, 153)"></td>
           <td id="경대사망자차이" style="text-align:left;font-size:17px; font-weight:700; color:rgb(153, 153, 153);width:30%">
@@ -743,9 +252,8 @@
           margin-left:-4px; margin-top:5px;
           margin-right:10px; font-size:12px;
           font-weight:700">
-          <span style="border:2px solid rgb(243, 156, 156);
-          background-color:white; border-radius: 10px; padding:3px;
-          color:rgb(221, 68, 68)">학교</span></p>
+          <span style="background-color:rgb(223, 87, 132); border-radius: 10px; padding:5px;
+          color:white">학교</span></p>
         <ul id="scroll"
           style="border-radius:10px; box-shadow:0 2px 8px rgb(238, 238, 238); list-style-type:none; height:30px; padding:15px; background-color: white;">
           <li class="lists" id="list1" style="margin-left:-6px; margin-top:7px;">
@@ -782,11 +290,10 @@
           style="float:left;margin-left:-11px; margin-top:5px;margin-right:10px;font-size:13px; font-weight:500; color:rgb(8, 8, 151)"><i
             class="fas fa-bell"></i> 최신 코로나19 관련뉴스</p>
         <p id="newsIcon2_1"
-          style="float:left;margin-left:-4px; margin-top:6px;margin-right:10px; font-size:12px;
+          style="float:left;margin-left:-4px; margin-top:6px; margin-right:10px; font-size:12px;
           font-weight:700">
-           <span style="border:2px solid rgb(91, 166, 236);
-           background-color:white; border-radius: 10px; padding:3px;
-           color:rgb(44, 89, 172)">최신</span></p>
+           <span style="background-color:rgb(13, 108, 197); border-radius: 10px; padding:5px;
+           color:white">최신</span></p>
         <ul id="scroll2"
           style="border-radius:10px; box-shadow:0 2px 8px rgb(238, 238, 238); list-style-type:none; height:30px; padding:15px; background-color: white;">
           <li class="lists" id="2list1" style="margin-left:-6px; margin-top:7px;">
@@ -819,7 +326,7 @@
     </div>
   </section>
   <section id="mobile_world">
-    <div style="padding:0.7em; background:rgb(231, 231, 231);">
+    <div style="padding:0.7em; background:#e4e6eb;">
       <div style="text-align:center">
         <span style="padding:0.3em; background:rgb(52, 52, 75);
         border-radius:7px;
@@ -839,10 +346,8 @@
     </div>
   </section>
   <section class="content">
-    <p style="font-size:11px; margin-top:10px; margin-bottom:3px;">· 항목을 클릭하여 열고 닫을 수 있습니다</p>
     <!-- 국내 지역별 현황-->
-    <div class="contentItem" style="width:100%; 
-    float:left; border-radius:10px; border:2px solid rgb(231, 231, 231);">
+    <div class="contentItem">
       <h3 style="position:relative; text-align:left; z-index:3;
       margin-left:10px; margin-right:10px; margin-top:10px;
       font-weight:600">
@@ -1160,8 +665,7 @@
       </div>
     </div>
     <!-- 전 세계 현황-->
-    <div class="contentItem" style="width:100%; 
-    float:left; border-radius:10px; border:2px solid rgb(231, 231, 231)">
+    <div class="contentItem">
       <h3 style="position:relative; text-align:left; z-index:3;
       margin-left:10px; margin-right:10px; margin-top:10px;
       font-weight:600">
@@ -1270,8 +774,7 @@
       </div>
     </div>
     <!-- 추세선 그래프 -->
-    <div class="contentItem" style="width:100%; 
-    float:left; border-radius:10px; border:2px solid rgb(231, 231, 231)">
+    <div class="contentItem">
       <h3 style="position:relative; text-align:left; z-index:3;
       margin-left:10px; margin-right:10px; margin-top:10px;
       font-weight:600"><span id="Gcorona" style="cursor:pointer;">
@@ -1299,8 +802,7 @@
       </div>
     </div>
     <!-- 확진자 지도 및 동선 -->
-    <div class="contentItem" style="width:100%; 
-    float:left; border-radius:10px; border:2px solid rgb(231, 231, 231)">
+    <div class="contentItem">
       <h3 style="position:relative; text-align:left; z-index:3;
       margin-left:10px; margin-right:10px; margin-top:10px;
       font-weight:600">
@@ -1349,8 +851,7 @@
     </div>
 
     <!-- 관련 링크 -->
-    <div id="linkContent" class="contentItem" style="width:100%; 
-     float:left; border-radius:10px; border:2px solid rgb(231, 231, 231)">
+    <div id="linkContent" class="contentItem">
       <h3 style="position:relative; text-align:left; z-index:3;
       margin-left:10px; margin-right:10px; margin-top:10px;
       font-weight:600">
@@ -1386,9 +887,9 @@
     </div>
   </section>
   <div>
-    <p id="footer4" style="font-size:12px; text-align:center; float:left"> <a href="https://www.notion.so/41c18523ef264a65953829902a90a9fe"
+    <p id="footer4" style="font-size:11px; text-align:center; float:left"> <a href="https://www.notion.so/41c18523ef264a65953829902a90a9fe"
     target="_blank"> [현황 및 동선 출처 URL] </a> </p>
-    <p id="footer3" style="font-size:12px; text-align:center; float:left"> <a href="https://www.notion.so/chanhui/3c3f593d20cd42ee9241451ee9225a4b"
+    <p id="footer3" style="font-size:11px; text-align:center; float:left"> <a href="https://www.notion.so/chanhui/3c3f593d20cd42ee9241451ee9225a4b"
       target="_blank"> [사이트 기능 업데이트 현황]</a> </p>
   </div>
   <script type="text/javascript" src="//code.jquery.com/jquery-1.8.3.min.js"></script>
