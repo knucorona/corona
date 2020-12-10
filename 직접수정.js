@@ -47,7 +47,7 @@ var chart0 = new Highcharts.Chart('container', {
           color: Highcharts.getOptions().colors[1]
         }
       },
-      max: 39000,
+      max: 45000,
       title: {
         text: '전체 확진자 수',
         style: {
