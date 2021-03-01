@@ -4,25 +4,7 @@ var $description = $('#description');
 
 //업데이트 시간
 var updateString = String(세계현황[3]);
-var a_month = updateString.substring(14,25);
-var a_year = updateString.substring(27,31);
-var a_hour = updateString.substring(33,35);
-var a_min = updateString.substring(36,38);
-
-var updateDate = new Date(a_month+', '+a_year+' '+a_hour+':'+a_min);
-updateDate.setHours(updateDate.getHours()+9);
-
-var new_year = updateDate.getFullYear();
-var new_month = updateDate.getMonth();
-var new_day = updateDate.getDate();
-var new_hour = updateDate.getHours();
-var new_min = updateDate.getMinutes();
-if(new_hour < 10)
-  new_hour = '0'+String(new_hour);
-if(new_min < 10)
-  new_min = '0'+String(new_min);
-
-doc.getElementById("Now").innerHTML = '(업데이트 : '+new_year+'년 '+(new_month+1)+'월 '+new_day+'일, '+new_hour+':'+new_min+')';
+doc.getElementById("Now").innerHTML = updateString;
 
   //국내 현황
   doc.getElementById("국내확진자").innerHTML = String(Number(국내현황[0]).toLocaleString());
@@ -87,8 +69,8 @@ doc.getElementById("Now").innerHTML = '(업데이트 : '+new_year+'년 '+(new_mo
   doc.getElementById("update3").innerHTML = '<br><i class="fas fa-sync-alt"></i> '+ String(국내현황[6]) +' (차이 : 전일 00시 대비)';
 
   // 세계순위현황 업데이트시간 텍스트
-  doc.getElementById("W_updateDate").innerHTML = '(업데이트 : '+new_year+'년 '+(new_month+1)+'월 '+new_day+'일, '+new_hour+':'+new_min+')';
-  doc.getElementById("mobile_update").innerHTML = new_year+'.'+(new_month+1)+'.'+new_day+', '+new_hour+':'+new_min+')';
+  doc.getElementById("W_updateDate").innerHTML = updateString;
+  doc.getElementById("mobile_update").innerHTML = updateString;
 
   // 세계순위현황
   doc.getElementById("w_name_1").innerHTML = '<b>' + String(세계확진자[1].Name) + '</b>';
