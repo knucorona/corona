@@ -7,7 +7,7 @@ import sys
 ## python파일의 위치
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-print('지역별현황크롤러 시작')
+print('지역별현황 스크래핑 시작')
 
 try:
  req = requests.get('http://ncov.mohw.go.kr/bdBoardList_Real.do?brdId=1&brdGubun=13&ncvContSeq=&contSeq=&board_id=&gubun=')
@@ -42,12 +42,12 @@ try:
     f_write.write(dataA)
 
 except:
-  print('일시적인 오류 발생, 해당 크롤링 skip')
-print('지역별현황크롤러 끝')
+  print('일시적인 오류 발생, 해당 스크래핑 skip')
+print('지역별현황 스크래핑 끝')
 
 ############################################################################
 print('')
-print('국내현황크롤러 시작')
+print('국내현황 스크래핑 시작')
 
 try:
  req = requests.get('http://ncov.mohw.go.kr')
@@ -112,11 +112,11 @@ try:
     f_write.write(dataA)
 
 except:
-  print('일시적인 오류 발생, 해당 크롤링 skip')
-print('국내현황크롤러 끝')
+  print('일시적인 오류 발생, 해당 스크래핑 skip')
+print('국내현황 스크래핑 끝')
 ############################################################################
 print('')
-print('검사자크롤러 시작')
+print('검사자 스크래핑 시작')
 
 try:
   req = requests.get('http://ncov.mohw.go.kr/bdBoardList_Real.do?brdId=1&brdGubun=11&ncvContSeq=&contSeq=&board_id=&gubun=')
@@ -153,13 +153,13 @@ try:
     f_write.write(dataA)
 
 except:
-  print('일시적인 오류 발생, 해당 크롤링 skip')
-print('검사자크롤러 끝')
+  print('일시적인 오류 발생, 해당 스크래핑 skip')
+print('검사자 스크래핑 끝')
 
 ############################################################################
 
 print('')
-print('세계현황크롤러 시작')
+print('세계현황 스크래핑 시작')
 
 try:
   req = requests.get('https://www.worldometers.info/coronavirus/#countries')
@@ -199,12 +199,12 @@ try:
     f_write.write(dataA)
 
 except:
-  print('일시적인 오류 발생, 해당 크롤링 skip')
+  print('일시적인 오류 발생, 해당 스크래핑 skip')
 print('세계현황 끝')
 
 ############################################################################
 print('')
-print('세계순위현황크롤러 시작')
+print('세계순위현황 스크래핑 시작')
 
 html = requests.get("https://www.worldometers.info/coronavirus/").text
 soup = BeautifulSoup(html, 'html.parser')
@@ -405,15 +405,15 @@ try:
   with open("세계확진자증가수현황.js", "w", encoding='UTF-8-sig') as f_write:
     f_write.write(data2)
 
-  print('세계순위현황크롤러 끝')
+  print('세계순위현황 스크래핑 끝')
 
 except:
-  print('일시적인 오류 발생, 해당 크롤링 skip')
+  print('일시적인 오류 발생, 해당 스크래핑 skip')
 
-print('세계순위현황크롤러 끝')
+print('세계순위현황 스크래핑 끝')
 ############################################################################
 print('')
-print('맵크롤러 시작')
+print('맵 스크래핑 시작')
 
 try:
  req = requests.get('http://ncov.mohw.go.kr/bdBoardList_Real.do?brdId=1&brdGubun=13&ncvContSeq=&contSeq=&board_id=&gubun=')
@@ -454,11 +454,11 @@ try:
     f_write.write(data)
 
 except:
-  print('일시적인 오류 발생, 해당 크롤링 skip')
-print('맵크롤러 끝')
+  print('일시적인 오류 발생, 해당 스크래핑 skip')
+print('맵 스크래핑 끝')
 ############################################################################
 print('')
-print('뉴스기사크롤러 시작')
+print('뉴스기사 스크래핑 시작')
 
 try:
  req = requests.get('https://www.yna.co.kr/safe/news')
@@ -480,14 +480,14 @@ try:
     json.dump(data, json_file, ensure_ascii = False, indent='\t')
 
 except:
-  print('일시적인 오류 발생, 해당 크롤링 skip')
-print('뉴스기사크롤러 끝')
+  print('일시적인 오류 발생, 해당 스크래핑 skip')
+print('뉴스기사 스크래핑 끝')
 ############################################################################
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 print('')
-print('학교공지사항크롤러 시작')
+print('학교공지사항 스크래핑 시작')
 
 try:
  req = requests.get('http://knu.ac.kr/wbbs/wbbs/bbs/btin/list.action?bbs_cde=34&menu_idx=224')
@@ -511,7 +511,7 @@ try:
     json.dump(data, json_file, ensure_ascii = False, indent='\t')
 
 except:
-  print('일시적인 오류 발생, 해당 크롤링 skip')
-print('학교공지사항크롤러 끝')
+  print('일시적인 오류 발생, 해당 스크래핑 skip')
+print('학교공지사항 스크래핑 끝')
 print('완료')
 ############################################################################
