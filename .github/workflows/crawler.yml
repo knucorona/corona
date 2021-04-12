@@ -3,7 +3,7 @@ name: Web Scraping - Update data
 
 on:
   schedule:
-    - cron:  '* */12 * * *'
+    - cron:  '30 11 * * *'
 
 jobs:
   build:
